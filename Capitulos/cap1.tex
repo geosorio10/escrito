@@ -8,7 +8,7 @@ Este nuevo enfoque se tiene un universo que está compuesto por el sistema y el 
 Estos resultados no miran la evolución del sistema pero debido a que la mayoría de los estados del universo están termalizados se preve que no importa el estado inicial cualquier evolución llevará al estado a uno en el equilibrio.
 
 (
-Lo que mi asesor no me ha respondido.
+comentario sobre esto.
 )
 
 Ya poniendo las ideas más explícitas se supone tener un sistema cuántio aislado y grande que se llamará el universo, que se descompone en dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho maś grande que la del sistema $S$. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica estas condiciones se pueden poner como restricciones en el espacio de Hilbert, restricción de los estados posibles:
@@ -56,9 +56,9 @@ D(\rho_{S}, \Omega_{S})= \frac{1}{2} Tr |\rho_{S} -\Omega_{S}|=\frac{1}{2}Tr\sqr
 
 Esta medida cuantifica que tan difícil es diferenciar $\rho_{S}$ y $\Omega_{S}$ por mediciones cuánticas. Un poco de notación $\langle . \rangle$ es el promedio sobre todos los estados $\ket{\phi} \in \mathcal{H_{R}}$ de acuerdo a la medida estandar(unitariamente invariante). Esta medida se usa para hallar volúmenes de conjuntos de estados. Luego por esto se sabe que $\Omega_{S} = \langle \rho_{S} \rangle $.
 
-Entonces el teorema central de este capítulo es:
+Entonces el teorema central de este capítulo es:\\
 
-\textbf{Teorema:}Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H_{R}} \subseteq \mathcal{H_{S}} \otimes \mathcal{H_{E}} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr \mathcal{E_{R}}$ esta dado probabilísticamente por 
+\textbf{Teorema 1:}Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H_{R}} \subseteq \mathcal{H_{S}} \otimes \mathcal{H_{E}} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr \mathcal{E_{R}}$ esta dado probabilísticamente por 
 
 \begin{equation}
 Prob[  \norm{\rho_{S} -\Omega_{S}}_{1} \geq \eta ] \leq \eta',
@@ -85,15 +85,143 @@ d_{E}^{eff}= \frac{1}{Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
 
 Donde $\Omega_{E}= Tr_{S} \mathcal{E_{R}}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio acesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{r}^{-\frac{1}{3}}$.\\
 
-Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico. (Dar comentario sobre lo intuitivo de las cotas)
+Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico. (Dar comentario sobre lo intuitivo de las cotas)\\
 \section{Lema de Levy}
-El teorema anterior tiene como base principal el lema de Levy (referencias). Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:
+El teorema anterior tiene como base principal el lema de Levy (referencias). Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:\\
 
 \textbf{Lema de Levy:} Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera $\mathbb{S}^d$, y un punto $\phi \in \mathbb{S}^d $ es escogido de manera aleatoria uniforme, 
 \begin{equation}
 Prob[|f(\phi)- \langle f \rangle| \ge \epsilon ] \le 2exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})
 \end{equation}
-donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|$ y $C=(18\pi^3)^-1$.
+donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|$ y $C=(18\pi^3)^-1$.\\
+
+Gracias a la normalización, los estados puros en $\mathcal{H_{R}}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$. Luego e puede aplicar este lema a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H_{R}}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad.\\
+
+\section{Demostración del teorema 1}
+Ya con el teorema de Levy como herramienta se usará este para poder demostrar el teorema 1. Para usar el teorema de Levy para el problema actual se dice que $f(\phi)= \norm{\rho_{S} - \Omega_{S}}_{1}$. Antes de seguir con la demostración se quiere dar la idea de qué habla la constante de Lipschitz que fue nombrada anteriormente. Para esto se debe ver qué significa que una función sea Lipschitz continua. \\
+La definición general de continuidad es: Sea $f: I \to \mathbb{R}$ donde $I$ puede ser un intervalo abierto $(a,b)$ o uno cerrado $[a,b]$, además $C \in I$. Se dice que $f$ es continua en $C \longleftrightarrow \forall \epsilon >0 $ $\exists$ $ \delta >0 $ tal que  $ |x-c|\longrightarrow |f(x)-f(c)|< \epsilon $. Esta es la definición que en general se maneja pero hay sutilezas en esta definición que no siempre son mostradas como por ejemplo que $\delta$ depende de donde se ponga el  punto $C$, esto se ve claramente en la siguiente función: $f: (0,1) \to \mathbb{R}$, $f(x)=\frac{1}{x} $ al $C$ estar más lejos del $0$ permite un $\delta$ más grande pero al acercarse al $0$ el $\delta$ debe ser más pequeño.
+La continuidad de Lipschitz permite que se defina un $\delta$ constante sin importar donde se encuentre el $C$. Se es Lipschitz continuo si 
+
+\begin{equation}
+|f(x) -f(y)| \le \eta |x-y|,
+\end{equation}
+
+ con $\eta$ constante esto permite poner $|f(x)-f(y)| < \epsilon \to $ $\delta < \frac{\epsilon}{\eta} $. Ahora si f es derivable y $\nabla f$ es acotado, $x$ y $y$ dados existe $\xi$ entre $x$,$y$ tal que:
+ 
+\begin{equation}
+f(x)-f(y)= \nabla f(\xi) (x-y)
+\end{equation}
+
+\begin{equation}
+\to |f(x)- f(y)| \le |\nabla f(\xi)| |x-y|
+\end{equation}
+
+\begin{equation}
+\to |f(x)- f(y)| \le \sup|\nabla f(\xi)| |x-y|
+\end{equation}
+ 
+Como $\nabla f$ es acotado se tiene que $\sup |\nabla f(\xi)|=\eta$.\\
+
+Dado esta introducción a la continuidad de Lipschitz va encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$. Entonces para poder lograr esto se procederá de la siguiente forma se definen dos estados reducidos $\rho_{1}= Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}=Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, Ahora se tiene
+
+\begin{equation}
+|f(\phi_{1})-f(\phi_{2})|^2= |\norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1}|^2.
+\end{equation}
+
+como $\norm{M}_{1}$ es una distancia (esto es $d(\rho_{1},\Omega)= \norm{\rho_{1}-\Omega}_{1}$) es cierto para un espacio métrico
+
+\begin{equation}
+|d(x,z)-d(y,z)| \le d(x,y)
+\end{equation}
+
+Por lo tanto 
+
+\begin{equation}
+|\norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1}|^2 \le \norm{\rho_{1}- \rho_{2} }_{1}^2=\norm{Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1}^{2}.
+\end{equation}
+
+Como hay una cota a la norma de una traza parcial,
+
+\begin{equation}
+\norm{Tr_{\mathcal{B}}(M)}_{p} \le [dim(\mathcal{H_{B}})]^{\frac{p-1}{p}} \norm{M}_{p}.
+\end{equation}
+
+entones por la cota anterior
+
+\begin{equation}
+\norm{Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1} \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}.
+\end{equation}
+
+Se tiene que :
+\begin{equation}
+\norm{\rho_{1}- \rho_{2} }_{1}^2 \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2}
+\end{equation}
+
+Usando la hermiticidad de $\rho$ y el teorema espectral se puede descomponer $\rho= UDU^{\dag}$ donde $U$ es un operador unitario y $D$ es diagonal. Además por las propiedades de la traza $Tr(\sqrt{UD^2U^{\dag}})= Tr(U\sqrt{D^2}U^{\dag})= Tr(\sqrt{D^{2}})$ se llega a
+\begin{equation}
+\norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2} = 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2})
+\end{equation}
+también
+\begin{equation}
+ 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2}) \le 4|\ket{\phi}-\ket{\phi}|^2.
+\end{equation}
+
+Uniendo todo los pasos anteriores
+\begin{equation}
+|f(\phi_{1})-f(\phi_{2})|^{2} \le  4|\ket{\phi}-\ket{\phi}|^2
+\end{equation}
+
+o sea 
+\begin{equation}
+|f(\phi_{1})-f(\phi_{2})| \le  2|\ket{\phi}-\ket{\phi}|,
+\end{equation}
+
+Con esto se muestra que $\eta \le 2$.\\
+
+Habiendo dado una cota para $\eta$ ahora se usará el lema de Levy para la función $f(\phi)=\norm{\rho_{S} -\Omega_{S}}_{1}$ recordando que se reemplazará $d$ en el lema por $d=2d_{R}-1$. sustituyendo en el teorema se tiene:
+
+\begin{equation}
+ 2exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})= 2exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2})
+\end{equation}
+
+como $\eta \le 2$ 
+
+\begin{equation}
+2exp(-Cd_{R}\epsilon^2) \ge 2exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2}) \ge Prob[|f(\phi)- \langle f \rangle| \ge \epsilon ]
+\end{equation}
+
+mirando más atentamente  $|f(\phi)- \langle f \rangle| \ge \epsilon $, por ser  una distancia $\norm{\rho_{S} -\Omega_{S}}_{1} \ge 0$ entonces
+
+
+\begin{equation}
+\norm{\rho_{S} -\Omega_{S}}_{1}- \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \ge \epsilon.
+\end{equation}
+
+Nombrando a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle $ y $\mu'=2 exp(-Cd_{R}\epsilon^2)$ esto permite organizar lo anterior así:
+
+\begin{equation}
+Prob[\norm{\rho_{S} -\Omega_{S}}_{1} \ge \mu] \le \mu'.
+\end{equation}
+Ahora para poder obtener el resultado se debe acotar $\mu$ .Se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$ porque $d_{R}>>1$. Se quiere ahora ponerle un cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle$ para esto primero se acotará dando los límites por las trazas y luego se calcularán estas para poder dejar la cota en terminos de las dimensiones del sistema. Primero se procederá a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$ esto se hará para tener una facilidad de manejo mayor ya que la segunda norma(Hilbert-Schmidt) permite un mejor tratamiento.\\
+La relación entre estas dos normas se puede ver desde el manejo de amtrices. Sea $M$ una matriz $nxn$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
+\begin{equation}
+Tr M= \sum_{i} \lambda_{i} 
+\end{equation}
+con esto se puede escribir de manera explícita la norma de traza 
+\begin{equation}
+\norm{M}_{1}^2=(Tr|M|)^{2}=n^{2} (\frac{1}{n}\sum_{i} |\lambda_{i}|)^{2}.
+\end{equation}
+Como la función $x^{2}$ es convexa se puede usar la desigualdad de Jensen que	
+
+
+
+(poner luego de las demostraconesCuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.)
+
+
+
+
+
+
 
 
 
