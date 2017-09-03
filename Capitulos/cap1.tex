@@ -40,11 +40,63 @@ Aquí se hace un supuesto importante y es que el universo está en un estado pur
 se acerca al estado canónico para la gran mayoría de los casos 
 
 \begin{equation}
-\rho_{S}=\Omega_{S}.
+\rho_{S} \approx \Omega_{S}.
 \end{equation}
 
 O sea que para casi todos los estados puros $\ket{\phi} \in \mathcal{H_{R}}$ del universo el sistema se comporta como si el universo estuviese en el estado mixto equiprobable $\mathcal{E_{R}}$. Siendo este el principio general canónico.
 
 Clarificando la idea, el estado canónico $\Omega_{S}$ del sistema es el estado del sistema cuando el universo se encuentra en el estado equiprobable $\mathcal{E_{R}}$. Se puede interpretar el principio general canónico como un principio que estipula que las probabilidades iguales del sistema son aparentes. Porque para casi cualquier estado del universo que sea puro, un subsistema de este universo que cumpla con ser lo suficientemente pequeño se comporta como si el universo estuviese en el estado equiprobable $\mathcal{E_{R}}$. Cabe recordar que aún no se ha especificado la restricción $R$ entonces todo este análisis es general, la restricción no necesariamente debe ser la energía u otras cantidades que se conserven. Esto hace que $\Omega_{S}$ no  deba ser obligatoriamente es el estado canónico usual, puede ser el gran canónico o cualquier otro que sea acorde con la restricción. Este principio puede ser de utilidad cuando la interacción entre el ambiente y el sistema no es débil como siempre se toma.
+
+\section{formulación matemática}
+
+Ahora se procederá a especificar lo dicho anteriormente en un contexto matemático. Lo primordial es decir cuál será la distancia que usaremos para darle un sentido de cercanía a los estados $\rho_{S}$ y $\Omega_{S}$. La distancia a usar es una bastante conocida en la teoría cuántica de la información, la distancia de traza. Esta se define como:
+\begin{equation}
+D(\rho_{S}, \Omega_{S})= \frac{1}{2} Tr |\rho_{S} -\Omega_{S}|=\frac{1}{2}Tr\sqrt{(\rho_{S} -\Omega_{S})^{\dag}(\rho_{S} -\Omega_{S})}.
+\end{equation}
+
+Esta medida cuantifica que tan difícil es diferenciar $\rho_{S}$ y $\Omega_{S}$ por mediciones cuánticas. Un poco de notación $\langle . \rangle$ es el promedio sobre todos los estados $\ket{\phi} \in \mathcal{H_{R}}$ de acuerdo a la medida estandar(unitariamente invariante). Esta medida se usa para hallar volúmenes de conjuntos de estados. Luego por esto se sabe que $\Omega_{S} = \langle \rho_{S} \rangle $.
+
+Entonces el teorema central de este capítulo es:
+
+\textbf{Teorema:}Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H_{R}} \subseteq \mathcal{H_{S}} \otimes \mathcal{H_{E}} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr \mathcal{E_{R}}$ esta dado probabilísticamente por 
+
+\begin{equation}
+Prob[  \norm{\rho_{S} -\Omega_{S}}_{1} \geq \eta ] \leq \eta',
+\end{equation}
+
+Donde 
+
+\begin{equation}
+\norm{\rho_{S}-\Omega_{S}}_{1}=2 D(\rho_{S}, \Omega_{S})
+\end{equation}
+
+\begin{equation}
+\eta= \epsilon + \sqrt{ \frac{d_{S}}{d_{E}^{eff}} },
+\end{equation}
+
+\begin{equation}
+\eta'=2exp(-Cd_{R}\epsilon^{2}).
+\end{equation}
+
+y las constantes son: $ C=(18\pi^{3})^{-1}, d_{R} = dim \mathcal{H_{R}}, d_{S} = dim \mathcal{H_{S}} $. $d_{E}^{eff}$ es la medida efectiva del tamaño del ambiente,
+\begin{equation}
+d_{E}^{eff}= \frac{1}{Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
+\end{equation}
+
+Donde $\Omega_{E}= Tr_{S} \mathcal{E_{R}}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio acesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{r}^{-\frac{1}{3}}$.\\
+
+Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico. (Dar comentario sobre lo intuitivo de las cotas)
+\section{Lema de Levy}
+El teorema anterior tiene como base principal el lema de Levy (referencias). Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:
+
+\textbf{Lema de Levy:} Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera $\mathbb{S}^d$, y un punto $\phi \in \mathbb{S}^d $ es escogido de manera aleatoria uniforme, 
+\begin{equation}
+Prob[|f(\phi)- \langle f \rangle| \ge \epsilon ] \le 2exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})
+\end{equation}
+donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|$ y $C=(18\pi^3)^-1$.
+
+
+
+
 
 

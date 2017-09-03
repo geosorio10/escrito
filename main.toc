@@ -1,6 +1,8 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}El entrelazamiento y la mec\IeC {\'a}nica estad\IeC {\'\i }stica}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Conclusiones}{5}{chapter.2}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{7}{appendix.Alph1}
+\contentsline {section}{\numberline {1.1}formulaci\IeC {\'o}n matem\IeC {\'a}tica}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Lema de Levy}{5}{section.1.2}
+\contentsline {chapter}{\numberline {2}Conclusiones}{7}{chapter.2}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{9}{appendix.Alph1}
 \vspace {2em}
 \vspace {2em}
