@@ -4,12 +4,12 @@ La idea principal que se quiere mostrar es cómo se puede reemplazar el postulad
 
 La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista. Pero lo que sorprende al tratar sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos. La conexión que hay entre el determinismo y estas probabilidades es una discusión que lleva desde los inicios de la termodinámica. Aunque el planteamiento que se mostrará no necesita de los métodos típicos de la mecánica estadística como por ejemplo: aleatoriedad subjetiva, promedio sobre el ensamble o promedio temporal; Esto le da una fuerza a estas ideas ya que no debe entrar en problemas de ergodicidad. 
 
-Este nuevo enfoque se tiene un universo que está compuesto por el sistema y el ambiente. Dando como condición que el ambiente sea los suficientemente grande. Este universo está descrito por un estado cuántico puro ( se conoce el estado de manera exacta) que obedece una restricción global, que el sistema alcance el equilibrio térmico por medio de la interacción mutua (termalización) es un producto del entrelazamiento del sistema y el ambiente (Popescu et al,2006). Más adelante se le dará una definición más rigurosa que ayudará a dar cotas para la expresión "ambiente suficientemente grande". Con este enfoque se quiere formular un principio canónico general  el sistema estará termalizado para casi todos los estados puros del universo, dando límites cuantitativos. La restricción que se impone no es una específica esto generaliza los resultados tradicionales dados en la literatura donde se toma por restricción la energía (cualquier libro, año).
+Este nuevo enfoque se tiene un universo que está compuesto por el sistema y el ambiente. Dando como condición que el ambiente sea los suficientemente grande. Este universo está descrito por un estado cuántico puro ( se conoce el estado de manera exacta) que obedece una restricción global, que el sistema alcance el equilibrio térmico por medio de la interacción mutua (termalización) es un producto del entrelazamiento del sistema y el ambiente (Popescu et al,2006). Más adelante se le dará una definición más rigurosa que ayudará a dar cotas para la expresión "ambiente suficientemente grande". Con este enfoque se quiere formular un principio canónico general  el sistema estará termalizado para casi todos los estados puros del universo, dando límites cuantitativos. La restricción que se impone no es una específica esto generaliza los resultados tradicionales dados en la literatura donde se toma por restricción la energía. %(cualquier libro, año).
 Estos resultados no miran la evolución del sistema pero debido a que la mayoría de los estados del universo están termalizados se preve que no importa el estado inicial cualquier evolución llevará al estado a uno en el equilibrio.
 
-(
-comentario sobre esto.
-)
+%(
+%comentario sobre esto.
+%)
 
 Ya poniendo las ideas más explícitas se supone tener un sistema cuántio aislado y grande que se llamará el universo, que se descompone en dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho maś grande que la del sistema $S$. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica estas condiciones se pueden poner como restricciones en el espacio de Hilbert, restricción de los estados posibles:
 
@@ -85,7 +85,7 @@ d_{E}^{eff}= \frac{1}{Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
 
 Donde $\Omega_{E}= Tr_{S} \mathcal{E_{R}}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio acesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{r}^{-\frac{1}{3}}$.\\
 
-Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico. (Dar comentario sobre lo intuitivo de las cotas)\\
+Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico.\\ %(Dar comentario sobre lo intuitivo de las cotas)\\
 \section{Lema de Levy}
 El teorema anterior tiene como base principal el lema de Levy (referencias). Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:\\
 
@@ -230,7 +230,7 @@ se llega a la conclusión que
 \norm{M}_{1}^{2} = n^{2}(\frac{1}{n} \sum_{i}| \lambda_{i} | )^{2} \le  n^{2} \frac{1}{n} \sum_{i} | \lambda_{i} |^{2}= n\norm{M}_{2}^{2}
 \end{equation}
 Gracias a lo anterior se tiene que 
-\begin{equation}
+\begin{equation}\label{eq:0}
 \norm{\rho_{S} - \Omega_{S}}_{1} \le \sqrt{d_{S}}\norm{\rho_{S} - \Omega_{S}}_{2}
 \end{equation}
 Esta relación se usará un poco más adelante.\\
@@ -283,7 +283,7 @@ F_{SS'} =\sum_{S,S'} \ket{s'}\bra{s}_{S} \otimes \ket{s}\bra{s'}_{S'}
 
 Entonces
 
-\begin{equation}
+\begin{equation} \label{eq:1}
 \sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}= Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})
 \end{equation}
 
@@ -304,9 +304,62 @@ la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalizac
 \begin{equation}
 V= \langle \ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi} \rangle = \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim}.
 \end{equation}
+luego 
+\begin{equation}
+\langle Tr (\rho)^{2} \rangle = Tr_{RR'}((\frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim})(F_{SS'} \otimes \mathbbm{1}_{EE'}))
+\end{equation}
+Al ser $\Pi_{RR'}^{sim}$ un proyector simétrico se puede cambiar por 
+\begin{equation}
+\Pi_{RR'}^{sim}=\frac{1}{2}(\mathbbm{1}_{RR'}+(F_{RR'} )
+\end{equation}
+donde $F_{RR'}$ es el operador "flip" $R \longleftrightarrow R'$. Como $F_{RR'}$ es el operador que actua sobre $RR'$ este puede escribirse como $F_{RR'}= \mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'})$.
+
+Compilando lo anterior
+
+\begin{equation}
+\langle Tr \rho^2 \rangle = Tr_{RR'} \Bigg( \frac{1}{d_{R}(d_{R}+1)} \big( \mathbbm{1}_{RR'}+\mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'}) \big)  (F_{SS'}\otimes \mathbbm{1}_{EE'})   \Bigg)
+\end{equation}
+
+Distribuyendo y sabiendo que al hacer dos veces la operación "flip"  es lo mismo que no haber hecho nada se sigue
+
+\begin{equation}
+Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'}\otimes F_{EE'})  \Bigg).
+\end{equation}
+
+Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a:
+\begin{equation}
+
+	Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)}(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big) 
+	+ Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Big)\\
+	\le Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big)
+	+ Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big)
+
+\end{equation}
 
 
-(poner luego de las demostraciones Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.)
+Recordando que $\frac{\mathbbm{1}_{R}}{d_{R}}= \mathcal{E}_{R}$ y $\Omega_{S}=Tr_{E}(\mathcal{E}_{R})$ se tiene que:
+
+\begin{align}
+Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big) + Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big) \notag \\ = Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
+\end{align}
+Por la ecuación \ref{eq:1} se tiene lo que se quería
+\begin{equation}
+\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \Omega_{S}^{2} +Tr_{E} \Omega_{E}^{2}
+\end{equation}
+y esto es lo mismo que 
+\begin{equation}
+\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \langle \roh_{S} \rangle ^{2}  + Tr_{E} \langle \rho_{E}\rangle^{2}
+\end{equation}
+
+con el resultado \ref{eq:0} se obtiene
+\begin{equation}
+\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{d_{S}(Tr_{E} \langle \rho_{E} \rangle^{2})}
+\end{equation}
+Sea $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ la cual es la dimensión efectiva del ambiente en el estado canónico este mide la dimensión del espacio en el que el ambiene es más probable de estar, como $\langle \rho_{E} \rangle = \Omega_{E}$ se concluye que 
+\begin{equation}
+\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{\frac{d_{S}}{d_{E}^{eff}}}
+\end{equation}
+Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.
 
 
 
