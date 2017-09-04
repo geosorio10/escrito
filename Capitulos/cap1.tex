@@ -203,7 +203,7 @@ Nombrando a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle $ 
 Prob[\norm{\rho_{S} -\Omega_{S}}_{1} \ge \mu] \le \mu'.
 \end{equation}
 Ahora para poder obtener el resultado se debe acotar $\mu$ .Se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$ porque $d_{R}>>1$. Se quiere ahora ponerle un cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle$ para esto primero se acotará dando los límites por las trazas y luego se calcularán estas para poder dejar la cota en terminos de las dimensiones del sistema. Primero se procederá a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$ esto se hará para tener una facilidad de manejo mayor ya que la segunda norma(Hilbert-Schmidt) permite un mejor tratamiento.\\
-La relación entre estas dos normas se puede ver desde el manejo de amtrices. Sea $M$ una matriz $nxn$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
+La relación entre estas dos normas se puede ver desde el manejo de amtrices. Sea $M$ una matriz $nX	n$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
 \begin{equation}
 Tr M= \sum_{i} \lambda_{i} 
 \end{equation}
@@ -211,11 +211,102 @@ con esto se puede escribir de manera explícita la norma de traza
 \begin{equation}
 \norm{M}_{1}^2=(Tr|M|)^{2}=n^{2} (\frac{1}{n}\sum_{i} |\lambda_{i}|)^{2}.
 \end{equation}
-Como la función $x^{2}$ es convexa se puede usar la desigualdad de Jensen que	
+Como la función $x^{2}$ es convexa se puede usar la desigualdad de Jensen que dice: sean $a_{1},a_{2},...,a_{n} \le 0$ constantes y $a_{1} +...+a_{n}=1$ sea $f: I \to \mathbb{R}$ donde I es un intervalo, $x_{1},...,x_{n} \in I$ entonces
+\begin{equation}
+f(a_{1}x_{1}+...+a_{n}x_{n}) \le a_{1}f(x_{1})+...+a_{n}f(x_{n}),
+\end{equation}
+
+con esto se puede decir que
+
+\begin{equation}
+(\frac{1}{n}\sum_{i} |\lambda_{i}|)^{2} \le \frac{1}{n}\sum_{i} |\lambda_{i}|^{2}.
+\end{equation}
+Pero se sabe que 
+\begin{equation}
+\sum_{i} |\lambda_{i}|^2=Tr(|M|^2)=\norm{M}_{2}^{2}
+\end{equation}
+se llega a la conclusión que 
+\begin{equation}
+\norm{M}_{1}^{2} = n^{2}(\frac{1}{n} \sum_{i}| \lambda_{i} | )^{2} \le  n^{2} \frac{1}{n} \sum_{i} | \lambda_{i} |^{2}= n\norm{M}_{2}^{2}
+\end{equation}
+Gracias a lo anterior se tiene que 
+\begin{equation}
+\norm{\rho_{S} - \Omega_{S}}_{1} \le \sqrt{d_{S}}\norm{\rho_{S} - \Omega_{S}}_{2}
+\end{equation}
+Esta relación se usará un poco más adelante.\\
+
+Volviendo al cálculo de $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle$  se recuerda que $ \langle f^{2} \rangle-\langle f \rangle^{2} \ge 0$ donde $\langle f \rangle = \int_{\mathcal{M}} f(x)p(x)dx$. Tomando a $f$ como $f= \norm{\rho_{S}-\Omega_{S}}_{2}$ entones
+
+\begin{equation}
+\langle \norm{ \rho_{S}-\Omega_{S} }_{2} \rangle \le \sqrt{ \langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}
+\end{equation}
+
+acordándose que este promedio es tomado a los estados $\ket{\phi}$, $\Omega_{S}$ es constante.Por hermiticidad de $\rho_{S}-\Omega_{S}$ 
+
+\begin{equation}
+\sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle} = \sqrt{\langle Tr(\rho_{S}-\Omega_{S})^{2} \rangle}
+\end{equation}
+
+\begin{equation}
+\sqrt{\langle Tr( \rho_{S}-\Omega_{S})^{2} \rangle}= \sqrt{\langle Tr(\rho_{S})^{2}\rangle -2Tr(\langle \rho_{S} \rangle \Omega_{S})+Tr(\Omega_{S}^{2}) }
+\end{equation}
+
+ya que $\langle \rho_{S} \rangle=\Omega_{S}$
+
+\begin{equation}
+\langle \norm{ \rho_{S}-\Omega_{S} }_{2}\rangle \le \sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}= \sqrt{\langle Tr(\rho_{S})^{2}\rangle -Tr(\Omega_{S}^{2}) }
+\end{equation}
+
+Por la relación entre la norma de traza y la norma de Hilbert-Schmidt se concluye lo que se quería
+
+\begin{equation}
+\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle \le \sqrt{d_{S}( \langle Tr(\rho_{S})^{2}\rangle -Tr(\Omega_{S}^{2}) ) }.
+\end{equation}
+\\
+Aunque ya se ha acotado $\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle$ se quiere relacionar esta cota con las dimensiones del sistema para esto se procederá a demostrar la desigualdad
+\begin{equation}
+\langle Tr \rho_{S}^{2} \rangle \le Tr \langle \rho_{S} \rangle^{2} +Tr \langle \rho_E \rangle^{2}
+\end{equation}
+
+Para poder hacer este cálculo se introduce una segunda copia del espacio de Hilbert. Ahora el problema se trabaja en $\mathcal{H_{R}} \otimes \mathcal{H_{R'}}$, donde $\mathcal{H_{R'}} \subseteq \mathcal{H_{S'} \otimes H_{E'}}$.
+Percatándose de lo siguiente
+
+\begin{equation}
+Tr_{S} (\rho_{S})^2 = \sum_{k} (\rho_{kk})^{2} = \sum_{k,l,k',l'}(\rho_{kl})(\rho{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}.
+\end{equation}
+
+Sea $F_{SS'}$ la operación "flip" $S \longleftrightarrow S'$:
+
+\begin{equation}
+F_{SS'} =\sum_{S,S'} \ket{s'}\bra{s}_{S} \otimes \ket{s}\bra{s'}_{S'}
+\end{equation}
+
+Entonces
+
+\begin{equation}
+\sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}= Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})
+\end{equation}
+
+\begin{equation}
+Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})=Tr_{RR'}((\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})_{RR'}(F_{SS'} \otimes \mathbbm{1}_{EE'}))
+\end{equation}
+
+Pero como se quiere $\langle Tr (\rho)^{2} \rangle= \int Tr (\rho)^{2} d\phi $. Entonces para resolver esto se requiere saber $V=\int (\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})d\phi$. V puede representarse como:
+
+\begin{equation}
+V= \alpha \Pi_{RR'}^{sim} + \beta \Pi_{RR'}^{anti},
+\end{equation}
+$\alpha$ y $\beta$ son constantes donde $\Pi_{RR'}^{sim/anti}$ son proyectores en el subespacio simétrico y antisimétrico de $\mathcal{H_{R} \otimes H_{R'}}$. Esto es posible por la invarianza unitaria de V. Debido a que 
+\begin{equation}
+(\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})\frac{1}{\sqrt{2}} ( \ket{ab} -\ket{ba})=0  \forall a,b,\phi
+\end{equation}
+la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalización de $V$, $\alpha= \frac{1}{dim(RR'_{sim})}$ la dimensión está dada por el álgebra lineal $dim(RR'_{sim})= \frac{d_{R}(d_{R}+1)}{2}$.Entonces
+\begin{equation}
+V= \langle \ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi} \rangle = \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim}.
+\end{equation}
 
 
-
-(poner luego de las demostraconesCuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.)
+(poner luego de las demostraciones Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.)
 
 
 
