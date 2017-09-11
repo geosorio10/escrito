@@ -9,8 +9,31 @@ Ya con resultados del capítulo anterior sobre: la mayoría de los estados puros
 
 \textbf{Independencia del ambiente}: El  estado de equilibrio del sistema no debería depender exactamente del estado inicial del baño. Esto quiere decir que el baño debe tener unos parámetros macroscópicos (como la temperatura) tales que al final llegan al equilibrio el estado dependa de la temperatura del baño. Con esto se puede restringir un poco más a lo que se llamará equilibrio.Esta idea también es proveniente de lo que normalmente se espera del equilibrio porque los parámetros macroscópicos son los que en general se tienen completamente especificados y se ve que para los mismos se tiene un mismo equilibrio. El estado exacto del baño no debería jugar un papel  tan importante ya que para los mismos parámetros macroscópicos pueden haber varios estados del baño que concuerden con ellos. Como se supone que con ciertos parámetros macroscópicos dados  un subsistema llegará al equilibrio sin importar cual ha sido su estado inicial. Pueden dos subsistemas preparados idénticamente haber sido iniciados en un estado A y el otro en el estado B, el equilibrio se obtendrá así hayan empezado de maneras diferentes. Esto motiva lo siguiente
 
+\textbf{Independencia del estado del subsistema}:Si el subsistema es pequeño en comparación con el ambiente el estado de equilibrio del subsistema debería ser independiente de su estado inicial.
 
+Pero para poder corroborar y unir estas ideas con los resultados ya bien conocidos se impone una última restricción
 
+\textbf{Forma Boltzmanniana del estado de equilibrio}: Bajo condiciones del estado inicial y el hamiltoniano, el estado de equilibrio del subsistema puede ser escrito como $\rho_{S}= \frac{1}{Z} \exp(-\frac{H_{S}}{k_{B}T})$la forma familiar ya conocida.
+Descomponiendo el problema de la termalización de esa forma permite ver cada uno de los aspectos por separado además de darle una generalidad a todo el tratamiento sin tener que restringirse a situaciones que usualmente se le asocian a la termalización. Por ejemplo no se debe quedar en el régimen de corta o débil interacción entre el sistema y el baño; decir que el baño es uno típico (Dado una temperatura o rango de energía), la energía puede llegar a ser una cantidad extensiva. Pueden tomarse situaciones en los que el sistema no llegue a equilibrio.
+Se mostrará con suposiciones no muy fuertes que los primeros dos supuestos(Equilibrio e independencia del ambiente) son propiedades de sistemas cuánticos.
+
+\subsection{contexto y definiciones}
+Nociones que se usarán
+
+\textbf{EL sistema}: Se tiene un sistema cuántico grande descrito por un espacio de Hilbert $\mathcal{H}$.Se tomo un subsistema pequeño $S$ y lo demás será elambiente $E$. Esto lleva a descomponer $\mathcal{H}$ como $\mathcal{H}=\mathcal{H}_{S} \otimes \mathcal{H}_{E}$, con dimensiones $d_{S}$ y $d_{E}$ respectivamente. Para evitar espacios de dimensión infinita se introduce un tope para las altas energías así mantener la dimensión finita. Además se eliminarían términos de interacción del hamiltoniano que lo lleven a subespacios no permitidos. Aún no se ha especificado nada sobre el subsistema o el ambiente. Cualquier descomposición del espacio de Hilbert especifica un subsistema y un baño. El subsistema S puede ser cualquier cosa desde una partícula hasta el conjunto de partículas distribuidas por todo el baño.
+
+\textbf{El Hamiltoniano}: la evolución de todo el sistema viene dado por 
+\begin{equation}
+H= \sum_{k} E_{k} \ket{E_{k}} \bra{E_{k}},
+\end{equation}
+$\ket{E_{k}}$ es el estado propio con energía $E_{k}$.Al Hamiltoniano anterior se le dará la siguiente y única restricción: Que tenga brechas de energías no degeneradas. Esta restricción quiere decir que  un hamiltoniano tiene brechas de energía no degeneradas si para cualquier diferencia de energías propias que sea diferente acero determina los valores de energía involucrados. Por ejemplo si se tiene 4 valores propios de energía $E_{k}, E_{l},E_{m},E_{n}$ entonces $E_{k}-E_{l}=E_{m}-E_{n} $ implica $k=l$ y $m=n$, o $k=m$ y $l=n$. Esto implica que los niveles de energía no son iguales para diferentes estados (no son degenerados).
+Esta restricción del Hamiltoniano implica que el subsistema y el baño no importa como se divida siempre van a estar interactuando. Esto excluye los hamiltonianos no interactuantes ($H=H_{S}+H_{E}$). Este tipo de hamiltonianos tienen muchas brechas de energía degeneradas. véase que si no hay interacción en el hamiltoniano la energía es $E=E_{S}+E_{E}$ sean $E_{1},E_{2},E_{3},E_{4}$ tales que se satisfaga $E_{i}=E_{i}^{S}+E_{i}^{E}$ $i=1,2,3,4$. Esto lleva a una brecha degenerada. Este supuesto no es tan fuerte como pueda llegar a parecer porque cualquier perturbación que se le haga al Hamiltoniano romperá las degeneraciones sin importar lo pequeña que seala perturbación. Aunque estos cambios se tarden en hacer efecto sobre la evolución del sistema las escalas temporales no son importantes en este momento. Con este supuesto se puede hablar de interacciones complejas que por lo general no son muy tratados como interacciones de larga distancia o interacciones entre todas las partículas esto hace que la energía no llegue a ser una cantidad extensiva.
+\textbf{Notaciones} El estado global puro del sistema se escribirá como $\ket{\phi(t)}$ en un tiempo t. Su matriz de densidad se escribirá $\rho(t)=\ket{\phi(t)}\bra{\phi(t)}$. El estado del subsistema se encontrará al sacarle la traza $\rho_{S}=Tr_{B} \rho(t)$ de manera similar el estado del ambiente está dado por $\rho_{B}=Tr_{S} \rho(t)$. El promedio temporal del sistema está dado por 
+\begin{equation}
+\omega= \langle \rho(t) \rangle= \lim_{\tau \to \infty} \frac{1}{\tau} \int_{0}^{\tau} \rho (t)dt
+\end{equation}
+de la misma forma se define $\omega_{S}$ y $\omega_{B}$ como el promedio temporal respectivamente para el sistema y el baño.
+\subsection{Equilibración}
 
 
 
