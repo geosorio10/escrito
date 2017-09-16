@@ -34,12 +34,27 @@ Esta restricción del Hamiltoniano implica que el subsistema y el baño no impor
 \end{equation}
 de la misma forma se define $\omega_{S}$ y $\omega_{B}$ como el promedio temporal respectivamente para el sistema y el baño.
 \subsection{Equilibración}
-
-
-
-
-
-
+El punto principal que se quiere dar a entender viene en forma del siguiente resultado: Para casa estado puro de un sistema cuántico que se compone por un número grande de estados de energía propios y el cual evoluciona bajo un Hamiltoniano que tiene brechas de energías no degeneradas y por lo demás arbitrario, es tal que cada subsistema pequeño llegará al equilibrio. Esto quiere decir que todos los subsistemas pequeños cumplirán con las ideas anteriores sobre equilibrio exactamente que el sistema evolucionará a un estado particular y se quedará cercano a él o en este durante la mayoría del tiempo.
+Hay en este resultado un requerimiento que anteriormente no fue nombrado, el requerimiento de una cantidad grande de estados propios de energía. La necesidad de que el sistema tenga muchos estados propios de energía es equivalente a decir que el estado variará bastante durante su evolución temporal. viendo el caso trivial de un solo estado propio de energía es claro que este no cambiará para nada. Este caso tan particular no llega a ser de mucho interés porque en el sentido anterior de equilibrio no cambia para nada y se diría que este se encuentra ya en equilibrio. Los resultados que se quieren mostrar tomaŕan estados lejanos de equilibrio sistemas que no se encuentre en el pero aquí llegan las otras suposiciones hechas anteriormente para que el subsistema no dependa del estado inicial este debe perder la información entonces si el subsistema empieza lejano al equilibrio este pasará  por muchos estados en su camino al equilibrio lo cual implica que todo el sistema también evolucione en muchos estados. El hecho de que el subsistema haya llegado al equilibrio no significa que el sistema deje de evolucionar debido a la unitaridad este debe seguir evolucionando con la misma proporción de antes. Para que los estados en los que el subsistema se encuentre en no equilibrio ocurran poco, los estados del universo en los que el subsistema se encuentre en esas condiciones deben ser una fracción muy pequeña del total de estados por donde pasa el universo. Por esto el universo debe pasar por muchos estados y el requerimiento de que tenga muchos estados propios de energía se valida.
+También se muestra que lo siguiente es suficiente: Cuando el estado de todo el sistema pasa por muchos estados diferentes cualquier estado pequeño del subsistema alcanza el equilibrio.
+Otra forma de saber qué pasa con el sistema es observar qué ocurre con el ambiente. por unitaridad el sistema debe seguir evolucionando aunque el subsistema y se encuentre en equilibrio y no cambie. Esta Evolución puede darse por el cambio de correlaciones entre el subsistema y el baño o por cambios en el estado del baño. Lo que se muestra es: cuando el estado del baño pasa por muchos estados diferentes, cualquier subsistema alcanza el equilibrio.Con estas dos ideas se muestra que la equilibración ocurre en estados productos iniciales entre el subsistema y el baño, para casi todos los estados iniciales del baño.
+La noción de evolución por muchos estados diferentes se puede escribir matemáticamente por la dimensión efectiva del estados promediado temporalmente $d^{eff}(\omega)$ donde $\omega=\langle \rho(t) \rangle_{t}$. La relación que se puede ver con los estados propios de energía es 
+\begin{equation}
+\ket{\psi(t)} = \sum_{k} c_{k} e^{-i\frac{E_{k}t}{\hbar}} \ket{E_{k}}
+\end{equation}
+luego el operador de densidad es 
+\begin{equation}
+\rho(t)=\sum_{k,l} c_{k} c_{l}^{*} e^{-i(E_{k}-E_{l})t}\ket{E_{k}} \bra{E_{l}}
+\end{equation}
+entonces su promedio temporal es, recordando la condición de no degeneración de los niveles de energía
+\begin{equation}
+\omega= \sum_{k} |c_{k}|^{2} \ket{E_{k}} \bra{E_{k}}
+\end{equation}
+entoces la dimensión efectiva es 
+\begin{equation}
+d^{eff}(\omega)=\frac{1}{Tr(\omega^{2})}=\frac{1}{\sum_{k} |c_{k}|^{4} }
+\end{equation}
+De la misma manera el hechode que el baño pase por muchos estados diferentes viene dado por $d^{eff}(\omega_{B})$ por $\omega_{B}=\langle \rho(t) \rangle_{t}$. Como se espera que el baño al evolucionar pase por muchos más estados dado que el subsistema debe seguir evolucionando y el subsistema quede en un espacio de estados más pequeños se preve que $d^{eff}(\omega_{B})$ sea mucho más grande que $d_{S}$. Para formular ya el primer teorema se quiere ver la distancia entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}= \langle \rho_{S}(t) \rangle_{t}$. Como se espera que $\rho_{S}(t) $ vaya fluctuando alrededor de $\omega_{S}$ se analizará el promedio temporal de su distancia $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ cuando este sea muy pequeño el subsistema debe pasar gran parte del tiempo muy cerca a $\omega_{S}$. Esto quiere decir que el subsistema se equilibrará(según la definición anterior) a $\omega_{S}$.
 
 
 
