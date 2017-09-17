@@ -323,33 +323,31 @@ Compilando lo anterior
 Distribuyendo y sabiendo que al hacer dos veces la operación "flip"  es lo mismo que no haber hecho nada se sigue
 
 \begin{equation}
-Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'}\otimes F_{EE'})  \Bigg).
+Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Bigg).
 \end{equation}
 
 Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a:
 
-\begin{equation}
+\begin{multline}
 
-	Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)}(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big) 
-	+ Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Big)\\
-	\le Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big)
-	+ Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big)
-
-\end{equation}
+Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)}(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big) + Tr_{RR'} \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Big)\\
+\le Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big) + Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big)
+\end{multline}
 
 
 Recordando que $\frac{\mathbbm{1}_{R}}{d_{R}}= \mathcal{E}_{R}$ y $\Omega_{S}=Tr_{E}(\mathcal{E}_{R})$ se tiene que:
 
-\begin{align}
-Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big) + Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big) \notag \\ = Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
-\end{align}
+\begin{multline}
+Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big) + Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big) \notag \\
+ = Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
+\end{multline}
 Por la ecuación \ref{eq:1} se tiene lo que se quería
 \begin{equation}
 \langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \Omega_{S}^{2} +Tr_{E} \Omega_{E}^{2}
 \end{equation}
 y esto es lo mismo que 
 \begin{equation}
-\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \langle \roh_{S} \rangle ^{2}  + Tr_{E} \langle \rho_{E}\rangle^{2}
+\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \langle \rho_{S} \rangle ^{2}  + Tr_{E} \langle \rho_{E}\rangle^{2}
 \end{equation}
 
 con el resultado \ref{eq:0} se obtiene
