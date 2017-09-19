@@ -1,92 +1,104 @@
 \chapter{El entrelazamiento y la mecánica estadística}
 
-La idea principal que se quiere mostrar es cómo se puede reemplazar el postulado de probabilidades iguales por un principio canónico general basado en el entrelazamiento cuántico, basado en el entrelazamiento del sistema y el ambiente.
+La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista dadas las ecuaciones de movimiento. Pero lo que sorprende al tratar con  sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos. La conexión que hay entre el determinismo y estas probabilidades es una discusión que no se ha podido solucionar dado a que han existido varias soluciones pero todas con sus fallas (libro de historia de la termodinámica). Los métodos típicos requieren hablar de promedios de ensamble, promedios temporales, aleatoriedad. Todos estos conceptos siguen siendo muy debatidos y parecería que no solucionará ninguna pregunta seguir con ellos. Por eso se ha estado buscando nuevos fundamentos para la mecánica estadística.
+\\
+La mecánica estadística tiene como base el postulado de probabilidades iguales este viene dado por la ignorancia subjetiva que el observador del sistema tiene. Aunque la mecánica estadística no tiene problemas al compararse sus resultados teóricos con el experimento, el cimiento filosófico en el que reposa da mucho de que hablar dando así posturas diferentes que desde los inicios de su teoría no han sido unidos. En este capítulo se expondrá cómo Popescu et al. en (Popescu et al. 2006) muestran una posible luz sobre el problema de unificar las perspectivas de la mecánica estadística. La idea principal que se quiere mostrar es cómo se puede reemplazar el postulado de probabilidades iguales por un principio canónico general basado en el entrelazamiento cuántico, al poner el entrelazamiento cuántico como nueva cimiento ya no se tiene probabilidades subjetivas sino objetivas dadas por la teoría  cuántica. Este nuevo enfoque permite evitar problemas con la ignorancia subjetiva pero también esquiva el problema de ergodicidad gracias a esto se puede ver un fundamento más claro y sólido. 
+\\
+Este capítulo solo se enfocará en mostrar cómo la mayoría de los estados del universo están termalizados sin hablar en ningún momento de la evolución de estos estados. Si en general los estados del universo están termalizados se esperaría que cualquier evolución lleve los estados al equilibrio pero en el siguiente capítulo se darán especificaciones de esta conjetura junto con detalles que hacen ver las complicaciones de formalizar las ideas intuitivas que se tienen sobre el equilibrio.
 
-La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista. Pero lo que sorprende al tratar sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos. La conexión que hay entre el determinismo y estas probabilidades es una discusión que lleva desde los inicios de la termodinámica. Aunque el planteamiento que se mostrará no necesita de los métodos típicos de la mecánica estadística como por ejemplo: aleatoriedad subjetiva, promedio sobre el ensamble o promedio temporal; Esto le da una fuerza a estas ideas ya que no debe entrar en problemas de ergodicidad. 
 
-Este nuevo enfoque se tiene un universo que está compuesto por el sistema y el ambiente. Dando como condición que el ambiente sea los suficientemente grande. Este universo está descrito por un estado cuántico puro ( se conoce el estado de manera exacta) que obedece una restricción global, que el sistema alcance el equilibrio térmico por medio de la interacción mutua (termalización) es un producto del entrelazamiento del sistema y el ambiente (Popescu et al,2006). Más adelante se le dará una definición más rigurosa que ayudará a dar cotas para la expresión "ambiente suficientemente grande". Con este enfoque se quiere formular un principio canónico general  el sistema estará termalizado para casi todos los estados puros del universo, dando límites cuantitativos. La restricción que se impone no es una específica esto generaliza los resultados tradicionales dados en la literatura donde se toma por restricción la energía. %(cualquier libro, año).
-Estos resultados no miran la evolución del sistema pero debido a que la mayoría de los estados del universo están termalizados se preve que no importa el estado inicial cualquier evolución llevará al estado a uno en el equilibrio.
+\subsection{Definiciones}
 
-%(
-%comentario sobre esto.
-%)
+Antes de seguir sería preciso dar la notación que se usará a lo largo de este capítulo y el siguiente. Cuando se tenga un sistema cuántico grande descrito por un espacio de Hilbert $\mathcal{H}$  este se llamará el universo. Este universo será descompuesto en  dos subsistemas. El primero se llamará el sistema $S$  y el segundo se le dará el nombre de ambiente $E$, en ocasiones $S$ se le dirá subsistema y $E$ se le podrá llamar baño estos nombres son equivalentes a los anteriores. Esto lleva a descomponer $\mathcal{H}$ como $\mathcal{H}=\mathcal{H}_{S} \otimes \mathcal{H}_{E}$, con dimensiones $d_{S}$ y $d_{E}$ respectivamente, se supone que la dimensión del ambiente es mucho mayor que la del sistema. Para evitar espacios de dimensión infinita se introduce un tope para altas energías y así mantener la dimensión finita. Además se eliminarían términos de interacción del Hamiltoniano que lo lleven a subespacios no permitidos. Aún no se ha especificado nada sobre el subsistema o el ambiente (Excepto las proporciones de sus dimensiones)  esto permite decir que cualquier descomposición del espacio de Hilbert especifica un subsistema y un baño. El subsistema S puede ser cualquier cosa desde una partícula hasta el conjunto de partículas distribuidas por todo el baño.
+\\
+El estado global puro del universo se escribirá como $\ket{\phi(t)}$ en un tiempo t y su matriz de densidad se escribirá $\rho(t)=\ket{\phi(t)}\bra{\phi(t)}$. El estado del sistema se encontrará al hacer una traza parcial del ambiente sobre el estado del universo $\rho_{S}=Tr_{B} \rho(t)$; similarmente el estado del ambiente está dado por $\rho_{B}=Tr_{S} \rho(t)$. El promedio temporal del universo es:
+\begin{equation}
+\omega= \langle \rho(t) \rangle= \lim_{\tau \to \infty} \frac{1}{\tau} \int_{0}^{\tau} \rho (t)dt
+\end{equation}
+de manera análoga $\omega_{S}$ y $\omega_{B}$ son el promedio temporal para el sistema y el ambiente respectivamente. También se tiene el promedio $\langle . \rangle_{\phi}$ que es sobre todos los estados $\ket{\phi} \in \mathcal{H}_{R}$ de acuerdo a la medida estándar (unitariamente invariante). Esta medida se usa para hallar volúmenes de conjuntos de estados.
 
-Ya poniendo las ideas más explícitas se supone tener un sistema cuántio aislado y grande que se llamará el universo, que se descompone en dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho maś grande que la del sistema $S$. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica estas condiciones se pueden poner como restricciones en el espacio de Hilbert, restricción de los estados posibles:
+\section{Idea conceptual}
+
+Este nuevo tratamiento de los fundamentos de la mecánica estadística se tiene un universo. Dando como condición que el ambiente sea los suficientemente grande. Este universo está descrito por un estado cuántico puro (se conoce el estado de manera exacta) que obedece una restricción global. Se plantea que el sistema alcanza el equilibrio térmico por medio de la interacción mutua (termalización) es producto del entrelazamiento del sistema y el ambiente (Popescu et al,2006). Lo que se presentará más adelante es una definición más rigurosa que ayudará a dar cotas para la expresión "ambiente suficientemente grande".Esta idea permite formular un principio canónico general: el sistema estará termalizado para casi todos los estados puros del universo. esto es soportado por límites cuantitativos. La restricción que se impone no es una específica, esto generaliza los resultados tradicionales dados en la literatura donde se toma por restricción la energía (Kardar,2009).
+\\
+Ya poniendo lo dicho en un contexto un poco más matemático, supone tener un universo asilado y bastante grande. Este tiene dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho maś grande que la del sistema. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica esto puede ponerse como restricciones en el espacio de Hilbert, restricción de los estados posibles:
 
 \begin{equation}
-\mathcal{H_{R}}\subseteq \mathcal{H_{S}}\otimes \mathcal{H_{E}},
+\mathcal{H}_{R}\subseteq \mathcal{H}_{S}\otimes \mathcal{H}_{E},
 \end{equation}
 
-Donde $\mathcal{H_{S}}$ y $\mathcal{H_{E}}$ son los espacios de Hilbert del sistema y el ambiente con dimension $d_{\mathcal{S}}$  y $d_{\mathcal{E}}$ respectivamente. Es bueno recalcar que $R$ es una restricción arbitraria generalmente se toma como la energía del universo.
-Ahora se define el estado equiprobable del universo bajo $R$ como
+Donde $\mathcal{H}_{S}$ y $\mathcal{H}_{E}$ son los espacios de Hilbert del sistema y el ambiente con dimension $d_{S}$  y $d_{E}$ respectivamente. Es bueno recalcar que $R$ es una restricción arbitraria generalmente se toma como la energía del universo. Ahora se define el estado equiprobable del universo bajo $R$ como:
 
 \begin{equation}
-\mathcal{E_{R}} = \frac{1}{d_{R}} \mathbbm{1_{\mathcal{R}}},
+\mathcal{E}_{R} = \frac{1}{d_{R}} \mathbbm{1}_{R},
 \end{equation}
 
-Donde $\mathbbm{1_{\mathcal{R}}}$ es el operador identidad (proyección) sobre el espacio de Hilbert  $\mathcal{H_{R}}$  que tiene dimensión $d_{\mathcal{R}}$. Esto se relaciona con el principio de probabilidades iguales porque este es el estado máximamente mezclado en $\mathcal{H_{R}}$ por ser así todos los estados bajo la restricción de R tienen la misma probabilidad de salir.
-
-Definimos $\Omega_{\mathcal{S}}$ como el estado canónico que está restringido por $R$ cuando el universo se encuentra en el estado $\mathcal{E_{R}}$.Esto significa que si se hace una traza parcial al universo sobre el ambiente da como resultado el estado canónico:
-\begin{equation}
- \Omega_{\mathcal{S}} =Tr_{\mathcal{E}} \mathcal{E_{R}}.
-\end{equation}
-
-Aquí se hace un supuesto importante y es que el universo está en un estado puro $\ket{\phi}$ y no en un estado mixto $\mathcal{E_{R}}$, esto quiere decir que se conoce todo lo que es permitido por la mecánica cuántica del universo si estuviese en un estado mixto significaría que nosotros no tenemos toda la información que se pudiese tener. Ahora lo que se quiere ver es que aun que el estado del universo sea puro el estado reducido del sistema,
+Donde $\mathbbm{1}_{R}$ es el operador identidad (proyección) sobre el espacio de Hilbert  $\mathcal{H}_{R}$  que tiene dimensión $d_{R}$. Esto se relaciona con el principio de probabilidades iguales porque este es el estado máximamente mezclado en $\mathcal{H}_{R}$ por ser así todos los estados bajo la restricción de $R$ tienen la misma probabilidad de salir.
+\\
+Definimos $\Omega_{S}$ como el estado canónico que está restringido por $R$ cuando el universo se encuentra en el estado $\mathcal{E}_{R}$. Esto significa que si se hace una traza parcial del ambiente al universo da como resultado el estado canónico:
 
 \begin{equation}
-\rho_{S}=Tr_{E}\ket{\phi}\bra{\phi} 
+ \Omega_{S} =Tr_{E} \mathcal{E}_{R}.
+\end{equation}
+\\
+Para lo que sigue se hace un supuesto importante  y es que el universo está en un estado puro $\ket{\phi}$ y no en un estado mixto $\mathcal{E}_{R}$, esto quiere decir que se conoce todo lo que es permitido por la mecánica cuántica del universo. Si estuviese en un estado mixto significaría que nosotros no tenemos toda la información que se pudiese tener. Ahora lo que se quiere ver es que  pese a que el estado del universo es puro el estado reducido del sistema
+
+\begin{equation}
+\rho_{S}=Tr_{E}\ket{\phi}\bra{\phi},
 \end{equation}
 
-se acerca al estado canónico para la gran mayoría de los casos 
+se acerca al estado canónico para la gran mayoría de los casos es decir:
 
 \begin{equation}
 \rho_{S} \approx \Omega_{S}.
 \end{equation}
-
-O sea que para casi todos los estados puros $\ket{\phi} \in \mathcal{H_{R}}$ del universo el sistema se comporta como si el universo estuviese en el estado mixto equiprobable $\mathcal{E_{R}}$. Siendo este el principio general canónico.
-
-Clarificando la idea, el estado canónico $\Omega_{S}$ del sistema es el estado del sistema cuando el universo se encuentra en el estado equiprobable $\mathcal{E_{R}}$. Se puede interpretar el principio general canónico como un principio que estipula que las probabilidades iguales del sistema son aparentes. Porque para casi cualquier estado del universo que sea puro, un subsistema de este universo que cumpla con ser lo suficientemente pequeño se comporta como si el universo estuviese en el estado equiprobable $\mathcal{E_{R}}$. Cabe recordar que aún no se ha especificado la restricción $R$ entonces todo este análisis es general, la restricción no necesariamente debe ser la energía u otras cantidades que se conserven. Esto hace que $\Omega_{S}$ no  deba ser obligatoriamente es el estado canónico usual, puede ser el gran canónico o cualquier otro que sea acorde con la restricción. Este principio puede ser de utilidad cuando la interacción entre el ambiente y el sistema no es débil como siempre se toma.
+\\
+Por consiguiente para casi todos los estados puros del universo $\ket{\phi} \in \mathcal{H}_{R}$ el sistema se comporta como si el universo estuviese en el estado mixto equiprobable $\mathcal{E}_{R}$. Este  es el principio general canónico. Clarificando lo esbozado, el estado canónico del sistema $\Omega_{S}$ es el estado del sistema cuando el universo se encuentra en el estado equiprobable $\mathcal{E}_{R}$. Se puede interpretar el principio general canónico como un principio que estipula que las probabilidades iguales del sistema son aparentes porque para casi cualquier estado del universo, que sea puro, un subsistema de este universo que cumpla con ser lo suficientemente pequeño se comporta como si el universo estuviese en el estado equiprobable $\mathcal{E}_{R}$. Cabe recordar que aún no se ha especificado la restricción $R$ entonces todo este análisis es general, la restricción no necesariamente debe ser la energía u otras cantidades que se conserven. Esto hace que $\Omega_{S}$ no  deba ser obligatoriamente el estado canónico usual, puede ser el gran canónico o cualquier otro que sea acorde con la restricción impuesta. Este principio puede ser de utilidad cuando la interacción entre el ambiente y el sistema no es débil o cuando las interacciones son complicadas el principio general canónico también aplica.
 
 \section{formulación matemática}
 
-Ahora se procederá a especificar lo dicho anteriormente en un contexto matemático. Lo primordial es decir cuál será la distancia que usaremos para darle un sentido de cercanía a los estados $\rho_{S}$ y $\Omega_{S}$. La distancia a usar es una bastante conocida en la teoría cuántica de la información, la distancia de traza. Esta se define como:
+Hasta ahora no se han entrado en los detalles ni en qué significa bastante pequeño o bastante grandes, ni tampoco se ha demostrado el principio general canónico. En esta sección se orientará en los detalles matemáticos, las herramientas usadas y la demostración de los teoremas. En la siguiente sección se dará una perspectiva más física a lo hecho aquí.
+\\
+Para empezar se debe decir cuál será la distancia que usaremos para darle un sentido de cercanía a los estados $\rho_{S}$ y $\Omega_{S}$. La distancia a usar es una bastante conocida en la teoría cuántica de la información, la distancia de traza. Esta se define como:
 \begin{equation}
 D(\rho_{S}, \Omega_{S})= \frac{1}{2} Tr |\rho_{S} -\Omega_{S}|=\frac{1}{2}Tr\sqrt{(\rho_{S} -\Omega_{S})^{\dag}(\rho_{S} -\Omega_{S})}.
 \end{equation}
 
-Esta medida cuantifica que tan difícil es diferenciar $\rho_{S}$ y $\Omega_{S}$ por mediciones cuánticas. Un poco de notación $\langle . \rangle$ es el promedio sobre todos los estados $\ket{\phi} \in \mathcal{H_{R}}$ de acuerdo a la medida estandar(unitariamente invariante). Esta medida se usa para hallar volúmenes de conjuntos de estados. Luego por esto se sabe que $\Omega_{S} = \langle \rho_{S} \rangle $.
-
-Entonces el teorema central de este capítulo es:\\
-
-\textbf{Teorema 1:}Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H_{R}} \subseteq \mathcal{H_{S}} \otimes \mathcal{H_{E}} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr \mathcal{E_{R}}$ esta dado probabilísticamente por 
+Esta distancia de traza se relaciona con la distancia de norma de manera sencilla
 
 \begin{equation}
-Prob[  \norm{\rho_{S} -\Omega_{S}}_{1} \geq \eta ] \leq \eta',
+\norm{\rho_{S}-\Omega_{S}}_{1}=2 D(\rho_{S}, \Omega_{S}).
+\end{equation}
+
+Teniendo ya una forma de darle sentido al concepto de que dos estados son cercanos entonces se puede plantear el teorema central de este capítulo:
+\\
+\begin{theorem} \label{teorema principal}
+Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H}_{R} \subseteq \mathcal{H}_{S} \otimes \mathcal{H}_{E} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr_{E}(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr_{E} ( \mathcal{E}_{R})$ esta dado probabilísticamente por 
+
+\begin{equation}
+Pr_{\phi} \{  \norm{\rho_{S} -\Omega_{S}}_{1} \geq \eta \} \leq \eta',
 \end{equation}
 
 Donde 
-
-\begin{equation}
-\norm{\rho_{S}-\Omega_{S}}_{1}=2 D(\rho_{S}, \Omega_{S})
-\end{equation}
 
 \begin{equation}
 \eta= \epsilon + \sqrt{ \frac{d_{S}}{d_{E}^{eff}} },
 \end{equation}
 
 \begin{equation}
-\eta'=2exp(-Cd_{R}\epsilon^{2}).
+\eta'=2\exp{-C d_{R} \epsilon^{2} }.
 \end{equation}
 
-y las constantes son: $ C=(18\pi^{3})^{-1}, d_{R} = dim \mathcal{H_{R}}, d_{S} = dim \mathcal{H_{S}} $. $d_{E}^{eff}$ es la medida efectiva del tamaño del ambiente,
+
+y las constantes son: $ C=(18 \pi^{3})^{-1}, d_{R} = \dim \mathcal{H}_{R}, d_{S} = \dim \mathcal{H}_{S} $. $d_{E}^{eff}$ es la medida efectiva del tamaño del ambiente,
 \begin{equation}
 d_{E}^{eff}= \frac{1}{Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
 \end{equation}
 
-Donde $\Omega_{E}= Tr_{S} \mathcal{E_{R}}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio acesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{r}^{-\frac{1}{3}}$.\\
-
-Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico.\\ %(Dar comentario sobre lo intuitivo de las cotas)\\
-\section{Lema de Levy}
+Donde $\Omega_{E}= Tr_{S} \mathcal{E}_{R}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
+\end{theorem}
+Para poder demostar el teorema \ref{teorema principal} se usará principalmente el lema de Levy. 
+\subsection{Lema de Levy}
 El teorema anterior tiene como base principal el lema de Levy (referencias). Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:\\
 
 \textbf{Lema de Levy:} Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera $\mathbb{S}^d$, y un punto $\phi \in \mathbb{S}^d $ es escogido de manera aleatoria uniforme, 
@@ -97,7 +109,7 @@ donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|
 
 Gracias a la normalización, los estados puros en $\mathcal{H_{R}}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$. Luego e puede aplicar este lema a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H_{R}}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad.\\
 
-\section{Demostración del teorema 1}
+\subsection{Demostración del teorema 1}
 Ya con el teorema de Levy como herramienta se usará este para poder demostrar el teorema 1. Para usar el teorema de Levy para el problema actual se dice que $f(\phi)= \norm{\rho_{S} - \Omega_{S}}_{1}$. Antes de seguir con la demostración se quiere dar la idea de qué habla la constante de Lipschitz que fue nombrada anteriormente. Para esto se debe ver qué significa que una función sea Lipschitz continua. \\
 La definición general de continuidad es: Sea $f: I \to \mathbb{R}$ donde $I$ puede ser un intervalo abierto $(a,b)$ o uno cerrado $[a,b]$, además $C \in I$. Se dice que $f$ es continua en $C \longleftrightarrow \forall \epsilon >0 $ $\exists$ $ \delta >0 $ tal que  $ |x-c|\longrightarrow |f(x)-f(c)|< \epsilon $. Esta es la definición que en general se maneja pero hay sutilezas en esta definición que no siempre son mostradas como por ejemplo que $\delta$ depende de donde se ponga el  punto $C$, esto se ve claramente en la siguiente función: $f: (0,1) \to \mathbb{R}$, $f(x)=\frac{1}{x} $ al $C$ estar más lejos del $0$ permite un $\delta$ más grande pero al acercarse al $0$ el $\delta$ debe ser más pequeño.
 La continuidad de Lipschitz permite que se defina un $\delta$ constante sin importar donde se encuentre el $C$. Se es Lipschitz continuo si 
@@ -362,10 +374,11 @@ Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pe
 
 
 
+\section{Significado físico}
 
+Distancia de traza esta medida cuantifica que tan difícil es diferenciar $\rho_{S}$ y $\Omega_{S}$ por mediciones cuánticas.
 
-
-
+Ya con esto se le da un significado cuantitativo de lo que se ha ido explicando hasta ahora. Además también se dan unas cotas explícitas a cuando se habla de la "mayoría" de los estados. Se tiene una cota exponencialmente pequeña  sobre la probabilidad de encontrar un estado lejano del canónico.\\ %(Dar comentario sobre lo intuitivo de las cotas)\\
 
 
 

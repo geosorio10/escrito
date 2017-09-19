@@ -2,6 +2,7 @@
 
 \documentclass[11pt]{book}
 \usepackage[paperwidth=17cm, paperheight=22.5cm, bottom=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm} %paquete para símbolo matemáticos
 \usepackage{amsmath,amsfonts}
 \usepackage{bbm}
@@ -21,7 +22,10 @@
             pdfproducer={Latex con hyperref},
             pdfcreator={pdflatex}]{hyperref}
 
-
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+ 
 
 \begin{document}
 
