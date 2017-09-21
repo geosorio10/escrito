@@ -208,16 +208,17 @@ f(\psi_{1})- f(\psi_{2})\leq g(\psi_{1})- g(\psi_{2}) \leq 4\sqrt[4]{d_{R}} |\ke
 \end{equation}
 entonces la constante de Lipschitz para $f$ está acotada por $4\sqrt[4]{d_{R}}$.
 Aplicando el lema de Levy a $f(\psi)$ y  por la observación $\Pr[x>a] \leq b$ y $x \geq y$ implica $\Pr[y>a] \leq b$ y sustituyendo la cota en $\langle f(\psi) \rangle_{\psi}$ obtenida arriba y limitando más esta 
-\begin{equation}
-\ln\Big( \Tr (\tilde{\$}[\ket{\psi}\bra{\psi}]^{2}) \Big) \geq \ln\Big( \Tr ( \$ [\ket{\psi}\bra{\psi}]^{2}) \Big)
-\end{equation}
+%-------
+%\begin{equation}
+%\ln\Big( \Tr (\tilde{\$}[\ket{\psi}\bra{\psi}]^{2}) \Big) \geq \ln\Big( \Tr ( \$ [\ket{\psi}\bra{\psi}]^{2}) \Big)
+%\end{equation}
 esto da 
 
-\begin{equation}
-Pr_{\psi} [ \ln (\Tr( \$ [\ket{\psi}\bra{\psi}]^{2})) > \ln \frac{2e^{\epsilon}}{d_{R}}  ] \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}})
+%\begin{equation}
+%Pr_{\psi} [ \ln (\Tr( \$ [\ket{\psi}\bra{\psi}]^{2})) > \ln \frac{2e^{\epsilon}}{d_{R}}  ] \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}})
 
-\end{equation}
-
+%\end{equation}
+%------
 Tomando la desigualdad que está dentro de los corchetes  multiplicándola por menos y tomando su exponencial se llega
 
 \begin{equation}
@@ -252,9 +253,8 @@ d^{eff}(\omega_{B}) \leq \frac{d^{R}}{4d_{S}}=\frac{d_{B}^{R}}{4d_{S}} >>d_{S} \
 \textbf{Independencia del estado inicial}
 LO que se ha mostrado hasta ahora ha sido como si el subsistema es pequeño este se equilibrará. Ahora el enfoque que se quiere mostrar es cual sería la dependencia del estado de equilibrio del subsistema. Hasta ahora el estado inicial podría hacer que el equilibrio sea un estado diferente dependiendo del inicial. Sea el estado de equilibrio del subsistema $\omega_{S}^{\psi}$.Como es conocido se desearía que el estado de equilibrio dependa solo de los parámetros macroscópicos y no del estado inicial microscópico.
 El teorema siguiente prueba que para casi todos los estados en un subsistema restringido llevan al mismo estado de equilibrio.
+
 \begin{theorem}
-
-
 i) Casi todos los estados iniciales de un subespacio restringido bastante grande llevan al mismo estado de equilibrio de un subsistema pequeño. En particula, con $\langle .\rangle_{\psi}$ siendo el promedio sobre estados puros aleatoriamente uniformes $\ket{\psi(0)} \in \mathcal{H}_{R} \subset \mathcal{H}_{S} \otimes \mathcal{H}_{B}$ u $\Omega_{S}= \langle \omega_{S}^{\psi} \rangle_{\psi}$ :
 \begin{equation}
 \langle D(\omega_{S}^{\psi}, \Omega_{S}) \rangle_{\psi} \leq \sqrt{\frac{d_{S} \delta}{4d_{R}}} \leq \sqrt{\frac{d_{S}}{4d_{R}}}
@@ -270,6 +270,29 @@ Pr_{\psi} \{ D(\omega_{S}^{\psi}, \Omega_{S}) > \frac{1}{2}\sqrt{\frac{d_{S} \de
 \end{equation}
 con $C'=\frac{2}{9 \pi^{3}}$ si se pone $\epsilon=d_{R}^{-1/3}$ da una distancia promedio pequeña con alta probabilidad cuando $d_{R}>>d_{S}$.
 \end{theorem}
+
+\textbf{Demostración i)}
+Se usa la relación ya establecida entre la distancia de traza y la distancia de Hilbert-Schmidt
+\begin{multline}
+\langle D(\omega_{S}, \langle \omega_{S} \rangle_{\psi}) \rangle_{\psi} \leq \langle \frac{1}{2} \sqrt{d_{S} \Tr (\omega_{S}, \langle \omega_{S} \rangle_{\psi})^{2}} \rangle_{\psi}\\
+\leq \frac{1}{2} \sqrt{d_{S} \langle \Tr (\omega_{S}, \langle \omega_{S} \rangle_{\psi})^{2} \rangle_{\psi}}
+\end{multline}
+ahora se prueban las cotas al término promediado
+
+\begin{multline}
+\langle \Tr (\omega_{S}, \langle \omega_{S} \rangle_{\psi})^{2} \rangle_{\psi} = \langle \Tr(\omega_{S}^{2})_{\psi} \rangle - \Tr_{S} (\langle \omega_{S}^{2} \rangle_{\psi})\\
+=\Tr (   (\langle \omega_{S} \otimes \omega_{S} \rangle_{\psi} - \langle \omega_{S} \rangle_{\psi} \otimes \langle \omega_{S} \rangle_{\psi} )F )\\
+= \Tr_{SS} \Big( \Tr_{BB} \Big( \$ \otimes \$ \Big[ \langle \ket{\psi}\bra{\psi} \otimes  \ket{\psi}\bra{\psi}\rangle_{\psi} - \frac{\Pi_{R}}{d_{R}} \otimes  \frac{\Pi_{R}}{d_{R}}  \Big]  \Big) F \Big)\\
+= \Tr_{SS} \Big( \Tr_{BB} \Big( \$ \otimes \$ \Big[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} - \frac{\Pi_{RR}}{d_{R}^{2}}  \Big]  \Big) F \Big)\\
+\leq \Tr_{SS} \Big(  \Tr_{BB} \Big( \$ \otimes \$ \Big[ \frac{\Pi_{RR}F}{d_{R}^{2}} \Big] \Big) F \Big)\\
+=  \sum_{kl}  \Tr_{SS} \Big(  \Tr_{BB} \Big( \ket{kl}\bra{kl}[ \frac{\Pi_{RR}F}{d_{R}^{2}}  \ket{lk}\bra{kl} \Big) F \Big)\\
+= \sum_{kl} \frac{\bra{kl}\Pi_{RR}\ket{lk}}{d_{R}^{2}} \Tr_{S}(\Tr_{B}(\ket{k}\bra{k}) \Tr_{B}(\ket{l}\bra{l}) )\\
+\leq \sum_{kl} \frac{\bra{k}\Pi_{R}\ket{l}\bra{l}\Pi_{R}\ket{k}}{d_{R}^{2}} \Tr_{S} \Big( \frac{(\Tr_{B}(\ket{k}\bra{k}))^{2}+(\Tr_{B}(\ket{l}\bra{l}))^{2}}{2} \Big)\\
+=\frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} \Tr_{S} \Big( (\Tr_{B} \ket{k}\bra{k})^{2} \Big)\\
+\leq \frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} =\frac{1}{d_{R}}
+\end{multline}
+en la segunda desigualdad se usó elhecho que $\Tr_{S} (\Tr_{B} \ket{k}\bra{k}-\Tr_{B} \ket{l}\bra{l})^{2}\geq 0$ es las traza de un operador positivo.
+
 \textbf{Independencia del estado del ambiente}
 PAra un estado inicial que sea el producto del estado del sistema y el del ambiente $\ket{\psi}_{SB}= \ket{\psi}_{S} \ket{\phi}_{B}$ en el espacio $\mathcal{H}_{R}=\ket{\psi} \otimes \mathcal{H}_{R}^{B}$.ya se mostró que para estados genéricos el ambiente causa que el subsistema se equilibre aunque el estado de equilibrio $\omega_{S}^{\psi}$ del subsistema podría  depender del estado inicial del baño $\ket{\phi}_{B}$. Esto no es así y casi todos los estados del baño en $\mathcal{H}_{B}^{R}$ llevan al mismo estado de equilibrio del subsistema simplemente usando el resultado anterior a  $\mathcal{H}_{B} = \ket{\psi}\otimes \mathcal{H}_{R}^{B}$ y luego $d_{R} = d_{R}^{B}$, si $d_{R}^{B}>>d_{S}$ para casi todos los estados iniciales del baño llevarán al subsistema al mismo estado de equilibrio $\omega_{S}$. como se usó la cota menos estricta este resultado no depende de la forma explícita de los estados de energías propios.
 \textbf{Independenciadelestado del sistema}: Como yase hadicho el subsistema en contacto con el baño llega al equilibrio sin importar su estado inicial pero sí depende del baño. Este resultado no se pudo resolver pero se da más indicios.
