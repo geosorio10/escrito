@@ -11,7 +11,7 @@ Este capítulo solo se enfocará en mostrar cómo la mayoría de los estados del
 
 Antes de seguir sería preciso dar la notación que se usará a lo largo de este capítulo y el siguiente. Cuando se tenga un sistema cuántico grande descrito por un espacio de Hilbert $\mathcal{H}$  este se llamará el universo. Este universo será descompuesto en  dos subsistemas. El primero se llamará el sistema $S$  y el segundo se le dará el nombre de ambiente $E$, en ocasiones $S$ se le dirá subsistema y $E$ se le podrá llamar baño estos nombres son equivalentes a los anteriores. Esto lleva a descomponer $\mathcal{H}$ como $\mathcal{H}=\mathcal{H}_{S} \otimes \mathcal{H}_{E}$, con dimensiones $d_{S}$ y $d_{E}$ respectivamente, se supone que la dimensión del ambiente es mucho mayor que la del sistema. Para evitar espacios de dimensión infinita se introduce un tope para altas energías y así mantener la dimensión finita. Además se eliminarían términos de interacción del Hamiltoniano que lo lleven a subespacios no permitidos. Aún no se ha especificado nada sobre el subsistema o el ambiente (Excepto las proporciones de sus dimensiones)  esto permite decir que cualquier descomposición del espacio de Hilbert especifica un subsistema y un baño. El subsistema S puede ser cualquier cosa desde una partícula hasta el conjunto de partículas distribuidas por todo el baño.
 \\
-El estado global puro del universo se escribirá como $\ket{\phi(t)}$ en un tiempo t y su matriz de densidad se escribirá $\rho(t)=\ket{\phi(t)}\bra{\phi(t)}$. El estado del sistema se encontrará al hacer una traza parcial del ambiente sobre el estado del universo $\rho_{S}=Tr_{B} \rho(t)$; similarmente el estado del ambiente está dado por $\rho_{B}=Tr_{S} \rho(t)$. El promedio temporal del universo es:
+El estado global puro del universo se escribirá como $\ket{\phi(t)}$ en un tiempo t y su matriz de densidad se escribirá $\rho(t)=\ket{\phi(t)}\bra{\phi(t)}$. El estado del sistema se encontrará al hacer una traza parcial del ambiente sobre el estado del universo $\rho_{S}= \Tr _{B} \rho(t)$; similarmente el estado del ambiente está dado por $\rho_{B}=\Tr _{S} \rho(t)$. El promedio temporal del universo es:
 \begin{equation}
 \omega= \langle \rho(t) \rangle= \lim_{\tau \to \infty} \frac{1}{\tau} \int_{0}^{\tau} \rho (t)dt
 \end{equation}
@@ -38,13 +38,13 @@ Donde $\mathbbm{1}_{R}$ es el operador identidad (proyección) sobre el espacio 
 Definimos $\Omega_{S}$ como el estado canónico que está restringido por $R$ cuando el universo se encuentra en el estado $\mathcal{E}_{R}$. Esto significa que si se hace una traza parcial del ambiente al universo da como resultado el estado canónico:
 
 \begin{equation}
- \Omega_{S} =Tr_{E} \mathcal{E}_{R}.
+ \Omega_{S} =\Tr_{E} \mathcal{E}_{R}.
 \end{equation}
 \\
 Para lo que sigue se hace un supuesto importante  y es que el universo está en un estado puro $\ket{\phi}$ y no en un estado mixto $\mathcal{E}_{R}$, esto quiere decir que se conoce todo lo que es permitido por la mecánica cuántica del universo. Si estuviese en un estado mixto significaría que nosotros no tenemos toda la información que se pudiese tener. Ahora lo que se quiere ver es que  pese a que el estado del universo es puro el estado reducido del sistema
 
 \begin{equation}
-\rho_{S}=Tr_{E}\ket{\phi}\bra{\phi},
+\rho_{S}=\Tr_{E}\ket{\phi}\bra{\phi},
 \end{equation}
 
 se acerca al estado canónico para la gran mayoría de los casos es decir:
@@ -61,7 +61,7 @@ Hasta ahora no se han entrado en los detalles ni en qué significa bastante pequ
 \\
 Para empezar se debe decir cuál será la distancia que usaremos para darle un sentido de cercanía a los estados $\rho_{S}$ y $\Omega_{S}$. La distancia a usar es una bastante conocida en la teoría cuántica de la información, la distancia de traza. Esta se define como:
 \begin{equation}
-D(\rho_{S}, \Omega_{S})= \frac{1}{2} Tr |\rho_{S} -\Omega_{S}|=\frac{1}{2}Tr\sqrt{(\rho_{S} -\Omega_{S})^{\dag}(\rho_{S} -\Omega_{S})}.
+D(\rho_{S}, \Omega_{S})= \frac{1}{2} \Tr |\rho_{S} -\Omega_{S}|=\frac{1}{2} \Tr \sqrt{(\rho_{S} -\Omega_{S})^{\dag}(\rho_{S} -\Omega_{S})}.
 \end{equation}
 
 Esta distancia de traza se relaciona con la distancia de norma de manera sencilla
@@ -73,7 +73,7 @@ Esta distancia de traza se relaciona con la distancia de norma de manera sencill
 Teniendo ya una forma de darle sentido al concepto de que dos estados son cercanos entonces se puede plantear el teorema central de este capítulo:
 \\
 \begin{theorem} \label{teorema principal}
-Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H}_{R} \subseteq \mathcal{H}_{S} \otimes \mathcal{H}_{E} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=Tr_{E}(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=Tr_{E} ( \mathcal{E}_{R})$ esta dado probabilísticamente por 
+Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H}_{R} \subseteq \mathcal{H}_{S} \otimes \mathcal{H}_{E} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=\Tr_{E}(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=\Tr_{E} ( \mathcal{E}_{R})$ esta dado probabilísticamente por 
 
 \begin{equation}
 Pr_{\phi} \{  \norm{\rho_{S} -\Omega_{S}}_{1} \geq \eta \} \leq \eta',
@@ -86,16 +86,16 @@ Donde
 \end{equation}
 
 \begin{equation}
-\eta'=2\exp{-C d_{R} \epsilon^{2} }.
+\eta'=2\exp (-C d_{R} \epsilon^{2} ).
 \end{equation}
 
 
 y las constantes son: $ C=(18 \pi^{3})^{-1}, d_{R} = \dim \mathcal{H}_{R}, d_{S} = \dim \mathcal{H}_{S} $. $d_{E}^{eff}$ es la medida efectiva del tamaño del ambiente,
 \begin{equation}
-d_{E}^{eff}= \frac{1}{Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
+d_{E}^{eff}= \frac{1}{\Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
 \end{equation}
 
-Donde $\Omega_{E}= Tr_{S} \mathcal{E}_{R}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
+Donde $\Omega_{E}= \Tr_{S} \mathcal{E}_{R}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
 \end{theorem}
 
 \subsection{Lema de Levy}
@@ -105,7 +105,7 @@ Para poder demostrar el teorema \ref{teorema principal} se usará  el lema de Le
 
 Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera d-dimensional $\mathbb{S}^d$ , y un punto $\phi \in \mathbb{S}^d $ es escogido de manera uniformemente aleatoria,
 \begin{equation}
-Pr_{\phi} \{ |f(\phi)- \langle f \rangle| \geq \epsilon \} \leq 2exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})
+Pr_{\phi} \{ |f(\phi)- \langle f \rangle| \geq \epsilon \} \leq 2 \exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})
 \end{equation}
 donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|$ y $C=(18 \pi^3)^{-1} $.\\
 
@@ -136,7 +136,7 @@ esto permite decir que  $|f(x)-f(y)| < \epsilon $ entonces $\delta < \frac{\epsi
 \end{multline}
 como $\nabla f$ es acotado se tiene que $\sup |\nabla f(\xi)|=\eta$.\\
 
-Gracias a la normalización, los estados puros en $\mathcal{H_{R}}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$. Luego se puede aplicar \ref{lemma de levy} a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H}_{R}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad. Para poder usar \ref{lemma de levy} primero  debe encontrarse la constante de Lipschitz ya teniendo una idea de qué es ser Lipschitz continuo se encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$ que es la función que nos interesa para el problema físico. Entonces para poder lograr esto se procederá de la siguiente forma se definen dos estados reducidos $\rho_{1}= Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}=Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, entonces
+Gracias a la normalización, los estados puros en $\mathcal{H_{R}}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$. Luego se puede aplicar \ref{lemma de levy} a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H}_{R}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad. Para poder usar \ref{lemma de levy} primero  debe encontrarse la constante de Lipschitz ya teniendo una idea de qué es ser Lipschitz continuo se encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$ que es la función que nos interesa para el problema físico. Entonces para poder lograr esto se procederá de la siguiente forma se definen dos estados reducidos $\rho_{1}= \Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}= \Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, entonces
 
 \begin{equation}
 |f(\phi_{1})-f(\phi_{2})|^2= |\norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1}|^2.
@@ -151,18 +151,18 @@ como $\norm{M}_{1}$ es una distancia (esto es $d(\rho_{1},\Omega)= \norm{\rho_{1
 Por lo tanto 
 
 \begin{equation}
-\Big | \norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1} \Big |^2 \le \norm{\rho_{1}- \rho_{2} }_{1}^2= \norm{Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1}^{2}.
+\Big | \norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1} \Big |^2 \le \norm{\rho_{1}- \rho_{2} }_{1}^2= \norm{\Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1}^{2}.
 \end{equation}
 
 Como existe una cota a la norma de una traza parcial dada por
 
 \begin{equation}
-\norm{Tr_{\mathcal{B}}(M)}_{p} \le [dim(\mathcal{H_{B}})]^{\frac{p-1}{p}} \norm{M}_{p},
+\norm{\Tr_{\mathcal{B}}(M)}_{p} \le [dim(\mathcal{H_{B}})]^{\frac{p-1}{p}} \norm{M}_{p},
 \end{equation}
 
 entones la cota sobre los estados reducidos queda 
 \begin{equation}
-\norm{Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1} \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}.
+\norm{\Tr_{E}(\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}})}_{1} \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}.
 \end{equation}
 
 Por lo tanto se tiene hasta ahora:
@@ -170,7 +170,7 @@ Por lo tanto se tiene hasta ahora:
 \norm{\rho_{1}- \rho_{2} }_{1}^2 \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2},
 \end{equation}
 
-Usando la hermiticidad de $\rho$ y el teorema espectral se puede descomponer $\rho= UDU^{\dag}$ donde $U$ es un operador unitario y $D$ es diagonal. Junto con las propiedades de la traza $Tr(\sqrt{UD^2U^{\dag}})= Tr(U\sqrt{D^2}U^{\dag})= Tr(\sqrt{D^{2}})$ se llega a
+Usando la hermiticidad de $\rho$ y el teorema espectral se puede descomponer $\rho= UDU^{\dag}$ donde $U$ es un operador unitario y $D$ es diagonal. Junto con las propiedades de la traza $\Tr(\sqrt{UD^2U^{\dag}})= Tr(U\sqrt{D^2}U^{\dag})= \Tr(\sqrt{D^{2}})$ se llega a
 \begin{equation}
 \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2} = 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2})
 \end{equation}
@@ -191,40 +191,41 @@ o sea
 
 Con esto se muestra que $\eta \le 2$.\\
 
-\subsection{Demostración del teorema 1}
-En esta parte se dará una demostración matemática explícita del principio general canónico usando el lema de Levy
-Habiendo dado una cota para $\eta$ ahora se puede usar por completo el lema \ref{lemma de levy} para la función $f(\phi)=\norm{\rho_{S} -\Omega_{S}}_{1}$ recordando que se reemplazará $d$ en el lema por $d=2d_{R}-1$. sustituyendo en el teorema se tiene:
+\subsection{Demonstración del principio general canónico}
+En esta parte se dará una demostración matemática explícita del principio general canónico usando el lema de Levy se entrará en los detalles matemáticos de usar este lema y las cotas adicionales que se necesitan para poder llegar al teorema \ref{teorema principal}. Habiendo dado una cota para $\eta$ ahora se puede usar por completo el lema \ref{lemma de levy} para la función $f(\phi)=\norm{\rho_{S} -\Omega_{S}}_{1}$ recordando que se reemplazará $d$ en el lema por $d=2d_{R}-1$.Tomando la parte derecha de la desigualdad de \ref{lemma de levy}  y sustituyendo la dimensión se tiene:
 
 \begin{equation}
- 2exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})= 2exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2})
+ 2 \exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})= 2 \exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2})
 \end{equation}
 
-como $\eta \le 2$ 
+como $\eta \le 2$ entonces
 
-\begin{equation}
-2exp(-Cd_{R}\epsilon^2) \ge 2exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2}) \ge Prob[|f(\phi)- \langle f \rangle| \ge \epsilon ]
+\begin{equation} \label{desigualdad}
+2\exp(-Cd_{R}\epsilon^2) \ge 2 \exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2}) \ge Pr_{\phi}[|f(\phi)- \langle f \rangle| \ge \epsilon ].
 \end{equation}
 
-mirando más atentamente  $|f(\phi)- \langle f \rangle| \ge \epsilon $, por ser  una distancia $\norm{\rho_{S} -\Omega_{S}}_{1} \ge 0$ entonces
+Mirando más atentamente  $|f(\phi)- \langle f \rangle| \ge \epsilon $, como la norma de traza es un distancia se tiene que  $\norm{\rho_{S} -\Omega_{S}}_{1} \ge 0$ entonces
 
 
 \begin{equation}
-\norm{\rho_{S} -\Omega_{S}}_{1}- \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \ge \epsilon.
+\norm{\rho_{S} -\Omega_{S}}_{1}- \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi} \ge \epsilon.
 \end{equation}
 
-Nombrando a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle $ y $\mu'=2 exp(-Cd_{R}\epsilon^2)$ esto permite organizar lo anterior así:
+Nombrando a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi} $ y $\mu'=2 \exp(-Cd_{R}\epsilon^2)$ esto permite organizar el lema de levy así:
 
-\begin{equation}
-Prob[\norm{\rho_{S} -\Omega_{S}}_{1} \ge \mu] \le \mu'.
+\begin{equation} \label{eq.3}
+Pr_{\phi}[\norm{\rho_{S} -\Omega_{S}}_{1} \ge \mu] \le \mu'.
 \end{equation}
-Ahora para poder obtener el resultado se debe acotar $\mu$ .Se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$ porque $d_{R}>>1$. Se quiere ahora ponerle un cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle$ para esto primero se acotará dando los límites por las trazas y luego se calcularán estas para poder dejar la cota en terminos de las dimensiones del sistema. Primero se procederá a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$ esto se hará para tener una facilidad de manejo mayor ya que la segunda norma(Hilbert-Schmidt) permite un mejor tratamiento.\\
-La relación entre estas dos normas se puede ver desde el manejo de amtrices. Sea $M$ una matriz $nX	n$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
+
+Debido a que $d_{R}>>1$ Se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$. Para llegar a \ref{teorema principal} falta acotar $\mu$ con las dimensiones de los espacios conocidos, se impondrá una cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$; lo primero  para lograr esta empresa es acotar este promedio con trazas del estado del sistema  y luego se calcularán estas trazas para poder dejar la cota en términos de las dimensiones del sistema y la dimensión efectiva del ambiente. Se procede a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$ esto se hará para tener una facilidad de manejo ya que la norma de Hilbert-Schmidt ($\norm{.}_{2}$) es más sencilla para trabajar que la norma de traza y luego se procederá con los planeado.
+\\
+La relación entre estas dos normas se puede ver desde el manejo de matrices. Sea $M$ una matriz $n \times n$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
 \begin{equation}
-Tr M= \sum_{i} \lambda_{i} 
+\Tr M= \sum_{i} \lambda_{i}
 \end{equation}
 con esto se puede escribir de manera explícita la norma de traza 
 \begin{equation}
-\norm{M}_{1}^2=(Tr|M|)^{2}=n^{2} (\frac{1}{n}\sum_{i} |\lambda_{i}|)^{2}.
+\norm{M}_{1}^2=(\Tr|M|)^{2}=n^{2} \Big( \frac{1}{n}\sum_{i} |\lambda_{i}| \Big)^{2}.
 \end{equation}
 Como la función $x^{2}$ es convexa se puede usar la desigualdad de Jensen que dice: sean $a_{1},a_{2},...,a_{n} \le 0$ constantes y $a_{1} +...+a_{n}=1$ sea $f: I \to \mathbb{R}$ donde I es un intervalo, $x_{1},...,x_{n} \in I$ entonces
 \begin{equation}
@@ -234,63 +235,62 @@ f(a_{1}x_{1}+...+a_{n}x_{n}) \le a_{1}f(x_{1})+...+a_{n}f(x_{n}),
 con esto se puede decir que
 
 \begin{equation}
-(\frac{1}{n}\sum_{i} |\lambda_{i}|)^{2} \le \frac{1}{n}\sum_{i} |\lambda_{i}|^{2}.
+\Big( \frac{1}{n}\sum_{i} |\lambda_{i}| \Big)^{2} \le \frac{1}{n}\sum_{i} |\lambda_{i}|^{2}.
 \end{equation}
 Pero se sabe que 
 \begin{equation}
-\sum_{i} |\lambda_{i}|^2=Tr(|M|^2)=\norm{M}_{2}^{2}
+\sum_{i} |\lambda_{i}|^2= \Tr(|M|^2)=\norm{M}_{2}^{2}
 \end{equation}
-se llega a la conclusión que 
+se llega entonces a la conclusión que 
 \begin{equation}
-\norm{M}_{1}^{2} = n^{2}(\frac{1}{n} \sum_{i}| \lambda_{i} | )^{2} \le  n^{2} \frac{1}{n} \sum_{i} | \lambda_{i} |^{2}= n\norm{M}_{2}^{2}
+\norm{M}_{1}^{2} = n^{2}\Bigg( \frac{1}{n} \sum_{i}| \lambda_{i} | \Bigg)^{2} \le  n^{2} \frac{1}{n} \sum_{i} | \lambda_{i} |^{2}= n\norm{M}_{2}^{2}
 \end{equation}
-Gracias a lo anterior se tiene que 
+Gracias a lo anterior la relación entre normas es:
 \begin{equation}\label{eq:0}
 \norm{\rho_{S} - \Omega_{S}}_{1} \le \sqrt{d_{S}}\norm{\rho_{S} - \Omega_{S}}_{2}
 \end{equation}
 Esta relación se usará un poco más adelante.\\
 
-Volviendo al cálculo de $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle$  se recuerda que $ \langle f^{2} \rangle-\langle f \rangle^{2} \ge 0$ donde $\langle f \rangle = \int_{\mathcal{M}} f(x)p(x)dx$. Tomando a $f$ como $f= \norm{\rho_{S}-\Omega_{S}}_{2}$ entones
+Volviendo al cálculo de $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$ se acotará la norma de Hilbert-Schmidt y con la relación entre normas se dará la desigualdad que limite el promedio de la norma de traza. Para empezar se recuerda que $ \langle f^{2} \rangle-\langle f \rangle^{2} \ge 0$ donde $\langle f \rangle = \int_{\mathcal{M}} f(x)p(x)dx$. Tomando a $f$ como $f= \norm{\rho_{S}-\Omega_{S}}_{2}$ entones
 
 \begin{equation}
 \langle \norm{ \rho_{S}-\Omega_{S} }_{2} \rangle \le \sqrt{ \langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}
 \end{equation}
 
-acordándose que este promedio es tomado a los estados $\ket{\phi}$, $\Omega_{S}$ es constante.Por hermiticidad de $\rho_{S}-\Omega_{S}$ 
+acordándose que este promedio es tomado a los estados $\ket{\phi}$, se omitirá por ahora el subíndice indicando este promedio, esto hace que $\Omega_{S}$ se tome constante. Por hermiticidad de $\rho_{S}-\Omega_{S}$ 
 
 \begin{equation}
-\sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle} = \sqrt{\langle Tr(\rho_{S}-\Omega_{S})^{2} \rangle}
+\sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle} = \sqrt{\langle \Tr(\rho_{S}-\Omega_{S})^{2} \rangle}
 \end{equation}
 
 \begin{equation}
-\sqrt{\langle Tr( \rho_{S}-\Omega_{S})^{2} \rangle}= \sqrt{\langle Tr(\rho_{S})^{2}\rangle -2Tr(\langle \rho_{S} \rangle \Omega_{S})+Tr(\Omega_{S}^{2}) }
+\sqrt{\langle \Tr( \rho_{S}-\Omega_{S})^{2} \rangle}= \sqrt{\langle \Tr(\rho_{S})^{2}\rangle -2 \Tr(\langle \rho_{S} \rangle \Omega_{S})+ \Tr(\Omega_{S}^{2}) }
 \end{equation}
 
-ya que $\langle \rho_{S} \rangle=\Omega_{S}$
+porque $\langle \rho_{S} \rangle=\Omega_{S}$. Luego se llega a
 
 \begin{equation}
-\langle \norm{ \rho_{S}-\Omega_{S} }_{2}\rangle \le \sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}= \sqrt{\langle Tr(\rho_{S})^{2}\rangle -Tr(\Omega_{S}^{2}) }
+\langle \norm{ \rho_{S}-\Omega_{S} }_{2}\rangle \le \sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}= \sqrt{\langle \Tr(\rho_{S})^{2}\rangle - \Tr(\Omega_{S}^{2}) }.
 \end{equation}
 
 Por la relación entre la norma de traza y la norma de Hilbert-Schmidt se concluye lo que se quería
 
 \begin{equation}
-\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle \le \sqrt{d_{S}( \langle Tr(\rho_{S})^{2}\rangle -Tr(\Omega_{S}^{2}) ) }.
+\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle \le \sqrt{d_{S}( \langle \Tr(\rho_{S})^{2}\rangle -\Tr(\Omega_{S}^{2}) ) }.
 \end{equation}
 \\
 Aunque ya se ha acotado $\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle$ se quiere relacionar esta cota con las dimensiones del sistema para esto se procederá a demostrar la desigualdad
 \begin{equation}
-\langle Tr \rho_{S}^{2} \rangle \le Tr \langle \rho_{S} \rangle^{2} +Tr \langle \rho_E \rangle^{2}
+\langle \Tr \rho_{S}^{2} \rangle \le \Tr \langle \rho_{S} \rangle^{2} +\Tr \langle \rho_E \rangle^{2},
 \end{equation}
-
-Para poder hacer este cálculo se introduce una segunda copia del espacio de Hilbert. Ahora el problema se trabaja en $\mathcal{H_{R}} \otimes \mathcal{H_{R'}}$, donde $\mathcal{H_{R'}} \subseteq \mathcal{H_{S'} \otimes H_{E'}}$.
+recordando que el promedio es tomado con respecto a los estados $\ket{\phi}$, los métodos usados para encontrar esta desigualdad son usados también en destilación de entrelazamiento aleatoria y codificación de canal cuántico aleatorio. Para poder hacer este cálculo se introduce una segunda copia del espacio de Hilbert. Ahora el problema se trabaja en $\mathcal{H}_{R} \otimes \mathcal{H}_{R'}$, donde $\mathcal{H}_{R'} \subseteq \mathcal{H}_{S'} \otimes \mathcal{H}_{E'}$.
 Percatándose de lo siguiente
 
 \begin{equation}
-Tr_{S} (\rho_{S})^2 = \sum_{k} (\rho_{kk})^{2} = \sum_{k,l,k',l'}(\rho_{kl})(\rho{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}.
+\Tr_{S} (\rho_{S})^2 = \sum_{k} (\rho_{kk})^{2} = \sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}.
 \end{equation}
 
-Sea $F_{SS'}$ la operación "flip" $S \longleftrightarrow S'$:
+Sea $F_{SS'}$ la operación "flip" $S \longleftrightarrow S'$ definida de esta manera:
 
 \begin{equation}
 F_{SS'} =\sum_{S,S'} \ket{s'}\bra{s}_{S} \otimes \ket{s}\bra{s'}_{S'}
@@ -298,84 +298,94 @@ F_{SS'} =\sum_{S,S'} \ket{s'}\bra{s}_{S} \otimes \ket{s}\bra{s'}_{S'}
 
 Entonces
 
-\begin{equation} \label{eq:1}
-\sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}= Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})
-\end{equation}
+\begin{multline} \label{eq:1}
+\sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}= \Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})\\
+=\Tr_{RR'}((\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})_{RR'}(F_{SS'} \otimes \mathbbm{1}_{EE'}))
+\end{multline}
 
-\begin{equation}
-Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})=Tr_{RR'}((\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})_{RR'}(F_{SS'} \otimes \mathbbm{1}_{EE'}))
-\end{equation}
-
-Pero como se quiere $\langle Tr (\rho)^{2} \rangle= \int Tr (\rho)^{2} d\phi $. Entonces para resolver esto se requiere saber $V=\int (\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})d\phi$. V puede representarse como:
+Pero como se quiere $\langle \Tr (\rho)^{2} \rangle= \int \Tr (\rho)^{2} d\phi $. Entonces para resolver esto se requiere saber $V=\int (\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})d\phi$. V puede representarse como:
 
 \begin{equation}
 V= \alpha \Pi_{RR'}^{sim} + \beta \Pi_{RR'}^{anti},
 \end{equation}
-$\alpha$ y $\beta$ son constantes donde $\Pi_{RR'}^{sim/anti}$ son proyectores en el subespacio simétrico y antisimétrico de $\mathcal{H_{R} \otimes H_{R'}}$. Esto es posible por la invarianza unitaria de V. Debido a que 
+$\alpha$ y $\beta$ son constantes y $\Pi_{RR'}^{sim/anti}$ son proyectores en el subespacio simétrico y antisimétrico de $\mathcal{H_{R} \otimes H_{R'}}$ respectivamente, esto es posible por la invarianza unitaria de V. Debido a que 
 \begin{equation}
-(\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})\frac{1}{\sqrt{2}} ( \ket{ab} -\ket{ba})=0  \forall a,b,\phi
+(\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})\frac{1}{\sqrt{2}} ( \ket{ab} -\ket{ba})=0  \quad  \forall a,b,\phi
 \end{equation}
-la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalización de $V$, $\alpha= \frac{1}{dim(RR'_{sim})}$ la dimensión está dada por el álgebra lineal $dim(RR'_{sim})= \frac{d_{R}(d_{R}+1)}{2}$.Entonces
+la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalización de $V$ se llega a $\alpha= \frac{1}{dim(RR'_{sim})}$, la dimensión del espacio $RR'_{sim}$ está dada por el álgebra lineal $dim(RR'_{sim})= \frac{d_{R}(d_{R}+1)}{2}$.Entonces
 \begin{equation}
 V= \langle \ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi} \rangle = \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim}.
 \end{equation}
-luego 
+luego se puede escribir \ref{eq:1} como 
 \begin{equation}
-\langle Tr (\rho)^{2} \rangle = Tr_{RR'}((\frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim})(F_{SS'} \otimes \mathbbm{1}_{EE'}))
+\langle \Tr (\rho)^{2} \rangle = \Tr_{RR'} \Big( \Big( \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim} \Big)(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big)
 \end{equation}
-Al ser $\Pi_{RR'}^{sim}$ un proyector simétrico se puede cambiar por 
+Al ser $\Pi_{RR'}^{sim}$ un proyector simétrico se escribe
 \begin{equation}
-\Pi_{RR'}^{sim}=\frac{1}{2}(\mathbbm{1}_{RR'}+(F_{RR'} )
+\Pi_{RR'}^{sim}=\frac{1}{2}(\mathbbm{1}_{RR'}+(F_{RR'} ))
 \end{equation}
-donde $F_{RR'}$ es el operador "flip" $R \longleftrightarrow R'$. Como $F_{RR'}$ es el operador que actua sobre $RR'$ este puede escribirse como $F_{RR'}= \mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'})$.
+donde $F_{RR'}$ es el operador "flip"  $R \longleftrightarrow R'$. Como $F_{RR'}$ es un operador que actúa sobre $RR'$ puede escribirse como $F_{RR'}= \mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'})$.
 
-Compilando lo anterior
+reuniendo todo lo anterior
 
 \begin{equation}
-\langle Tr_{S} \rho_{S}^2 \rangle = Tr_{RR'} \Bigg( \frac{1}{d_{R}(d_{R}+1)} \big( \mathbbm{1}_{RR'}+\mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'}) \big)  (F_{SS'}\otimes \mathbbm{1}_{EE'})   \Bigg)
+\langle \Tr_{S} \rho_{S}^2 \rangle = \Tr_{RR'} \Bigg( \frac{1}{d_{R}(d_{R}+1)} \Big( \mathbbm{1}_{RR'}+\mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'}) \Big)  (F_{SS'}\otimes \mathbbm{1}_{EE'})   \Bigg)
 \end{equation}
 
-Distribuyendo y sabiendo que al hacer dos veces la operación "flip"  es lo mismo que no haber hecho nada se sigue
+Distribuyendo y sabiendo que al hacer dos veces la operación "flip" no afecta nada se sigue lo siguiente
 
 \begin{equation}
-Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Bigg).
+\Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Bigg).
 \end{equation}
 
 Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a:
 
 \begin{multline}
-\langle Tr_{S} \rho_{S}^2 \rangle= Tr_{RR'} \Big( \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Big) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Big) \\
-+ Tr_{RR'} \Big( \Big( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Big) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Big)\\ 
-\leq Tr_{RR'} \Big( \Big( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Big) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Big)\\
-+ Tr_{RR'} \Big( \Big( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Big) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Big)
+\langle \Tr_{S} \rho_{S}^2 \rangle= \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg) \\
++ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)\\ 
+\leq \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg)\\
++ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)
 \end{multline}
 
-Recordando que $\frac{\mathbbm{1}_{R}}{d_{R}}= \mathcal{E}_{R}$ y $\Omega_{S}=Tr_{E}(\mathcal{E}_{R})$ se tiene que:
+Recordando que $\frac{\mathbbm{1}_{R}}{d_{R}}= \mathcal{E}_{R}$ y $\Omega_{S}=\Tr_{E}(\mathcal{E}_{R})$ se tiene que:
 
 \begin{multline}
-Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Big) + Tr_{RR'}\Big(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Big) \notag \\
- = Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
+\Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Bigg) + \Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Bigg) \notag \\
+ = \Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + \Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
 \end{multline}
-Por la ecuación \ref{eq:1} se tiene lo que se quería
+Por la ecuación \ref{eq:1} se llega a lo que se quería:	
 \begin{equation}
-\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \Omega_{S}^{2} +Tr_{E} \Omega_{E}^{2}
+\langle \Tr_{S} \rho_{S}^{2} \rangle \le \Tr_{S} \Omega_{S}^{2} +\Tr_{E} \Omega_{E}^{2},
 \end{equation}
 y esto es lo mismo que 
 \begin{equation}
-\langle Tr_{S} \rho_{S}^{2} \rangle \le Tr_{S} \langle \rho_{S} \rangle ^{2}  + Tr_{E} \langle \rho_{E}\rangle^{2}
+\langle \Tr_{S} \rho_{S}^{2} \rangle \le \Tr_{S} \langle \rho_{S} \rangle ^{2}  + \Tr_{E} \langle \rho_{E}.\rangle^{2}
 \end{equation}
 
-con el resultado \ref{eq:0} se obtiene
+Gracias al resultado \ref{eq:0} se obtiene
 \begin{equation}
-\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{d_{S}(Tr_{E} \langle \rho_{E} \rangle^{2})}
+\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{d_{S}(Tr_{E} \langle \rho_{E} \rangle^{2})}.
 \end{equation}
-Sea $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ la cual es la dimensión efectiva del ambiente en el estado canónico este mide la dimensión del espacio en el que el ambiene es más probable de estar, como $\langle \rho_{E} \rangle = \Omega_{E}$ se concluye que 
+Si se define $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ como la dimensión efectiva del ambiente en el estado canónico, esto mide la dimensión del espacio en el que el ambiente es más probable de estar, como $\langle \rho_{E} \rangle_{\phi} = \Omega_{E}$ se concluye que 
 \begin{equation}
 \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{\frac{d_{S}}{d_{E}^{eff}}}
 \end{equation}
-Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$ serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad.
 
+Ya con esto se tiene el teorema \ref{teorema principal}. Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$  de la ecuación \ref{eq.3} serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad. Aunque ya se llegó a la desigualdad que se quería se puede notar lo siguiente, sean los valores propios de $\Omega_{E}$ iguales a $\lambda_{E}^{k}$ con su máximo valor propio $\lambda_{E}^{max}$ se ve que 
 
+\begin{multline}
+\Tr_{E} \Omega_{E}^{2} = \sum_{k} (\lambda_{E}^{k})
+\leq \lambda_{E}^{max} \sum_{k} \lambda_{E}^{k}\\
+= \max_{\ket{\phi_{E}}} \bra{\phi_{E}} \Tr_{S} \Big( \frac{\mathbbm{1}_{R}}{d_{R}} \Big) \ket{\phi_{E}}\\
+= \max_{\ket{\phi_{E}}} \sum_{s} \bra{s \phi_{E}} \frac{\mathbbm{1}_{R}}{d_{R}} \ket{s \phi_{E}} \leq \frac{d_{S}}{d_{E}}	
+\end{multline}
+
+en conclusión  $d^{eff}_{E} \geq d_{R}/ d_{S}$ entonces se obtiene
+
+\begin{equation}
+\langle \norm{\rho_{S} - \Omega_{S}}_{1} \rangle \leq \sqrt{\frac{d_{S}}{d_{E}^{eff}}} \leq  \sqrt{\frac{d_{S}^{2}}{d_{R}}}.
+\end{equation}
+Con esto se finaliza la demostración del teorema \ref{teorema principal} en la siguiente sección se hablará de sus consecuencias físicas.
 
 \section{Significado físico}
 

@@ -47,13 +47,15 @@ entoces la dimensión efectiva es
 \begin{equation}
 d^{eff}(\omega)=\frac{1}{Tr(\omega^{2})}=\frac{1}{\sum_{k} |c_{k}|^{4} }
 \end{equation}
-De la misma manera el hechode que el baño pase por muchos estados diferentes viene dado por $d^{eff}(\omega_{B})$ por $\omega_{B}=\langle \rho(t) \rangle_{t}$. Como se espera que el baño al evolucionar pase por muchos más estados dado que el subsistema debe seguir evolucionando y el subsistema quede en un espacio de estados más pequeños se preve que $d^{eff}(\omega_{B})$ sea mucho más grande que $d_{S}$. Para formular ya el primer teorema se quiere ver la distancia entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}= \langle \rho_{S}(t) \rangle_{t}$. Como se espera que $\rho_{S}(t) $ vaya fluctuando alrededor de $\omega_{S}$ se analizará el promedio temporal de su distancia $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ cuando este sea muy pequeño el subsistema debe pasar gran parte del tiempo muy cerca a $\omega_{S}$. Esto quiere decir que el subsistema se equilibrará(según la definición anterior) a $\omega_{S}$.
-
-\textbf{Teorema 1}:Considere cualquier estado $\ket{\psi(t)} \in \mathcal{H}$ evolucionando bajo un Hamiltoniano con brechas de energía no-degeneradas. Luego la distancia promedio entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}$ está acotado por:
+De la misma manera el hecho de que el baño pase por muchos estados diferentes viene dado por $d^{eff}(\omega_{B})$ por $\omega_{B}=\langle \rho(t) \rangle_{t}$. Como se espera que el baño al evolucionar pase por muchos más estados dado que el subsistema debe seguir evolucionando y el subsistema quede en un espacio de estados más pequeños se preve que $d^{eff}(\omega_{B})$ sea mucho más grande que $d_{S}$. Para formular ya el primer teorema se quiere ver la distancia entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}= \langle \rho_{S}(t) \rangle_{t}$. Como se espera que $\rho_{S}(t) $ vaya fluctuando alrededor de $\omega_{S}$ se analizará el promedio temporal de su distancia $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ cuando este sea muy pequeño el subsistema debe pasar gran parte del tiempo muy cerca a $\omega_{S}$. Esto quiere decir que el subsistema se equilibrará(según la definición anterior) a $\omega_{S}$.
+\begin{theorem}
+Considere cualquier estado $\ket{\psi(t)} \in \mathcal{H}$ evolucionando bajo un Hamiltoniano con brechas de energía no-degeneradas. Luego la distancia promedio entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}$ está acotado por:
 
 \begin{equation}
 \langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t} \le \frac{1}{2} \sqrt{\frac{d_{S}}{d^{eff}(\omega-{B})}} \le \sqrt{\frac{d_{S}^{2}}{d^{eff}(\omega)}}.
 \end{equation}
+\end{theorem}
+
 \textbf{Demostración}:Por la relación ya conocida entre la distanacia de traza y la norma de Hilbert-Schimidt que se usó en el capítulo anterior
 
 \begin{equation}
@@ -123,7 +125,8 @@ EL resultado anterior tiene varias generalidades que se quiere recodar. La restr
 Los valores propios de energía tampoco son importantes en las cotas dadas anteriormente, en el teorema al ser demostrado fue encontrado algunos valores propios de energía que al ser promediados dan 0. La energía es importante al buscar las formas exactas en las que evoluciona el sistema pero aquí se demostró que para la equilibración en intervalos de tiempo muy grandes no son muy importantes , las cotas son independientes del tiempo . La forma en que se dividió el sistema(subsistema y baño) solo es importante para el teorema 1 la dimensión del subsistema y no la especificación de la forma o un subsistema particular. Esto permite decir que cualquier subsistema con dimensión $d_{S}$ estará en equilibrio, los varios subsistemas bastante pequeños de dimensión $d_{S}$ también estarán en equilibrio.
 \textbf{Equilibrio de conjuntos típicos}
 Aunque se puso una cota a la fluctuación de $\rho_{S}(t)$ alrededor de $\omega_{S}$ se quiere ver cuales casos esta fluctuación es tan pequeña que el subsistema se equilibrará para esto se mostrará el siguiente teorema\\
-\textbf{Terorema2}:
+
+\begin{theorem}
 i)El promedio de la dimensión efectiva $\langle d^{eff}(\omega) \rangle_{\psi}$, donde el promedio es sobre estados puros aleatorios uniformemente distribuidos $\ket{\psi} \in \mathcal{H}_{R} \subset \mathcal{H}$. Es tal que 
 \begin{equation}
 \langle d^{eff}(\omega) \rangle_{\psi} \ge \frac{d_{R}}{2}
@@ -133,13 +136,101 @@ ii)Para un estado aleatorio $\ket{\psi} \in \mathcal{H}_{R} \subset \mathcal{H}$
 Pr_{\psi} \{ d^{eff}(\omega) < \frac{d_{R}}{4}  \} \leq 2 \exp{-C \sqrt{d_{R}}}
 \end{equation}
 con constante $c= \frac{(ln 2)^{2}}{72 \pi^{3}} \approx 10^{-4}$.
+\end{theorem}
+
+\textbf{Demostración i)}
+Primero se prueba la cota de la pureza esperada de $\omega$,
+
+\begin{multline}
+\langle \Tr (\omega)^{2} \rangle_{\psi} = \langle \Tr(\omega \otimes \omega)F) \rangle_{\psi}\\
+= \Tr(\$ \otimes \$ [ \langle \ket{\psi} \bra{\psi} \otimes \ket{\psi} \bra{\psi} \rangle_{\psi}]F)\\
+=\Tr \Bigg( \$ \otimes \$ \Bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg]F \Bigg)\\
+= \sum_{kl} \Tr \Bigg(  \ket{kl}\bra{kl}  \Bigg(  \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg) \ket{kl}\bra{kl} F \Bigg)\\
+=\sum_{kl} \Tr ( \ket{kl}\bra{lk} ) \Bigg( \frac{\ket{kl} \Pi_{RR}(\bra{kl}+\bra{lk})}{d_{R}(d_{R}+1)}  \Bigg)\\
+=\sum_{k} \frac{2 \ket{kk} \Pi_{RR}\bra{kk}}{d_{R}(d_{R}+1)} \\
+\leq \sum_{k} \frac{2 \ket{k} \Pi_{R}\bra{k}}{d_{R}(d_{R}+1)} < \frac{2}{d_{R}}
+\end{multline}
+se sigue directamente que 
+\begin{equation}
+\langle d^{eff}(\omega) \rangle_{\psi} = \langle\frac{1}{\Tr (\omega)^{2}} \rangle \geq \frac{1}{\langle \Tr (\omega)^{2} \rangle_{\psi}} \geq \frac{d_{R}}{2}
+\end{equation}
+concluyendo la prueba.
+\textbf{Demostración ii)}
+Para demostrar la segunda parte se usará el lema de levy pero no directamente sino sobre la función 
+\begin{equation}
+f(\psi) \equiv f(\vec{x}(\psi)) = \ln \Bigg( \Tr \Big( \tilde{\$}[ \ket{\psi}\bra{\psi}]^{2} \Big) \Bigg)
+\end{equation}
+
+Donde el operador  $ \tilde{\$} $ actúa sobre el subespacio $\mathcal{H}_{T} \subset \mathcal{H}$ generado por los estados de energía con proyección diferente de cero sobre $\mathcal{H}_{R}$ (estados que satisfagan $\bra{k} \Pi_{R} \ket{k} \neq 0$). El subespacio $\mathcal{H}_{T}$ contiene todos los estados que pueden aparecer durante la evolución temporal del estado inicial en $\mathcal{H}_{R}$ , y $\ \widetilde{\$} $ mapea estos estados de regreso a $\mathcal{H}_{R}$ de acuerdo a 
+\begin{equation}
+ \tilde{\$}[\rho]= \sum_{k}  \tilde{\ket{k}} \bra{k} \rho \ket{k} \tilde{\bra{k}} \quad y \quad  \tilde{\ket{k}}= \frac{1}{\sqrt{\bra{k}\Pi_{R}\ket{k}}} \Pi_{R} \ket{k}.
+\end{equation}
+nótese que cuando el Hamiltoniano conmuta con $\Pi_{R}$, $ \tilde{\$}$ es identico al $ \$ $ en $\mathcal{H}_{T}$. Calculando el promedio de la función se encuentra
+\begin{multline}
+\langle \ln \Big( \Tr \Big( \tilde{\$}[ \ket{\psi}\bra{\psi}]^{2} \Big) \Big) \rangle_{\psi}\\
+\leq \ln \langle \Tr \Big( \tilde{\$}[\ket{\psi}\bra{\psi}]^{2} \Big) \rangle_{\psi}\\
+= \ln \Tr\Bigg( \tilde{\$}\otimes \tilde{\$} [\langle \ket{\psi}\bra{\psi} \otimes \ket{\psi}\bra{\psi} \rangle_{\psi}] F \Bigg)\\
+= \ln \Bigg( \Tr \Big( \tilde{\$}\otimes \tilde{\$} \Bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg] F   \Big) \Bigg)\\
+\ln \Bigg( \sum_{kl} \Tr \Big( \tilde{\ket{kl}} \bra{kl} \frac{\Pi_{RR} \Bigg ( \mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg) \ket{kl}  \tilde{\bra{lk}}  \Big) \Bigg)\\
+= \ln \Bigg( \sum_{kl} \tilde{\bra{lk}}\tilde{\ket{kl}} \Big( \frac{\bra{kl}\Pi_{RR}(\ket{kl}+\ket{lk})}{d_{R}(d_{R}+1)} \Big) \Bigg)\\
+\leq \ln \Big( \frac{2}{d_{R}(d_{R}+1)} \sum_{kl} \bra{lk}\Pi_{RR}\ket{kl}  \Big)\\
+= \ln \Big(  \frac{2}{d_{R}(d_{R}+1)} \sum_{k} \bra{k}\Pi_{R} \ket{k}  \Big) < \ln (\frac{2}{d_{R}})
+\end{multline}
+Para acotar la constante de Lipchitz  de la función $f(\psi)$ se usará otra función
+\begin{equation}
+g(\psi)= \ln \Tr \Bigg[  \Big( \sum_{n} \ket{\hat{n}}\bra{\hat{n}} \tilde{\$} [\ket{\psi}\bra{\psi}] \ket{\hat{n}}\bra{\hat{n}} \Big)^{2}  \Bigg]
+\end{equation}
+donde $\ket{\hat{n}}$ es una base ortonormal de $\mathcal{H}_{R}$. Escribiendo
+
+\begin{equation}
+t_{nk0}= \Re [ \bra{\hat{n}} \tilde{\ket{k}} \bra{k}\ket{\psi}] \quad y \quad  t_{nk1}= \Im [ \bra{\hat{n}} \tilde{\ket{k}} \bra{k}\ket{\psi}]
+\end{equation}
+se sigue que 
+\begin{equation}
+g(\psi)= \ln \Tr \Bigg[  \Big( \sum_{nkz} t_{nkz}^{2}  \ket{\hat{n}} \bra{\hat{n}}  \Big)^{2} \Bigg]= \ln \sum_{n} \Big( \sum_{kz} t_{nkz}^{2} \Big)^{2}.
+\end{equation}
+
+Para encontrar la constante de Lipschitz de $g$ es suficiente con encontrar una cota superior al gradiente 
+\begin{equation}
+\frac{\partial g}{\partial t_{nkz}}=\frac{1}{\sum_{n'} (\sum_{k'z'}t_{n'k'z'}^{2})^{2}} 2.2.t_{nkz} \sum_{k'z'}t_{nk'z'}^{2}.
+\end{equation}
+introduciendo la notación $p_{n}=\sum_{kz}t_{nkz}^{2}$, y notando que $\sum_{n} p_{n}=1$, se encuentra 
+\begin{multline}
+|\nabla g|^{2}= \sum_{nkz} (\frac{\partial g}{\partial t_{nkz}})^{2}= \frac{16 \sum_{n} p_{n}^{3}}{(\sum_{n} p_{n}^{2})^{2}}\\
+\leq \frac{16(\sum_{n} p_{n}^{2})^{3/2}}{\sum_{n} p_{n}^{2})^{2}}\\
+=\frac{16}{(\sum_{n} p_{n}^{2})^{1/2}}\\
+=\frac{16}{(\sum_{n} p_{n}^{2})^{1/2}}\\
+\leq 16 \sqrt{d_{R}}
+\end{multline}
+Por lo tanto la constante de Lipschitzs de $g$ alcanza por lo menos $4 \sqrt[4]{d_{R}}$. Para obtener la constante de Lipchistz de $f$ se nota que $g(\psi) \geq f(\psi)$ la igualdad se da si $ { \ket{ \hat{n}} }$ es una base  propia de $\Tr_{B} \ket{\psi}\bra{\psi}$. Ahora para dos vectores cuales quiera, sin perdida de generalidad asumir $f(\psi_{1}) \leq f(\psi_{2})$, y tomar ${ \ket{\hat{n}} }$ como la base propia de $\Tr_{B} \ket{\psi}\bra{\psi}$. Entonces,
+\begin{equation}
+f(\psi_{1})- f(\psi_{2})\leq g(\psi_{1})- g(\psi_{2}) \leq 4\sqrt[4]{d_{R}} |\ket{\psi_{1}}-\ket{\psi_{2}}|_{2},
+\end{equation}
+entonces la constante de Lipschitz para $f$ está acotada por $4\sqrt[4]{d_{R}}$.
+Aplicando el lema de Levy a $f(\psi)$ y  por la observación $\Pr[x>a] \leq b$ y $x \geq y$ implica $\Pr[y>a] \leq b$ y sustituyendo la cota en $\langle f(\psi) \rangle_{\psi}$ obtenida arriba y limitando más esta 
+\begin{equation}
+\ln\Big( \Tr (\tilde{\$}[\ket{\psi}\bra{\psi}]^{2}) \Big) \geq \ln\Big( \Tr ( \$ [\ket{\psi}\bra{\psi}]^{2}) \Big)
+\end{equation}
+esto da 
+
+\begin{equation}
+Pr_{\psi} [ \ln (\Tr( \$ [\ket{\psi}\bra{\psi}]^{2})) > \ln \frac{2e^{\epsilon}}{d_{R}}  ] \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}})
+
+\end{equation}
+
+Tomando la desigualdad que está dentro de los corchetes  multiplicándola por menos y tomando su exponencial se llega
+
+\begin{equation}
+Pr_{\psi} \Big [  d^{eff}(\omega) < \frac{d_{R}}{2e^{\epsilon}} \Big ] \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}}).
+\end{equation}
+
+y haciendoque $\epsilon=\ln 2$ se llega al resultado esperado.
 La primera parte del teorema 2 nos habla de cómo el promedio de la dimensión efectiva es más grande que la dimensión del subespacio de Hilbert esto significa que si se tiene estados de un subespacio bastante grande se puede asegurar un $d^{eff}(\omega)$ grane que implica un $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ pequeño. La segunda parte solo confirma de manera más estricta el hecho de encontrar un $d^{eff}(\omega)$ pequeño, mostrando que la probabilidad de encontrar una dimensión efectiva menor a $\frac{d_{R}}{4}$ es exponencialmente pequeña.\\
 \textbf{equilibrio de estados genéricos}:
 usando el teorema 2 para ver qué ocurre con un estado escogido de forma aleatorio del espacio total $\mathcal{H}$, un estado genérico. Esto es simplemente poner $d_{R}=d$ gracias a esto se comprende que $d^{eff}(\omega)~d$ ya que  hay una probabilidad exponencialmente baja para que se dé  el caso en que $d^{eff} < \frac{d}{4}$.Dado que $d=d_{S}d_{B}$ la cota para las fluctuaciones queda $\sqrt{\frac{d_{S}}{d_{B}}}$ para un sistema de muchas partículas la dimensión del espacio de Hilbert crece de manera exponencial, si el subsistema es una fracción constante del número de partículas del baño esta proporción caerá de manera exponencial con el número total de de partículas luego los subsistemas se equilibrarán.\\
 \textbf{Equilibración de sistemas lejanos del equilibrio}:
 Qué ocurre con los sistemas que están lejos del equilibrio. Lo dicho arriba ya cualquier se pensaría que  que cualquier sistema debe llegar al equilibrio pero esto no es cierto debido a que arriba se usó un estado genérico y los estados lejos del equilibrio no son genéricos; los estados lejos del equilibrio no son típicos por el capítulo anterior se sabe que cono cotas exponenciales la mayoría de los estados en el espacio de Hilbert son tales que un subsistema pequeño está en un estado canónico. Para poder sacar algo de esta pregunta se planteará la situación normal, hay un baño que consiste de un número muy grande de partículas de las cuales se conoce unos parámetros macroscópicos, dentro de este se pone un subsistema con un estado inicial arbitrario pero descorrelacionado con el ambiente. Ahora la pregunta es ¿ el subsistema se equilibra?, se verá que para cualquier estado inicial del subsistema y para casi todos los estados iniciales del baño el subsistema se equilibra. Esto incluye cuando el subsistema está lejos del equilibrio.
 El estado inicial del sistema está dado por $\ket{\Psi}_{SB}=\ket{\psi}_{S} \ket{\psi}_{B}$. El estado del subsistema es uno arbitrario $\ket{\psi}_{S}$ en el espacio de Hilbert. Dado unos parámetros macroscópicos el baño  debe cumplir con estos luego el estado del baño $\ket{\phi}_{B} \in \mathcal{H}_{B}^{R} \subset\mathcal{H}_{B}$. Esta restricción mantiene la generalidad de seguir en cualquier espacio de Hilbert restringido. Puede tener o no un sentido termodinámico o macroscópico. Pero la restricción es solo inicial al evolucionar el baño en el tiempo este puede moverse fuera de $\mathcal{H}_{B}^{R}$. Usando el teorema 2 para $\mathcal{H}_{R}= \ket{\psi}_{S} \otimes \mathcal{H}_{B}^{R}$ luego $d_{R}=d_{B}^{R}$ esto da como resultado que para casi todos los estados iniciales del baño y cualquier estado del subsistema $d^{eff}(\omega) \geq \frac{d_{B}^{R}}{4}$ lo cual significa que el subsistema se equilibrará para esas condiciones, mientras que $d_{B}^{R} >> d_{S}^{2}$.
-
 El mecanismo en que el subsistema se equilibra puede ser bastante complicada ya que el baño pasa por muchos estados diferentes y no llega el equilibrio. Aunque el baño no llegue a hacerlo y se salga del subespacio $\mathcal{H}_{B}^{R}$ y el subsistema  puede equilibrarse de todas formas. En principio puede que la evolución del subsistema sea sensible a la forma precisa del baño.
 Para ver que el baño no se equilibra de manera genérica se verá que $d^{eff}(\omega_{S})$ es mucho mayor que $d^{eff}(\rho_{B}(t))$ lo cual muestra que el baño sigue evolucionando y no se equilibra en ningún estado. Como los dos sistemas están en un estado puro $Rank(\rho_{B}(t))=Rank(\rho_{S}(t)) \geq d_{S}$ como la dimensión efectiva de un estado es siempre menor a su rango se obtiene 
 
@@ -161,7 +252,9 @@ d^{eff}(\omega_{B}) \leq \frac{d^{R}}{4d_{S}}=\frac{d_{B}^{R}}{4d_{S}} >>d_{S} \
 \textbf{Independencia del estado inicial}
 LO que se ha mostrado hasta ahora ha sido como si el subsistema es pequeño este se equilibrará. Ahora el enfoque que se quiere mostrar es cual sería la dependencia del estado de equilibrio del subsistema. Hasta ahora el estado inicial podría hacer que el equilibrio sea un estado diferente dependiendo del inicial. Sea el estado de equilibrio del subsistema $\omega_{S}^{\psi}$.Como es conocido se desearía que el estado de equilibrio dependa solo de los parámetros macroscópicos y no del estado inicial microscópico.
 El teorema siguiente prueba que para casi todos los estados en un subsistema restringido llevan al mismo estado de equilibrio.
-\textbf{Teorema 3}:
+\begin{theorem}
+
+
 i) Casi todos los estados iniciales de un subespacio restringido bastante grande llevan al mismo estado de equilibrio de un subsistema pequeño. En particula, con $\langle .\rangle_{\psi}$ siendo el promedio sobre estados puros aleatoriamente uniformes $\ket{\psi(0)} \in \mathcal{H}_{R} \subset \mathcal{H}_{S} \otimes \mathcal{H}_{B}$ u $\Omega_{S}= \langle \omega_{S}^{\psi} \rangle_{\psi}$ :
 \begin{equation}
 \langle D(\omega_{S}^{\psi}, \Omega_{S}) \rangle_{\psi} \leq \sqrt{\frac{d_{S} \delta}{4d_{R}}} \leq \sqrt{\frac{d_{S}}{4d_{R}}}
@@ -176,7 +269,7 @@ ii)Paraunestado aleatorio $\ket{\psi} \in \mathcal{H}_{R}\subset \mathcal{H}$, l
 Pr_{\psi} \{ D(\omega_{S}^{\psi}, \Omega_{S}) > \frac{1}{2}\sqrt{\frac{d_{S} \delta}{d_{R}}} + \epsilon \} \leq 2exp(-C'\epsilon^{2}d_{R}),
 \end{equation}
 con $C'=\frac{2}{9 \pi^{3}}$ si se pone $\epsilon=d_{R}^{-1/3}$ da una distancia promedio pequeña con alta probabilidad cuando $d_{R}>>d_{S}$.
-
+\end{theorem}
 \textbf{Independencia del estado del ambiente}
 PAra un estado inicial que sea el producto del estado del sistema y el del ambiente $\ket{\psi}_{SB}= \ket{\psi}_{S} \ket{\phi}_{B}$ en el espacio $\mathcal{H}_{R}=\ket{\psi} \otimes \mathcal{H}_{R}^{B}$.ya se mostró que para estados genéricos el ambiente causa que el subsistema se equilibre aunque el estado de equilibrio $\omega_{S}^{\psi}$ del subsistema podría  depender del estado inicial del baño $\ket{\phi}_{B}$. Esto no es así y casi todos los estados del baño en $\mathcal{H}_{B}^{R}$ llevan al mismo estado de equilibrio del subsistema simplemente usando el resultado anterior a  $\mathcal{H}_{B} = \ket{\psi}\otimes \mathcal{H}_{R}^{B}$ y luego $d_{R} = d_{R}^{B}$, si $d_{R}^{B}>>d_{S}$ para casi todos los estados iniciales del baño llevarán al subsistema al mismo estado de equilibrio $\omega_{S}$. como se usó la cota menos estricta este resultado no depende de la forma explícita de los estados de energías propios.
 \textbf{Independenciadelestado del sistema}: Como yase hadicho el subsistema en contacto con el baño llega al equilibrio sin importar su estado inicial pero sí depende del baño. Este resultado no se pudo resolver pero se da más indicios.
