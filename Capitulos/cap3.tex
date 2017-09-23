@@ -20,104 +20,114 @@ H= \sum_{k} E_{k} \ket{E_{k}} \bra{E_{k}},
 donde $\ket{E_{k}}$ es el estado propio con energía $E_{k}$. Al Hamiltoniano anterior se le dará la única restricción de que tenga brechas de energías no degeneradas. Esto quiere decir que para una diferencia de energías dada, solo existe un par posible de estados con esa diferencia. El ejemplo puesto por (Linden et al.) es: si se tiene 4 valores propios de energía $E_{k}, E_{l},E_{m},E_{n}$ entonces $E_{k}-E_{l}=E_{m}-E_{n} $ implica $k=l$ y $m=n$, o $k=m$ y $l=n$. Esto implica que los niveles de energía no son iguales para diferentes estados (no son degenerados).\\
 Esta restricción del Hamiltoniano comprende que no importa como se divida el subsistema y el baño  siempre van a estar interactuando, esto excluye los Hamiltonianos no interactuantes ($H=H_{S}+H_{E}$) estos Hamiltonianos tienen muchas brechas de energía degeneradas. Véase que si no hay interacción en el Hamiltoniano la energía es $E=E_{S}+E_{B}$ y sean $E_{1},E_{2},E_{3},E_{4}$ tales que se satisfaga $E_{i}=E_{i}^{S}+E_{i}^{E}$ $i=1,2,3,4$, esto lleva a una brecha degenerada. Este supuesto no es tan fuerte como pueda llegar a parecer porque cualquier perturbación que se le haga al Hamiltoniano romperá las degeneraciones sin importar lo pequeña que sea la perturbación. Aunque estos cambios se tarden en hacer efecto sobre la evolución del sistema las escalas temporales no son importantes en este momento.  Gracias a esta restricción se pueden incluir interacciones complejas que por lo general no son analizadas en la literatura como interacciones de larga distancia o interacciones entre todas las partículas esto hace que la energía no llegue a ser una cantidad extensiva.
 
-\subsection{Equilibración}
+\section{Equilibración}
 
-El punto principal que se quiere dar a entender viene en forma del siguiente resultado: Para casa estado puro de un sistema cuántico que se compone por un número grande de estados de energía propios y el cual evoluciona bajo un Hamiltoniano que tiene brechas de energías no degeneradas y por lo demás arbitrario, es tal que cada subsistema pequeño llegará al equilibrio. Esto quiere decir que todos los subsistemas pequeños cumplirán con las ideas anteriores sobre equilibrio exactamente que el sistema evolucionará a un estado particular y se quedará cercano a él o en este durante la mayoría del tiempo.
-Hay en este resultado un requerimiento que anteriormente no fue nombrado, el requerimiento de una cantidad grande de estados propios de energía. La necesidad de que el sistema tenga muchos estados propios de energía es equivalente a decir que el estado variará bastante durante su evolución temporal. viendo el caso trivial de un solo estado propio de energía es claro que este no cambiará para nada. Este caso tan particular no llega a ser de mucho interés porque en el sentido anterior de equilibrio no cambia para nada y se diría que este se encuentra ya en equilibrio. Los resultados que se quieren mostrar tomaŕan estados lejanos de equilibrio sistemas que no se encuentre en el pero aquí llegan las otras suposiciones hechas anteriormente para que el subsistema no dependa del estado inicial este debe perder la información entonces si el subsistema empieza lejano al equilibrio este pasará  por muchos estados en su camino al equilibrio lo cual implica que todo el sistema también evolucione en muchos estados. El hecho de que el subsistema haya llegado al equilibrio no significa que el sistema deje de evolucionar debido a la unitaridad este debe seguir evolucionando con la misma proporción de antes. Para que los estados en los que el subsistema se encuentre en no equilibrio ocurran poco, los estados del universo en los que el subsistema se encuentre en esas condiciones deben ser una fracción muy pequeña del total de estados por donde pasa el universo. Por esto el universo debe pasar por muchos estados y el requerimiento de que tenga muchos estados propios de energía se valida.
-También se muestra que lo siguiente es suficiente: Cuando el estado de todo el sistema pasa por muchos estados diferentes cualquier estado pequeño del subsistema alcanza el equilibrio.
-Otra forma de saber qué pasa con el sistema es observar qué ocurre con el ambiente. por unitaridad el sistema debe seguir evolucionando aunque el subsistema y se encuentre en equilibrio y no cambie. Esta Evolución puede darse por el cambio de correlaciones entre el subsistema y el baño o por cambios en el estado del baño. Lo que se muestra es: cuando el estado del baño pasa por muchos estados diferentes, cualquier subsistema alcanza el equilibrio.Con estas dos ideas se muestra que la equilibración ocurre en estados productos iniciales entre el subsistema y el baño, para casi todos los estados iniciales del baño.
-La noción de evolución por muchos estados diferentes se puede escribir matemáticamente por la dimensión efectiva del estados promediado temporalmente $d^{eff}(\omega)$ donde $\omega=\langle \rho(t) \rangle_{t}$. La relación que se puede ver con los estados propios de energía es 
+La perspectiva principal que se quiere dar a entender siguiendo a (Linden et al.) viene en forma del siguiente resultado: Para cada estado puro de un sistema cuántico que se compone por un número grande de estados de energía propios y el cual evoluciona bajo un Hamiltoniano que tiene brechas de energías no degeneradas y por lo demás arbitrario, es tal que cada pequeño subsistema llegará al equilibrio. Esto quiere decir que todos los subsistemas pequeños cumplirán con las ideas anteriores sobre equilibrio exactamente que el sistema evolucionará a un estado particular y se quedará cercano a él o en este durante la mayoría del tiempo.
+\\
+Hay en este resultado un requerimiento que anteriormente no fue nombrado, el requerimiento de una cantidad grande de estados propios de energía. La necesidad de que el sistema tenga muchos estados propios de energía es equivalente a decir que el estado variará bastante durante su evolución temporal, por ejemplo el caso trivial de un solo estado propio de energía es claro que este no cambiará para nada. Este caso tan particular no llega a ser de mucho interés porque este estado no evolucionará a otro y se diría que ya se encuentra en equilibrio. Los resultados que se quieren mostrar tomaran estados fuera del equilibrio. En este punto se usan las otras suposiciones hechas anteriormente para que el subsistema no dependa del estado inicial el subsistema debe perder esta información; si el subsistema empieza lejano al equilibrio este pasará  por muchos estados en su camino al equilibrio lo cual implica que el universo también evolucione en muchos estados. El hecho de que el subsistema haya llegado al equilibrio no significa que el universo deje de evolucionar, debido a la unitaridad, debe seguir evolucionando con la misma proporción que antes. Para que los estados en los que el subsistema se encuentre en no equilibrio ocurran poco, los estados del universo en los que el subsistema se encuentre en esas condiciones deben ser una fracción muy pequeña del total de estados por donde pasa el universo. Por esto el universo debe pasar por muchos estados y el requerimiento de que tenga muchos estados propios de energía se valida. 
+\\
+Otra forma de saber qué pasa con el universo es observar qué ocurre con el ambiente. Por unitaridad el universo debe seguir evolucionando aunque el subsistema y se encuentre en equilibrio y no cambie. Esta Evolución puede darse por el cambio de correlaciones entre el subsistema y el baño o por cambios en el estado del baño. Lo que se muestra es: cuando el estado del baño pasa por muchos estados diferentes, cualquier subsistema alcanza el equilibrio. También se muestra que cuando el estado del universo pasa por muchos estados diferentes cualquier estado pequeño subsistema alcanza el equilibrio. Estas dos ideas  exponen que la equilibración ocurre en estados productos iniciales entre el subsistema y el baño, para casi todos los estados iniciales del baño.
+\\
+
+Para poder empezar a construir estos conceptos matemáticamente se puede empezar con la concepción matemática de evolucionar por muchos estados diferentes, esta se comprime en la dimensión efectiva del estado promediado temporalmente $d^{eff}(\omega)$ donde $\omega= \big \langle \rho(t) \big\rangle_{t}$. Esta medida de evolución por muchos estados se puede relacionar con los estados propios de energía así:
+\\
+Se toma el estado del universo
 \begin{equation}
 \ket{\psi(t)} = \sum_{k} c_{k} e^{-i\frac{E_{k}t}{\hbar}} \ket{E_{k}}
 \end{equation}
-luego el operador de densidad es 
+cuyo operador de densidad es 
 \begin{equation}
-\rho(t)=\sum_{k,l} c_{k} c_{l}^{*} e^{\frac{-i(E_{k}-E_{l})t}{\hbar}}\ket{E_{k}} \bra{E_{l}}
+\rho(t)=\sum_{k,l} c_{k} c_{l}^{*} e^{\frac{-i(E_{k}-E_{l})t}{\hbar}}\ket{E_{k}} \bra{E_{l}},
 \end{equation}
-entonces su promedio temporal es, recordando la condición de no degeneración de los niveles de energía
+su promedio temporal es, recordando la condición de no degeneración de los niveles de energía,
 \begin{equation}
 \omega= \sum_{k} |c_{k}|^{2} \ket{E_{k}} \bra{E_{k}}
 \end{equation}
-entoces la dimensión efectiva es 
+y dando la relación se calcula la dimensión efectiva resultando 
 \begin{equation}
-d^{eff}(\omega)=\frac{1}{Tr(\omega^{2})}=\frac{1}{\sum_{k} |c_{k}|^{4} }
+d^{eff}(\omega)=\frac{1}{Tr(\omega^{2})}=\frac{1}{\sum_{k} |c_{k}|^{4} }.
 \end{equation}
-De la misma manera el hecho de que el baño pase por muchos estados diferentes viene dado por $d^{eff}(\omega_{B})$ por $\omega_{B}=\langle \rho(t) \rangle_{t}$. Como se espera que el baño al evolucionar pase por muchos más estados dado que el subsistema debe seguir evolucionando y el subsistema quede en un espacio de estados más pequeños se preve que $d^{eff}(\omega_{B})$ sea mucho más grande que $d_{S}$. Para formular ya el primer teorema se quiere ver la distancia entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}= \langle \rho_{S}(t) \rangle_{t}$. Como se espera que $\rho_{S}(t) $ vaya fluctuando alrededor de $\omega_{S}$ se analizará el promedio temporal de su distancia $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ cuando este sea muy pequeño el subsistema debe pasar gran parte del tiempo muy cerca a $\omega_{S}$. Esto quiere decir que el subsistema se equilibrará(según la definición anterior) a $\omega_{S}$.
-\begin{theorem}
+\\
+Similarmente el hecho de que el baño pase por muchos estados diferentes viene dado por $d^{eff}(\omega_{B})$ con $\omega_{B}=\langle \rho(t) \rangle_{t}$. Debido a que el baño al evolucionar pase por muchos más estados dado que el universo debe seguir evolucionando y el subsistema quede en un espacio de estados más pequeño se preve que $d_{S}$ es mucho más pequeño que $d^{eff}(\omega_{B})$. Para formular ya el primer teorema se quiere ver la distancia entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}= \langle \rho_{S}(t) \rangle_{t}$. Como se espera que $\rho_{S}(t) $ vaya fluctuando alrededor de $\omega_{S}$ se analizará el promedio temporal de su distancia $\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t}$ cuando este sea muy pequeño el subsistema debe pasar gran parte del tiempo muy cerca a $\omega_{S}$. Esto quiere decir que el subsistema se equilibrará(según la definición anterior) a $\omega_{S}$.
+
+\begin{theorem} \label{equlibracion}
+
 Considere cualquier estado $\ket{\psi(t)} \in \mathcal{H}$ evolucionando bajo un Hamiltoniano con brechas de energía no-degeneradas. Luego la distancia promedio entre $\rho_{S}(t)$ y su promedio temporal $\omega_{S}$ está acotado por:
 
 \begin{equation}
-\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t} \le \frac{1}{2} \sqrt{\frac{d_{S}}{d^{eff}(\omega-{B})}} \le \sqrt{\frac{d_{S}^{2}}{d^{eff}(\omega)}}.
+\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t} \le \frac{1}{2} \sqrt{\frac{d_{S}}{d^{eff}(\omega_{B})}} \le \frac{1}{2} \sqrt{\frac{d_{S}^{2}}{d^{eff}(\omega)}}.
 \end{equation}
 \end{theorem}
 
-\textbf{Demostración}:Por la relación ya conocida entre la distanacia de traza y la norma de Hilbert-Schimidt que se usó en el capítulo anterior
+\textbf{Demostración}:
+Recordando la relación entre la distancia de traza y la norma de Hilbert-Schmidt que se usó en el capítulo anterior
 
 \begin{equation}
-\norm{M}_{1} \le \sqrt{n}\norm{M}_{2}
+\norm{M}_{1} \le \sqrt{n}\norm{M}_{2},
 \end{equation}
 
-se usa para la el operador $D(\rho_{1}, \rho_{2})$:
+se usa para el operador $D(\rho_{1}, \rho_{2})$:
 
 \begin{equation}
-\frac{1}{2} Tr_{S} \sqrt{(\rho_{1} - \rho_{2})^{2}} \le \frac{1}{2}\sqrt{d_{S} Tr_{S} (\rho_{1}- \rho_{2})^{2}}
-\end{equation}
-Por la concavidad de la función raíz cuadrada
-
-\begin{equation}
-\langle D(\rho_{S}(t),\omega_{S}) \rangle_{t} \le \sqrt{  d_{S} \Big \langle Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \Big \rangle_{t}}
+\frac{1}{2} \Tr_{S} \sqrt{(\rho_{1} - \rho_{2})^{2}} \le \frac{1}{2}\sqrt{d_{S} \Tr_{S} (\rho_{1}- \rho_{2})^{2}},
 \end{equation}
 
-usando las expansiones para $\rho_{S}$ y $\omega_{S}$
+por la concavidad de la función raíz cuadrada se obtiene
+
 \begin{equation}
-\rho_{S}(t)=\sum_{k,l} c_{k} c_{l}^{*} e^{\frac{-i(E_{k}-E_{l})t}{\hbar}} Tr_{B} (\ket{E_{k}} \bra{E_{l}}),
+\langle D(\rho_{S}(t),\omega_{S}) \rangle_{t} \le \sqrt{  d_{S} \Big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \Big \rangle_{t}}.
+\end{equation}
+
+Usando las expansiones para $\rho_{S}$ y $\omega_{S}$
+\begin{equation}
+\rho_{S}(t)=\sum_{k,l} c_{k} c_{l}^{*} e^{\frac{-i(E_{k}-E_{l})t}{\hbar}} \Tr_{B} (\ket{E_{k}} \bra{E_{l}}),
 \end{equation}
 
 \begin{equation}
-\omega_{S} = \sum |c_{k}|^{2} Tr_{B}(\ket{E_{k}} \bra{E_{k}}),
+\omega_{S} = \sum |c_{k}|^{2} \Tr_{B}(\ket{E_{k}} \bra{E_{k}}),
 \end{equation}
 
-se puede escribir $\langle Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \rangle_{t}$ como 
+se puede escribir $ \big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \big \rangle_{t}$ como 
 
 \begin{equation}
-\langle Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \rangle_{t}=\sum_{k \neq l} \sum_{m \neq n} \mathcal{T}_{klmn} Tr_{S} [Tr_{B}(\ket{E_{k}} \bra{E_{l}}) Tr_{B}(\ket{E_{k}} \bra{E_{l}})]
+\big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2}  \big \rangle_{t}=\sum_{k \neq l} \sum_{m \neq n} \mathcal{T}_{klmn} \Tr_{S} [\Tr_{B} \ket{E_{k}} \bra{E_{l}} \Tr_{B} \ket{E_{k}} \bra{E_{l}}]
 \end{equation}
 donde $\mathcal{T}_{klmn}$ es :
 \begin{equation}
-\mathcal{T}_{klmn}=c_{k}c_{l}^{*}c_{m}c_{n}^{*} \Big \langle e^{\frac{-i(E_{k}-E_{l}+E_{m}-E_{n})t}{\hbar}} \Big \rangle_{t}
+\mathcal{T}_{klmn}=c_{k}c_{l}^{*}c_{m}c_{n}^{*} \Big \langle e^{\frac{-i(E_{k}-E_{l}+E_{m}-E_{n})t}{\hbar}} \Big \rangle_{t}.
 \end{equation}
-debido a la restricción impuesta al Hamiltoniano de brechas de energías no degeneradas y como solo se toman elementos $k \neq l$ y $m\neq n$ los terminos que son diferentes de $0$ son $k=n$ y $l=m$.
+Debido a la restricción impuesta al Hamiltoniano de brechas de energías no degeneradas y como solo se toman elementos $k \neq l$ y $m\neq n$ los terminos que son diferentes de $0$ son $k=n$ y $l=m$,
 
-Luego
+entonces
  
 \begin{multline}
-\langle Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \rangle_{t} \\
-	= \sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} Tr_{S} [Tr_{B}(\ket{E_{k}} \bra{E_{l}}) Tr_{B}(\ket{E_{k}} \bra{E_{l}})] \\
-	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{l}}\ket{s'b} \bra{s'b'}\ket{E_{l}} \bra{E_{k}}\ket{sb'} \\
+\big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \big \rangle_{t}\\
+	= \sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{S} [\Tr_{B}(\ket{E_{k}} \bra{E_{l}}) \Tr_{B}(\ket{E_{k}} \bra{E_{l}})]\\
+	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{l}}\ket{s'b} \bra{s'b'}\ket{E_{l}} \bra{E_{k}}\ket{sb'}\\
 	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{k}}\ket{sb'} \bra{s'b'}\ket{E_{l}} \bra{E_{l}}\ket{s'b}\\
-	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} Tr_{B} [Tr_{S}(\ket{E_{k}} \bra{E_{k}}) Tr_{S}(\ket{E_{l}} \bra{E_{l}})] \\
-	=\sum_{k \neq l}  Tr_{B} [Tr_{S}(|c_{k}|^{2}\ket{E_{k}} \bra{E_{k}}) Tr_{S}( |c_{l}|^{2} \ket{E_{l}} \bra{E_{l}})] 
+	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{B} [\Tr_{S}(\ket{E_{k}} \bra{E_{k}}) \Tr_{S}(\ket{E_{l}} \bra{E_{l}})]\\
+	=\sum_{k \neq l}  \Tr_{B} [\Tr_{S}(|c_{k}|^{2}\ket{E_{k}} \bra{E_{k}}) \Tr_{S}( |c_{l}|^{2} \ket{E_{l}} \bra{E_{l}})]\\
+=\Tr_{B} \omega_{B}^{2} -\sum_{k} |c_{k}|^{4} \Tr_{S}[ \Tr_{B}( \ket{E_{k}} \bra{E_{k}})]^{2} \leq  \Tr_{B}( \omega_{B}^{2}).
 \end{multline}
-recordando la definición de $\omega_{B}$ y observando la segunda línea de la ecuación anterior
-\begin{equation}
-Tr_{B} \omega_{B}^{2} -\sum_{k} |c_{k}|^{2} Tr_{S}[ Tr_{B}( \ket{E_{k}} \bra{E_{k}})]^{2} \leq  Tr_{B}( \omega_{B}^{2}).
-\end{equation}
 
-Por la subaditividad débil de la entropía de Rényi:
+La última  igualdad se encuentra recordando la definición de $\omega_{B}$ y observando la segunda igualdad. Por la subaditividad débil de la entropía de Rényi:
 
 \begin{equation}
-Tr(\omega^{2}) \geq  \frac{Tr_{B}(\omega_{B}^{2})}{Rank(\rho_{S})} \geq \frac{Tr_{B}(\omega_{B}^{2})}{d_{S}}
+\Tr(\omega^{2}) \geq  \frac{\Tr_{B}(\omega_{B}^{2})}{ \rank (\rho_{S})} \geq \frac{\Tr_{B}(\omega_{B}^{2})}{d_{S}}.
 \end{equation}
 
-uniendo todos los resultados con la desigualdad inicial del promedio de la distancia
+Uniendo todos los resultados con la desigualdad inicial del promedio de la distancia
 
 \begin{equation}
-\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t} \le  \frac{1}{2} \sqrt{d_{S} Tr_{B}(\omega_{B}^{2})} \le \frac{1}{2}\sqrt{d_{S}^{2}Tr(\omega^{2})}=\frac{1}{2}\sqrt{\frac{d_{S}^{2}}{d^{eff}(\omega)}}.
+\langle D(\rho_{S}(t) ,\omega_{S}) \rangle_{t} \le  \frac{1}{2} \sqrt{d_{S} \Tr_{B}(\omega_{B}^{2})} \le \frac{1}{2}\sqrt{d_{S}^{2} 	\Tr(\omega^{2})}=\frac{1}{2}\sqrt{\frac{d_{S}^{2}}{d^{eff}(\omega)}}.
 \end{equation}
 
-Con este resultado se puede hablar de la termalización de una forma matemática consto se ve que el subsistema se equilibra cuando la dimensión de $d^{eff}(\omega)$ sea mucho mayor que la dimensión de dos copias del subsistema ($d_{S}^{2}$) o cuando la dimensión efectiva explorada por el baño $d^{eff}(\omega_{B})$ sea mucho más grande que la dimensión del subsistema.
-EL resultado anterior tiene varias generalidades que se quiere recodar. La restricción impuesta sobre el Hamiltoniano  es una que no excluye muchos Hamiltonianos. Además de que esta ha sido la única restricción sobre todo el sistema , no se ha especificado nada del baño ni del subsistema. El baño no está necesariamente en equilibrio no se le ha dado ninguna interpretación térmica a ningún objeto tratado hasta ahora. no se ha hablado tampoco de ninguna forma en la que el subsistema llega al equilibrio ni que esta en algún estado específico.
-Los valores propios de energía tampoco son importantes en las cotas dadas anteriormente, en el teorema al ser demostrado fue encontrado algunos valores propios de energía que al ser promediados dan 0. La energía es importante al buscar las formas exactas en las que evoluciona el sistema pero aquí se demostró que para la equilibración en intervalos de tiempo muy grandes no son muy importantes , las cotas son independientes del tiempo . La forma en que se dividió el sistema(subsistema y baño) solo es importante para el teorema 1 la dimensión del subsistema y no la especificación de la forma o un subsistema particular. Esto permite decir que cualquier subsistema con dimensión $d_{S}$ estará en equilibrio, los varios subsistemas bastante pequeños de dimensión $d_{S}$ también estarán en equilibrio.
+Este resultado  da base para hablar de la termalización de una forma matemática, se ve que el subsistema se equilibra cuando la dimensión de $d^{eff}(\omega)$ sea mucho mayor que la dimensión de dos copias del subsistema ($d_{S}^{2}$) o cuando la dimensión efectiva explorada por el baño $d^{eff}(\omega_{B})$ sea mucho más grande que la dimensión del subsistema.
+\\
+EL resultado anterior tiene varias generalidades que se quieren recodar. La restricción impuesta sobre el Hamiltoniano  es una que no excluye muchos Hamiltonianos. Además de que esta ha sido la única restricción sobre todo el universo, no se ha especificado nada del baño ni del subsistema. El baño no está necesariamente en equilibrio no se le ha dado ninguna interpretación con respecto a la termodinámica usual a ningún objeto tratado hasta ahora. no se ha hablado tampoco de ninguna forma en la que el subsistema llega al equilibrio ni que esta en algún estado específico.
+\\
+Los valores propios de energía tampoco son importantes en las cotas dadas anteriormente, en el teorema al ser demostrado fue encontrado algunos valores propios de energía que al ser promediados dan 0. La energía es importante al buscar las formas exactas en las que evoluciona el sistema pero aquí se demostró que para la equilibración en intervalos de tiempo muy grandes no son muy importantes, las cotas son independientes del tiempo. La forma en que se dividió el universo (subsistema y baño) no es importante, solo es importante para el teorema \ref{equlibracion} la dimensión del subsistema y no la especificación de la forma o un subsistema particular. Esto permite decir que cualquier subsistema con dimensión $d_{S}$ estará en equilibrio, los varios subsistemas bastante pequeños de dimensión $d_{S}$ también estarán en equilibrio.
+
 \textbf{Equilibrio de conjuntos típicos}
 Aunque se puso una cota a la fluctuación de $\rho_{S}(t)$ alrededor de $\omega_{S}$ se quiere ver cuales casos esta fluctuación es tan pequeña que el subsistema se equilibrará para esto se mostrará el siguiente teorema\\
 
