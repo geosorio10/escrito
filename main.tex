@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc} %Paquete para escribir acentos y otros símbolos directamente
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{xr}
 %\usepackage{subfig} %para poner subfiguras
 \graphicspath{{Img/}} %En qué carpeta están las imágenes
 \usepackage[nottoc]{tocbibind}
@@ -22,7 +23,6 @@
             pdfproducer={Latex con hyperref},
             pdfcreator={pdflatex}]{hyperref}
             
-
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{corollary}{Corolario}[theorem]
 \newtheorem{lemma}[theorem]{Lema}
@@ -40,7 +40,7 @@
 
 %SI TU TESIS TIENE TEOREMAS Y DEMOSTRACIONES, PUEDES DESCOMENTAR Y USAR LOS SIGUIENTES COMANDOS
 
-%\renewcommand{\proofname}{Demostración}
+%\proofname}{Demostración}
 %\providecommand{\norm}[1]{\lVert#1\rVert} %Provee el comando para producir una norma.
 %\providecommand{\innp}[1]{\langle#1\rangle} 
 %\newcommand{\seno}{\mathrm{sen}}

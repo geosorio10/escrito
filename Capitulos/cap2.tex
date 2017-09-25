@@ -1,4 +1,4 @@
-\chapter{El entrelazamiento y la mecánica estadística}
+\chapter{El entrelazamiento y la mecánica estadística} \label{cap:2}
 
 La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista dadas las ecuaciones de movimiento. Pero lo que sorprende al tratar con  sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos. La conexión que hay entre el determinismo y estas probabilidades es una discusión que no se ha podido solucionar dado a que han existido varias soluciones pero todas con sus fallas (libro de historia de la termodinámica). Los métodos típicos requieren hablar de promedios de ensamble, promedios temporales, aleatoriedad. Todos estos conceptos siguen siendo muy debatidos y parecería que no solucionará ninguna pregunta seguir con ellos. Por eso se ha estado buscando nuevos fundamentos para la mecánica estadística.
 \\
@@ -72,7 +72,7 @@ Esta distancia de traza se relaciona con la distancia de norma de manera sencill
 
 Teniendo ya una forma de darle sentido al concepto de que dos estados son cercanos entonces se puede plantear el teorema central de este capítulo:
 \\
-\begin{theorem} \label{teorema principal}
+\begin{theorem} \label{cap2 teorema principal}
 Para un estado escogido de manera aleatoria $\ket{\phi} \in \mathcal{H}_{R} \subseteq \mathcal{H}_{S} \otimes \mathcal{H}_{E} $ y un $\epsilon > 0$ arbitrario, la distancia entre la matriz densidad reducida del sistema $\rho_{S}=\Tr_{E}(\ket{\phi} \bra{\phi})$  y el estado canónico $\Omega_{S}=\Tr_{E} ( \mathcal{E}_{R})$ esta dado probabilísticamente por 
 
 \begin{equation}
@@ -98,10 +98,10 @@ d_{E}^{eff}= \frac{1}{\Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
 Donde $\Omega_{E}= \Tr_{S} \mathcal{E}_{R}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
 \end{theorem}
 
-\subsection{Lema de Levy}
+\subsection{Lema de Levy} \label{cap2 levy}
 Para poder demostrar el teorema \ref{teorema principal} se usará  el lema de Levy. Este dice que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente:\\
 
-\begin{lemma} \label{lemma de levy}
+\begin{lemma} \label{cap2 lemma de levy}
 
 Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera d-dimensional $\mathbb{S}^d$ , y un punto $\phi \in \mathbb{S}^d $ es escogido de manera uniformemente aleatoria,
 \begin{equation}
