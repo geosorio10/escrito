@@ -11,8 +11,11 @@
 \contentsline {subsection}{\numberline {2.2.1}Lema de Levy}{14}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{17}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Significado f\IeC {\'\i }sico}{23}{section.2.3}
-\contentsline {chapter}{\numberline {3}Evoluci\IeC {\'o}n hacia el equilibrio}{25}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Equilibraci\IeC {\'o}n}{28}{subsection.3.0.1}
-\contentsline {chapter}{\numberline {4}Conclusiones}{41}{chapter.4}
+\contentsline {chapter}{\numberline {3}Evoluci\IeC {\'o}n hacia el equilibrio}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Especificaci\IeC {\'o}n del equilibrio}{28}{section.3.1}
+\contentsline {section}{\numberline {3.2}Equilibraci\IeC {\'o}n}{30}{section.3.2}
+\contentsline {chapter}{\numberline {4}Termalizaci\IeC {\'o}n y los estados de Gibbs}{45}{chapter.4}
+\contentsline {chapter}{\numberline {5}Microreversibilidad de sistemas cl\IeC {\'a}sicos no aut\IeC {\'o}nomos}{47}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{49}{chapter.6}
 \vspace {2em}
 \vspace {2em}
