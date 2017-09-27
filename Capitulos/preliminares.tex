@@ -1,87 +1,87 @@
 \chapter{Preliminares}
 
-Para el trabajo que se presentará en preciso poder dar una base que más adelante será útil  en su momento para poder expandir sobre estás ideas en el momento. Con estos preliminares se espera poder poner a los lectores en un mismo contexto. Dado los temas que se trataran se debe dar una explicación sobre la mecánica estadística y un poco de la visión de la mecánica cuántica que es usada en la teoría cuántica de la información. se repasarán algunos puntos importantes para la exposición y se verán algunos problemas que tienen los fundamentos de la mecánica estadística. Por la parte de la cuántica se dará la versión de operadores de densidad  que por lo general no se explica mucho, anexo se hablara de conceptos como el entrelazamiento y un poco la idea de decoherencia.
+%Para el trabajo que se presentará en preciso poder dar una base que más adelante será útil  en su momento para poder expandir sobre estás ideas en el momento. Con estos preliminares se espera poder poner a los lectores en un mismo contexto. Dado los temas que se trataran se debe dar una explicación sobre la mecánica estadística y un poco de la visión de la mecánica cuántica que es usada en la teoría cuántica de la información. se repasarán algunos puntos importantes para la exposición y se verán algunos problemas que tienen los fundamentos de la mecánica estadística. Por la parte de la cuántica se dará la versión de operadores de densidad  que por lo general no se explica mucho, anexo se hablara de conceptos como el entrelazamiento y un poco la idea de decoherencia.
 
 
-\section{mecánica estadística}
-La mecánica clásica ha tenido desde sus inicio varios puntos fuertes, ha ganado el puesto como una teoría bastante buena. Pero como ya se sabe esta teoría tiene bastantes limitaciones en el régimen microscópico no llega a ser la teoría que funciona. Ahora para otras propiedades físicas no se puede extender la mecánica clásica de manera sencilla la termodinámica fue una nueva área que surgió y la mecánica como se conocía desde Newton no fue tan 
-sencilla ni obvia de aplicar. La termodinámica toma sistemas de muchas partículas ...
+\section{Mecánica Estadística}
+%La mecánica clásica ha tenido desde sus inicio varios puntos fuertes, ha ganado el puesto como una teoría bastante buena. Pero como ya se sabe esta teoría tiene bastantes limitaciones en el régimen microscópico no llega a ser la teoría que funciona. Ahora para otras propiedades físicas no se puede extender la mecánica clásica de manera sencilla la termodinámica fue una nueva área que surgió y la mecánica como se conocía desde Newton no fue tan 
+%sencilla ni obvia de aplicar. La termodinámica toma sistemas de muchas partículas ...
 
 \subsection{Teorma de Liouville }
-Este teorema es de alta importancia en la mecánica estadística para ver sus consecuencias en esta área primero se verá qué declara este teorema para luego ver sus consecuencias. La siguiente demostración del teorema sigue los pasos dados por (pathria,1996). 
+%Este teorema es de alta importancia en la mecánica estadística para ver sus consecuencias en esta área primero se verá qué declara este teorema para luego ver sus consecuencias. La siguiente demostración del teorema sigue los pasos dados por (pathria,1996). 
 
-Se considera un volumen $\Gamma$ que encierra una región que se quiere estudiar en el espacio de fase,  este volumen tiene una superficie $\sigma$. El cambio número de puntos (el punto $6-N$-dimensional que da la posición y momento de cada partícula en el sistema) dentro de este volumen está dado por 
-\begin{equation}
-\frac{\partial}{\partial t} \int_{\Gamma} \rho d\Gamma
-\end{equation}
+%Se considera un volumen $\Gamma$ que encierra una región que se quiere estudiar en el espacio de fase,  este volumen tiene una superficie $\sigma$. El cambio número de puntos (el punto $6-N$-dimensional que da la posición y momento de cada partícula en el sistema) dentro de este volumen está dado por 
+%\begin{equation}
+%\frac{\partial}{\partial t} \int_{\Gamma} \rho d\Gamma
+%\end{equation}
 
-donde $\rho$ es es la densidad en el espacio de fase, esta función es tal que el número de puntos representativos en el espacio de fase en cierto volumen ($d^{3N}q d^{3N}p$) al rededor de un punto $(q,p)$  viene dado por $\rho(q,p;t)d^{3N}q d^{3N}p$. En la ecuación anterior $d^{3N}q d^{3N}p=d\Gamma$. 
-El cambio neto de puntos que salen de $\Gamma$ por la superficie $\sigma$ es
+%donde $\rho$ es es la densidad en el espacio de fase, esta función es tal que el número de puntos representativos en el espacio de fase en cierto volumen ($d^{3N}q d^{3N}p$) al rededor de un punto $(q,p)$  viene dado por $\rho(q,p;t)d^{3N}q d^{3N}p$. En la ecuación anterior $d^{3N}q d^{3N}p=d\Gamma$. 
+%El cambio neto de puntos que salen de $\Gamma$ por la superficie $\sigma$ es
 
-\begin{equation}
-\int_{\sigma} \rho \mathbf{v \cdot \hat{n}} d\sigma;
-\end{equation}
+%\begin{equation}
+%\int_{\sigma} \rho \mathbf{v \cdot \hat{n}} d\sigma;
+%\end{equation}
 
-donde $\mathbf{v}$ es el vector de velocidad del punto representativo en la región de superficie $d\sigma$ y $\mathbf{\hat{n}}$ es el vector perpendicular a esta superficie con dirección de salida. Por el teorema de la divergencia se tiene:
+%donde $\mathbf{v}$ es el vector de velocidad del punto representativo en la región de superficie $d\sigma$ y $\mathbf{\hat{n}}$ es el vector perpendicular a esta superficie con dirección de salida. Por el teorema de la divergencia se tiene:
 
-\begin{equation}
-\int_{\Gamma} \div{ ( \rho\mathbf{v} ) } d\Gamma = \int_{\Gamma} \sum_{i=1}^{3N} \Big( \frac{\partial}{\partial q_{i}}(\rho \dot{q_{i}})+ \frac{\partial}{\partial p_{i}} (\rho \dot{p_{i}}) \Big) d\Gamma
-\end{equation}
-Debido a que las cantidad de puntos se conserva en el espacio de fase esto quiere decir que el ensamble que se considera no agrega nuevos miembros ni elimina los que ya se encuentran en este, esto permite concluir:
-\begin{equation}
- \int_{\Gamma} \Big( \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) } \Big) d\Gamma =0
-\end{equation}
-La condición para que esta integral sea cierta para cualquier $\omega$ es que el integrando sea cero.Esto nos da la ecuación de continuidad para el espacio de fase.
+%\begin{equation}
+%\int_{\Gamma} \div{ ( \rho\mathbf{v} ) } d\Gamma = \int_{\Gamma} \sum_{i=1}^{3N} \Big( \frac{\partial}{\partial q_{i}}(\rho \dot{q_{i}})+ \frac{\partial}{\partial p_{i}} (\rho \dot{p_{i}}) \Big) d\Gamma
+%\end{equation}
+%Debido a que las cantidad de puntos se conserva en el espacio de fase esto quiere decir que el ensamble que se considera no agrega nuevos miembros ni elimina los que ya se encuentran en este, esto permite concluir:
+%\begin{equation}
+ %\int_{\Gamma} \Big( \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) } \Big) d\Gamma =0
+%\end{equation}
+%La condición para que esta integral sea cierta para cualquier $\omega$ es que el integrando sea cero.Esto nos da la ecuación de continuidad para el espacio de fase.
 
-\begin{equation} \label{con}
- \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) }=0
-\end{equation}
+%\begin{equation} \label{con}
+ %\frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) }=0
+%\end{equation}
 
-usando la forma explícita de la divergencia en $\ref{con}$,
-\begin{equation}
- \frac{\partial \rho}{\partial t} +\sum_{i=1}^{3N} \Big( \frac{\partial\rho}{\partial q_{i}}\dot{q_{i}}+  \frac{\partial\rho}{\partial p_{i}}\dot{p_{i}} \Big) + \rho \sum_{i=1}^{3N} \Big( \frac{\partial \dot{q_{i}}}{\partial q_{i}} + \frac{\partial \dot{p_{i}}}{\partial p_{i}}\Big)=0
-\end{equation}
-Por las ecuaciones de Hamilton el último término se cancela. Como $\rho$ depende de $p,q$ y $t$ con los dos primeros términos se pueden organizar para que la ecuación quede de la siguiente forma:
-\begin{equation} \label{liouville}
-\frac{d \rho}{dt}= \frac{\partial \rho}{\partial t} + [ \rho, H ]=0
-\end{equation}
-la ecuación \ref{liouville} es el teorema de Liouville. Esto lo que dice es que la densidad "local" de puntos vista desde un observador que se mueve con el punto, se mantiene constante en el tiempo. Luego los puntos en el espacio de fase se mueven de la misma manera que un fluido incompresible en el espacio físico.
+%usando la forma explícita de la divergencia en $\ref{con}$,
+%\begin{equation}
+% \frac{\partial \rho}{\partial t} +\sum_{i=1}^{3N} \Big( \frac{\partial\rho}{\partial q_{i}}\dot{q_{i}}+  \frac{\partial\rho}{\partial p_{i}}\dot{p_{i}} \Big) + \rho \sum_{i=1}^{3N} \Big( \frac{\partial \dot{q_{i}}}{\partial q_{i}} + \frac{\partial \dot{p_{i}}}{\partial p_{i}}\Big)=0
+%\end{equation}
+%Por las ecuaciones de Hamilton el último término se cancela. Como $\rho$ depende de $p,q$ y $t$ con los dos primeros términos se pueden organizar para que la ecuación quede de la siguiente forma:
+%\begin{equation} \label{liouville}
+%\frac{d \rho}{dt}= \frac{\partial \rho}{\partial t} + [ \rho, H ]=0
+%\end{equation}
+%la ecuación \ref{liouville} es el teorema de Liouville. Esto lo que dice es que la densidad "local" de puntos vista desde un observador que se mueve con el punto, se mantiene constante en el tiempo. Luego los puntos en el espacio de fase se mueven de la misma manera que un fluido incompresible en el espacio físico.
 
-Esta conclusión es la más clara al obtener el teorema de Liouville pero también hay consecuencias profundas dadas por este. Para ver las consecuencias que brinda el teorema seguiremos a (kardar,2010) 
+%Esta conclusión es la más clara al obtener el teorema de Liouville pero también hay consecuencias profundas dadas por este. Para ver las consecuencias que brinda el teorema seguiremos a (kardar,2010) 
 
-Consecuencias del teorema de Liouville: La primera consecuencia es que al hacer una inversión temporal el corchete de poisson $[\rho, H]$ cambia de signo y esto predice que la densidad revierte su evolución. Es decir que al hacer la transformación $(\textbf{p},\textbf{q},t) \to (-\textbf{p},\textbf{q},-t)$ el teorema de Liouvile implica $\rho(\textbf{p},\textbf{q},t)=\rho(\textbf{-p},\textbf{q},-t)$.
-La segunda es sobre la evolución del promedio de ensamble en el tiempo.
-\begin{equation}
-\frac{d \langle f \rangle}{dt}= \int d \Gamma \frac{\partial \rho(p,q,t)}{\partial t} f(p,q)= \sum_{i=1}^{3N} \int d\Gamma f(p,q) \Big( \frac{\partial \rho}{\partial p_{i}}\frac{\partial H}{\partial q_{i}} - \frac{\partial \rho}{\partial q_{i}}\frac{\partial H}{\partial p_{i}}  \Big)
-\end{equation}
-En la ecuación anterior se usó el teorema de Liouville poniendo explícitamente el corchete de Poisson. Integrando por partes y recordando que $\rho$ tiende a cero en los límites de la integración se llega a:
-\begin{equation}
-\frac{d \langle f \rangle}{dt}= \langle [ f,H] \rangle.
-\end{equation}
-Con esta relación sobre los promedios se puede ver qué condiciones son necesarias para que el ensamble se encuentre en el estado de equilibrio. Dados unos parámetros macroscópicos se sabe que si el ensamble corresponde a uno en el equilibrio los promedios de ensamble deben ser independientes del tiempo. Esto puede lograrse por
+%Consecuencias del teorema de Liouville: La primera consecuencia es que al hacer una inversión temporal el corchete de poisson $[\rho, H]$ cambia de signo y esto predice que la densidad revierte su evolución. Es decir que al hacer la transformación $(\textbf{p},\textbf{q},t) \to (-\textbf{p},\textbf{q},-t)$ el teorema de Liouvile implica $\rho(\textbf{p},\textbf{q},t)=\rho(\textbf{-p},\textbf{q},-t)$.
+%La segunda es sobre la evolución del promedio de ensamble en el tiempo.
+%\begin{equation}
+%\frac{d \langle f \rangle}{dt}= \int d \Gamma \frac{\partial \rho(p,q,t)}{\partial t} f(p,q)= \sum_{i=1}^{3N} \int d\Gamma f(p,q) \Big( \frac{\partial \rho}{\partial p_{i}}\frac{\partial H}{\partial q_{i}} - \frac{\partial \rho}{\partial q_{i}}\frac{\partial H}{\partial p_{i}}  \Big)
+%\end{equation}
+%En la ecuación anterior se usó el teorema de Liouville poniendo explícitamente el corchete de Poisson. Integrando por partes y recordando que $\rho$ tiende a cero en los límites de la integración se llega a:
+%\begin{equation}
+%\frac{d \langle f \rangle}{dt}= \langle [ f,H] \rangle.
+%\end{equation}
+%Con esta relación sobre los promedios se puede ver qué condiciones son necesarias para que el ensamble se encuentre en el estado de equilibrio. Dados unos parámetros macroscópicos se sabe que si el ensamble corresponde a uno en el equilibrio los promedios de ensamble deben ser independientes del tiempo. Esto puede lograrse por
  
-\begin{equation}
-[\rho_{eq}, H]=0.
-\end{equation}
-Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q))$ esto es una solución ya que $[\rho(H),H]=\rho^{'}(H)[H,H]=0$. Esto muestra el supuesto básico de la mecánica estadística, $\rho$es constante en as superficie de energías constantes $H$. El supuesto de la mecánica estadística dictamina que el macroestado esta dado por una densidad uniforme de microestados. Esto es lo mismo que cambiar la medida de objetiva de probabilidad de la de $\rho(p,q,t) d\Gamma$ a una medida subjetiva.
-La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Esta pregunta nos lleva al problema de ergodicidad, ¿es válido igualar el promedio temporal con el promedio de ensamble?.
+%\begin{equation}
+%[\rho_{eq}, H]=0.
+%\end{equation}
+%Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q))$ esto es una solución ya que $[\rho(H),H]=\rho^{'}(H)[H,H]=0$. Esto muestra el supuesto básico de la mecánica estadística, $\rho$es constante en as superficie de energías constantes $H$. El supuesto de la mecánica estadística dictamina que el macroestado esta dado por una densidad uniforme de microestados. Esto es lo mismo que cambiar la medida de objetiva de probabilidad de la de $\rho(p,q,t) d\Gamma$ a una medida subjetiva.
+%La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Esta pregunta nos lleva al problema de ergodicidad, ¿es válido igualar el promedio temporal con el promedio de ensamble?.
 
-\subsection{Ergodicidad}
-En esta sección se hablará un poco sobre el problema de ergodicidad, se planteará las dificultades y se verán algunas soluciones que se han dado para este problema. Se toca este tema para luego poder ver las soluciones dadas por (Popescu et al. 20..) cómo vuelven inexistente este problema y los problemas que llegan a saltarse sin realmente tener que resolverlos.
-La mecánica estadística tiene como base el principio de probabilidades iguales generalmente en la literatura siempre se empieza hablando de cómo se acepta el principio desde una vista de la teoría de probabilidad. Pero hay un concepto que no es profundizado en los textos y es el por qué se debe introducir la probabilidad en estos casos. Libros como (Landau, Lifshitz) empiezan explicando cómo se manejaría un problema de muchas partículas desde la forma clásica, la idea que muestra es que poder describir avogadro número de partículas es complicado porque aunque se  tenga las ecuaciones y se pueda de alguna forma (numérica o computacional) de resolver todas las ecuaciones que salen sería imposible llegar a darle condiciones iniciales al problema. Entonces Landau explica que para resolver el problema se tiene en cuenta que la complejidad de la interacciones que hay entre el sistema que se estudia y el ambiente, hace que el sistema se encuentre en muchos estado varias veces, esto da un comportamiento probabilístico al sistema que puede llegar a comportarse como uno aislado.
-Con esto Landau introduce las probabilidades al sistema sin tener que entrar en un conflicto con la mecánica clásica, nótese que dada esa explicación Landau sigue a formalizar lo dicho y construye la mecánica estadística que se conoce generalmente.Pero hay otra forma de introducir las probabilidades a estos sistemas de muchos grados de libertad y es por hipótesis, en el libro de Khinchin sigue esta filosofía.
-La hipótesis de ergodicidad postula que el promedio temporal de una cantidad física de un sistema aislado es igual al promedio del ensamble.\\
+%\subsection{Ergodicidad}
+%En esta sección se hablará un poco sobre el problema de ergodicidad, se planteará las dificultades y se verán algunas soluciones que se han dado para este problema. Se toca este tema para luego poder ver las soluciones dadas por (Popescu et al. 20..) cómo vuelven inexistente este problema y los problemas que llegan a saltarse sin realmente tener que resolverlos.
+%La mecánica estadística tiene como base el principio de probabilidades iguales generalmente en la literatura siempre se empieza hablando de cómo se acepta el principio desde una vista de la teoría de probabilidad. Pero hay un concepto que no es profundizado en los textos y es el por qué se debe introducir la probabilidad en estos casos. Libros como (Landau, Lifshitz) empiezan explicando cómo se manejaría un problema de muchas partículas desde la forma clásica, la idea que muestra es que poder describir avogadro número de partículas es complicado porque aunque se  tenga las ecuaciones y se pueda de alguna forma (numérica o computacional) de resolver todas las ecuaciones que salen sería imposible llegar a darle condiciones iniciales al problema. Entonces Landau explica que para resolver el problema se tiene en cuenta que la complejidad de la interacciones que hay entre el sistema que se estudia y el ambiente, hace que el sistema se encuentre en muchos estado varias veces, esto da un comportamiento probabilístico al sistema que puede llegar a comportarse como uno aislado.
+%Con esto Landau introduce las probabilidades al sistema sin tener que entrar en un conflicto con la mecánica clásica, nótese que dada esa explicación Landau sigue a formalizar lo dicho y construye la mecánica estadística que se conoce generalmente.Pero hay otra forma de introducir las probabilidades a estos sistemas de muchos grados de libertad y es por hipótesis, en el libro de Khinchin sigue esta filosofía.
+%La hipótesis de ergodicidad postula que el promedio temporal de una cantidad física de un sistema aislado es igual al promedio del ensamble.\\
 
-Dada una teoría que explique algún fenómeno que nos interese que querrá probar que tan buenos resultados se obtienen de ella. Para esto se comparará con el experimento pero las cantidades físicas en un teoría aparecen como funciones de las variables dinámicas. Pero ya se ve un problema claro en este procedimiento cómo se puede comprar los datos medidos en el laboratorio con las funciones de la teoría; las funciones de las variables dinámicas toman valores diferentes para varios estados del sistema pero para poder comparar los resultados experimentales se debería saber cuál es el estado del sistema o sea dar todas las variables dinámicas para poder así estar seguros que se está comparando los datos con el estado específico. Pero en el caso de un gas sería imposible poder saber todas las posiciones y momentos. Pero hay un punto en este caso y es que al medir una cantidad física esta no se observa de manera instantánea, se demora algún tiempo $\tau$ para poder observarla. En el caso de una cantidad termodinámica como la temperatura el tiempo en que se demora midiendo va desde $\tau_{0}$ que es el tiempo necesario para que no hayan correlaciones del movimiento molecular y  $\tau_{m}$ que es el tiempo máximo en el que la propiedad macroscópica que se mide no cambia. Por ejemplo la temperatura al medirla se necesita esperar un tiempo $\tau_{0}$ par que se estabilice el sistema y el termómetro y la medición se puede tomar hasta $\tau_{m}$ cuando el sistema se vuelva a perturbar. Cualquier cantidad que se mida durante este intervalo se supone que no debe depender de $\tau$ en algunos sistemas que llegan al equilibrio $\tau_{m}$ puede extenderse al infinito.
+%Dada una teoría que explique algún fenómeno que nos interese que querrá probar que tan buenos resultados se obtienen de ella. Para esto se comparará con el experimento pero las cantidades físicas en un teoría aparecen como funciones de las variables dinámicas. Pero ya se ve un problema claro en este procedimiento cómo se puede comprar los datos medidos en el laboratorio con las funciones de la teoría; las funciones de las variables dinámicas toman valores diferentes para varios estados del sistema pero para poder comparar los resultados experimentales se debería saber cuál es el estado del sistema o sea dar todas las variables dinámicas para poder así estar seguros que se está comparando los datos con el estado específico. Pero en el caso de un gas sería imposible poder saber todas las posiciones y momentos. Pero hay un punto en este caso y es que al medir una cantidad física esta no se observa de manera instantánea, se demora algún tiempo $\tau$ para poder observarla. En el caso de una cantidad termodinámica como la temperatura el tiempo en que se demora midiendo va desde $\tau_{0}$ que es el tiempo necesario para que no hayan correlaciones del movimiento molecular y  $\tau_{m}$ que es el tiempo máximo en el que la propiedad macroscópica que se mide no cambia. Por ejemplo la temperatura al medirla se necesita esperar un tiempo $\tau_{0}$ par que se estabilice el sistema y el termómetro y la medición se puede tomar hasta $\tau_{m}$ cuando el sistema se vuelva a perturbar. Cualquier cantidad que se mida durante este intervalo se supone que no debe depender de $\tau$ en algunos sistemas que llegan al equilibrio $\tau_{m}$ puede extenderse al infinito.
 
 
-\section{mecánica cuántica}
-La mecánica cuántica que por lo general se enseña es la que se empieza con la ecuación de Schrödinger en esta perspectiva los efecto cuánticos salen por probabilidades, pero estas probabilidades son habladas sobre un "ensamble" de sistemas físicos exactamente preparados. O sea las probabilidades que generalmente son usadas en la cuántica son habladas desde la perspectiva de repetir el experimento de un misma manera varias veces siendo este preparado exactamente todas las veces. Pero la mecánica cuántica en esta situaciones habla de que se puede describir todos los miembros del mismo estado por un $\ket{\phi}$ qué pasa si se tiene ensambles de sistemas físicos que son descritos con varios estados, que $30 \% $ del ensamble se describan por $\ket{\phi}$ y el $70 \% $ se describa por $\ket{\Phi}$. 
-Para poner un ejemplo se habla del experimento de Stern-Gerlach. se tiene un horno con átomos de plata que salen por un agujero en el horno y luego son filtrados por un imán que tiene un campo magnético en una dirección específica. Se supone que los átomos pueden tener orientaciones aleatorias del espin, ¿ La forma de describir un sistema cuántico dada por la superposición puede describir este ensamble de átomos?. No puede porque los estados descritos por un $\ket{\Phi}$ solo hablan de una dirección específica. Luego para poder hablar de este ensamble se parte otra vez desde el hecho que no se conoce nada de las direcciones de los espines entonces se dirá que habrá $50 \% $ de átomos en el ensamble que tengan $\ket{0}$ y otro $50 \% $ que se encuentren $\ket{1}$. con estos pesos de probabilidad ya se tiene la primera pieza para poder seguir con la formulación del operador densidad. Cabe aclarar que estas probabilidades no son las mismas que las amplitudes de probabilidad que son dadas a la superposición de estados como:
-\begin{equation}
-\ket{\Phi}=c_{1}\ket{\alpha}+ c_{2}\ket{\beta}
-\end{equation}
-done en este caso $c_{1}$ y $c_{2}$ dan información sobre el estado dadas las relaciones de fase que tienen, en cambio al hablar de los pesos de probabilidades dados al ensamble estos son las probabilidades que generalmente se tratan en la vida cotidiana. Antes de que el imán afecte los átomos se habla de un ensamble completamente aleatorio. Luego de que los átomos pasen por el aparato de Stern-Gerlachse habla de un ensamble puro, todos los miembros del ensamble pueden ser especificados por el mismo ket.
+\section{Mecánica Cuántica}
+%La mecánica cuántica que por lo general se enseña es la que se empieza con la ecuación de Schrödinger en esta perspectiva los efecto cuánticos salen por probabilidades, pero estas probabilidades son habladas sobre un "ensamble" de sistemas físicos exactamente preparados. O sea las probabilidades que generalmente son usadas en la cuántica son habladas desde la perspectiva de repetir el experimento de un misma manera varias veces siendo este preparado exactamente todas las veces. Pero la mecánica cuántica en esta situaciones habla de que se puede describir todos los miembros del mismo estado por un $\ket{\phi}$ qué pasa si se tiene ensambles de sistemas físicos que son descritos con varios estados, que $30 \% $ del ensamble se describan por $\ket{\phi}$ y el $70 \% $ se describa por $\ket{\Phi}$. 
+%Para poner un ejemplo se habla del experimento de Stern-Gerlach. se tiene un horno con átomos de plata que salen por un agujero en el horno y luego son filtrados por un imán que tiene un campo magnético en una dirección específica. Se supone que los átomos pueden tener orientaciones aleatorias del espin, ¿ La forma de describir un sistema cuántico dada por la superposición puede describir este ensamble de átomos?. No puede porque los estados descritos por un $\ket{\Phi}$ solo hablan de una dirección específica. Luego para poder hablar de este ensamble se parte otra vez desde el hecho que no se conoce nada de las direcciones de los espines entonces se dirá que habrá $50 \% $ de átomos en el ensamble que tengan $\ket{0}$ y otro $50 \% $ que se encuentren $\ket{1}$. con estos pesos de probabilidad ya se tiene la primera pieza para poder seguir con la formulación del operador densidad. Cabe aclarar que estas probabilidades no son las mismas que las amplitudes de probabilidad que son dadas a la superposición de estados como:
+%\begin{equation}
+%\ket{\Phi}=c_{1}\ket{\alpha}+ c_{2}\ket{\beta}
+%\end{equation}
+%done en este caso $c_{1}$ y $c_{2}$ dan información sobre el estado dadas las relaciones de fase que tienen, en cambio al hablar de los pesos de probabilidades dados al ensamble estos son las probabilidades que generalmente se tratan en la vida cotidiana. Antes de que el imán afecte los átomos se habla de un ensamble completamente aleatorio. Luego de que los átomos pasen por el aparato de Stern-Gerlachse habla de un ensamble puro, todos los miembros del ensamble pueden ser especificados por el mismo ket.
 
-La formulación matemática de estos ensambles está dada por lo siguiente cada peso probabilístico debe satisfacer la condición de normalización su suma debe ser igual a uno.
+%La formulación matemática de estos ensambles está dada por lo siguiente cada peso probabilístico debe satisfacer la condición de normalización su suma debe ser igual a uno.
 
