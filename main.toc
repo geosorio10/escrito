@@ -1,22 +1,23 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}Preliminares}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Mec\IeC {\'a}nica Estad\IeC {\'\i }stica}{1}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Teorma de Liouville }{1}{subsection.1.1.1}
-\contentsline {section}{\numberline {1.2}Mec\IeC {\'a}nica Cu\IeC {\'a}ntica}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}El entrelazamiento y la mec\IeC {\'a}nica estad\IeC {\'\i }stica}{5}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Definiciones}{6}{subsection.3.0.1}
-\contentsline {section}{\numberline {3.1}Idea conceptual}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{10}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{13}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{19}{section.3.3}
-\contentsline {chapter}{\numberline {4}Evoluci\IeC {\'o}n hacia el equilibrio}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Especificaci\IeC {\'o}n del equilibrio}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Equilibraci\IeC {\'o}n}{26}{section.4.2}
-\contentsline {chapter}{\numberline {5}Termalizaci\IeC {\'o}n y los estados de Gibbs}{43}{chapter.5}
-\contentsline {chapter}{\numberline {6}Microreversibilidad de sistemas cl\IeC {\'a}sicos no aut\IeC {\'o}nomos}{45}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusiones}{47}{chapter.7}
+\contentsline {subsection}{\numberline {1.1.1}Teorma de Liouville }{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Ergodicidad}{6}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Mec\IeC {\'a}nica Cu\IeC {\'a}ntica}{8}{section.1.2}
+\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{11}{chapter.2}
+\contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{13}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Definiciones}{14}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}Idea conceptual}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{21}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{27}{section.3.3}
+\contentsline {chapter}{\numberline {4}Evoluci\IeC {\'o}n Hacia El Equilibrio}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Especificaci\IeC {\'o}n del Equilibrio}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Equilibraci\IeC {\'o}n}{34}{section.4.2}
+\contentsline {chapter}{\numberline {5}Termalizaci\IeC {\'o}n y los estados de Gibbs}{51}{chapter.5}
+\contentsline {chapter}{\numberline {6}Microreversibilidad de sistemas cl\IeC {\'a}sicos no aut\IeC {\'o}nomos}{53}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusiones}{55}{chapter.7}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{49}{appendix*.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{57}{appendix*.2}

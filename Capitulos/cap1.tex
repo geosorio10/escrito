@@ -1,4 +1,22 @@
 \chapter{Introducción}
-En este corto capítulo se espera motivar la idea general de este escrito, mostrando un poco cuál ha sido el problema con los fundamentos de la mecánica estadística. En los siguientes capítulos se explicará el nuevo enfoque dado por Popescu et al.
+En este corto capítulo se espera motivar la idea general de este escrito, mostrando un poco cuál ha sido el problema con los fundamentos de la mecánica estadística. En los siguientes capítulos se explicará el nuevo enfoque dado por Popescu et al \cite{Popescu2006}.
 \\
-La mecánica estadística estudia los cuerpos macroscópicos, los cuales están compuestos por un gran número de partículas. Los métodos que ayudan al análisis de estos cuerpos por lo general no dependen de la forma en que se pueda describir una sola partícula (ecuaciones de movimiento para una partícula) sino se respaldan en métodos probabilísticos. A inicios del siglo 19 la teoría de la termodinámica cogía fuerza y mostraba coherencia con los experimentos pero se quiso fundamentar la termodinámica desde una perspectiva microscópica. La entropía un concepto nacido en la termodinámica pero con 
+La mecánica estadística estudia los cuerpos macroscópicos, los cuales están compuestos por un gran número de partículas. Los métodos que ayudan al análisis de estos cuerpos por lo general no dependen de la forma en que se pueda describir una sola partícula (ecuaciones de movimiento para una partícula) sino se respaldan en métodos probabilísticos. A inicios del siglo 19 la teoría de la termodinámica cogía fuerza y mostraba coherencia con los datos experimentales pero se quiso fundamentar la termodinámica desde una perspectiva microscópica. La entropía un concepto nacido en la termodinámica no tenía una clara idea de qué representaba. Boltzmann propone una función H que da la entropía correcta cuando no hay interacción entre las partículas del sistema; su idea detrás de esta función es simplemente tomar la densidad en el espacio de fase de una partícula y multiplicarla por $N$, este es el número de componentes en el cuerpo macroscópico. La función de Boltzmann es:
+
+\begin{equation}
+H_{B}=N \int w_{1} \log w_{1} d \tau_{1}.
+\end{equation}
+donde $w_{1}$ es la densidad de probabilidad de una partícula y $d \tau_{1} \equiv d^{3}x_{1}d^{3}p_{1}$.
+Pero al introducir la interacción la función de Boltzmann no da la entropía correcta, es menor que la experimental. Gibbs por su parte propone una función H que sí da la entropía correcta para cualquier caso pero las ideas que tiene esta función de Gibbs no son tan directas. Gibbs le da sentido a su función hablando de las copias del microestado posible, con esto da una densidad de estados en el espacio de fase y luego define sus función.
+\begin{equation}
+H_{G}= \int W_{N}  \log W_{N} d \tau
+\end{equation}
+donde $W_{N}$ es la densidad de probabilidad en el espacio de fase y $d\tau \equiv d^{3}x_{1}...d^{3}p_{N}$. Aunque la perspectiva de Gibbs no sea tan directa da los resultados correctos. Esta variedad de perspectivas hace que no se tenga un marco conceptual único en la mecánica estadística.
+\\
+Otro problema que ocurre es que el principio en el que se basa la mecánica estadística es el de probabilidades iguales. Esto es que al no conocer el estado exacto en el que se encuentra el sistema se supone por la ignorancia subjetiva que todos los estados deben tener la misma probabilidad de ocurrir. Dejar toda una teoría física en el cimiento de una probabilidad subjetiva no es deseable.
+\\
+Además de estos problemas existe el conflicto sobre los promedios de ensamble. Con las ideas de Gibbs se puede encontrar promedios pero como la función de densidad es de las copias de los microestados, ¿ qué significa un promedio de ensamble?. Se toma el camino ergódico donde se supone que el promedio de ensamble es igual al promedio temporal, este supuesto se fundamenta en que el estado va a pasar por todos lo microestados posbiles en el espacio de fase. El conflicto con eso es que hay sistemas que no pasan por todos los microestados posibles pero aún así se puede manejar estos sistemas; el tiempo necesario para que el estado pase por todos los microestados es bastante largo. Esto problemas son los que dejan al marco teórico de la mecánica estadística como algo controversial. 
+
+
+
+
