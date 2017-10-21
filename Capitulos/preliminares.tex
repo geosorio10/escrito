@@ -84,7 +84,7 @@ Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q)
 La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Estos nos lleva al problema de ergodicidad, ¿ es válido igualar el promedio temporal con el promedio de ensamble?.
 
 \subsection{Ergodicidad}
-En esta sección se hablará un poco sobre el problema de ergodicidad, se planteará las dificultades y se verán algunas soluciones que se han dado para este problema. Se habla de este problema ya que es fundamental la hipótesis de ergodicidad para la mecánica estadística, además la nueva perspectiva que se mostrará en los siguientes capítulos \cite{Popescu2006}, no hace énfasis en esta hipótesis es más ni siquiera llega a ser una pregunta que necesite ser resuelta. Para ver por qué facilita tanto evitar esta hipótesis se dará esta sección.
+En esta sección se hablará un poco sobre el problema de ergodicidad siguiendo a \cite{TodaStat}, se planteará las dificultades y se verán algunas soluciones que se han dado para este problema. Se habla de este problema ya que es fundamental la hipótesis de ergodicidad para la mecánica estadística, además la nueva perspectiva que se mostrará en los siguientes capítulos \cite{Popescu2006}, no hace énfasis en esta hipótesis es más ni siquiera llega a ser una pregunta que necesite ser resuelta. Para ver por qué facilita tanto evitar esta hipótesis se dará esta sección.
 \\
 La mecánica estadística tiene como base el principio de probabilidades iguales generalmente en la literatura siempre se empieza hablando de cómo se acepta el principio desde una vista de la teoría de probabilidad. Pero hay un concepto que no es profundizado en general por los textos usados regularmente; y es el por qué se debe introducir la probabilidad en estos casos. Libros como \cite{HuangStat},\cite{LandauStat} empiezan explicando cómo se manejaría un problema de muchas partículas desde la forma clásica. La idea que muestra es la forma habitual de introducir la mecánica estadística, se presenta por qué describir avogadro número de partículas es complicado aunque se  tenga las ecuaciones y se pueda de alguna forma (numérica o computacional) de resolver todas las ecuaciones que salen. Entonces se sigue explicando que para resolver el problema se tiene en cuenta que la complejidad de la interacciones que hay entre el sistema que se estudia y el ambiente, hace que el sistema se encuentre en muchos estado varias veces, esto otorga un comportamiento probabilístico al sistema que puede llegar a comportarse como uno aislado.
 \\ 
@@ -123,15 +123,51 @@ Como $\overline{f}$ es independiente de $P$ y constante sobre  todo el espacio d
 \begin{equation} \label{ergodicidad}
 \langle f \rangle = \overline{f}.
 \end{equation}
-Aquí se ha mostrado por qué es válido el uso del promedio de ensamble en vez del temporal. Para esta demostración se ha usado dos suposiciones. Primero que  $\overline{f}(P)$ tiene el mismo valor para cualquier $P$ en la misma trayectoria que este punto traza(G-Path). Birkhoff demostró esta aseveración. El problema se encuentra en que si $\overline{f}(P)$  tiene un valor definido independiente de la condición inicial $P$ y si esto se satisface para $P$ en cualquier G-path. Boltzmann propuso que para satisface la igualdad \ref{ergodicidad}, el G-path debe asumir que pasa portodos los puntos de la superficie de energía. Como la trayectoria del punto para por todos los puntos, el promedio temporal es igual al promedio de ensamble. Esto es lo que Boltzmann llamó la hipótesis de ergodicidad, esta idea sobre la trayectoria del punto $P$ es llamado la condición de ergodicidad en el sentido de Boltzmann. Como la trayectoria dinámica es un conjunto unidimensinal de puntos continuos y nunca se intersecta así misma en un superficia multidimensional constante de energía, hace imposible una correspondencia uno a uno de un espacio de dimensión dos o mayor a un espacio unidimensional, luego la ergodicidad en el sentido de Boltzmann no puede concebirse. Ergodicidad, laigual dad \ref{ergodicidad}, no siempre implica ergodicidad en el sentidode Boltzmann.
+Aquí se ha mostrado por qué es válido el uso del promedio de ensamble en vez del temporal. Para esta demostración se ha usado dos suposiciones. Primero que  $\overline{f}(P)$ tiene el mismo valor para cualquier $P$ en la misma trayectoria que este punto traza(G-Path). Birkhoff demostró esta aseveración. El problema se encuentra en que si $\overline{f}(P)$  tiene un valor definido independiente de la condición inicial $P$ y si esto se satisface para $P$ en cualquier G-path. Boltzmann propuso que para satisfacer la igualdad \ref{ergodicidad}, el G-path debe pasar por todos los puntos de la superficie de energía. Como la trayectoria del punto pasa por todos los puntos dado suficiente tiempo, el promedio temporal es igual al promedio de ensamble. Esto es lo que Boltzmann llamó la hipótesis de ergodicidad, esta idea sobre la trayectoria del punto $P$ es llamado la condición de ergodicidad en el sentido de Boltzmann. Como la trayectoria dinámica es un conjunto unidimensinal de puntos continuos y nunca se intersecta así misma en un superficia multidimensional constante de energía, hace imposible una correspondencia uno a uno de un espacio de dimensión dos o mayor a un espacio unidimensional, luego la ergodicidad en el sentido de Boltzmann no puede concebirse. Ergodicidad, la igualdad \ref{ergodicidad}, no siempre implica ergodicidad en el sentido de Boltzmann.
 
 \section{Mecánica Cuántica}
-La mecánica cuántica que por lo general se enseña es la que se empieza con la ecuación de Schrödinger en esta perspectiva los efecto cuánticos salen por probabilidades, pero estas probabilidades son habladas sobre un "ensamble" de sistemas físicos exactamente preparados. O sea las probabilidades que generalmente son usadas en la cuántica son habladas desde la perspectiva de repetir el experimento de un misma manera varias veces siendo este preparado exactamente todas las veces. Pero la mecánica cuántica en esta situaciones habla de que se puede describir todos los miembros del mismo estado por un $\ket{\phi}$ qué pasa si se tiene ensambles de sistemas físicos que son descritos con varios estados, que $30 \% $ del ensamble se describan por $\ket{\phi}$ y el $70 \% $ se describa por $\ket{\Phi}$. 
-Para poner un ejemplo se habla del experimento de Stern-Gerlach. se tiene un horno con átomos de plata que salen por un agujero en el horno y luego son filtrados por un imán que tiene un campo magnético en una dirección específica. Se supone que los átomos pueden tener orientaciones aleatorias del espin, ¿ La forma de describir un sistema cuántico dada por la superposición puede describir este ensamble de átomos?. No puede porque los estados descritos por un $\ket{\Phi}$ solo hablan de una dirección específica. Luego para poder hablar de este ensamble se parte otra vez desde el hecho que no se conoce nada de las direcciones de los espines entonces se dirá que habrá $50 \% $ de átomos en el ensamble que tengan $\ket{0}$ y otro $50 \% $ que se encuentren $\ket{1}$. con estos pesos de probabilidad ya se tiene la primera pieza para poder seguir con la formulación del operador densidad. Cabe aclarar que estas probabilidades no son las mismas que las amplitudes de probabilidad que son dadas a la superposición de estados como:
+La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. Sus aplicaciones son bastantes al momento de usar sus herramientas pero para algunos problemas no siempre es sencillo poder seguir con este formalismo. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema.
+\\
+Como se sabe cuánticamente el estado $\ket{\psi}$ da toda la información posible de un sistema, a esto se le llama un estado puro. Para especificar cuál es el operador densidad de un sistema se supone que el sistema cuántico puede estar en $\ket{\psi_{i}}$ para $i=1,2,...$. Cada estado posible del sistema tiene una probabilidad correspondiente, $p_{i}>0$ y $\sum_{i} p_{i}$. Luego el operador densidad para el sistema es :
 \begin{equation}
-\ket{\Phi}=c_{1}\ket{\alpha}+ c_{2}\ket{\beta}
+\rho \equiv \sum_{i} p_{i} \ket{\psi_{i}}\bra{\psi_{i}}.
 \end{equation}
-done en este caso $c_{1}$ y $c_{2}$ dan información sobre el estado dadas las relaciones de fase que tienen, en cambio al hablar de los pesos de probabilidades dados al ensamble estos son las probabilidades que generalmente se tratan en la vida cotidiana. Antes de que el imán afecte los átomos se habla de un ensamble completamente aleatorio. Luego de que los átomos pasen por el aparato de Stern-Gerlachse habla de un ensamble puro, todos los miembros del ensamble pueden ser especificados por el mismo ket.
+En el caso en que solo haya un estado posible, se tiene el operador densidad para un estado puro $\rho= \ket{\psi}\bra{\psi}$. Entonces se puede hablar de un ensamble de estados puros $ \{ p_{i} | \ket{\psi_{i}} \} $  siendo, el operador densidad, la distribución clásica de probabilidad de matrices de estados puros. Nótese que se usa de manera similar el nombre de operador densidad y de matriz densidad, esta es la usanza de la literatura. El operador densidad también puede ser especificado por las siguientes propiedades: 
 
-La formulación matemática de estos ensambles está dada por lo siguiente cada peso probabilístico debe satisfacer la condición de normalización su suma debe ser igual a uno.
+\begin{enumerate}
+\item $\rho$ tiene traza igual a uno, $\Tr(\rho)=1$.
+
+\item $\rho$ es un operador positivo, $\ket{\phi}$ es un vector arbitrario luego $\bra{\psi}\rho\ket{\psi} \geq 0$.
+\end{enumerate}
+Ya con esta breve introducción se pueden reescribir los postulados de la mecánica cuántica en este formalismo:
+\\
+
+\textbf{Postulado 1}: Se puede asociar a un sistema físico aislado un espacio de Hilbert. El sistema está descrito completamente por el operador densidad que actúa sobre el espacio de Hilbert del sistema. Si un sistema cuántico está en el estado $\rho_{i}$ con probabilidad $p_{i}$, el operador de densidad del sistema es $\sum_{i}= p_{i} \rho_{i}$.
+\\
+
+\textbf{Postulado 2}: La evolución de un sistema cuántico cerrado está descrita por una transformación unitaria. Esto es,  el estado $\rho'$ del sistema en el tiempo $t_{0}$ está relacionado con el estado $\rho$ del sistema para el tiempo $t$ por un operador unitario $U$ el cual depende solo de los tiempos $t_{0}$ y $t$. 
+\begin{equation}
+\rho' = U \rho U^{\dagger}.
+\end{equation}
+\\
+
+\textbf{Postulado 3}: Las medidas cuánticas están descritas por un conjunto de operadores $ \{  M_{m} \}$. Esto operadores actúan en el espacio de Hilbert del sistema. El índice $m$ habla de los posibles resultados de una medida al hacer el experimento. Si se tiene el estado del sistema $\rho$ inmediatamente antes de la medida la probabilidad que el resultado $m$ ocurra es:
+\begin{equation}
+p(m)= \Tr (M^{\dagger}_{m}M_{m} \rho),
+\end{equation}
+y el estado del sistema luego de una medición es
+\begin{equation}
+\frac{M_{m} \rho M_{m}^{\dagger}}{\Tr(M^{\dagger}_{m}M_{m} \rho)}.
+\end{equation}
+Los operados $\{  M_{m} \}$ satisfacen,
+\begin{equation}
+\sum_{m} M^{\dagger}_{m}M_{m} = I.
+\end{equation}
+\textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
+
+
+
+
+
+
 
