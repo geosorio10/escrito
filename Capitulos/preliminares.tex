@@ -128,6 +128,7 @@ Aquí se ha mostrado por qué es válido el uso del promedio de ensamble en vez 
 \section{Mecánica Cuántica}
 La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. Sus aplicaciones son bastantes al momento de usar sus herramientas pero para algunos problemas no siempre es sencillo poder seguir con este formalismo. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema.
 \\
+\subsection{Operador de Densidad}
 Como se sabe cuánticamente el estado $\ket{\psi}$ da toda la información posible de un sistema, a esto se le llama un estado puro. Para especificar cuál es el operador densidad de un sistema se supone que el sistema cuántico puede estar en $\ket{\psi_{i}}$ para $i=1,2,...$. Cada estado posible del sistema tiene una probabilidad correspondiente, $p_{i}>0$ y $\sum_{i} p_{i}$. Luego el operador densidad para el sistema es :
 \begin{equation}
 \rho \equiv \sum_{i} p_{i} \ket{\psi_{i}}\bra{\psi_{i}}.
@@ -165,9 +166,37 @@ Los operados $\{  M_{m} \}$ satisfacen,
 \end{equation}
 \textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
 
+\subsection{Operador de Densidad Reducido}
 
+Ahora se puede responder la siguiente situación: se tiene un sistema $A$ que está correlacionado cuánticamente  con el sistema $B$. Esto quiere decir que el sistema completo $AB$ puede estar dado por un estado puro pero aún así no se puede describir individualmente el sistema $A$, entonces si solo se tiene acceso al sistema $A$ pero no al $B$, cómo se puede modelar matemáticamente toda la información que es posible de extraer solo de mediciones locales en $A$. Aquí se una el operador densidad reducido este viene definido por 
+\begin{equation}
+\rho_{A} \equiv \Tr_{B}(\rho_{AB}).
+\end{equation}
 
-
-
-
-
+La traza es tomada únicamente en una base del espacio de Hilbert $\mathcal{H}_{B}$ del sistema $B$. Esta operación puede ser interpretada como si se estuviese promediando sobre todos los grados de libertad del sistema que no se tiene acceso, esta operación se le llama la traza parcial sobre $B$. Para ver la utilidad que tiene este operador se verá un ejemplo sencillo, este ejemplo se puede generalizar fácilmente.
+Se tiene el estado de algún sistema compuesto por $A$ y $B$ dado por la función de onda $\Phi$:
+\begin{equation}
+\Phi = \frac{1}{\sqrt{2}} (\ket{a_{1}}\ket{b_{1}}+\ket{a_{2}}\ket{b_{2}}),
+\end{equation}
+este es un típico ejemplo de una función de onda donde los subsistemas $A$ y $B$ están entrelazados. Los estados $\ket{a_{1}}$, $\ket{b_{1}}$,$\ket{a_{2}}$, $\ket{b_{2}}$ no son necesariamente ortogonales. La matriz de densidad es claramente:
+\begin{equation}
+\ket{\Phi}\bra{\Phi} = \frac{1}{2}\sum_{ij=1}^{2} \ket{a_{i}}\bra{a_{j}} \ket{b_{i}}\bra{b_{j}} .
+\end{equation}
+Sea $ \{ \ket{\psi_{k}} \} $ una base ortonormal en $\mathcal{H}_{A}$ y  $ \{ \ket{\phi_{l}} \} $ una base ortonormal en $\mathcal{H}_{B}$. Considerando mediciones que solo afecten al sistema $A$ se puede representar esta acción como $M=M_{A} \otimes I_{B}$, donde $I_{B}$ es el operador identidad en el espacio de Hilbert de $B$. Siguiendo la idea de responder si se puede extraer información del sistema solo conociendo las mediciones locales en $A$, entonces se hace el siguiente razonamiento:
+\begin{align}
+\langle M \rangle &=  \Tr(\rho M)\\
+\quad &=\sum_{kl} \bra{\phi_{l}}\bra{\psi_{k}}\rho(M_{A} \otimes I_{B})\ket{\psi_{k}} \ket{\phi_{l}}\\
+\quad &=\sum_{k}\bra{\psi_{k}}  \Bigg( \sum_{l=1} \bra{\phi_{l}} \rho\ket{\phi_{l}} \Bigg) M_{A}\ket{\psi_{k}}\\
+\quad &=\sum_{k}\bra{\psi_{k}} ( \Tr_{B}(\rho) )  M_{A}\ket{\psi_{k}}\\
+\quad &=\sum_{k}\bra{\psi_{k}} \rho_{A}  M_{A}\ket{\psi_{k}}\\
+\quad &= \Tr_{A} (\rho_{A} M_{A}).
+\end{align}
+Aquí $\rho_{A}$ es la matriz reducida definida al inicio de esta subsección. El ejemplo se puede expandir para sistemas con $N$ subsistemas entrelazados. Se tiene ahora $N$ componentes del sistema y solo se puede hacer mediciones en el componente $i$. El operador que describe estas mediciones sería $M= I_{1}\otimes I_{2} ... \otimes I_{i-1} \otimes M_{i} \otimes I_{i+1}\otimes .... \otimes I_{N}$. Ahora la matriz de densidad reducida para el sistema $i$ es
+\begin{equation}
+\rho_{i}= \Tr_{1,...,i-1,i+1,...,N}(\rho).
+\end{equation}
+Con esto y siguiendo el ejemplo anterior se puede demostrar que 
+\begin{equation}
+\langle M \rangle = \Tr(\rho M)=\Tr_{i}(\rho_{i} M_{i}).
+\end{equation}
+Entonces si se conoce el estado del sistema total y solo se puede hacer mediciones en un subsistema aún así gracias al formalismo del operador densidad se puede encontrar las estadísticas de las mediciones. Es importante aclarar que aunque se tenga un operador de densidad reducido para el sistema $A$ no significa que se haya descrito el sistema de manera individual. Esto es solo una herramienta matemática para poder sacar las estadísticas de las mediciones.

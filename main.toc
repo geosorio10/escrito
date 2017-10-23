@@ -4,19 +4,21 @@
 \contentsline {subsection}{\numberline {1.1.1}Teorma de Liouville }{3}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Ergodicidad}{6}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Mec\IeC {\'a}nica Cu\IeC {\'a}ntica}{9}{section.1.2}
-\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{13}{chapter.2}
-\contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{15}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Definiciones}{16}{subsection.3.0.1}
-\contentsline {section}{\numberline {3.1}Idea conceptual}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{20}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{23}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{29}{section.3.3}
-\contentsline {chapter}{\numberline {4}Continuaci\IeC {\'o}n Entrelazamiento y La mec\IeC {\'a}nica estad\IeC {\'\i }stica}{33}{chapter.4}
-\contentsline {chapter}{\numberline {5}Evoluci\IeC {\'o}n Hacia El Equilibrio}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Especificaci\IeC {\'o}n del Equilibrio}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Equilibraci\IeC {\'o}n}{38}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusiones}{55}{chapter.6}
+\contentsline {subsection}{\numberline {1.2.1}Operador de Densidad}{10}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Operador de Densidad Reducido}{11}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{15}{chapter.2}
+\contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{17}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Definiciones}{18}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}Idea conceptual}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{25}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{31}{section.3.3}
+\contentsline {chapter}{\numberline {4}Continuaci\IeC {\'o}n Entrelazamiento y La mec\IeC {\'a}nica estad\IeC {\'\i }stica}{35}{chapter.4}
+\contentsline {chapter}{\numberline {5}Evoluci\IeC {\'o}n Hacia El Equilibrio}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Especificaci\IeC {\'o}n del Equilibrio}{38}{section.5.1}
+\contentsline {section}{\numberline {5.2}Equilibraci\IeC {\'o}n}{40}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusiones}{57}{chapter.6}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{57}{appendix*.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{59}{appendix*.2}
