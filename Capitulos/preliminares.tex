@@ -125,7 +125,7 @@ Como $\overline{f}$ es independiente de $P$ y constante sobre  todo el espacio d
 \end{equation}
 Aquí se ha mostrado por qué es válido el uso del promedio de ensamble en vez del temporal. Para esta demostración se ha usado dos suposiciones. Primero que  $\overline{f}(P)$ tiene el mismo valor para cualquier $P$ en la misma trayectoria que este punto traza(G-Path). Birkhoff demostró esta aseveración. El problema se encuentra en que si $\overline{f}(P)$  tiene un valor definido independiente de la condición inicial $P$ y si esto se satisface para $P$ en cualquier G-path. Boltzmann propuso que para satisfacer la igualdad \ref{ergodicidad}, el G-path debe pasar por todos los puntos de la superficie de energía. Como la trayectoria del punto pasa por todos los puntos dado suficiente tiempo, el promedio temporal es igual al promedio de ensamble. Esto es lo que Boltzmann llamó la hipótesis de ergodicidad, esta idea sobre la trayectoria del punto $P$ es llamado la condición de ergodicidad en el sentido de Boltzmann. Como la trayectoria dinámica es un conjunto unidimensinal de puntos continuos y nunca se intersecta así misma en un superficia multidimensional constante de energía, hace imposible una correspondencia uno a uno de un espacio de dimensión dos o mayor a un espacio unidimensional, luego la ergodicidad en el sentido de Boltzmann no puede concebirse. Ergodicidad, la igualdad \ref{ergodicidad}, no siempre implica ergodicidad en el sentido de Boltzmann.
 
-\section{Mecánica Cuántica}
+\section{Herramientas de la Teoría Cuántica}
 La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. Sus aplicaciones son bastantes al momento de usar sus herramientas pero para algunos problemas no siempre es sencillo poder seguir con este formalismo. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema.
 \\
 \subsection{Operador de Densidad}
@@ -140,7 +140,7 @@ En el caso en que solo haya un estado posible, se tiene el operador densidad par
 
 \item $\rho$ es un operador positivo, $\ket{\phi}$ es un vector arbitrario luego $\bra{\psi}\rho\ket{\psi} \geq 0$.
 \end{enumerate}
-Ya con esta breve introducción se pueden reescribir los postulados de la mecánica cuántica en este formalismo:
+Ya con esta breve introducción se pueden reescribir los postulados de la mecánica cuántica en este formalismo, siguiendo a \cite{NielsenInformation}:
 \\
 
 \textbf{Postulado 1}: Se puede asociar a un sistema físico aislado un espacio de Hilbert. El sistema está descrito completamente por el operador densidad que actúa sobre el espacio de Hilbert del sistema. Si un sistema cuántico está en el estado $\rho_{i}$ con probabilidad $p_{i}$, el operador de densidad del sistema es $\sum_{i}= p_{i} \rho_{i}$.
@@ -165,6 +165,15 @@ Los operados $\{  M_{m} \}$ satisfacen,
 \sum_{m} M^{\dagger}_{m}M_{m} = I.
 \end{equation}
 \textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
+\\
+Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, esta medidas tiene muchas restricciones y no abarcan todas las posibilidades de medición.  Aunque se puede lograr demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales. Sin embargo la equivalencia que presentan estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general?. Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas, esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información, es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
+\\
+Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$. Al hacer a primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá el estado no cambia. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin darle importancia a cuál sea el estado del sistema después de la medida.
+Por el postulado 3 se sabe que la probabilidad de que el resultado m salga viene dado por $p(m)= \Tr (M^{\dagger}_{m}M_{m} \rho)$. Si se define :
+\begin{equation}
+E_{m} \equiv M^{\dagger}_{m}M_{m}.
+\end{equation}
+Se puede demostrar fácilmente que $E_{m}$ es un operador positivo y cumple con $\sum_{m} E_{m}=I$. El conjunto completo de $ \{ E_{m}\}$ se conoce como POVM, y cada $E_{m}$ es un elemento asociado a POVM. Las mediciones proyectivas hacen parte de POVM, sea $P_{m}$ un proyector tal que $P_{m}P_{n}= \delta_{mn}P_{m}$ y $\sum_{m}P_{m}=I$. Solo para este caso los elementos POVM son los mismos que los operadores de medición, ya que $E_{m}=P_{m}^{\dagger}P_{m}=P_{m}$.
 
 \subsection{Operador de Densidad Reducido}
 
@@ -200,3 +209,39 @@ Con esto y siguiendo el ejemplo anterior se puede demostrar que
 \langle M \rangle = \Tr(\rho M)=\Tr_{i}(\rho_{i} M_{i}).
 \end{equation}
 Entonces si se conoce el estado del sistema total y solo se puede hacer mediciones en un subsistema aún así gracias al formalismo del operador densidad se puede encontrar las estadísticas de las mediciones. Es importante aclarar que aunque se tenga un operador de densidad reducido para el sistema $A$ no significa que se haya descrito el sistema de manera individual. Esto es solo una herramienta matemática para poder sacar las estadísticas de las mediciones.
+\subsection{Distancia de Traza}
+Las herramientas hasta ahora mostradas han sido impulsadas por una pregunta que se necesitaba responder pero que tenía una respuesta única. Ahora se encuentra con la pregunta ¿ qué tan cercanos están dos estado cuánticos?. La respuesta a esta pregunta puede ser dado por varias definiciones de distancias pero la que se usará acá será la distancia de traza.
+\\
+Para empezar una pregunta relacionada con la cercanía de los estados cuánticos es la de ¿ qué quiere decir que dos informaciones sean similares?. En la teoría clásica de la información esto recae en poder diferenciar dos distribuciones de probabilidad. Pero como ya se había advertido esta respuesta no es única, existen diferentes medidas como la fidelidad o la distancia de Kullback–Leibler. Dependiendo del fin es deseable una a las otras.
+\\
+Se tienen dos distribuciones de probabilidad $\{ p_{x} \}$ y $\{ q_{x} \}$. La distancia de  traza clásica viene dada por:
+\begin{equation}
+D(p_{x},q_{x})\equiv \frac{1}{2} \sum_{x}|p_{x}-q_{x}|.
+\end{equation}
+También se conoce como la distancia $L_{1}$ o la distancia de Kolmogorov. Esta distancia también se puede escribir de la siguiente manera 
+\begin{equation}
+D(p_{x},q_{x})= \max_{S} |p(S)-q(S)|= \max_{S} |\sum_{x \in S}p_{x}-\sum_{x \in S}q_{x}|.
+\end{equation}
+Donde la maximización es sobre todos los subconjuntos $S$ de los indices $\{ x \}$. Aunque estas igualdades puedan a ser complicadas para hacer cálculos se puede sacar una intuición. Entonces la distancia de traza es la maximización  de las diferencias entre la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{p_{x} \}$ y la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{q_{x} \}$. El evento $S$ se podría decir que es el evento óptimo para examinar las diferencias entre $\{p_{x} \}$ y $\{q_{x} \}$.
+\\
+Pasando a un contexto cuántico la distancia de traza entre dos estados cuánticos $\rho$ y $\sigma$,
+\begin{equation}
+D(\rho,\sigma) \equiv \frac{1}{2} \Tr |\rho-\sigma|.	
+\end{equation}
+
+donde $|M| \equiv \sqrt{M^{\dagger}M}$ con la raíz positiva. Esta definición generaliza la distancia de traza clásica, si $\rho$ y $\sigma$ conmutan son diagonales en una misma base luego
+\begin{align*}
+D(\rho,\sigma) &= \frac{1}{2} \Tr |\sum_{i} (r_{i}-s_{i})\ket{i}\bra{i}|\\
+\quad &= D(r_{i},s_{i}).
+\end{align*}
+donde $r_{i}$ y $s_{i}$ son los elementos diagonales de $\rho$ y $\sigma$ respectivamente. Al igual que con la distancia de traza clásica se le puede dar un sentido más físico a esta definición. El siguiente teorema construirá la conexión.
+\begin{theorem}
+Sea $\{ E_{m}\}$ un POVM, con $p_{m} \equiv \Tr(\rhoE_{m})$ y $q_{m}\equiv \Tr(\sigmaE_{m})$ como las probabilidades de obtener un el resultado de una medida $m$. Luego
+
+\begin{equation}
+D(\rho,\sigma)= \max_{ \{ E_{m}\} } D(p_{m},q_{m}),
+\end{equation}
+donde la maximización es sobre todos los POVMs $\{ E_{m}\}$.
+\end{theorem}
+Entonces se puede decir que si dos operadores de densidad son cercanos, según la distancia de traza, cualquier medición hecha en este estado cuántico dará una distribución de probabilidad la cual estará cercana, en el sentido clásico de la distancia de traza. También se puede ver como el límite superior a la distancia de traza entre las distribuciones de probabilidad que se encuentran al medir esos estados cuánticos.
+
