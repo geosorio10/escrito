@@ -81,7 +81,41 @@ Con esta relación sobre los promedios se puede ver qué condiciones son necesar
 [\rho_{eq}, H]=0.
 \end{equation}
 Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q))$ esto es una solución ya que $[\rho(H),H]=\rho^{'}(H)[H,H]=0$. Esto muestra el supuesto básico de la mecánica estadística, $\rho$ es constante en las superficie de energías constantes $H$. El supuesto de la mecánica estadística dictamina que el macroestado esta dado por una densidad uniforme de microestados. Esto es lo mismo que cambiar la medida de objetiva de probabilidad de la de $\rho(p,q,t) d\Gamma$ a una medida subjetiva.
-La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Estos nos lleva al problema de ergodicidad, ¿ es válido igualar el promedio temporal con el promedio de ensamble?.
+La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Estos nos lleva al problema de ergodicidad, ¿ es válido igualar el promedio temporal con el promedio de ensamble?. 
+\\
+\subsection{Ensamble Canónico}
+Antes de entrar en el problema de ergodicidad se quiere ver cuál es el operador densidad de probabilidad para un sistema cerrado que puede intercambiar calor con su entorno. Para encontrar este operador se extremizará la entropía bajo dos restricciones. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
+\begin{equation}
+\Tr(\rho)=1,
+\end{equation}
+además se impone la restricción de tener un valor de energía fijo,
+\begin{equation}
+\Tr(H \rho)= \langle E \rangle,
+\end{equation}
+donde H  es el operador Hamiltoniano del sistema. La entropía que se va a maximizar  será la entropía de Gibbs, de esta se hablará un poco más profundo en el siguiente capítulo, esta se escribe para un sistema cuántico
+\begin{equation}
+S=-k_{B} \Tr[\rho \ln (\rho)].
+\end{equation}
+Con ayuda de los multiplicadores de Lagrange, $\alpha$ y $\beta$, se encuentra la distribución de probabilidad que maximiza la entropía bajo las restricciones dadas. Entonces se tiene
+\begin{align}
+\delta \{ \Tr [ \alpha \rho + \beta H \rho - k_{B} \rho \ln (\rho)] \} 
+&= \Tr \{ [(\alpha - k_{B})I + \beta H - k_{B} \ln (\rho) ] \delta \rho \}=0.
+\end{align}
+Donde I es el operador unitario. Como $\delta \rho$ es arbitrario, lo que está dentro de los corchetes cuadrados debe ser igual a 0. Organizando se llega al operador
+\begin{equation}
+\rho= \exp [ (\frac{ \alpha }{k_{B}}-1 ) I + \frac{\beta}{k_{B}}H ].
+\end{equation}
+Por la condición de normalización que se tiene sobre el operador se encuentra
+\begin{equation}
+Z(\beta) \equiv \exp (1- \frac{ \alpha }{k_{B}}) = \Tr (e^{\frac{\beta H}{k_{B}}}).
+\end{equation}
+Aquí se ha definido la función de partición $Z(\beta)$ como la normalización del operador de densidad de probabilidad. Por medio de las restricciones se puede encontrar que el multiplicador $\beta$ es $\beta= \frac{1}{T}$. Entonces se puede reescribir el operador de densidad de probabilidad como
+\begin{equation}
+\rho = \frac{ e^{-\beta H}}{\Tr( e^{-\beta H})}.
+\end{equation}
+Históricamente se escogió la entropía de Gibbs porque da este resultado para un sistema a temperatura $T$.
+
+
 
 \subsection{Ergodicidad}
 En esta sección se hablará un poco sobre el problema de ergodicidad siguiendo a \cite{TodaStat}, se planteará las dificultades y se verán algunas soluciones que se han dado para este problema. Se habla de este problema ya que es fundamental la hipótesis de ergodicidad para la mecánica estadística, además la nueva perspectiva que se mostrará en los siguientes capítulos \cite{Popescu2006}, no hace énfasis en esta hipótesis es más ni siquiera llega a ser una pregunta que necesite ser resuelta. Para ver por qué facilita tanto evitar esta hipótesis se dará esta sección.
@@ -124,6 +158,26 @@ Como $\overline{f}$ es independiente de $P$ y constante sobre  todo el espacio d
 \langle f \rangle = \overline{f}.
 \end{equation}
 Aquí se ha mostrado por qué es válido el uso del promedio de ensamble en vez del temporal. Para esta demostración se ha usado dos suposiciones. Primero que  $\overline{f}(P)$ tiene el mismo valor para cualquier $P$ en la misma trayectoria que este punto traza(G-Path). Birkhoff demostró esta aseveración. El problema se encuentra en que si $\overline{f}(P)$  tiene un valor definido independiente de la condición inicial $P$ y si esto se satisface para $P$ en cualquier G-path. Boltzmann propuso que para satisfacer la igualdad \ref{ergodicidad}, el G-path debe pasar por todos los puntos de la superficie de energía. Como la trayectoria del punto pasa por todos los puntos dado suficiente tiempo, el promedio temporal es igual al promedio de ensamble. Esto es lo que Boltzmann llamó la hipótesis de ergodicidad, esta idea sobre la trayectoria del punto $P$ es llamado la condición de ergodicidad en el sentido de Boltzmann. Como la trayectoria dinámica es un conjunto unidimensinal de puntos continuos y nunca se intersecta así misma en un superficia multidimensional constante de energía, hace imposible una correspondencia uno a uno de un espacio de dimensión dos o mayor a un espacio unidimensional, luego la ergodicidad en el sentido de Boltzmann no puede concebirse. Ergodicidad, la igualdad \ref{ergodicidad}, no siempre implica ergodicidad en el sentido de Boltzmann.
+\\
+\\
+Aunque la hipótesis ergodica se encuentre en un punto importante en la construcción de la física estadística, hay sistemas que no son ergodicos pero aún así se pueden tratar con la mecánica estadística. El calor específico de los sólidos pueden ser modelado de manera correcta bajo el supuesto de una red de partículas cuánticas vibrando en una aproximación armónica.  El tratamiento clásico también es satisfactoria para temperaturas altas. Como se sabe, cualquier modo normal en vibraciones armónicas es independiente de los otros modos normales y la energía de cada modo es constante. Para describir el calor específico se puede hacer por medio de la aproximación armónica pero si existen terminos no lineales pequeños o anarmónicos habrá una intercambio de energía entre los modos normales. Hay problema famoso que E. Fermi, J. Pasta y S. Ulam investigaron un sistema de una cadena lineal de $N+1$ partículas idénticas de masa m conectadas por resortes idénticos. Pero en  este caso ellos incluyeron interacciones no lineares al Hamiltoniano de este sistema, que puede ser escrito 
+\begin{equation}
+H= \sum_{k} \frac{1}{2m} p_{k}^{2} +\frac{\kappa}{2}\sum_{k} (q_{k+1}-q_{k})^{2}+\frac{\lambda}{s}\sum_{s} (q_{k+1}-q_{k})^{s},
+\end{equation}
+donde $\lambda$ es la constante de acoplamiento y $s=3,4$, esto representa los potenciales no lineales cúbicos y cuadráticos. Ellos querían mostrar la intuición que cualquier interacción no lineal entre partículas de un sistema generaría un comportamiento ergodico  o irreversible para el sistema. Las ecuaciones de movimiento del sistema son
+\begin{equation}
+m \ddot{q}_{k}= \kappa (q_{k+1}-2q_{k}+q_{k-1})+ \lambda[(q_{k+1}-q_{k})^{s-1}-(q_{k}-q_{k-1})^{s-1}],
+\end{equation} 
+o transformando a coordenadas normales: $q_{k}=(\frac{2}{N})^{\frac{1}{2}} \sum_{j=1}^{N-1}x_{j} \sin (\frac{jk \pi }{N})$, $m\dot{x}_{j}=y_{j}$ la ecuación queda como
+\begin{equation}
+\ddot{x}_{j}= - \omega_{j}^{2} x_{j} +\lambda F_{j}(x),
+\end{equation}
+con $\omega_{j} =2(\frac{\kappa }{m})^{\frac{1}{2}} \sin (\frac{j \pi}{2N})$. Donde $F_{j}(x)$ son las fuerzas no lineales. El sistema que ellos estudiaron fue de $N=32$  y $N=64$ mirando su evolución luego de un largo tiempo. Las fuerzas que usaron fueron cuadráticas, cúbicas y lineales. Además la energía de los modos está dada por 
+\begin{equation}
+E_{k} = \frac{1}{2} m(\dot{x}^{2}_{k}+ \omega_{k}^{2}x_{k}^{2}).
+\end{equation}
+Simularon cómo las energías cambiaban en el tiempo cuando inicialmente se le da al menor modo una cantidad de energía. Se esperaba que la energía dada al menor modo fuese siendo distribuida paulatinamente a los demás modos y al final se tuviese una cantidad de energía igualmente distribuida en cada modo. Pero este no fue el hallazgo, para $N=32$ con un potencial cúbico y con las constantes $\kappa=m=1$ y $\lambda=1/4$. Las condiciones iniciales eran; las velocidades iguales a 0 y los desplazamientos dados por la curva sinusoidal del menor modo normal. Lo que se vio fue que la energía regresa al primer modo de manera periódica, la energía es intercambiada en los modos más bajos pero no mucho en los modos más grandes. Se llega a la conclusión que el sistema regresa de forma casi exacta a su estado inicial. Entonces la presencia de anarmonicidad no implica ergodicidad para este sistema. Esto es un ejemplo de un sistema que no es ergódico, esto deja mucha desconformidad dado que no se llega ver porqué la hipótesis que se usar para formar la mecánica estadística no se cumple para sistemas que comúnmente  son usados en la física y son utilizados de manera frecuente. Este descontento es una de las partes que no deja al marco teórico de la física estadística muy estable en comparación con otras ramas de la física.
+
 
 \section{Herramientas de la Teoría Cuántica}
 La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. Sus aplicaciones son bastantes al momento de usar sus herramientas pero para algunos problemas no siempre es sencillo poder seguir con este formalismo. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema.
@@ -166,7 +220,10 @@ Los operados $\{  M_{m} \}$ satisfacen,
 \end{equation}
 \textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
 \\
-Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, esta medidas tiene muchas restricciones y no abarcan todas las posibilidades de medición.  Aunque se puede lograr demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales. Sin embargo la equivalencia que presentan estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general?. Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas, esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información, es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
+\\
+Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, esta medidas tiene muchas restricciones y no abarcan todas las posibilidades de medición.
+\\
+Aunque se puede lograr demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales. Sin embargo la equivalencia que presentan estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general?. Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas, esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información, es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
 \\
 Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$. Al hacer a primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá el estado no cambia. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin darle importancia a cuál sea el estado del sistema después de la medida.
 Por el postulado 3 se sabe que la probabilidad de que el resultado m salga viene dado por $p(m)= \Tr (M^{\dagger}_{m}M_{m} \rho)$. Si se define :
@@ -236,12 +293,37 @@ D(\rho,\sigma) &= \frac{1}{2} \Tr |\sum_{i} (r_{i}-s_{i})\ket{i}\bra{i}|\\
 \end{align*}
 donde $r_{i}$ y $s_{i}$ son los elementos diagonales de $\rho$ y $\sigma$ respectivamente. Al igual que con la distancia de traza clásica se le puede dar un sentido más físico a esta definición. El siguiente teorema construirá la conexión.
 \begin{theorem}
-Sea $\{ E_{m}\}$ un POVM, con $p_{m} \equiv \Tr(\rhoE_{m})$ y $q_{m}\equiv \Tr(\sigmaE_{m})$ como las probabilidades de obtener un el resultado de una medida $m$. Luego
+Sea $\{ E_{m}\}$ un POVM, con $p_{m} \equiv \Tr(\rho E_{m})$ y $q_{m}\equiv \Tr(\sigma E_{m})$ como las probabilidades de obtener un el resultado de una medida $m$. Luego
 
 \begin{equation}
 D(\rho,\sigma)= \max_{ \{ E_{m}\} } D(p_{m},q_{m}),
 \end{equation}
 donde la maximización es sobre todos los POVMs $\{ E_{m}\}$.
 \end{theorem}
+
+\begin{proof}
+
+Véase que 
+
+\begin{equation}
+D(p_{m},q_{m})= \frac{1}{2} \sum_{m} |\Tr(E_{m}(\rho- \sigma))|.
+\end{equation}
+Usando la descomposición espectral se tiene que $\rho- \sigma=Q-S$, donde $Q$ y $S$ son operadores positivos con soporte ortogonal. Luego $|\rho - \sigma|= Q+S$, y
+\begin{align}
+|\Tr(E_{m}(\rho- \sigma))| &= |\Tr(E_{m}(Q-S))| \\
+\quad &\leq \Tr(E_{m}(Q+S))\\
+\quad &\leq \Tr(E_{m}|\rho -\sigma|).
+\end{align}
+Luego 
+
+\begin{align}
+D(p_{m},q_{m}) &\leq \frac{1}{2} \sum_{m} \Tr(E_{m}|\rho-\sigma|)\\
+\quad &= \frac{1}{2} \Tr(|\rho -\sigma|)\\
+\quad &= D(\rho,\sigma),
+\end{align}
+se usó la relación de completitud de los elementos de POVM. Por otro lado si se escogen medidas donde los elementos POVM incluyen proyectores sobre e soporte de $Q$ y $S$, se ve que existen mediciones que dan distribuciones de probabilidad tales que $D(p_{m},q_{m})= D(\rho,\sigma)$.
+
+\end{proof}
+
 Entonces se puede decir que si dos operadores de densidad son cercanos, según la distancia de traza, cualquier medición hecha en este estado cuántico dará una distribución de probabilidad la cual estará cercana, en el sentido clásico de la distancia de traza. También se puede ver como el límite superior a la distancia de traza entre las distribuciones de probabilidad que se encuentran al medir esos estados cuánticos.
 
