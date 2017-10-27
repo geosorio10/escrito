@@ -9,6 +9,7 @@
 \contentsline {subsection}{\numberline {1.2.2}Operador de Densidad Reducido}{15}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Distancia de Traza}{17}{subsection.1.2.3}
 \contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Recuento Hist\IeC {\'o}rico}{21}{section.2.1}
 \contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{25}{chapter.3}
 \contentsline {subsection}{\numberline {3.0.1}Definiciones}{26}{subsection.3.0.1}
 \contentsline {section}{\numberline {3.1}Idea conceptual}{27}{section.3.1}
