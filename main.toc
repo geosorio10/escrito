@@ -10,18 +10,19 @@
 \contentsline {subsection}{\numberline {1.2.3}Distancia de Traza}{17}{subsection.1.2.3}
 \contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{21}{chapter.2}
 \contentsline {section}{\numberline {2.1}Recuento Hist\IeC {\'o}rico}{21}{section.2.1}
-\contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{27}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Definiciones}{28}{subsection.3.0.1}
-\contentsline {section}{\numberline {3.1}Idea conceptual}{29}{section.3.1}
-\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{32}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{35}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{41}{section.3.3}
-\contentsline {chapter}{\numberline {4}Continuaci\IeC {\'o}n Entrelazamiento y La mec\IeC {\'a}nica estad\IeC {\'\i }stica}{45}{chapter.4}
-\contentsline {chapter}{\numberline {5}Evoluci\IeC {\'o}n Hacia El Equilibrio}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Especificaci\IeC {\'o}n del Equilibrio}{48}{section.5.1}
-\contentsline {section}{\numberline {5.2}Equilibraci\IeC {\'o}n}{50}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusiones}{67}{chapter.6}
+\contentsline {section}{\numberline {2.2}teor\IeC {\'\i }a cin\IeC {\'e}tica}{24}{section.2.2}
+\contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica stad\IeC {\'\i }stica}{29}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Definiciones}{30}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}Idea conceptual}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Formulaci\IeC {\'o}n matem\IeC {\'a}tica}{33}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lema de Levy}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Demonstraci\IeC {\'o}n del principio general can\IeC {\'o}nico}{37}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Significado f\IeC {\'\i }sico}{43}{section.3.3}
+\contentsline {chapter}{\numberline {4}Continuaci\IeC {\'o}n Entrelazamiento y La mec\IeC {\'a}nica estad\IeC {\'\i }stica}{47}{chapter.4}
+\contentsline {chapter}{\numberline {5}Evoluci\IeC {\'o}n Hacia El Equilibrio}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Especificaci\IeC {\'o}n del Equilibrio}{50}{section.5.1}
+\contentsline {section}{\numberline {5.2}Equilibraci\IeC {\'o}n}{52}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusiones}{69}{chapter.6}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{69}{appendix*.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{71}{appendix*.2}
