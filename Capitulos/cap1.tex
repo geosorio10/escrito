@@ -56,48 +56,18 @@ En este artículo Jaynes muestra en el teorema 1 que
 \begin{equation}
 H_{B} \leq H_{G},
 \end{equation}
-y la igualdad se cumple solo cuando $W_{N}(x_{1},x_{2},..,x_{N};p_{1},p_{2},...,p_{N})=w_{1}(x_{1},p_{1})..w_{1}(x_{N},p_{N},$,  es decir hay independencia entre las partículas esto es el caso para un gas que no tiene interacción entre partículas, gas ideal. Gracias a esto Jaynes prosigue con mostrar que la entropía de Boltzmann, $S_{B}=k_{B}H_{B}$, solo es cierta cuando se habla de un fluido con la misma densidad y temperatura en todo el espacio pero sin fuerzas entre partículas. Mientras la entropía de Gibbs, $S_{G}=k_{B}H_{G}$, es válida para cualquier sistema porque da la entropía fenomenológica de la termodinámica. Concluye que esta diferencia no puede ser pequeña porque hay interacciones entre partículas muy importantes que afectan ampliamente el resultado. Esto muestra que aunque la idea de Gibbs sobre un ensamble 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{comment}
-
-En este corto capítulo se espera motivar la idea general de este escrito, mostrando un poco cuál ha sido el problema con los fundamentos de la mecánica estadística. En los siguientes capítulos se explicará el nuevo enfoque dado por Popescu et al \cite{Popescu2006}.
-\\
-La mecánica estadística estudia los cuerpos macroscópicos, los cuales están compuestos por un gran número de partículas. Los métodos que ayudan al análisis de estos cuerpos por lo general no dependen de la forma en que se pueda describir una sola partícula (ecuaciones de movimiento para una partícula) sino se respaldan en métodos probabilísticos. A inicios del siglo 19 la teoría de la termodinámica cogía fuerza y mostraba coherencia con los datos experimentales pero se quiso fundamentar la termodinámica desde una perspectiva microscópica. La entropía un concepto nacido en la termodinámica no tenía una clara idea de qué representaba. Boltzmann propone una función H que da la entropía correcta cuando no hay interacción entre las partículas del sistema; su idea detrás de esta función es simplemente tomar la densidad en el espacio de fase de una partícula y multiplicarla por $N$, este es el número de componentes en el cuerpo macroscópico. La función de Boltzmann es:
-
+y la igualdad se cumple solo cuando 
 \begin{equation}
-H_{B}=N \int w_{1} \log w_{1} d \tau_{1}.
+W_{N}(x_{1},x_{2},..,x_{N};p_{1},p_{2},...,p_{N})=w_{1}(x_{1},p_{1})..w_{1}(x_{N},p_{N},
 \end{equation}
-donde $w_{1}$ es la densidad de probabilidad de una partícula y $d \tau_{1} \equiv d^{3}x_{1}d^{3}p_{1}$.
-Pero al introducir la interacción la función de Boltzmann no da la entropía correcta, es menor que la experimental. Gibbs por su parte propone una función H que sí da la entropía correcta para cualquier caso pero las ideas que tiene esta función de Gibbs no son tan directas. Gibbs le da sentido a su función hablando de las copias del microestado posible, con esto da una densidad de estados en el espacio de fase y luego define sus función.
-\begin{equation}
-H_{G}= \int W_{N}  \log W_{N} d \tau
-\end{equation}
-donde $W_{N}$ es la densidad de probabilidad en el espacio de fase y $d\tau \equiv d^{3}x_{1}...d^{3}p_{N}$. Aunque la perspectiva de Gibbs no sea tan directa da los resultados correctos. Esta variedad de perspectivas hace que no se tenga un marco conceptual único en la mecánica estadística.
+es decir hay independencia entre las partículas esto es el caso para un gas que no tiene interacción entre partículas, gas ideal. Gracias a esto Jaynes prosigue con mostrar que la entropía de Boltzmann, $S_{B}=k_{B}H_{B}$, solo es cierta cuando se habla de un fluido con la misma densidad y temperatura en todo el espacio pero sin fuerzas entre partículas. Mientras la entropía de Gibbs, $S_{G}=k_{B}H_{G}$, es válida para cualquier sistema porque da la entropía fenomenológica de la termodinámica. Concluye que esta diferencia no puede ser pequeña porque hay interacciones entre partículas muy importantes que afectan ampliamente el resultado. Esto muestra que aunque la idea de Gibbs sobre un ensamble es exótica da los resultados esperados por la termodinámica. Mientras que Boltzmann usando ideas más intuitivas no llega a hacer una conexión entre la termodinámica y sus ideas. 
 \\
-Otro problema que ocurre es que el principio en el que se basa la mecánica estadística es el de probabilidades iguales. Esto es que al no conocer el estado exacto en el que se encuentra el sistema se supone por la ignorancia subjetiva que todos los estados deben tener la misma probabilidad de ocurrir. Dejar toda una teoría física en el cimiento de una probabilidad subjetiva no es deseable.
+La mecánica estadística que introdujo Gibbs tenía como base la idea de la distribución microcanónica, esta es básicamente que: $\rho(q,p)$ es una distribución de densidad en el espacio de fase, la cual es cero en todo las excepto entre $E$ y $E+ \Delta E$. Donde $\Delta E$ es bastante pequeña, en esta superficie de energía $\rho$ tiene un valor constante. La idea física de detrás de esta distribución es bastante simple de exponer. Desde la perspectiva de la teoría de probabilidad cuando no se tiene un conocimiento del problema que se quiere tratar se supone que no hay razón para darle un mayor peso a algún resultado en especial, dada la ignorancia subjetiva que se tiene. Entonces al no conocer nada del sistema se dice que todos los resultados tienen la misma probabilidad de salir, luego la distribución de probabilidad es constante. Luego si tengo un sistema físico del que conozco solo su estado macroscópico, estos parámetros me pueden dar varios posibles estados microscópicos. Dado que no tengo más información supongo que cada posible estado microscópico tiene la misma probabilidad de ser el estado en el que el sistema se encuentra en realidad. Este es uno de los problemas al fundamentar la mecánica estadística porque se basa en la ignorancia subjetiva que se tiene del sistema. Muchos argumentan que las teorías físicas deben ser edificadas en ideas objetivas, y que una rama tan importante de la física se asiente en algo como la ignorancia propia deja mucho que desear. Además aunque esta idea se base en la teoría de la probabilidad también ha sido muy criticada en las matemáticas. Hay preguntas como: si se llegará a conocer un poco más del sistema, ¿ aún sería válida la distribución microcanónica?, ¿ si las probabilidades realmente tiene un peso que se les debería asignar?. En busca de evitar estas preguntas pero no volver a construir toda una teoría lo que se propone es intercambiar el principio de probabilidades iguales por una idea más estable que tenga las mismas implicaciones que ese principio y se vuelva a la mecánica estadística actual.
 \\
-Además de estos problemas existe el conflicto sobre los promedios de ensamble. Con las ideas de Gibbs se puede encontrar promedios pero como la función de densidad es de las copias de los microestados, ¿ qué significa un promedio de ensamble?. Se toma el camino ergódico donde se supone que el promedio de ensamble es igual al promedio temporal, este supuesto se fundamenta en que el estado va a pasar por todos lo microestados posbiles en el espacio de fase. El conflicto con eso es que hay sistemas que no pasan por todos los microestados posibles pero aún así se puede manejar estos sistemas; el tiempo necesario para que el estado pase por todos los microestados es bastante largo. Esto problemas son los que dejan al marco teórico de la mecánica estadística como algo controversial. 
+E.T Jaynes viendo este problema propuso una conexión entre la teoría de la información clásica y la mecánica estadística que podría resolver el problema del principio de probabilidades iguales. 
 
-\end{comment}
+
+
+
 
 
