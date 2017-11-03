@@ -4,18 +4,25 @@ Este capítulo espera contextualizar al lector en mecánica estadística, sus id
 
 
 \section{Mecánica Estadística}
-La mecánica clásica entregada por Newton y sus contemporáneos, y perfeccionada por Hamilton y Lagrange da el inicio a la física actual. Esta teoría es de gran alcance dando predicciones bastante correctas. Aunque no todo se podía estudiar con esta teoría. Ya desde siglo 17 se habían dado muchos indicios sobre otra teoría que debía tratar con conceptos diferentes a los tratados comúnmente por la mecánica. La teoría sobre el calor fue evolucionando siendo guiada por los experimentos de Graf von Rumfor, Julius Mayer, James Prescott Joule. Por otro lado Nicolas Carnot trabajaba en motores de calor y sus consecuencias teóricas. Poco a poco la termodinámica fue tomando la cara actual con ayuda de Benoît Clapeyron, Lord Kelvin, Rudolf Clausius. 
+La mecánica clásica entregada por Newton y perfeccionada por Hamilton y Lagrange da el inicio a la física actual. La física clásica tiene un amplio alcance dando predicciones acordes con los experimentos. Sin embargo ya se mostraba que esta teoría no podía estudiar todos los aspectos de la naturaleza. Ya desde siglo 18 se habían dado muchos indicios sobre otra teoría que debía tratar con conceptos diferentes a los tratados comúnmente por la mecánica. La teoría sobre el calor fue evolucionando siendo guiada por los experimentos de Graf von Rumford, Julius Mayer, James Prescott Joule. Por otro lado Nicolas Carnot trabajaba en motores de calor y sus consecuencias teóricas. Poco a poco la termodinámica fue tomando la cara actual con ayuda de Benoît Clapeyron, Lord Kelvin, Rudolf Clausius. 
 \\
-La termodinámica se diferencia de las demás teorías físicas porque no propone nuevas leyes, simplemente exponen qué ocurre con las propiedades de un sistema macroscópico en equilibrio, por ejemplo la primera ley de la termodinámica simplemente expone como la energía del sistema es constante sin importar que proceso se lleve acabo. La termodinámica fue basada en los experimentos y organizada bajo unos postulados \cite{CallenThermo}, sus predicciones eran respaldadas experimentalmente ayudando a la innovación e industria; pero la termodinámica no se interesaba por encontrar una conexión con sus resultados y los constituyentes de la materia. De este problema nace la mecánica estadística, sus esfuerzos iniciales eran considerar la materia hecha de partículas y de allí poder predecir todas las propiedades térmicas macroscópicas ya encontradas por la termodinámica. Las personas que más ayudaron a la creación de esta teoría fueron Gibbs, Boltzmann y Maxwell. Ellos le dieron las ideas principales y moldearon la teoría para poder tener métodos generales a aplicaciones de diferentes tipos. Aunque el método de Gibbs es el que se mostrará.
+\\
+La termodinámica se diferencia de las demás teorías físicas porque no propone nuevas leyes, simplemente exponen qué ocurre con las propiedades de un sistema macroscópico en equilibrio, por ejemplo la primera ley de la termodinámica simplemente expone cómo la energía del sistema es constante sin importar que proceso se lleve acabo. La termodinámica fue basada en los experimentos y organizada bajo unos postulados \cite{CallenThermo}, sus predicciones eran respaldadas experimentalmente ayudando a la innovación e industria; pero la termodinámica no se interesaba por encontrar una conexión entre sus resultados y los constituyentes de la materia.\\
+De este problema nace la mecánica estadística, sus esfuerzos iniciales eran considerar la materia hecha de partículas y de allí poder predecir todas las propiedades térmicas macroscópicas ya encontradas por la termodinámica. Las personas que más ayudaron a la creación de esta teoría fueron Gibbs, Boltzmann y Maxwell. Ellos le dieron las ideas principales y moldearon la teoría para poder tener métodos generales a aplicaciones de diferentes tipos, los métodos producidos por Gibbs son los que usualmente se utilizan.
+\\
 \\
 Para seguir la idea de Gibbs primero se supone que el sistema que se va a estudiar es uno compuesto de $N$ partículas, la suposición atomista de la materia. Gracias a la mecánica clásica se conocen las ecuaciones de movimiento para un sistema de varias partículas, las ecuaciones de Hamilton:
 \begin{equation} \label{Hamilton}
 \frac{dq_{i}}{dt}= \frac{\partial H}{\partial p_{i}} \quad , \quad \frac{d p_{i}}{dt} =-\frac{\partial H}{\partial q_{i}}.
 \end{equation}
-Donde el índice $i=1,...,3N$ y $H$ es el Hamiltoniano del sistema. Se podría pensar que el problema ya se encuentra solucionado pero hay dos dificultades; primero la cantidad de ecuaciones de movimiento son muchas pues existirán el mismo número de ecuaciones que grados de libertar, y en un volumen típico hay en el orden de $10^{23}$ partículas. En la actualidad las herramientas prácticas que da la computación podría ayuda a resolver estas ecuaciones, suponiendo cierta simplicidad en ellas. Pero aún así existe el problema de las condiciones iniciales del sistema; esto en la práctica es imposible de encontrar no se puede hallar la posición ni el momento de todas las partículas para el mismo tiempo esto es en el caso clásico, la mecánica cuántica impone restricciones aún mayores. Para poder superar este dilema se preve un enfoque estadístico, donde se ve que a mayor número de partículas empiezan a aparecer regularidades, lo interesante de la mecánica estadística es que las leyes dadas solo funcionan cuando los grados de libertad son muchos.
+Donde el índice $i=1,...,3N$ y $H$ es el Hamiltoniano del sistema. Se podría pensar que el problema ya se encuentra solucionado pero hay dos dificultades; la cantidad de ecuaciones de movimiento son muchas pues existirán el mismo número de ecuaciones que grados de libertar, y en un volumen típico hay en el orden de $10^{23}$ partículas. En la actualidad, las herramientas que proporciona la computación podría ayuda a resolver estas ecuaciones, suponiendo cierta simplicidad en ellas. Pero aún así existe el problema de las condiciones iniciales del sistema, en la práctica es imposible de encontrar la posición y el momento de todas las partículas para el mismo tiempo esto es en el caso clásico \cite{LandauStat}, la mecánica cuántica impone restricciones aún mayores.
+\\
+Para poder superar este dilema se preve un enfoque estadístico, donde se ve que a mayor número de partículas empiezan a aparecer regularidades. Lo interesante de la mecánica estadística es que las leyes dadas solo funcionan cuando los grados de libertad son muchos.
 \\
 Sea un sistema mecánico macroscópico en un instante de tiempo $t$,  se dice que el microestado del sistema está dado por cada $q_{i}(t)$ y $p_{i}(t)$. El microestado se puede representar por un punto $\lambda(t)$ en un espacio  abstracto de $6N$ dimensiones, este espacio se llama el espacio de fase $\Gamma = \Pi^{3N}_{i} \{q_{i}, p_{i} \}$.
-Aquí es donde entra la idea del ensamble dada por Gibbs. Se supone $N$ copias de un sistema macroscópico, cada uno de ellos viene representado en el espacio de fase $\Gamma$ por un punto $\lambda(t)$. Nótese que esto no significa  que todos los puntos sean el mismo, un sistema macroscópico puede tener diferentes microestados, cada microestado puede cambiar por lo menos por un momento o una posición esto no afectaría a las propiedades macroscópicas que se miden y para términos prácticos sería el mismo sistema macroscópico. Sea $d\mathcal{N}(p,q,t)$ el número representativo de puntos en el volumen infinitesimal $d\Gamma = \Pi^{3N}_{i}dp_{i}dq_{i}$ alrededor del punto $(p,q)$. Entonces se define una densidad en el espacio de fase:
+Aquí es donde entra la idea del ensamble dada por Gibbs. Se supone $N$ copias de un sistema macroscópico, cada uno de ellos viene representado en el espacio de fase $\Gamma$ por un punto $\lambda(t)$. Nótese que esto no significa  que todos los puntos sean el mismo, un sistema macroscópico puede tener diferentes microestados, cada microestado puede cambiar por lo menos por un momento o una posición esto no afectaría a las propiedades macroscópicas que se miden y para términos prácticos sería el mismo sistema macroscópico \cite{KardarStat}.
+\\
+Sea $d\mathcal{N}(p,q,t)$ el número representativo de puntos en el volumen infinitesimal $d\Gamma = \Pi^{3N}_{i}dp_{i}dq_{i}$ alrededor del punto $(p,q)$. Entonces se define una densidad en el espacio de fase:
 \begin{equation}
 \rho(p,q,t)d\Gamma= \lim_{\mathcal{N} \to \infty} \frac{d\mathcal{N}(p,q,t)}{\mathcal{N}}.
 \end{equation}
@@ -25,9 +32,9 @@ Es más conveniente escribir la evolución del sistema por esta densidad. Los pr
 \end{equation}
 
 \subsection{Teorma de Liouville }
-Este teorema es de alta importancia en la mecánica estadística para ver sus consecuencias en esta área primero se verá qué declara este teorema para luego ver sus consecuencias. La siguiente demostración del teorema sigue los pasos dados por \cite{PathriaStat}. 
+Este teorema es de alta importancia en la mecánica estadística, para ver sus consecuencias en esta área primero se verá qué declara este teorema. La siguiente demostración del teorema sigue los pasos dados por \cite{PathriaStat}. 
 
-Se considera un volumen $\Gamma$ que encierra una región que se quiere estudiar en el espacio de fase,  este volumen tiene una superficie $\sigma$. El cambio del número de puntos dentro de este volumen está dado por 
+Se considera un volumen $\Gamma$ que encierra una región que se quiere estudiar en el espacio de fase,  este volumen tiene una superficie $\sigma$. El cambio del número de puntos, microestados posibles del sistema, dentro de este volumen está dado por 
 \begin{equation}
 \frac{\partial}{\partial t} \int_{\Gamma} \rho d\Gamma
 \end{equation}
@@ -39,16 +46,16 @@ El cambio neto de puntos que salen de $\Gamma$ por la superficie $\sigma$ es
 \int_{\sigma} \rho \mathbf{v \cdot \hat{n}} d\sigma;
 \end{equation}
 
-donde $\mathbf{v}$ es el vector de velocidad del punto representativo en la región de superficie $d\sigma$ y $\mathbf{\hat{n}}$ es el vector perpendicular a esta superficie con dirección de salida. Por el teorema de la divergencia se tiene:
+donde $\mathbf{v}$ es el vector de velocidad del punto representativo en la región de superficie $d\sigma$. $\mathbf{\hat{n}}$ es el vector perpendicular a esta superficie con dirección de salida. Por el teorema de la divergencia se tiene:
 
 \begin{equation}
 \int_{\Gamma} \div{ ( \rho\mathbf{v} ) } d\Gamma = \int_{\Gamma} \sum_{i=1}^{3N} \Big( \frac{\partial}{\partial q_{i}}(\rho \dot{q_{i}})+ \frac{\partial}{\partial p_{i}} (\rho \dot{p_{i}}) \Big) d\Gamma
 \end{equation}
 Debido a que las cantidad de puntos se conserva en el espacio de fase esto quiere decir que el ensamble que se considera no agrega nuevos miembros ni elimina los que ya se encuentran en este, esto permite concluir:
 \begin{equation}
- \int_{\Gamma} \Big( \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) } \Big) d\Gamma =0
+ \int_{\Gamma} \Big( \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) } \Big) d\Gamma =0.
 \end{equation}
-La condición para que esta integral sea cierta para cualquier $\omega$ es que el integrando sea cero. Esto nos da la ecuación de continuidad para el espacio de fase,
+La condición para que esta integral sea cierta para cualquier $\Gamma$ es que el integrando sea cero. Esto nos da la ecuación de continuidad para el espacio de fase,
 
 \begin{equation} \label{con}
  \frac{\partial \rho}{\partial t} + \div{ ( \rho\mathbf{v} ) }=0
@@ -56,7 +63,7 @@ La condición para que esta integral sea cierta para cualquier $\omega$ es que e
 
 usando la forma explícita de la divergencia,
 \begin{equation}
- \frac{\partial \rho}{\partial t} +\sum_{i=1}^{3N} \Big( \frac{\partial\rho}{\partial q_{i}}\dot{q_{i}}+  \frac{\partial\rho}{\partial p_{i}}\dot{p_{i}} \Big) + \rho \sum_{i=1}^{3N} \Big( \frac{\partial \dot{q_{i}}}{\partial q_{i}} + \frac{\partial \dot{p_{i}}}{\partial p_{i}}\Big)=0
+ \frac{\partial \rho}{\partial t} +\sum_{i=1}^{3N} \Big( \frac{\partial\rho}{\partial q_{i}}\dot{q_{i}}+  \frac{\partial\rho}{\partial p_{i}}\dot{p_{i}} \Big) + \rho \sum_{i=1}^{3N} \Big( \frac{\partial \dot{q_{i}}}{\partial q_{i}} + \frac{\partial \dot{p_{i}}}{\partial p_{i}}\Big)=0.
 \end{equation}
 Por las ecuaciones de Hamilton \ref{Hamilton} el último término se cancela. Como $\rho$ depende de $p,q$ y $t$ con los dos primeros términos se pueden organizar para que la ecuación quede de la siguiente forma:
 \begin{equation} \label{liouville}
@@ -66,7 +73,8 @@ La ecuación \ref{liouville} es el teorema de Liouville. Esto lo que dice es que
 
 Esta conclusión es la más clara al obtener el teorema de Liouville pero también hay consecuencias profundas dadas por este. Para ver las consecuencias que brinda el teorema seguiremos a \cite{KardarStat}.
 
-\textbf{ Consecuencias del teorema de Liouville}: La primera consecuencia es que al hacer una inversión temporal el corchete de poisson $[\rho, H]$ cambia de signo y esto predice que la densidad revierte su evolución. Es decir que al hacer la transformación $(p,q,t) \to (p,q,-t)$ el teorema de Liouvile implica $\rho(p,q,t)=\rho(-p,q,-t)$.
+\subsection{Consecuencias del teorema de Liouville}
+La primera consecuencia es que al hacer una inversión temporal el corchete de poisson $[\rho, H]$ cambia de signo y esto predice que la densidad revierte su evolución. Es decir que al hacer la transformación $(p,q,t) \to (p,q,-t)$ el teorema de Liouvile implica $\rho(p,q,t)=\rho(-p,q,-t)$.
 La segunda es sobre la evolución del promedio de ensamble en el tiempo.
 \begin{equation}
 \frac{d \langle f \rangle}{dt}= \int d \Gamma \frac{\partial \rho(p,q,t)}{\partial t} f(p,q)= \sum_{i=1}^{3N} \int d\Gamma f(p,q) \Big( \frac{\partial \rho}{\partial p_{i}}\frac{\partial H}{\partial q_{i}} - \frac{\partial \rho}{\partial q_{i}}\frac{\partial H}{\partial p_{i}}  \Big)
@@ -80,11 +88,12 @@ Con esta relación sobre los promedios se puede ver qué condiciones son necesar
 \begin{equation}
 [\rho_{eq}, H]=0.
 \end{equation}
-Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q))$ esto es una solución ya que $[\rho(H),H]=\rho^{'}(H)[H,H]=0$. Esto muestra el supuesto básico de la mecánica estadística, $\rho$ es constante en las superficie de energías constantes $H$. El supuesto de la mecánica estadística dictamina que el macroestado esta dado por una densidad uniforme de microestados. Esto es lo mismo que cambiar la medida de objetiva de probabilidad de la de $\rho(p,q,t) d\Gamma$ a una medida subjetiva.
+Una posible solución a la ecuación anterior es que $\rho_{eq}(p,q)=\rho(H(p,q))$ esto es una solución ya que $[\rho(H),H]=\rho^{'}(H)[H,H]=0$. Esto muestra el supuesto básico de la mecánica estadística, $\rho$ es constante en las superficie de energías constantes $H$. El supuesto de la mecánica estadística dictamina que el macroestado esta dado por una densidad uniforme de microestados. Esto es el principio de probabilidades iguales  a priori.
+\\
 La consecuencia anterior respondería la pregunta de cómo definir equilibrio para partículas en movimiento. Pero para saber si todos los sistemas evolucionan naturalmente al equilibrio  y justificar el supuesto básico de la mecánica estadística se debe mostrar que densidades no estacionarias se van acercando a densidades estacionarias $\rho_{eq}$. Pero esto entra en un problema con la primera consecuencia (inversión temporal), dado una densidad $\rho(t)$ que se acerque a $\rho_{eq}$ habrá otra dada la inversión temporal que se estará alejando de esta densidad de equilibrio. Lo que se ha propuesto normalmente es mostrar que $\rho(t)$ se encontrará en el intervalo cercano a $\rho_{eq}$ una gran parte del tiempo, esto significa que los promedios temporales están dominados por la solución estacionaria. Estos nos lleva al problema de ergodicidad, ¿ es válido igualar el promedio temporal con el promedio de ensamble?. 
 \\
 \subsection{Ensamble Canónico}
-Antes de entrar en el problema de ergodicidad se quiere ver cuál es el operador densidad de probabilidad para un sistema cerrado que puede intercambiar calor con su entorno. Para encontrar este operador se extremizará la entropía bajo dos restricciones. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
+Antes de entrar en el problema de ergodicidad se quiere ver cuál es el operador densidad de probabilidad para un sistema cerrado que puede intercambiar calor con su entorno. Para encontrar este operador se extremizará la entropía bajo dos restricciones \cite{ReichlStat}. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
 \begin{equation}
 \Tr(\rho)=1,
 \end{equation}
@@ -92,24 +101,24 @@ además se impone la restricción de tener un valor de energía fijo,
 \begin{equation}
 \Tr(H \rho)= \langle E \rangle,
 \end{equation}
-donde H  es el operador Hamiltoniano del sistema. La entropía que se va a maximizar  será la entropía de Gibbs, de esta se hablará un poco más profundo en el siguiente capítulo, esta se escribe para un sistema cuántico
+donde H  es el operador Hamiltoniano del sistema. El porqué el promedio de energía se escribe así se tendrá claro más adelante. La entropía que se va a maximizar  será la entropía de Gibbs, de esta se hablará un poco más profundo en el siguiente capítulo, esta se escribe para un sistema cuántico
 \begin{equation}
 S=-k_{B} \Tr[\rho \ln (\rho)].
 \end{equation}
-Con ayuda de los multiplicadores de Lagrange, $\alpha$ y $\beta$, se encuentra la distribución de probabilidad que maximiza la entropía bajo las restricciones dadas. Entonces se tiene
+Con ayuda de los multiplicadores de Lagrange, $\alpha$ y $\beta$, se encuentra la distribución de probabilidad que maximiza la entropía bajo las restricciones dadas. Entonces se tiene:
 \begin{align}
 \delta \{ \Tr [ \alpha \rho + \beta H \rho - k_{B} \rho \ln (\rho)] \} 
 &= \Tr \{ [(\alpha - k_{B})I + \beta H - k_{B} \ln (\rho) ] \delta \rho \}=0.
 \end{align}
 Donde I es el operador unitario. Como $\delta \rho$ es arbitrario, lo que está dentro de los corchetes cuadrados debe ser igual a 0. Organizando se llega al operador
 \begin{equation}
-\rho= \exp [ (\frac{ \alpha }{k_{B}}-1 ) I + \frac{\beta}{k_{B}}H ].
+\rho= \exp [ \bigg( \frac{ \alpha }{k_{B}}-1 \bigg) I + \frac{\beta}{k_{B}}H ].
 \end{equation}
 Por la condición de normalización que se tiene sobre el operador se encuentra
 \begin{equation}
 Z(\beta) \equiv \exp (1- \frac{ \alpha }{k_{B}}) = \Tr (e^{\frac{\beta H}{k_{B}}}).
 \end{equation}
-Aquí se ha definido la función de partición $Z(\beta)$ como la normalización del operador de densidad de probabilidad. Por medio de las restricciones se puede encontrar que el multiplicador $\beta$ es $\beta= \frac{1}{T}$. Entonces se puede reescribir el operador de densidad de probabilidad como
+Aquí se ha definido la función de partición $Z(\beta)$ como la normalización del operador de densidad de probabilidad. Por medio de las restricciones se puede encontrar que el multiplicador $\beta$ es igual a $\frac{1}{T}$. Entonces se puede reescribir el operador de densidad  como
 \begin{equation}
 \rho = \frac{ e^{-\beta H}}{\Tr( e^{-\beta H})}.
 \end{equation}
