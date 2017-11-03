@@ -195,14 +195,16 @@ Entonces la presencia de anarmonicidad no implica ergodicidad para este sistema.
 
 
 \section{Herramientas de la Teoría Cuántica}
-La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. Sus aplicaciones son bastantes al momento de usar sus herramientas pero para algunos problemas no siempre es sencillo poder seguir con este formalismo. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema.
+La mecánica cuántica en general se introduce desde la perspectiva del vector de estado, sus aplicaciones abarcan una gran cantidad de problemas. Sus herramientas son poderosas para algunos problemas, pero no siempre es sencillo poder seguir con este formalismo en casos particulares. Por esto se usa el formalismo de la matriz densidad u operador densidad cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema \cite{Decoherence}.
 \\
 \subsection{Operador de Densidad}
 Como se sabe cuánticamente el estado $\ket{\psi}$ da toda la información posible de un sistema, a esto se le llama un estado puro. Para especificar cuál es el operador densidad de un sistema se supone que el sistema cuántico puede estar en $\ket{\psi_{i}}$ para $i=1,2,...$. Cada estado posible del sistema tiene una probabilidad correspondiente, $p_{i}>0$ y $\sum_{i} p_{i}$. Luego el operador densidad para el sistema es :
 \begin{equation}
 \rho \equiv \sum_{i} p_{i} \ket{\psi_{i}}\bra{\psi_{i}}.
 \end{equation}
-En el caso en que solo haya un estado posible, se tiene el operador densidad para un estado puro $\rho= \ket{\psi}\bra{\psi}$. Entonces se puede hablar de un ensamble de estados puros $ \{ p_{i} | \ket{\psi_{i}} \} $  siendo, el operador densidad, la distribución clásica de probabilidad de matrices de estados puros. Nótese que se usa de manera similar el nombre de operador densidad y de matriz densidad, esta es la usanza de la literatura. El operador densidad también puede ser especificado por las siguientes propiedades: 
+En el caso en que solo haya un estado posible, se tiene el operador densidad para un estado puro $\rho= \ket{\psi}\bra{\psi}$. Entonces se puede hablar de un ensamble de estados puros $ \{ p_{i} | \ket{\psi_{i}} \} $  siendo, el operador densidad, la distribución clásica de probabilidad de matrices de estados puros. Nótese que se puede usar de manera similar el nombre de operador densidad y de matriz densidad, esta es la usanza de la literatura. 
+\\
+El operador densidad también puede ser especificado por las siguientes propiedades: 
 
 \begin{enumerate}
 \item $\rho$ tiene traza igual a uno, $\Tr(\rho)=1$.
@@ -211,11 +213,10 @@ En el caso en que solo haya un estado posible, se tiene el operador densidad par
 \end{enumerate}
 Ya con esta breve introducción se pueden reescribir los postulados de la mecánica cuántica en este formalismo, siguiendo a \cite{NielsenInformation}:
 \\
-
-\textbf{Postulado 1}: Se puede asociar a un sistema físico aislado un espacio de Hilbert. El sistema está descrito completamente por el operador densidad que actúa sobre el espacio de Hilbert del sistema. Si un sistema cuántico está en el estado $\rho_{i}$ con probabilidad $p_{i}$, el operador de densidad del sistema es $\sum_{i}= p_{i} \rho_{i}$.
+\textbf{Postulado 1}: Se puede asociar a un sistema físico aislado un espacio de Hilbert. El sistema está descrito completamente por el operador densidad que actúa sobre el espacio de Hilbert del sistema. Si un sistema cuántico está en el estado $\rho_{i}$ con probabilidad $p_{i}$, el operador de densidad del sistema es $\sum_{i} p_{i} \rho_{i}$.
 \\
 
-\textbf{Postulado 2}: La evolución de un sistema cuántico cerrado está descrita por una transformación unitaria. Esto es,  el estado $\rho'$ del sistema en el tiempo $t_{0}$ está relacionado con el estado $\rho$ del sistema para el tiempo $t$ por un operador unitario $U$ el cual depende solo de los tiempos $t_{0}$ y $t$. 
+\textbf{Postulado 2}: La evolución de un sistema cuántico cerrado está descrita por una transformación unitaria. Esto es,  el estado $\rho$ del sistema en el tiempo $t_{0}$ está relacionado con el estado $\rho'$ del sistema para el tiempo $t$ por un operador unitario $U$ el cual depende solo de los tiempos $t_{0}$ y $t$. 
 \begin{equation}
 \rho' = U \rho U^{\dagger}.
 \end{equation}
@@ -236,11 +237,11 @@ Los operados $\{  M_{m} \}$ satisfacen,
 \textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
 \\
 \\
-Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, esta medidas tiene muchas restricciones y no abarcan todas las posibilidades de medición.
+Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, estas medidas tienen muchas restricciones y no abarcan todas las posibilidades de medición.
+\\	
+Se puede demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales \cite{NielsenInformation}, entonces si existe una equivalencia entre estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general?. Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas, esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información, es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
 \\
-Aunque se puede lograr demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales. Sin embargo la equivalencia que presentan estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general?. Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas, esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información, es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
-\\
-Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$. Al hacer a primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá el estado no cambia. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin darle importancia a cuál sea el estado del sistema después de la medida.
+Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$. Al hacer la primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá en el mismo estado \cite{VedralInformation}. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin darle importancia a cuál sea el estado del sistema después de la medida \cite{NielsenInformation}.
 Por el postulado 3 se sabe que la probabilidad de que el resultado m salga viene dado por $p(m)= \Tr (M^{\dagger}_{m}M_{m} \rho)$. Si se define :
 \begin{equation}
 E_{m} \equiv M^{\dagger}_{m}M_{m}.
@@ -249,17 +250,16 @@ Se puede demostrar fácilmente que $E_{m}$ es un operador positivo y cumple con 
 
 \subsection{Operador de Densidad Reducido}
 
-Ahora se puede responder la siguiente situación: se tiene un sistema $A$ que está correlacionado cuánticamente  con el sistema $B$. Esto quiere decir que el sistema completo $AB$ puede estar dado por un estado puro pero aún así no se puede describir individualmente el sistema $A$, entonces si solo se tiene acceso al sistema $A$ pero no al $B$, cómo se puede modelar matemáticamente toda la información que es posible de extraer solo de mediciones locales en $A$. Aquí se una el operador densidad reducido este viene definido por 
+Ahora se puede plantear la siguiente situación: se tiene un sistema $A$ que está correlacionado cuánticamente  con el sistema $B$. Esto quiere decir que el sistema completo $AB$ puede estar dado por un estado puro pero aún así no se puede describir individualmente el sistema $A$, entonces si solo se tiene acceso al sistema $A$ pero no al $B$, cómo se puede modelar matemáticamente toda la información que es posible de extraer solo de mediciones locales en $A$. Aquí se usa el operador densidad reducido, este se define así
 \begin{equation}
 \rho_{A} \equiv \Tr_{B}(\rho_{AB}).
 \end{equation}
-
 La traza es tomada únicamente en una base del espacio de Hilbert $\mathcal{H}_{B}$ del sistema $B$. Esta operación puede ser interpretada como si se estuviese promediando sobre todos los grados de libertad del sistema que no se tiene acceso, esta operación se le llama la traza parcial sobre $B$. Para ver la utilidad que tiene este operador se verá un ejemplo sencillo, este ejemplo se puede generalizar fácilmente.
 Se tiene el estado de algún sistema compuesto por $A$ y $B$ dado por la función de onda $\Phi$:
 \begin{equation}
 \Phi = \frac{1}{\sqrt{2}} (\ket{a_{1}}\ket{b_{1}}+\ket{a_{2}}\ket{b_{2}}),
 \end{equation}
-este es un típico ejemplo de una función de onda donde los subsistemas $A$ y $B$ están entrelazados. Los estados $\ket{a_{1}}$, $\ket{b_{1}}$,$\ket{a_{2}}$, $\ket{b_{2}}$ no son necesariamente ortogonales. La matriz de densidad es claramente:
+este es un típico ejemplo de una función de onda donde los subsistemas $A$ y $B$ están entrelazados \cite{SusskindQuantum}. Los estados $\ket{a_{1}}$, $\ket{b_{1}}$,$\ket{a_{2}}$, $\ket{b_{2}}$ no son necesariamente ortogonales. La matriz de densidad es claramente:
 \begin{equation}
 \ket{\Phi}\bra{\Phi} = \frac{1}{2}\sum_{ij=1}^{2} \ket{a_{i}}\bra{a_{j}} \ket{b_{i}}\bra{b_{j}} .
 \end{equation}
@@ -276,15 +276,15 @@ Aquí $\rho_{A}$ es la matriz reducida definida al inicio de esta subsección. E
 \begin{equation}
 \rho_{i}= \Tr_{1,...,i-1,i+1,...,N}(\rho).
 \end{equation}
-Con esto y siguiendo el ejemplo anterior se puede demostrar que 
+Con esto y siguiendo el ejemplo anterior se puede demostrar que  \cite{Decoherence}
 \begin{equation}
 \langle M \rangle = \Tr(\rho M)=\Tr_{i}(\rho_{i} M_{i}).
 \end{equation}
 Entonces si se conoce el estado del sistema total y solo se puede hacer mediciones en un subsistema aún así gracias al formalismo del operador densidad se puede encontrar las estadísticas de las mediciones. Es importante aclarar que aunque se tenga un operador de densidad reducido para el sistema $A$ no significa que se haya descrito el sistema de manera individual. Esto es solo una herramienta matemática para poder sacar las estadísticas de las mediciones.
 \subsection{Distancia de Traza}
-Las herramientas hasta ahora mostradas han sido impulsadas por una pregunta que se necesitaba responder pero que tenía una respuesta única. Ahora se encuentra con la pregunta ¿ qué tan cercanos están dos estado cuánticos?. La respuesta a esta pregunta puede ser dado por varias definiciones de distancias pero la que se usará acá será la distancia de traza.
+Las herramientas hasta ahora mostradas han sido impulsadas por una pregunta que se necesitaba responder pero que tenía una respuesta única. Ahora se encuentra con la pregunta ¿ qué tan cercanos están dos estado cuánticos?. La respuesta a esta pregunta puede ser dada por varias definiciones de distancias pero la que se usará acá será la distancia de traza.
 \\
-Para empezar una pregunta relacionada con la cercanía de los estados cuánticos es la de ¿ qué quiere decir que dos informaciones sean similares?. En la teoría clásica de la información esto recae en poder diferenciar dos distribuciones de probabilidad. Pero como ya se había advertido esta respuesta no es única, existen diferentes medidas como la fidelidad o la distancia de Kullback–Leibler. Dependiendo del fin es deseable una a las otras.
+Una pregunta relacionada con la cercanía de los estados cuánticos es la de ¿ qué quiere decir que dos informaciones sean similares?. En la teoría clásica de la información esto recae en poder diferenciar dos distribuciones de probabilidad. Pero como ya se había advertido esta respuesta no es única, existen diferentes medidas como la fidelidad o la distancia de Kullback–Leibler. Dependiendo del fin es deseable una a las otras.
 \\
 Se tienen dos distribuciones de probabilidad $\{ p_{x} \}$ y $\{ q_{x} \}$. La distancia de  traza clásica viene dada por:
 \begin{equation}
@@ -292,11 +292,11 @@ D(p_{x},q_{x})\equiv \frac{1}{2} \sum_{x}|p_{x}-q_{x}|.
 \end{equation}
 También se conoce como la distancia $L_{1}$ o la distancia de Kolmogorov. Esta distancia también se puede escribir de la siguiente manera 
 \begin{equation}
-D(p_{x},q_{x})= \max_{S} |p(S)-q(S)|= \max_{S} |\sum_{x \in S}p_{x}-\sum_{x \in S}q_{x}|.
+D(p_{x},q_{x})= \max_{S} \big| p(S)-q(S) \big| = \max_{S} \Bigg| \sum_{x \in S}p_{x}-\sum_{x \in S}q_{x} \Bigg|.
 \end{equation}
-Donde la maximización es sobre todos los subconjuntos $S$ de los indices $\{ x \}$. Aunque estas igualdades puedan a ser complicadas para hacer cálculos se puede sacar una intuición. Entonces la distancia de traza es la maximización  de las diferencias entre la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{p_{x} \}$ y la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{q_{x} \}$. El evento $S$ se podría decir que es el evento óptimo para examinar las diferencias entre $\{p_{x} \}$ y $\{q_{x} \}$.
+Donde la maximización es sobre todos los subconjuntos $S$ de los indices $\{ x \}$ \cite{NielsenInformation}. Aunque estas igualdades puedan ser complicadas para hacer cálculos se conseguir una intuición de estas ecuaciones. Entonces la distancia de traza es la maximización  de las diferencias entre la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{p_{x} \}$ y la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{q_{x} \}$. El evento $S$ se podría decir que es el evento óptimo para examinar las diferencias entre $\{p_{x} \}$ y $\{q_{x} \}$.
 \\
-Pasando a un contexto cuántico la distancia de traza entre dos estados cuánticos $\rho$ y $\sigma$,
+Pasando a un contexto cuántico la distancia de traza entre dos estados cuánticos $\rho$ y $\sigma$ es,
 \begin{equation}
 D(\rho,\sigma) \equiv \frac{1}{2} \Tr |\rho-\sigma|.	
 \end{equation}
@@ -306,9 +306,9 @@ donde $|M| \equiv \sqrt{M^{\dagger}M}$ con la raíz positiva. Esta definición g
 D(\rho,\sigma) &= \frac{1}{2} \Tr |\sum_{i} (r_{i}-s_{i})\ket{i}\bra{i}|\\
 \quad &= D(r_{i},s_{i}).
 \end{align*}
-donde $r_{i}$ y $s_{i}$ son los elementos diagonales de $\rho$ y $\sigma$ respectivamente. Al igual que con la distancia de traza clásica se le puede dar un sentido más físico a esta definición. El siguiente teorema construirá la conexión.
+donde $r_{i}$ y $s_{i}$ son los elementos diagonales de $\rho$ y $\sigma$ respectivamente. Al igual que con la distancia de traza clásica se le puede dar un sentido más físico a esta definición. El siguiente teorema construirá la conexión \cite{NielsenInformation}.
 \begin{theorem}
-Sea $\{ E_{m}\}$ un POVM, con $p_{m} \equiv \Tr(\rho E_{m})$ y $q_{m}\equiv \Tr(\sigma E_{m})$ como las probabilidades de obtener un el resultado de una medida $m$. Luego
+Sea $\{ E_{m}\}$ un POVM, con  $p_{m} \equiv \Tr(\rho E_{m})$  y  $q_{m}\equiv \Tr(\sigma E_{m})$ como las probabilidades de obtener un resultado de una medida $m$. Luego
 
 \begin{equation}
 D(\rho,\sigma)= \max_{ \{ E_{m}\} } D(p_{m},q_{m}),
@@ -321,11 +321,11 @@ donde la maximización es sobre todos los POVMs $\{ E_{m}\}$.
 Véase que 
 
 \begin{equation}
-D(p_{m},q_{m})= \frac{1}{2} \sum_{m} |\Tr(E_{m}(\rho- \sigma))|.
+D(p_{m},q_{m})= \frac{1}{2} \sum_{m} \Big|\Tr(E_{m}(\rho- \sigma)) \Big|.
 \end{equation}
 Usando la descomposición espectral se tiene que $\rho- \sigma=Q-S$, donde $Q$ y $S$ son operadores positivos con soporte ortogonal. Luego $|\rho - \sigma|= Q+S$, y
 \begin{align}
-|\Tr(E_{m}(\rho- \sigma))| &= |\Tr(E_{m}(Q-S))| \\
+\big|\Tr(E_{m}(\rho- \sigma)) \big| &= \big|\Tr(E_{m}(Q-S)) \big| \\
 \quad &\leq \Tr(E_{m}(Q+S))\\
 \quad &\leq \Tr(E_{m}|\rho -\sigma|).
 \end{align}
@@ -336,7 +336,7 @@ D(p_{m},q_{m}) &\leq \frac{1}{2} \sum_{m} \Tr(E_{m}|\rho-\sigma|)\\
 \quad &= \frac{1}{2} \Tr(|\rho -\sigma|)\\
 \quad &= D(\rho,\sigma),
 \end{align}
-se usó la relación de completitud de los elementos de POVM. Por otro lado si se escogen medidas donde los elementos POVM incluyen proyectores sobre e soporte de $Q$ y $S$, se ve que existen mediciones que dan distribuciones de probabilidad tales que $D(p_{m},q_{m})= D(\rho,\sigma)$.
+se usó la relación de completitud de los elementos de POVM. Por otro lado si se escogen medidas donde los elementos POVM incluyen proyectores sobre el soporte de $Q$ y $S$, se ve que existen mediciones que dan distribuciones de probabilidad tales que $D(p_{m},q_{m})= D(\rho,\sigma)$.
 
 \end{proof}
 
