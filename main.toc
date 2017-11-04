@@ -23,7 +23,7 @@
 \contentsline {chapter}{\numberline {5}Evoluci\IeC {\'o}n Hacia El Equilibrio}{51}{chapter.5}
 \contentsline {section}{\numberline {5.1}Especificaci\IeC {\'o}n del Equilibrio}{52}{section.5.1}
 \contentsline {section}{\numberline {5.2}Equilibraci\IeC {\'o}n}{54}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusiones}{71}{chapter.6}
+\contentsline {chapter}{\numberline {6}Conclusiones}{69}{chapter.6}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{73}{appendix*.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{71}{appendix*.2}

@@ -131,11 +131,12 @@ La  definición anterior es la usada por lo general pero hay sutilezas en este c
 esto permite decir que  $|f(x)-f(y)| < \epsilon $ entonces $\delta < \frac{\epsilon}{\eta} $. Ahora si f es derivable y $\nabla f$ es acotado, para $x$ y $y$ dados existe $\xi$ entre ellos tal que:
 
 
-\begin{multline}
-\implies f(x)-f(y)= \nabla f(\xi) (x-y) \\
-\implies |f(x)- f(y)| \le |\nabla f(\xi)| |x-y| 
-\implies |f(x)- f(y)| \le \sup|\nabla f(\xi)| |x-y|,
-\end{multline}
+\begin{align}
+&\implies f(x)-f(y) = \nabla f(\xi) (x-y) \\
+&\implies |f(x)- f(y)| \le |\nabla f(\xi)| |x-y| \\
+&\implies |f(x)- f(y)| 	\le \sup|\nabla f(\xi)| |x-y|,
+\end{align}
+
 como $\nabla f$ es acotado se tiene que $\sup |\nabla f(\xi)|=\eta$.\\
 
 Gracias a la normalización, los estados puros en $\mathcal{H}_{R}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$ \cite{SakuraiQuantum}. Luego se puede aplicar \ref{lemma de levy} a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H}_{R}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad. Para poder usar \ref{lemma de levy} primero  debe encontrarse la constante de Lipschitz ya teniendo una idea de qué es ser Lipschitz continuo se encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$ que es la función que nos interesa para el problema físico. Entonces para poder lograr esto se procederá de la siguiente forma se definen dos estados reducidos $\rho_{1}= \Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}= \Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, entonces
@@ -300,17 +301,19 @@ F_{SS'} =\sum_{S,S'} \ket{s'}\bra{s}_{S} \otimes \ket{s}\bra{s'}_{S'}
 
 Entonces
 
-\begin{multline} \label{eq:1}
-\sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}= \Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})\\
-=\Tr_{RR'}((\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})_{RR'}(F_{SS'} \otimes \mathbbm{1}_{EE'}))
-\end{multline}
+\begin{align*} 
+\sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'} &= \Tr_{SS'} ((\rho_{S} \otimes \rho_{S'})F_{SS'})\\
+\quad &=\Tr_{RR'}((\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})_{RR'}(F_{SS'} \otimes \mathbbm{1}_{EE'}))
+\end{align*}
+
+
 
 Pero como se quiere $\langle \Tr (\rho)^{2} \rangle= \int \Tr (\rho)^{2} d\phi $. Entonces para resolver esto se requiere saber $V=\int (\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})d\phi$. V puede representarse como:
 
 \begin{equation}
 V= \alpha \Pi_{RR'}^{sim} + \beta \Pi_{RR'}^{anti},
 \end{equation}
-$\alpha$ y $\beta$ son constantes y $\Pi_{RR'}^{sim/anti}$ son proyectores en el subespacio simétrico y antisimétrico de $\mathcal{H_{R} \otimes H_{R'}}$ respectivamente, esto es posible por la invarianza unitaria de V. Debido a que 
+$\alpha$ y $\beta$ son constantes y $\Pi_{RR'}^{sim/anti}$ son proyectores en el subespacio simétrico y antisimétrico de $\mathcal{H_{R} \otimes H_{R'}}$ respectivamente, esto es posible por la invarianza unitaria de V. Debido a que 	
 \begin{equation}
 (\ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi})\frac{1}{\sqrt{2}} ( \ket{ab} -\ket{ba})=0  \quad  \forall a,b,\phi
 \end{equation}
@@ -318,7 +321,7 @@ la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalizac
 \begin{equation}
 V= \langle \ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi} \rangle = \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim}.
 \end{equation}
-luego se puede escribir \ref{eq:1} como 
+luego se tiene que 
 \begin{equation}
 \langle \Tr (\rho)^{2} \rangle = \Tr_{RR'} \Big( \Big( \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim} \Big)(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big)
 \end{equation}
@@ -342,20 +345,20 @@ Distribuyendo y sabiendo que al hacer dos veces la operación "flip" no afecta n
 
 Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a:
 
-\begin{multline}
-\langle \Tr_{S} \rho_{S}^2 \rangle= \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg) \\
-+ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)\\ 
-\leq \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg)\\
-+ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)
-\end{multline}
-
+\begin{align*}
+\langle \Tr_{S} \rho_{S}^2 \rangle &= \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg) \\
+\qquad  &+ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)\\ 
+&\leq \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg)\\
+\qquad &+ \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{R}}{d_{R}} \otimes  \frac{\mathbbm{1}_{R'}}{d_{R}}  \Bigg) (\mathbbm{1}_{SS'} \otimes F_{EE'} )  \Bigg)
+\end{align*}
+	
 Recordando que $\frac{\mathbbm{1}_{R}}{d_{R}}= \mathcal{E}_{R}$ y $\Omega_{S}=\Tr_{E}(\mathcal{E}_{R})$ se tiene que:
 
-\begin{multline}
-\Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Bigg) + \Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Bigg) \notag \\
- = \Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + \Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'})
-\end{multline}
-Por la ecuación \ref{eq:1} se llega a lo que se quería:	
+\begin{align*}
+\Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (F_{SS'} \otimes 		\mathbbm{1}_{EE'}) \Bigg) &+ \Tr_{RR'}\Bigg(\frac{\mathbbm{1}_{R}}{d_{R}} \otimes \frac{\mathbbm{1}_{R'}}{d_{R}} (\mathbbm{1}_{SS'}\otimes 	F_{EE'}) \Bigg) \notag \\
+&= \Tr_{SS'}((\Omega_{S} \otimes \Omega_{S})F_{SS'}) + \Tr_{EE'}((\Omega_{E} \otimes \Omega_{E})F_{EE'}).
+\end{align*}
+Entonces se llega a lo que se quería:	
 \begin{equation}
 \langle \Tr_{S} \rho_{S}^{2} \rangle \le \Tr_{S} \Omega_{S}^{2} +\Tr_{E} \Omega_{E}^{2},
 \end{equation}
@@ -375,12 +378,13 @@ Si se define $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ como la dimens
 
 Ya con esto se tiene el teorema \ref{teorema principal}. Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$  de la ecuación \ref{eq.3} serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad. Aunque ya se llegó a la desigualdad que se quería se puede notar lo siguiente, sean los valores propios de $\Omega_{E}$ iguales a $\lambda_{E}^{k}$ con su máximo valor propio $\lambda_{E}^{max}$ se ve que 
 
-\begin{multline}
-\Tr_{E} \Omega_{E}^{2} = \sum_{k} (\lambda_{E}^{k})
-\leq \lambda_{E}^{max} \sum_{k} \lambda_{E}^{k}\\
-= \max_{\ket{\phi_{E}}} \bra{\phi_{E}} \Tr_{S} \Big( \frac{\mathbbm{1}_{R}}{d_{R}} \Big) \ket{\phi_{E}}\\
-= \max_{\ket{\phi_{E}}} \sum_{s} \bra{s \phi_{E}} \frac{\mathbbm{1}_{R}}{d_{R}} \ket{s \phi_{E}} \leq \frac{d_{S}}{d_{E}}	
-\end{multline}
+\begin{align*}
+\Tr_{E} \Omega_{E}^{2} &= \sum_{k} (\lambda_{E}^{k})\\
+&\leq \lambda_{E}^{max} \sum_{k} \lambda_{E}^{k}\\
+&= \max_{\ket{\phi_{E}}} \bra{\phi_{E}} \Tr_{S} \Big( \frac{\mathbbm{1}_{R}}{d_{R}} \Big) \ket{\phi_{E}}\\
+&= \max_{\ket{\phi_{E}}} \sum_{s} \bra{s \phi_{E}} \frac{\mathbbm{1}_{R}}{d_{R}} \ket{s \phi_{E}} \\
+&\leq \frac{d_{S}}{d_{E}}	
+\end{align*}
 
 en conclusión  $d^{eff}_{E} \geq d_{R}/ d_{S}$ entonces se obtiene
 

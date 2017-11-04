@@ -100,15 +100,14 @@ Debido a la restricción impuesta al Hamiltoniano de brechas de energías no deg
 
 entonces
  
-\begin{multline}
-\big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \big \rangle_{t}\\
-	= \sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{S} [\Tr_{B}(\ket{E_{k}} \bra{E_{l}}) \Tr_{B}(\ket{E_{k}} \bra{E_{l}})]\\
-	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{l}}\ket{s'b} \bra{s'b'}\ket{E_{l}} \bra{E_{k}}\ket{sb'}\\
-	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{k}}\ket{sb'} \bra{s'b'}\ket{E_{l}} \bra{E_{l}}\ket{s'b}\\
-	=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{B} [\Tr_{S}(\ket{E_{k}} \bra{E_{k}}) \Tr_{S}(\ket{E_{l}} \bra{E_{l}})]\\
-	=\sum_{k \neq l}  \Tr_{B} [\Tr_{S}(|c_{k}|^{2}\ket{E_{k}} \bra{E_{k}}) \Tr_{S}( |c_{l}|^{2} \ket{E_{l}} \bra{E_{l}})]\\
-=\Tr_{B} \omega_{B}^{2} -\sum_{k} |c_{k}|^{4} \Tr_{S}[ \Tr_{B}( \ket{E_{k}} \bra{E_{k}})]^{2} \leq  \Tr_{B}( \omega_{B}^{2}).
-\end{multline}
+\begin{align*}
+\big \langle \Tr_{S}(\rho_{S}(t)-\omega_{S})^{2} \big \rangle_{t} &= \sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{S} [\Tr_{B}(\ket{E_{k}} \bra{E_{l}}) \Tr_{B}(\ket{E_{k}} \bra{E_{l}})]\\
+	&=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{l}}\ket{s'b} \bra{s'b'}\ket{E_{l}} \bra{E_{k}}\ket{sb'}\\
+	&=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \sum_{ss' bb'} \bra{sb}\ket{E_{k}} \bra{E_{k}}\ket{sb'} \bra{s'b'}\ket{E_{l}} \bra{E_{l}}\ket{s'b}\\
+	&=\sum_{k \neq l} |c_{k}|^{2} |c_{l}|^{2} \Tr_{B} [\Tr_{S}(\ket{E_{k}} \bra{E_{k}}) \Tr_{S}(\ket{E_{l}} \bra{E_{l}})]\\
+	&=\sum_{k \neq l}  \Tr_{B} [\Tr_{S}(|c_{k}|^{2}\ket{E_{k}} \bra{E_{k}}) \Tr_{S}( |c_{l}|^{2} \ket{E_{l}} \bra{E_{l}})]\\
+&=\Tr_{B} \omega_{B}^{2} -\sum_{k} |c_{k}|^{4} \Tr_{S}[ \Tr_{B}( \ket{E_{k}} \bra{E_{k}})]^{2} \leq  \Tr_{B}( \omega_{B}^{2}).
+\end{align*}
 
 La última  igualdad se encuentra recordando la definición de $\omega_{B}$ y observando la segunda igualdad. Por la subaditividad débil de la entropía de Rényi \cite{RenyiEntropia}:
 
@@ -152,15 +151,15 @@ con constante $c= \frac{(\ln 2)^{2}}{72 \pi^{3}} \approx 10^{-4}$.
 \item
 Primero se prueba la cota de la pureza esperada de $\omega$. Para esta prueba se usarán varios resultados ya empleados en el capítulo anterior como: la operación "flip"  $F$ y la identidad $\langle \ket{\psi} \bra{\psi} \otimes \ket{\psi} \bra{\psi} \rangle_{\psi} =  \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)}$. Además se usará la notación de $ \ket{E_{k}} \equiv \ket{k}$ y $\ket{E_{k}} \otimes \ket{E_{l}} \equiv \ket{kl}$. Se introduce el mapeo de desfase como $ \$[ \rho ] \equiv  \sum_{k} \ket{k} \bra{k} \rho \ket{k}\bra{k}$, implica que $\omega= \langle \ket{\psi}\bra{\psi} \rangle_{t}= \$ [\ket{\psi}\bra{\psi}]$. Entonces usando la operación "flip"  se escribe $\langle \Tr (\omega)^{2} \rangle_{\psi}$ como
  
-\begin{multline}
-\langle \Tr (\omega)^{2} \rangle_{\psi} = \langle \Tr(\omega \otimes \omega)F) \rangle_{\psi}\\
-= \Tr(\$ \otimes \$ [ \langle \ket{\psi} \bra{\psi} \otimes \ket{\psi} \bra{\psi} \rangle_{\psi}]F)\\
-=\Tr \Bigg( \$ \otimes \$ \Bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg]F \Bigg)\\
-= \sum_{kl} \Tr \Bigg(  \ket{kl}\bra{kl}  \Bigg(  \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg) \ket{kl}\bra{kl} F \Bigg)\\
-=\sum_{kl} \Tr ( \ket{kl}\bra{lk} ) \Bigg( \frac{\bra{kl} \Pi_{RR}(\ket{kl}+\ket{lk})}{d_{R}(d_{R}+1)}  \Bigg)\\
-=\sum_{k} \frac{2 \bra{kk} \Pi_{RR}\ket{kk}}{d_{R}(d_{R}+1)} \\
-\leq \sum_{k} \frac{2 \bra{k} \Pi_{R}\ket{k}}{d_{R}(d_{R}+1)} < \frac{2}{d_{R}}
-\end{multline}
+\begin{align*}
+\langle \Tr (\omega)^{2} \rangle_{\psi} &= \langle \Tr(\omega \otimes \omega)F) \rangle_{\psi}\\
+&= \Tr(\$ \otimes \$ [ \langle \ket{\psi} \bra{\psi} \otimes \ket{\psi} \bra{\psi} \rangle_{\psi}]F)\\
+&=\Tr \Bigg( \$ \otimes \$ \Bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg]F \Bigg)\\
+&= \sum_{kl} \Tr \Bigg(  \ket{kl}\bra{kl}  \Bigg(  \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \Bigg) \ket{kl}\bra{kl} F \Bigg)\\
+&=\sum_{kl} \Tr ( \ket{kl}\bra{lk} ) \Bigg( \frac{\bra{kl} \Pi_{RR}(\ket{kl}+\ket{lk})}{d_{R}(d_{R}+1)}  \Bigg)\\
+&=\sum_{k} \frac{2 \bra{kk} \Pi_{RR}\ket{kk}}{d_{R}(d_{R}+1)} \\
+&\leq \sum_{k} \frac{2 \bra{k} \Pi_{R}\ket{k}}{d_{R}(d_{R}+1)} < \frac{2}{d_{R}}
+\end{align*}
 se sigue directamente que 
 \begin{equation}
 \langle d^{eff}(\omega) \rangle_{\psi} = \Bigg \langle \frac{1}{\Tr (\omega)^{2}} \Bigg \rangle_{\psi} \geq \frac{1}{\langle \Tr (\omega)^{2} \rangle_{\psi}} > \frac{d_{R}}{2}
@@ -176,17 +175,16 @@ Donde el operador  $ \tilde{\$} $ actúa sobre el subespacio $\mathcal{H}_{T} \s
 \begin{equation}
  \tilde{\$}[\rho]= \sum_{k}  \tilde{\ket{k}} \bra{k} \rho \ket{k} \tilde{\bra{k}} \quad y \quad  \tilde{\ket{k}}= \frac{1}{\sqrt{\bra{k}\Pi_{R}\ket{k}}} \Pi_{R} \ket{k}.
 \end{equation}
-nótese que cuando el Hamiltoniano conmuta con $\Pi_{R}$, $ \tilde{\$}$ es identico al $ \$ $ en $\mathcal{H}_{T}$. Calculando el promedio de la función se encuentra
-\begin{multline}
-\Big \langle \ln \Big( \Tr \Big( \tilde{\$}[ \ket{\psi}\bra{\psi}]^{2} \Big) \Big) \Big \rangle_{\psi}\\
-\leq \ln \Big \langle \Tr \Big( \tilde{\$}[\ket{\psi}\bra{\psi}]^{2} \Big) \Big \rangle_{\psi}\\
-= \ln \Tr\Big( \tilde{\$}\otimes \tilde{\$} [\langle \ket{\psi}\bra{\psi} \otimes \ket{\psi}\bra{\psi} \rangle_{\psi}] F \Big)\\
-= \ln \bigg( \Tr \bigg( \tilde{\$}\otimes \tilde{\$} \bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \bigg] F   \bigg) \bigg)\\
-= \ln \Bigg( \sum_{kl} \Tr \bigg( \tilde{\ket{kl}} \bra{kl} \bigg( \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \bigg) \ket{kl}  \tilde{\bra{lk}}  \bigg) \Bigg)\\
-= \ln \Bigg( \sum_{kl} \tilde{\bra{lk}}\tilde{\ket{kl}} \bigg( \frac{\bra{kl}\Pi_{RR}(\ket{kl}+\ket{lk})}{d_{R}(d_{R}+1)} \bigg) \Bigg)\\
-\leq \ln \bigg( \frac{2}{d_{R}(d_{R}+1)} \sum_{kl} \bra{lk}\Pi_{RR}\ket{kl}  \bigg)\\
-= \ln \bigg(  \frac{2}{d_{R}(d_{R}+1)} \sum_{k} \bra{k}\Pi_{R} \ket{k}  \bigg) < \ln (\frac{2}{d_{R}}).
-\end{multline}
+nótese que cuando el Hamiltoniano conmuta con $\Pi_{R}$, $ \tilde{\$}$ es idéntico al $ \$ $ en $\mathcal{H}_{T}$. Calculando el promedio de la función se encuentra
+\begin{align*}
+\Big \langle \ln \Big( \Tr \Big( \tilde{\$}[ \ket{\psi}\bra{\psi}]^{2} \Big) \Big) \Big \rangle_{\psi} & \leq \ln \Big \langle \Tr \Big( \tilde{\$}[\ket{\psi}\bra{\psi}]^{2} \Big) \Big \rangle_{\psi}\\
+&= \ln \Tr\Big( \tilde{\$}\otimes \tilde{\$} [\langle \ket{\psi}\bra{\psi} \otimes \ket{\psi}\bra{\psi} \rangle_{\psi}] F \Big)\\
+&= \ln \bigg( \Tr \bigg( \tilde{\$}\otimes \tilde{\$} \bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \bigg] F   \bigg) \bigg)\\
+&= \ln \Bigg( \sum_{kl} \Tr \bigg( \tilde{\ket{kl}} \bra{kl} \bigg( \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} \bigg) \ket{kl}  \tilde{\bra{lk}}  \bigg) \Bigg)\\
+&= \ln \Bigg( \sum_{kl} \tilde{\bra{lk}}\tilde{\ket{kl}} \bigg( \frac{\bra{kl}\Pi_{RR}(\ket{kl}+\ket{lk})}{d_{R}(d_{R}+1)} \bigg) \Bigg)\\
+&\leq \ln \bigg( \frac{2}{d_{R}(d_{R}+1)} \sum_{kl} \bra{lk}\Pi_{RR}\ket{kl}  \bigg)\\
+&= \ln \bigg(  \frac{2}{d_{R}(d_{R}+1)} \sum_{k} \bra{k}\Pi_{R} \ket{k}  \bigg) < \ln (\frac{2}{d_{R}}).
+\end{align*}
 Para acotar la constante de Lipchitz  de la función $f(\psi)$ se usará otra función
 \begin{equation}
 g(\psi)= \ln \Tr \Bigg[  \bigg( \sum_{n} \ket{\hat{n}}\bra{\hat{n}} \tilde{\$} [\ket{\psi}\bra{\psi}] \ket{\hat{n}}\bra{\hat{n}} \bigg)^{2}  \Bigg]
@@ -206,12 +204,13 @@ Para encontrar la constante de Lipschitz de $g$ es suficiente con encontrar una 
 \frac{\partial g}{\partial t_{nkz}}=\frac{1}{\sum_{n'} (\sum_{k'z'}t_{n'k'z'}^{2})^{2}} 2.2.t_{nkz} \sum_{k'z'}t_{nk'z'}^{2}.
 \end{equation}
 Introduciendo la notación $p_{n}=\sum_{kz}t_{nkz}^{2}$, y notando que $\sum_{n} p_{n}=1$, se encuentra 
-\begin{multline}
-|\nabla g|^{2}= \sum_{nkz} \bigg(\frac{\partial g}{\partial t_{nkz}} \bigg )^{2}= \frac{16 \sum_{n} p_{n}^{3}}{(\sum_{n} p_{n}^{2})^{2}}\\
-\leq \frac{16(\sum_{n} p_{n}^{2})^{3/2}}{(\sum_{n} p_{n}^{2})^{2}}\\
-=\frac{16}{(\sum_{n} p_{n}^{2})^{1/2}}\\
-\leq 16 \sqrt{d_{R}},\\
-\end{multline}
+\begin{align*}
+|\nabla g|^{2} &= \sum_{nkz} \bigg(\frac{\partial g}{\partial t_{nkz}} \bigg )^{2} \\
+&= \frac{16 \sum_{n} p_{n}^{3}}{(\sum_{n} p_{n}^{2})^{2}}\\
+&\leq \frac{16(\sum_{n} p_{n}^{2})^{3/2}}{(\sum_{n} p_{n}^{2})^{2}}\\
+&=\frac{16}{(\sum_{n} p_{n}^{2})^{1/2}}\\
+&\leq 16 \sqrt{d_{R}},\\
+\end{align*}
 Por lo tanto la constante de Lipschitzs de $g$ llega hasta $4 \sqrt[4]{d_{R}}$. Para obtener la constante de Lipchistz de $f$ se nota que $g(\psi) \geq f(\psi)$ la igualdad se da si $ \{ \ket{ \hat{n}} \} $ es una base  propia de $\Tr_{B} \ket{\psi}\bra{\psi}$. Ahora para dos vectores cuales quiera, sin perdida de generalidad asumir $f(\psi_{1}) \leq f(\psi_{2})$, y tomar $ \{ \ket{\hat{n}} \}$ como la base propia de $\Tr_{B} \ket{\psi}\bra{\psi}$. Entonces,
 \begin{equation}
 f(\psi_{1})- f(\psi_{2})\leq g(\psi_{1})- g(\psi_{2}) \leq 4\sqrt[4]{d_{R}} |\ket{\psi_{1}}-\ket{\psi_{2}}|_{2},
@@ -232,7 +231,7 @@ esto da
 Tomando la desigualdad que está dentro de los corchetes  multiplicándola por menos y tomando su exponencial se llega
 
 \begin{equation}
-\Pr_{\psi} \bigg \{  d^{eff}(\omega) < \frac{d_{R}}{2e^{\epsilon}} \bigg \} \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}}).
+\Pr_{\psi} \bigg \{  d^{eff}(\omega) < \frac{d_{R}}{2e^{\epsilon}} \bigg \} \leq 2\exp(-\frac{\epsilon^{2}\sqrt{d_{R}}}{72\pi^{3}}),
 \end{equation}
 
 y haciendo que $\epsilon=\ln 2$ se llega al resultado esperado.
@@ -273,7 +272,6 @@ d^{eff}(\omega_{B}) \geq \frac{d^{R}}{4d_{S}}=\frac{d_{B}^{R}}{4d_{S}} \gg d_{S}
 Lo trabajado anteriormente muestra cómo susbsistemas de dimensión pequeña en comparación con el ambiente se equilibrarán. Ahora se verá cual sería la dependencia del estado de equilibrio del subsistema. Hasta ahora el estado inicial podría hacer que el equilibrio sea un estado diferente dependiendo del inicial. Sea el estado de equilibrio del subsistema $\omega_{S}^{\psi}$.Como es conocido se desearía que el estado de equilibrio dependa solo de los parámetros macroscópicos y no del estado inicial microscópico.
 \\
 El teorema siguiente prueba que para casi todos los estados en un subsistema restringido llevan al mismo estado de equilibrio.
-
 \begin{theorem} \label{mismo estado}
 \begin{enumerate}
 \item Casi todos los estados iniciales de un subespacio restringido bastante grande llevan al mismo estado de equilibrio de un subsistema pequeño. En particula, con $\langle .\rangle_{\psi}$ siendo el promedio sobre estados puros aleatoriamente uniformes $\ket{\psi(0)} \in \mathcal{H}_{R} \subset \mathcal{H}_{S} \otimes \mathcal{H}_{B}$ y $\Omega_{S}= \langle \omega_{S}^{\psi} \rangle_{\psi}$ :
@@ -285,7 +283,6 @@ La primera desigualdad es más estricta pero más complicada
 \delta= \sum_{k}\bra{E_{k}}\frac{\Pi_{R}}{d_{R}}\ket{E_{k}} \Tr_{S} ( \Tr_{B} (\ket{E_{k}} \bra{E_{k}}) )^{2} \leq  1,
 \end{equation}
 donde $\Pi_{k}$ es el proyector sobre $\mathcal{H}_{R}$.
-
 \item Para un estado aleatorio $\ket{\psi} \in \mathcal{H}_{R}\subset \mathcal{H}$, la probabilidad que $D(\omega_{S}^{\psi},\Omega_{S}) > \frac{1}{2} \sqrt{\frac{d_{S} \delta}{d_{R}}}+ \epsilon$ caiga exponencialmente con $\epsilon^{2}d_{R}$:
 \begin{equation}
 \Pr_{\psi} \bigg \{ D(\omega_{S}^{\psi}, \Omega_{S}) > \frac{1}{2}\sqrt{\frac{d_{S} \delta}{d_{R}}} + \epsilon \bigg \} \leq 2exp(-C'\epsilon^{2}d_{R}),
@@ -293,41 +290,37 @@ donde $\Pi_{k}$ es el proyector sobre $\mathcal{H}_{R}$.
 con $C'=\frac{2}{9 \pi^{3}}$. Si se pone $\epsilon=d_{R}^{-1/3}$ da una distancia promedio pequeña con alta probabilidad cuando $d_{R}>>d_{S}$.
 \end{enumerate}
 \end{theorem}
-
-\textbf{Demostración }
+\textbf{Demostración}
 \begin{enumerate}
-
 \item Se usa la relación ya establecida entre la distancia de traza y la distancia de Hilbert-Schmidt
-\begin{multline}\label{a12}
-\langle D(\omega_{S}, \langle \omega_{S} \rangle_{\psi}) \rangle_{\psi} \leq \bigg \langle \frac{1}{2} \sqrt{d_{S} \Tr (\omega_{S}, \langle \omega_{S} \rangle_{\psi})^{2}} \bigg \rangle_{\psi}\\
-\leq \frac{1}{2} \sqrt{d_{S} \Big \langle \Tr (\omega_{S} - \langle \omega_{S} \rangle_{\psi})^{2} \Big \rangle_{\psi}}.
-\end{multline}
+\begin{align*}\label{a12}
+\langle D(\omega_{S}, \langle \omega_{S} \rangle_{\psi}) \rangle_{\psi} &\leq \bigg \langle \frac{1}{2} \sqrt{d_{S} \Tr (\omega_{S}, \langle \omega_{S} \rangle_{\psi})^{2}} \bigg \rangle_{\psi}\\
+&\leq \frac{1}{2} \sqrt{d_{S} \Big \langle \Tr (\omega_{S} - \langle \omega_{S} \rangle_{\psi})^{2} \Big \rangle_{\psi}}.
+\end{align*}
 Ahora se miran las cotas del término que es promediado
-
-\begin{multline}
-\Big \langle \Tr (\omega_{S}, \langle \omega_{S} \Big \rangle_{\psi})^{2} \rangle_{\psi} 	\\
-= \big \langle \Tr(\omega_{S}^{2})_{\psi} \big \rangle - \Tr_{S} (\langle \omega_{S}^{2} \rangle_{\psi})\\
-=\Tr (   (\langle \omega_{S} \otimes \omega_{S} \rangle_{\psi} - \langle \omega_{S} \rangle_{\psi} \otimes \langle \omega_{S} \rangle_{\psi} )F )\\
-= \Tr_{SS} \Big( \Tr_{BB} \Big( \$ \otimes \$ \Big[ \langle \ket{\psi}\bra{\psi} \otimes  \ket{\psi}\bra{\psi}\rangle_{\psi} - \frac{\Pi_{R}}{d_{R}} \otimes  \frac{\Pi_{R}}{d_{R}}  \Big]  \Big) F \Big)\\
-= \Tr_{SS} \bigg( \Tr_{BB} \bigg( \$ \otimes \$ \bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} - \frac{\Pi_{RR}}{d_{R}^{2}}  \bigg]  \bigg) F \bigg)\\
-\leq \Tr_{SS} \bigg(  \Tr_{BB} \bigg( \$ \otimes \$ \bigg[ \frac{\Pi_{RR}F}{d_{R}^{2}} \bigg] \bigg) F \bigg)\\
-=  \sum_{kl}  \Tr_{SS} \Big(  \Tr_{BB} \Big( \ket{kl}\bra{kl} \frac{\Pi_{RR}}{d_{R}^{2}}  \ket{lk}\bra{kl} \Big) F \Big)\\
-= \sum_{kl} \frac{\bra{kl}\Pi_{RR}\ket{lk}}{d_{R}^{2}} \Tr_{S}(\Tr_{B}(\ket{k}\bra{k}) \Tr_{B}(\ket{l}\bra{l}) )\\
-\leq \sum_{kl} \frac{\bra{k}\Pi_{R}\ket{l}\bra{l}\Pi_{R}\ket{k}}{d_{R}^{2}} \Tr_{S} \Big( \frac{(\Tr_{B}(\ket{k}\bra{k}))^{2}+(\Tr_{B}(\ket{l}\bra{l}))^{2}}{2} \Big)\\
-=\frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} \Tr_{S} \Big( (\Tr_{B} \ket{k}\bra{k})^{2} \Big)\\
-\leq \frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} = \frac{1}{d_{R}}
-\end{multline}
-en la segunda desigualdad se usó el hecho que $\Tr_{S} (\Tr_{B} \ket{k}\bra{k}-\Tr_{B} \ket{l}\bra{l})^{2}\geq 0$ es las traza de un operador positivo. Ahora insertando la tercera línea contando desde el final y la última línea a \ref{a12} se demuestra el resultado.
+\begin{align*}
+\Big \langle \Tr (\omega_{S}, \langle \omega_{S} \Big \rangle_{\psi})^{2} \rangle_{\psi}  &= \big \langle \Tr(\omega_{S}^{2})_{\psi} \big \rangle - \Tr_{S} (\langle \omega_{S}^{2} \rangle_{\psi})\\
+&=\Tr (   (\langle \omega_{S} \otimes \omega_{S} \rangle_{\psi} - \langle \omega_{S} \rangle_{\psi} \otimes \langle \omega_{S} \rangle_{\psi} )F )\\
+&= \Tr_{SS} \Big( \Tr_{BB} \big( \$ \otimes \$ \big[ \langle \ket{\psi}\bra{\psi} \otimes  \ket{\psi}\bra{\psi}\rangle_{\psi} - \frac{\Pi_{R}}{d_{R}} \otimes  \frac{\Pi_{R}}{d_{R}}  \big]  \big) F \Big)\\
+&= \Tr_{SS} \bigg( \Tr_{BB} \bigg( \$ \otimes \$ \bigg[ \frac{\Pi_{RR}(\mathbbm{1}+F)}{d_{R}(d_{R}+1)} - \frac{\Pi_{RR}}{d_{R}^{2}}  \bigg]  \bigg) F \bigg)
+&\leq \Tr_{SS} \bigg(  \Tr_{BB} \bigg( \$ \otimes \$ \bigg[ \frac{\Pi_{RR}F}{d_{R}^{2}} \bigg] \bigg) F \bigg)\\
+&= \sum_{kl}  \Tr_{SS} \Big(  \Tr_{BB} \Big( \ket{kl}\bra{kl} \frac{\Pi_{RR}}{d_{R}^{2}}  \ket{lk}\bra{kl} \Big) F \Big)\\
+&= \sum_{kl} \frac{\bra{kl}\Pi_{RR}\ket{lk}}{d_{R}^{2}} \Tr_{S}(\Tr_{B}(\ket{k}\bra{k}) \Tr_{B}(\ket{l}\bra{l}) )\\
+&\leq \sum_{kl} \frac{\bra{k}\Pi_{R}\ket{l}\bra{l}\Pi_{R}\ket{k}}{d_{R}^{2}} \Tr_{S} \Big( \frac{(\Tr_{B}(\ket{k}\bra{k}))^{2}+(\Tr_{B}(\ket{l}\bra{l}))^{2}}{2} \Big)\\
+&=\frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} \Tr_{S} \Big( (\Tr_{B} \ket{k}\bra{k})^{2} \Big)\\
+&\leq \frac{1}{d_{R}} \sum_{k} \bra{k} \frac{\Pi_{R}}{d_{R}} \ket{k} = \frac{1}{d_{R}}
+\end{align*}
+en la segunda desigualdad se usó el hecho que $\Tr_{S} (\Tr_{B} \ket{k}\bra{k}-\Tr_{B} \ket{l}\bra{l})^{2}\geq 0$ es las traza de un operador positivo. Ahora insertando la tercera línea contando desde el final y con la relación entre la distancia de traza y la distancia de Hilbert-Schmidt se demuestra el resultado.
 \item Para demostrar la segunda parte que todos los estados $\ket{\psi}$ llevan al mismo estado de equilibrio, se usa el ya conocido lema de Levy. Se aplica este lema directamente a la función $f(\psi) \equiv D(\omega_{S}^{\psi}, \Omega_{S})$ en la hiperesfera de dimensión $2d_{R}-1$ de estados cuánticos. Para hallar la constante de Lipschitz se sigue de la misma manera que en el capítulo anterior
-\begin{multline}
-|D(\omega_{S}^{\psi_{1}}, \Omega_{S})-D(\omega_{S}^{\psi_{2}},\Omega_{S})| \leq D(\omega_{S}^{\psi_{1}},\omega_{S}^{\psi_{2}})
+\begin{align*}
+|D(\omega_{S}^{\psi_{1}}, \Omega_{S})-D(\omega_{S}^{\psi_{2}},\Omega_{S})| &\leq D(\omega_{S}^{\psi_{1}},\omega_{S}^{\psi_{2}})
 \\
-\leq D(\omega^{\psi_{1}},\omega^{\psi_{2}})
+&\leq D(\omega^{\psi_{1}},\omega^{\psi_{2}})
 \\
-= \sqrt{1- |\bra{\psi_{1}} \ket{\psi_{2}}|^{2}}
+&= \sqrt{1- |\bra{\psi_{1}} \ket{\psi_{2}}|^{2}}
 \\
-\leq |\ket{\psi_{1}} - \ket{\psi_{2}}|_{2}.
-\end{multline} 
+&\leq |\ket{\psi_{1}} - \ket{\psi_{2}}|_{2}.
+\end{align*} 
 entonces la constante de Lipschitz satisface $\eta \leq 1$. Sustituyendo en el lema de Levy junto con el valor promedio encontrado en la primera parte de esta demostración se llega al resultado deseado.
 \\
 \end{enumerate}
