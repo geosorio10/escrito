@@ -80,7 +80,7 @@ Shannon en su teoría de la información propuso una función que describía de 
 H(p_{1},...,p_{N})=-k \sum_{i} p_{i} \ln p_{i},
 \end{equation}
 K es una constante positiva. Aquí Jaynes hace la conexión y es un punto importante. Esta cantidad Shannon la llama entropía pero no es la entropía termodinámica, se dice que Von Neumann le propuso este nombre a Shannon ya que nadie sabía realmente qué era la entropía. Pero Jaynes hace el puente entre las dos teorías diciendo que la entropía termodinámica es la  cantidad incertidumbre que se tiene del sistema. Entonces esto es lo que quiere decir el principio de la máxima entropía, dadas unas restricciones o sea con una información parcial se debe encontrar la distribución que minimice la incertidumbre. Esto es equivalente a maximizar $H$ bajo las condiciones conocidas. Esta es la forma de llegar a la distribución sin suposiciones arbitrarias que impondríamos bajo conjeturas que no estamos seguros de ser ciertas. Jaynes prosigue usando multiplicadores de Lagrange y obtiene los siguientes resultados para un número $m$ de funciones, dado  $\langle f_{r}(x) \rangle = \sum_{i} p_{i} f_{r} (x_{i})$:
-\begin{equation}
+\begin{equation} \label{Boltzmann maximum}
 p_{i}= \exp \{ -[\lambda_{0}+ \lambda_{1}f_{1}(x_{i})+...+\lambda_{m} f_{m}(x_{i})] \}.
 \end{equation}
 Donde los $\lambda$'s son los multiplicadores de Lagrange. Además se define la función de partición como
@@ -92,8 +92,20 @@ Los multiplicadores de Lagrange se pueden encontrar por
 \langle f_{r}(x) \rangle  &= - \frac{\partial}{\partial \lambda_{r}} \ln Z, \\
 \quad \lambda_{0} &= \ln Z.
 \end{align*}
-Jaynes argumenta que siguiendo este principio se llega a una distribución de probabilidad imparcial correspondiente a la información del problema, de forma inequívoca y única. También permite la modificación de la distribución de probabilidad si se llega a conocer más información. 
-
-
-
+Jaynes argumenta que siguiendo este principio se llega a una distribución de probabilidad imparcial correspondiente a la información del problema, de forma inequívoca y única. También permite la modificación de la distribución de probabilidad si se llega a conocer más información. Gracias a esto se puede ver los resultados dados por la mecánica estadística fácilmente. Sea $E(\alpha_{1},\alpha_{2},...)$ los niveles de energía de un sistema, donde los $\alpha$'s son parámetros externos como el volumen o potenciales gravitacionales. Si solo se conoce $\alpha E \rangle $. Pero por la ecuación \ref{Boltzmann maximum} ya se sabe las probabilidades de los niveles de energías $E_{i}$, esta es la distribución de Maxwell-Boltzmann. Entonces se puede seguir identificando los distintos parámetros de la termodinámica.
+\begin{align*}
+\lambda_{1} &=\frac{1}{kT}, \\
+U-TS &= F(T,\alpha_{1},\alpha_{2},...)=-kT \ln Z(T,\alpha_{1},\alpha_{2},...), \\
+S &= -\frac{\partial F}{\partial T}=-k\sum_{i} p_{i} \ln p_{i}, \\
+\beta_{i} &= kT \frac{\partial }{\partial \alpha_{i}} \ln Z.
+\end{align*}
+Las fuerzas $\beta_{i}$ pueden ser la presión, el tensor de estrés, los momentos magnéticos y/o  eléctricos. Se puede también encontrar la distribución gran canónica solo poniendo una nueva restricción sobre el número de partículas. sea $n_{i}$ el número de partículas del tipo $i$ y no se conoce además para especificar el estado del sistema se necesita las $n$'s junto con un nivel de energía $E(\alpha_{1},\alpha_{2},...;n_{1}n_{2}...)$ y se conoce los valores esperados de la energía y cada número de partículas de todos los tipos
+\begin{equation}
+\langle E \rangle \quad , \quad \langle n_{i} \rangle \quad , \quad i=  \{ 1,2,... \}.
+\end{equation} 
+la función de partición es la de la gran canónica 
+\begin{equation}
+Z(\alpha_{1},\alpha_{2},...|\lambda_{1} \lambda_{2} ,...,\beta )= \sum_{n_{1} n_{2}...} \sum_{i} \exp \{ -[ \lambda_{1} n_{1}+\lambda_{2} n_{2}+...+\beta E_{i} (\alpha_{k} | n_{s} ) ] \}.
+\end{equation}
+La propuesta de Jaynes ha ganado popularidad y evita la pregunta de sobre cuál distribución se está sacando las probbilidades porque como su perspectiva es subjetiva lo único que se está teniendo en cuenta es que se está mirando la ignorancia subjetiva. No se debe crear un ensamble de copias para darle un significado a la probabilidad.
 
