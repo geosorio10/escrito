@@ -1,26 +1,19 @@
 \chapter{Perspectivas}
 
 
-Este capítulo espera contextualizar al lector en mecánica estadística, sus ideas básicas, y mostrar algunas herramientas de la teoría cuántica de la información. Se expondrá  primero la manera típica de introducir la mecánica estadística, basada en la perspectiva de los ensambles de Gibbs. Luego se explicará la mecánica cuántica siguiendo el formalismo del operador densidad, se mostrarán sus ventajas respecto al formalismo de función de onda.
-
-
-
-
-
-
 
 \section{Recuento Histórico}
-Este recuento histórico sigue los capítulos 1,2 y 3  de \cite{MullerHistory}.
+Para poder explicar las visiones más fundamentales de la mecánica estadística se debe dar un contexto histórico; porque es la forma más clara para ver cómo surgieron estas ideas. Por esto, en esta sección se mostrará las circunstancias y personajes en las que la termodinámica se formuló. Este recuento histórico sigue el libro de I. Muller \cite{MullerHistory}. Este libro muestra la historia de manera dinámica y accesible, por eso se sigue en este texto.
 \\
-La mecánica clásica entregada por Newton y perfeccionada por Hamilton y Lagrange da el inicio a la física actual. La física clásica tiene un amplio alcance dando predicciones acordes con los experimentos. Sin embargo ya se mostraba que esta teoría no podía estudiar todos los aspectos de la naturaleza. Ya desde siglo 18 se habían dado muchos indicios sobre otra teoría que debía tratar con conceptos diferentes a los tratados comúnmente por la mecánica. La teoría sobre el calor fue evolucionando siendo guiada por los experimentos de Graf von Rumford, Julius Mayer, James Prescott Joule. Por otro lado Nicolas Carnot trabajaba en motores de calor y sus consecuencias teóricas. Poco a poco la termodinámica fue tomando la cara actual con ayuda de Benoît Clapeyron, Lord Kelvin, Rudolf Clausius. 
+La física actual es iniciada por Newton, luego Hamilton y Lagrange crearon métodos muy poderoso para poder atacar diferentes problemas. La mecánica clásica tiene un amplio alcance dando predicciones acordes con los experimentos. Sin embargo ya se mostraba que esta teoría no podía estudiar todos los aspectos de la naturaleza. Ya, desde siglo 18, se habían dado muchos indicios sobre otra teoría que debía tratar con conceptos diferentes a los tratados comúnmente por la mecánica. Los concepto como el calor y la energía fueron emergiendo, en su momento fueron ideas muy vagas y primitivas; pero la teoría sobre el calor fue evolucionando, siendo guiada por los experimentos de Graf von Rumford, Julius Mayer y James Prescott Joule. Por otro lado, Nicolas Carnot trabajaba en motores de calor y sus consecuencias teóricas, esto dio soporte para que un nuevo concepto naciera, la entropía. Poco a poco la termodinámica fue tomando la cara actual con ayuda de Benoît Clapeyron, Lord Kelvin y Rudolf Clausius. 
+\\
+La termodinámica fue basada en los experimentos y organizada bajo unos postulados \cite{CallenThermo}, sus predicciones eran respaldadas experimentalmente ayudando a la innovación e industria. Esto, le da una esencia diferente de las demás teorías físicas porque no propone nuevas leyes, simplemente exponen qué ocurre con las propiedades de un sistema macroscópico en equilibrio. Por ejemplo, la primera ley de la termodinámica simplemente expone cómo la energía del sistema es constante sin importar que proceso se lleve acabo. Dado su origen, la termodinámica no se interesaba por encontrar una conexión entre sus resultados y los constituyentes de la materia.
+\\
+De este problema nace la mecánica estadística, sus esfuerzos iniciales eran considerar la materia hecha de partículas y de allí poder predecir todas las propiedades térmicas macroscópicas ya encontradas por la termodinámica. Las personas que más ayudaron a la creación de esta teoría fueron Gibbs, Boltzmann y Maxwell. Ellos le dieron las ideas principales y moldearon la teoría para poder tener métodos generales a aplicaciones de diferentes tipos, los métodos producidos por Gibbs son los que actualmente se utilizan.
 \\
 \\
-La termodinámica se diferencia de las demás teorías físicas porque no propone nuevas leyes, simplemente exponen qué ocurre con las propiedades de un sistema macroscópico en equilibrio, por ejemplo la primera ley de la termodinámica simplemente expone cómo la energía del sistema es constante sin importar que proceso se lleve acabo. La termodinámica fue basada en los experimentos y organizada bajo unos postulados \cite{CallenThermo}, sus predicciones eran respaldadas experimentalmente ayudando a la innovación e industria; pero la termodinámica no se interesaba por encontrar una conexión entre sus resultados y los constituyentes de la materia.\\
-De este problema nace la mecánica estadística, sus esfuerzos iniciales eran considerar la materia hecha de partículas y de allí poder predecir todas las propiedades térmicas macroscópicas ya encontradas por la termodinámica. Las personas que más ayudaron a la creación de esta teoría fueron Gibbs, Boltzmann y Maxwell. Ellos le dieron las ideas principales y moldearon la teoría para poder tener métodos generales a aplicaciones de diferentes tipos, los métodos producidos por Gibbs son los que usualmente se utilizan.
-\\
-\\
-
-La mecánica estadística es la base conceptual de la termodinámica pero históricamente primero apareció la termodinámica. La termodinámica fue la agrupación de varias ideas en el siglo diecinueve que encerraban varios tipos de experimentos  y nociones que existían desde la antigua Grecia. Aunque las ideas que surgieron en la antigüedad se han ido refinando como ejemplo Klaudios Galenos (133-200 A.C) suponía que la influencia del clima sobre los fluidos del cuerpo podría determinar el carácter de una persona. Así decía que los habitantes del norte frío y húmedo eran salvajes y violentos, al contrario de los habitantes del sur, caliente y seco, eran flácidos y mansos \cite{MullerHistory}. Esto muestra que la idea de temperatura ha sido conocida de alguna u otra manera. 
+\subsection{Termodinámica}
+La mecánica estadística es la base conceptual de la termodinámica; pero históricamente primero apareció la termodinámica. La termodinámica apareció primero ya que fue la agrupación de varias ideas en el siglo diecinueve que encerraban varios tipos de experimentos  y nociones que existían desde la antigua Grecia. Aunque las ideas, que dieron paso a la termodinámica, surgieron en la antigüedad se han ido refinando. Por ejemplo Klaudios Galenos (133-200 A.C) suponía que la influencia del clima sobre los fluidos del cuerpo podría determinar el carácter de una persona. Así decía que los habitantes del norte frío y húmedo eran salvajes y violentos, al contrario de los habitantes del sur, caliente y seco, eran flácidos y mansos. Esto muestra que la idea de temperatura ha sido conocida de alguna u otra manera, pero de maneras muy intuitivas. 
 \\
 Ya en el año 1578  Johannis Hasler presentó una tabla de las temperaturas corporales de las personas en relación a la altura en la que vivían. Pero como se conoce ahora mientras se tenga una buena salud no importa la altura se debe tener la misma temperatura corporal. Este error fue debido a los instrumentos de medición usados en esa época. Ya en el inicio del siglo 17 ya se tenía el termómetro. Gracias a este instrumento muchas ideas equivocadas dadas por la subjetividad de los sentidos sobre el calor y el frío se fueron eliminando. Ya en los años 1700 empezaron a aparecer las escalas de temperatura, hubo incluso 18 escalas en algún tiempo. En 1848 William Thompson (Lord Kelvin)  introdujo la escala absoluta o la escala Kelvin. Esta cuenta desde el cero absoluto en adelante, el punto de ebullición del agua a  1 atm es 373.15 Kelvin.
 \\
@@ -32,24 +25,24 @@ Rumford siguió trabajando en su idea del equivalente mecánico del calor, con d
 \\
 Robert Julius Mayer (1814-1878) estudio medicina pero su entusiasmo hacia la física lo guió para hacer experimentos en este campo. La idea principal que tenía Mayer era que la energía se conservaba de forma general, no solo cuando hay trabajo mecánico. Es decir cualquier fenómeno capaz de aportar energía debía tenerse en cuenta al momento de un experimento. Gracias a los estudios hechos por su cuenta sabía que la energía cinética, fuerza viva en sus  palabras, podía convertirse en calor. Experimentalmente llegó a que la caída de un peso a una altura  de 365 metros correspondía a calentar el mismo peso de agua de $0^{\circ}$ a $1^{\circ}$. No es muy exacto pero estuvo bastante cerca, incluso llegó a cambiar la altura a 425 metros luego de que Joule hiciera mejores mediciones.
 \\
-Mayer tenía ideas bastante originales aunque en general no sabía expresarlas, por falta de experiencia matemática y su aislamiento de la comunidad científica. Pero Mayer fue el primero en hablar sobre máquinas térmicas y decir que el calor absorbido por el vapor era siempre mayor que el calor liberado durante la condensación y su diferencia era trabajo útil. Esta idea se expuso antes que Carnot y Clapeyron \cite{MullerHistory}. Sabía como se manejaba el calor pero no conocía su naturaleza.
+Mayer tenía ideas bastante originales aunque en general no sabía expresarlas, por falta de experiencia matemática y su aislamiento de la comunidad científica. Pero Mayer fue el primero en hablar sobre máquinas térmicas y decir que el calor absorbido por el vapor era siempre mayor que el calor liberado durante la condensación y su diferencia era trabajo útil. Esta idea se expuso antes que Carnot y Clapeyron. Sabía como se manejaba el calor pero no conocía su naturaleza.
 \\
-James Prescott Joule (1818-1889) proporcionó, en extremo detalle, observaciones sobre el calor y la temperatura. Sus experimentos eran discutidos en sus escritos de forma muy extensa, dando presumibles errores, compensando perdidas, sus experimentos eran tan detallados que algunos de sus artículos se volvieron estándares \cite{MullerHistory}. Es por eso que Mayer revisó sus experimentos respecto a los de Joule. Uno de los aportes de Joule fue que gracias a sus experimentos se podía aceptar la conservación de la energía. 
+James Prescott Joule (1818-1889) proporcionó, en extremo detalle, observaciones sobre el calor y la temperatura. Sus experimentos eran discutidos en sus escritos de forma muy extensa, dando presumibles errores, compensando perdidas, sus experimentos eran tan detallados que algunos de sus artículos se volvieron estándares. Es por eso que Mayer revisó sus experimentos respecto a los de Joule. Uno de los aportes de Joule fue que gracias a sus experimentos se podía aceptar la conservación de la energía. 
 \\
-Pero fue Hermann Ludwig Ferdinand Helmholtz(1821-1894) quien propuso la idea de que lo llamado calor era la energía cinética del movimiento térmico de los átomos. Fue Helmhotlz el primero en dejar el término de un fuerza viva y llamarlo energía \cite{MullerHistory}. El trabajo de Helmholtz fue importante ya que Joule y  Mayer no podía dar una visión clara sobre lo que se llama calor, y divagaban entre calor y fuerza; Helmholtz dejó los conceptos más claros en comparación con ellos dos. 
+Pero fue Hermann Ludwig Ferdinand Helmholtz(1821-1894) quien propuso la idea de que lo llamado calor era la energía cinética del movimiento térmico de los átomos. Fue Helmhotlz el primero en dejar el término de un fuerza viva y llamarlo energía. El trabajo de Helmholtz fue importante ya que Joule y  Mayer no podía dar una visión clara sobre lo que se llama calor, y divagaban entre calor y fuerza; Helmholtz dejó los conceptos más claros en comparación con ellos dos. 
 \\
 Todo este proceso histórico fue el camino para poder dar la primera ley de la termodinámica, se puede ver que la historia de la energía no es un desarrollo tan claro y llegar hasta la idea actual no fue para nada rápido ni sencillo. Puede ponerse en contraposición la mecánica cuántica que aunque fue inspirada también de la radiación del cuerpo negro, un tema que en ese entonces era tratado por la termodinámica, se construyó en menos años; aunque con ideas confusas pero su construcción matemática y teórica no fue demorada por siglos. 
 \\
-A diferencia de la energía, la entropía era un concepto más provocador al momento de darle un sentido microscópico. La historia de la  entropía empieza por los motores térmicos hay especulaciones que en el primer siglo antes de cristo ya existían algunas máquinas que funcionaban con vapor de agua, Hero de Alexandría se especula que hizo una de esa máquinas \cite{MullerHistory}. Pero en el siglo 18 Thomas Newcome y Thomas Savery crearon una máquina de vapor que inicialmente ayudaba a sacar agua de las minas. Fue James Watt(1736-1819) quien mejoró esa máquina de vapor haciendo una que era de 3 a 4 veces más eficiente.
+A diferencia de la energía, la entropía era un concepto más provocador al momento de darle un sentido microscópico. La historia de la  entropía empieza por los motores térmicos hay especulaciones que en el primer siglo antes de cristo ya existían algunas máquinas que funcionaban con vapor de agua, Hero de Alexandría se especula que hizo una de esa máquinas. Pero en el siglo 18 Thomas Newcome y Thomas Savery crearon una máquina de vapor que inicialmente ayudaba a sacar agua de las minas. Fue James Watt(1736-1819) quien mejoró esa máquina de vapor haciendo una que era de 3 a 4 veces más eficiente.
 \\
 Nicolas Léonard Sadi Carnot (1796-1832) se preguntó sobre que tanto se puede mejorar la eficiencia de una máquina térmica. Carnot publicó un libro donde muestra aseveraciones que intentan resolver la pregunta hecha; Carnot encuentra que: una máquina que trabaja entre dos temperaturas y solo intercambia calor entre ellas, su eficiencia solo depende de la  las temperatura, $e=F(T)dT$ para un delta de temperatura, incluso aunque las máquinas se manejen con agentes diferentes para generar trabajo. 
 \\
 Carnot seguía creyendo en la teoría calórica para llegar a estas ideas no fue necesario saber que esta teoría estaba incorrecta, aún así sus resultados se mantienen como ciertos. Carnot no pudo encontrar exactamente los valores de la eficiencia. Clapeyron y Kelvin no pudieron tampoco encontrar los valores de esta eficiencia ni por mediciones ni por cálculos. 
 \\
-Ya en 1850 se estaba asegurando que la teoría calórica estaba mal formulada y se debía hacer algo; Clausius retocó algunas ideas de Carnot y pudo encontrar la eficiencia del ciclo de Carnot. Clausius le dio forma a la termodinámica actual, hasta los cursos actuales de termodinámica siguen un artículo de Clausius que habla de gases ideales y vapor húmedo \cite{MullerHistory}. Clausius amplió sus investigaciones a ciclos no infinitesimales y a procesos no reversibles, él fue quien dio la idea de la entropía y sus propiedades. Con eso propuso la segunda ley de la termodinámica: El calor no puede pasar solo de un cuerpo frío a un cuerpo caliente. Clausius llamó $S=\frac{Q}{T}$ la entropía y vio que esto era lo que se conservaba en un ciclo de Carnot. Pero en términos microscópicos no se conocía el significado de $S$.
-\\\
-\section{Boltzmann}
-Paralelamente a mitad del siglo 19 se trabajaba en la teoría cinética de los gases. Esta reposaba en dos suposiciones la primera que los gases eras sistemas mecánicos de muchas partículas idénticas. La segunda era que debido a la gran cantidad de partículas se debía introducir probabilidades para así ver algunas regularidades que salían debido a las configuraciones de las moléculas. Personas como Calusius, Maxwell (1831-1879) y Boltzmann (1844-1906) trabajaron en esta área y produjeron resultados importantes pese a que concordaban con los resultados experimentales, hubo muchas discusiones sobre las hipótesis usadas para llegar a estos resultados. 
+Ya en 1850 se estaba asegurando que la teoría calórica estaba mal formulada y se debía hacer algo. Clausius retocó algunas ideas de Carnot y pudo encontrar la eficiencia del ciclo de Carnot. Clausius le dio forma a la termodinámica actual, hasta los cursos actuales de termodinámica siguen un artículo de Clausius que habla de gases ideales y vapor húmedo. Clausius amplió sus investigaciones a ciclos no infinitesimales y a procesos no reversibles, él fue quien dio la idea de la entropía y sus propiedades. Con eso propuso la segunda ley de la termodinámica: El calor no puede pasar solo de un cuerpo frío a un cuerpo caliente. Clausius llamó $S=\frac{Q}{T}$ la entropía y vio que esto era lo que se conservaba en un ciclo de Carnot. Pero en términos microscópicos no se conocía el significado de $S$.
+\\
+\subsection{Teoría Cinética}
+Paralelamente a mitad del siglo 19 se trabajaba en la teoría cinética de los gases. Esta teoría estudiaba las propiedades macroscópicas tale como la presión, temperatura, viscosidad, conductividad térmica etc. de un número muy grande de partículas que seguían las ecuaciones clásicas del movimiento. Habían dos suposiciones que se hacía  en esta teoría. La primera que los gases eras sistemas mecánicos de muchas partículas idénticas. La segunda era que debido a la gran cantidad de partículas se debía introducir probabilidades para así ver algunas regularidades que salían debido a las configuraciones de las moléculas. Personas como Calusius, Maxwell (1831-1879) y Boltzmann (1844-1906) trabajaron en esta área y produjeron resultados importantes pese a que concordaban con los resultados experimentales, hubo muchas discusiones sobre las hipótesis usadas para llegar a estos resultados. 
 \\
 Por ejemplo en los trabajos de Clausius se hace uso de los siguientes supuestos para gases en reposo y en equilibrio térmico: Las moléculas que están dentro de un recipiente se encuentran distribuidas con la misma densidad en todo el recipiente, la distribución de velocidades es igual en todo el recipiente, todas las direcciones de velocidad son igual de probables. Estas tres hipótesis son el inicio para ver los sistemas mecánicos con una perspectiva probabilística. 
 \\
@@ -63,10 +56,11 @@ Botlzmann en 1868 generalizó el resultado de Maxwell, ahora se tiene la misma s
 \begin{equation}
 f(x,y,z,u,v,w) \Delta \tau = \alpha e^{-\beta E} \Delta \tau.
 \end{equation}
-$E$ es la energía total que tiene la molécula esto es la energía cinética, energía potencial interna y energía potencial externa. Esta generalización es llamada la distribución de Maxwell-Boltzmann. Boltzmann además mostró que cualquier otra distribución bajo la condición de colisiones entre partículas evoluciona hacía la distribución de Maxwell-Boltzmann, él usó el teorema H para concluir esto.
-
-Para hablar del teorema H primero se debe explicar la ecuación de transporte de Boltzmann. La ecuación de transporte de Boltzmann puede ser derivada desde la jerarquía de Bogoliubov-Born-Green-Kirkwood-Yvon \cite{KardarStat} o mirando el problema del número de partículas en un rango del estado de una molécula en el espaico de fase \cite{HuangStat}. Para ambas rutas se debe hacer supuestos para poder seguir con el análisis, esto no se mostrará acá dado que no es pertinente seguir todos los pasos. La ecuación de transporte de Boltzmann describe cómo la distribución de moléculas $f(\vec{r},\vec{p},t)$, donde $\vec{r}$ es la posición y $\vec{p}$ es el momento,  evoluciona en el tiempo. La ecuación es 
-
+$E$ es la energía total que tiene la molécula esto es la energía cinética, energía potencial interna y energía potencial externa. Esta generalización es llamada la distribución de Maxwell-Boltzmann. Boltzmann además mostró que cualquier otra distribución bajo la condición de colisiones entre partículas evoluciona hacía la distribución de Maxwell-Boltzmann, Boltzmann usó el teorema H para concluir esto.
+\section{Boltzmann}
+En este contexto histórico fue que Boltzmann dio las primeras ideas sobre la mecánica estadística. En esta sección, se expondrán los conceptos más importantes que Boltzmann postuló y ayudaron a formar la física estadística. La meta de Boltzmann era poder dar un enfoque microscópico de la termodinámica, y poder explicar las propiedades térmicas que se observaban en los sistemas macroscópicos. Como primera conexión intentó darle un significado microscópico a la segunda ley de la termodinámica. Esta conexión viene demostrada por el teorema H.
+\\
+Para hablar sobre teorema H primero se debe explicar la ecuación de transporte de Boltzmann. La ecuación de transporte de Boltzmann puede ser derivada desde la jerarquía de Bogoliubov-Born-Green-Kirkwood-Yvon o mirando el problema del número de partículas en un rango del estado de una molécula en el espaico de fase \cite{HuangStat}. Para ambas rutas se debe hacer supuestos para poder seguir con el análisis, esto no se mostrará acá dado que no es pertinente seguir todos los pasos. La ecuación de transporte de Boltzmann describe cómo la distribución de moléculas $f(\vec{r},\vec{p},t)$, donde $\vec{r}$ es la posición y $\vec{p}$ es el momento,  evoluciona en el tiempo. La ecuación es 	
 \begin{align*}
 \quad (\frac{\partial}{\partial t}- \frac{\partial U}{\partial \vec{q}_{1}} \cdot \frac{\partial}{\partial \vec{p}_{1}} +\frac{\vec{p}_{1}}{m} \cdot \frac{\partial}{\partial \vec{q}_{1}})f  &=
 \\
@@ -74,13 +68,13 @@ Para hablar del teorema H primero se debe explicar la ecuación de transporte de
 \end{align*}
 Esta ecuación se puede leer como \cite{KardarStat}: el término a la izquierda describe el movimiento de una partícula en un potencial U, el término de la derecha es la probabilidad de encontrar una partícula con momento $\vec{p}_{1}$ en $\vec{q}_{1}$ ser alterada por una colisión con una partícula con momento $\vec{p}_{2}$.  La probabilidad de esta colisión está dada por el producto de los factores cinéticos proporcionado por la sección transversal diferencial $ |\frac{d \sigma}{d \Omega}|$, el flujo de partículas incidentes $|\vec{v}_{1}-\vec{v}_{2}|$ y la probabilidad de encontrar dos partículas $[f(\vec{p}_{1},\vec{q}_{1},t)f(\vec{p}_{2},\vec{q}_{1},t)$. El primer término substrae la probabilidad e integra sobre todos lo momentos posibles y el ángulo sólido. El segundo término es la adición del proceso inverso. 
 \\
-El teorema H dice que si $f$ satisface la ecuación de transporte de Boltzmann, entonces $\frac{dH}{dt} \leq 0$, donde 
+Hablar de la ecuación de transporte de Boltzmann es importante para seguir con el teorema H; ya que este dice que: si $f$ satisface la ecuación de transporte de Boltzmann, entonces $\frac{dH}{dt} \leq 0$, donde 
 \begin{equation}
-H(t)= \int d^{3} \vec{p}_{1} d^{3} \vec{q}_{1}  f(\vec{p},\vec{q},t) \ln (f(\vec{p},\vec{q},t)).
+H(t)= \int d^{3} \vec{p} d^{3} \vec{q}  f(\vec{p},\vec{q},t) \ln (f(\vec{p},\vec{q},t)).
 \end{equation}
-Con este teorema se puede demostrar que la distribución en el equilibrio es la distribución de Maxwell-Boltzmann o sea cuando $t \to \infty$ la distribución  $f(\vec{p},t) \to f_{0}(\vec{p})=  \alpha e^{-\beta E}$ \cite{HuangStat}. Pero hay un punto importante aquí y es algo que también en su época desconcertó a los contemporáneos de Boltzmann, ¿ cómo es posible llegar a una descripción de fenómenos irreversibles que muestran una dirección temporal pero se empezó con una teoría de un gas reversible?. Esto viene dado por las suposiciones echas al derivar la ecuación de transporte de Boltzmann.
+Con este teorema se puede demostrar que la distribución en el equilibrio es la distribución de Maxwell-Boltzmann o sea cuando $t \to \infty$ la distribución  $f(\vec{p},t) \to f_{0}(\vec{p})=  \alpha e^{-\beta E}$ \cite{HuangStat}. Pero hay un punto importante aquí y es algo que también en su época desconcertó a los contemporáneos de Boltzmann, ¿ cómo es posible llegar a una descripción de fenómenos irreversibles que muestran una dirección temporal pero se empezó con una teoría de un gas reversible? Esto viene dado por las suposiciones hechas al derivar la ecuación de transporte de Boltzmann.
 \\
-Se usa la hipótesis de caos molecular (Stosszahlanzatz), esta dice que después de una colisión las partículas están descorrelacionadas esto quiere decir $F(\vec{r},\vec{p}_{1},\vec{p}_{2},t)=f(\vec{r},\vec{p}_{1},t)f(\vec{r},\vec{p}_{2},t)$. Entonces es en este punto en el que la simetría temporal se rompe y hace que haya una dirección particular para el tiempo. 
+Se usa la hipótesis de caos molecular (Stosszahlanzatz). Esta dice que, después de una colisión las partículas, que interactuaron durante el choque, quedan descorrelacionadas. Entonces, por el caos molecular $f(\vec{r},\vec{p}_{1},\vec{p}_{2},t)=f(\vec{r},\vec{p}_{1},t)f(\vec{r},\vec{p}_{2},t)$. Es por esta hipótesis que la simetría temporal se rompe y hace que haya una dirección particular para el tiempo. Porque, al descorrelacionar las partículas después de un choque, se rompe la simetría que las ecuaciones de movimiento clásicas tienen.
 El teorema H fue usado por Boltzmann para poder darle una base microscópica a la segunda ley de la termodinámica. La relación es 
 \begin{equation}
 S(t)=- \frac{H(t)}{k_{B}}
@@ -92,30 +86,67 @@ Una de las objeciones que recibió fue sobre la posibilidad de poner todas las v
 Otro problema dado por E. Zermelo es que Poincaré había demostrado que en ese modelo cinético de un gas aislado, el sistema secomportaba quasiperiódico. Esto quiere decir que la función H puede ir asumiendo valores más grandes después de un periodo. 
 \\
 \section{Gibbs}
-Ya más adelante W. Gibbs (1839-1903) con su libro \textit{Elementary Principles of Statistica Mechanics} en 1901 ya propuso la forma actual de hacer física estadística. Él desarrola las ideas que se expusieron en los preliminares, las ideas de ensambles microcanónico y canónico fueron gracias a él. Aunque Gibbs volviera la mecánica estadística más moderna no le quitaba algunos problemas; es más puso en ella otro problema con su idea de ensambles.
-
-Para seguir la idea de Gibbs primero se supone que el sistema que se va a estudiar es uno compuesto de $N$ partículas, la suposición atomista de la materia. Gracias a la mecánica clásica se conocen las ecuaciones de movimiento para un sistema de varias partículas, las ecuaciones de Hamilton:
+Ya más adelante W. Gibbs (1839-1903) con su libro \textit{Elementary Principles of Statistica Mechanics} en 1901 ya propuso la forma actual de hacer física estadística. Gibbs desarrolla las ideas de ensambles, el estado  microcanónico y canónico. Las ideas de Gibbs eran más perspicaces que las de Boltzmann, porque introdujo conceptos no muy intuitivos a la mecánica estadística. Aunque Gibbs se volvió a formular la física estadística con ideas nuevas, también se encontraron dificultades en ellas. \\
+Para mostrar los nociones dadas por Gibbs se supone un sistema compuesto de $N$ partículas, la suposición atomista de la materia. Gracias a la mecánica clásica se conocen las ecuaciones de movimiento para un sistema de varias partículas, las ecuaciones de Hamilton:
 \begin{equation} \label{Hamilton}
 \frac{dq_{i}}{dt}= \frac{\partial H}{\partial p_{i}} \quad , \quad \frac{d p_{i}}{dt} =-\frac{\partial H}{\partial q_{i}}.
 \end{equation}
-Donde el índice $i=1,...,3N$ y $H$ es el Hamiltoniano del sistema. Se podría pensar que el problema ya se encuentra solucionado pero hay dos dificultades; la cantidad de ecuaciones de movimiento son muchas pues existirán el mismo número de ecuaciones que grados de libertar, y en un volumen típico hay en el orden de $10^{23}$ partículas. En la actualidad, las herramientas que proporciona la computación podría ayuda a resolver estas ecuaciones, suponiendo cierta simplicidad en ellas. Pero aún así existe el problema de las condiciones iniciales del sistema, en la práctica es imposible de encontrar la posición y el momento de todas las partículas para el mismo tiempo esto es en el caso clásico \cite{LandauStat}, la mecánica cuántica impone restricciones aún mayores.
+Donde el índice $i=1,...,3N$ y $H$ es el Hamiltoniano del sistema. Se podría pensar que el problema ya se encuentra solucionado pero hay dificultades al tener estas ecuaciones; la cantidad de ecuaciones de movimiento son muchas pues existirán el mismo número de ecuaciones que grados de libertar, y en un volumen típico hay en el orden de $10^{23}$ partículas. En la actualidad, las herramientas que proporciona la computación podría ayuda a resolver estas ecuaciones, suponiendo cierta simplicidad en ellas, pero aún así existe el problema de las condiciones iniciales del sistema; en la práctica es imposible de encontrar la posición y el momento de todas las partículas para el mismo tiempo, esto es en el caso clásico \cite{LandauStat}. La mecánica cuántica impone restricciones aún mayores.
 \\
 Para poder superar este dilema se preve un enfoque estadístico, donde se ve que a mayor número de partículas empiezan a aparecer regularidades. Lo interesante de la mecánica estadística es que las leyes dadas solo funcionan cuando los grados de libertad son muchos.
 \\
-Sea un sistema mecánico macroscópico en un instante de tiempo $t$,  se dice que el microestado del sistema está dado por cada $q_{i}(t)$ y $p_{i}(t)$. El microestado se puede representar por un punto $\lambda(t)$ en un espacio  abstracto de $6N$ dimensiones, este espacio se llama el espacio de fase $\Gamma = \Pi^{3N}_{i} \{q_{i}, p_{i} \}$.
-Aquí es donde entra la idea del ensamble dada por Gibbs. Se supone $N$ copias de un sistema macroscópico, cada uno de ellos viene representado en el espacio de fase $\Gamma$ por un punto $\lambda(t)$. Nótese que esto no significa  que todos los puntos sean el mismo, un sistema macroscópico puede tener diferentes microestados, cada microestado puede cambiar por lo menos por un momento o una posición esto no afectaría a las propiedades macroscópicas que se miden y para términos prácticos sería el mismo sistema macroscópico \cite{KardarStat}.
+Sea un sistema mecánico macroscópico en un instante de tiempo $t$,  se dice que el microestado del sistema está dado por cada $q_{i}(t)$ y $p_{i}(t)$. El microestado se puede representar por un punto $\lambda(t)$ en un espacio  abstracto de $6N$ dimensiones, el espacio de fase $\Gamma = \Pi^{3N}_{i} \{q_{i}, p_{i} \}$.
+Con esto claro, la propuesta de Gibbs del ensamble es: Se supone $N$ copias de un sistema macroscópico, cada uno de ellos viene representado en el espacio de fase $\Gamma$ por un punto $\lambda(t)$. Nótese que esto no significa  que todos los puntos son el mismo, un sistema macroscópico puede tener diferentes microestados, cada microestado puede cambiar con respecto a otro, por lo menos por una posición o momento. Esto no afectaría a las propiedades macroscópicas que se miden, y para términos prácticos sería el mismo sistema macroscópico \cite{KardarStat}.
 \\
-Sea $d\mathcal{N}(p,q,t)$ el número representativo de puntos en el volumen infinitesimal $d\Gamma = \Pi^{3N}_{i}dp_{i}dq_{i}$ alrededor del punto $(p,q)$. Entonces se define una densidad en el espacio de fase:
+El ensamble de copias permite crear una densidad de probabilidad en el espacio de fase. Sea $d\mathcal{N}(p,q,t)$ el número representativo de puntos en el volumen infinitesimal $d\Gamma = \Pi^{3N}_{i}dp_{i}dq_{i}$ alrededor del punto $(p,q)$. Entonces se define una densidad en el espacio de fase:
 \begin{equation}
 \rho(p,q,t)d\Gamma= \lim_{\mathcal{N} \to \infty} \frac{d\mathcal{N}(p,q,t)}{\mathcal{N}}.
 \end{equation}
-Es más conveniente escribir la evolución del sistema por esta densidad. Los promedios de ensamble se halla así:
+Es más conveniente escribir la evolución del sistema por esta densidad, por su sencillez matemática. 
+Ahora que se pudo definir una densidad de probabilidad en el espacio de fase, se puede hallar los promedios de ensamble así:
 \begin{equation}
 \langle f \rangle = \int d\Gamma \rho(p,q,t) f(p,q).
 \end{equation}
 \\
-Los promedios se encuentran gracias a los ensambles de varias copias idénticas del sistema pero en microestados diferentes que son admisibles por los parámetros macroscópicos. Pero no significa que el sistema que se está estudiando este en todos esos estados es solo un método para poder lograr describir una densidad en el espacio de fase, que luego se usa para poder calcular propiedades del sistema.Entonces entra la pregunta de que tan posible es hablar de copias imaginarias del sistema, sabiendo que solo existe uno. 
+Los promedios se encuentran gracias al ensamble compuesto de varias copias idénticas del sistema; pero en microestados diferentes que son admisibles por los parámetros macroscópicos. Pero no significa que el sistema que se está estudiando este en todos esos estados al tiempo, es solo un método para poder lograr describir una densidad en el espacio de fase, que luego se usa para poder calcular propiedades del sistema.Entonces entra la pregunta de que tan posible es hablar de copias imaginarias del sistema, sabiendo que solo existe uno. 
 \\
+\\
+La mecánica estadística que introdujo Gibbs tenía como base la idea de la distribución microcanónica, esta es básicamente que: $\rho(q,p)$ es una distribución de densidad en el espacio de fase, la cual es cero en todo el espacio excepto en una superficie de energía, entre $E$ y $E+ \Delta E$, donde $\Delta E$ es bastante pequeña. En esta superficie de energía $\rho$ tiene un valor constante. 
+\\
+La idea física detrás de esta distribución es bastante simple de seguir. Desde la perspectiva de la teoría de probabilidad cuando no se tiene conocimiento del problema que se quiere tratar se supone que no hay razón para darle un mayor peso a algún resultado que a otro, debido a la ignorancia subjetiva que se tiene. Entonces al no conocer nada del sistema se dice que todos los resultados tienen la misma probabilidad de salir, luego la distribución de probabilidad es constante. 
+\\
+Entonces si tengo un sistema físico del que conozco solo su estado macroscópico, estos parámetros me pueden dar varios posibles estados microscópicos. Ya que, no  se tiene más información suponemos que, cada posible estado microscópico tiene la misma probabilidad de ser el estado en el que el sistema se encuentra en realidad. Este es uno de los problemas al fundamentar la mecánica estadística, porque se basa en la ignorancia subjetiva que se tiene del sistema. Muchos argumentan que las teorías físicas deben ser edificadas en ideas objetivas, y que una rama tan importante de la física se asiente en algo como la ignorancia propia deja mucho que desear \cite{Penrose}.
+\\
+En este punto se puede incorporar la entropía de Gibbs. Usando la notación, $d\Gamma \equiv d^{3}x_{1}...d^{3}p_{N}$, $d\Gamma_{1} \equiv d^{3}x_{1}d^{3}p_{1}$, $d\Gamma_{-1} \equiv d^{3}x_{2}...d^{3}p_{N}$; la función de distribución de puntos representativos es
+\begin{equation}
+\rho_{N}(x_{1},x_{2},..,x_{N};p_{1},p_{2},...,p_{N};t),
+\end{equation}
+la cual da la densidad de probabilidad del sistema en todo  el espacio de fase. 
+\\
+La función H de Gibbs esta dada por
+\begin{equation}
+H_{G}= \int \rho_{N} \log \rho_{N} d \Gamma.
+\end{equation}
+Este punto es preciso para comparar la función H de Gibbs con la de Boltzmann. recordando que la función H de Boltzman está dada por 
+\begin{equation}
+H_{B}=N \int f_{1} log f_{1} d\Gamma_{1}.
+\end{equation}
+Donde $f_{1}(x_{1},p_{1},t)$ es la probabilidad de densidad de una sola partícula, 
+\begin{equation}
+f_{1}(x_{1},p_{1},t)= \int \rho_{N} d \Gamma_{-1}.
+\end{equation}
+En el artículo escrito por Jaynes \cite{JaynesEntropies}, se demuestra que
+\begin{equation}
+H_{B} \leq H_{G},
+\end{equation}
+y la igualdad se cumple solo cuando 
+\begin{equation}
+\rho_{N}(x_{1},x_{2},...,x_{N};p_{1},p_{2},...,p_{N})=f_{1}(x_{1},p_{1})...f_{1}(x_{N},p_{N}),
+\end{equation}
+es decir, cuando hay independencia entre las partículas. Este es el caso para un gas que no tiene interacción entre partículas, gas ideal. Gracias a esto Jaynes prosigue mostrando que la entropía de Boltzmann, $S_{B}=k_{B}H_{B}$, solo es cierta cuando se habla de un fluido con la misma densidad y temperatura en todo el espacio pero sin fuerzas entre partículas. Mientras la entropía de Gibbs, $S_{G}=k_{B}H_{G}$, es válida para cualquier sistema porque da la entropía fenomenológica de la termodinámica.
+\\
+Concluye que esta diferencia no puede ser pequeña porque hay interacciones entre partículas muy importantes que afectan ampliamente el resultado. Esto muestra que aunque la idea de Gibbs sobre un ensamble es exótica da los resultados esperados por la termodinámica. Mientras que Boltzmann usando ideas más intuitivas no llega a hacer una conexión con la termodinámica.
+
 \subsection{Ensamble Canónico}
 Antes de entrar en el problema de ergodicidad se quiere ver cuál es el operador densidad de probabilidad para un sistema cerrado que puede intercambiar calor con su entorno. Para encontrar este operador se extremizará la entropía bajo dos restricciones \cite{ReichlStat}. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
 \begin{equation}
@@ -147,43 +178,6 @@ Aquí se ha definido la función de partición $Z(\beta)$ como la normalización
 \rho = \frac{ e^{-\beta H}}{\Tr( e^{-\beta H})}.
 \end{equation}
 Históricamente se escogió la entropía de Gibbs porque da este resultado para un sistema a temperatura $T$.
-
-
-En el artículo hecho por E.T Jaynes \cite{JaynesEntropies} se habla de las propuestas dadas por Boltzmann y Gibbs para la entropía. En este artículo pone las diferencias entre cada pero muestra que la entropía dada por Gibbs es la correcta. Siguiendo la notación del artículo,$d\Gamma \equiv d^{3}x_{1}...d^{3}p_{N}$, $d\Gamma_{1} \equiv d^{3}x_{1}d^{3}p_{1}$, $d\Gamma_{-1} \equiv d^{3}x_{2}...d^{3}p_{N}$; se define un ensamble por su función de distribución de $N$ puntos representativos,
-\begin{equation}
-F_{N}(x_{1},x_{2},..,x_{N};p_{1},p_{2},...,p_{N};t),
-\end{equation}
-la cual da la densidad de probabilidad del sistema en todo  el espacio de fase. 
-\\
-La función H de Gibbs esta dada por
-\begin{equation}
-H_{G}= \int F_{N} \log F_{N} d \Gamma,
-\end{equation}
-y la función H de Boltzman está dada por 
-\begin{equation}
-H_{B}=N \int f_{1} log f_{1} d\Gamma_{1}.
-\end{equation}
-Donde $f_{1}(x_{1},p_{1},t)$ es la probabilidad de densida de una sola partícula, 
-\begin{equation}
-f_{1}(x_{1},p_{1},t)= \int F_{N} d \Gamma_{-1}.
-\end{equation}
-En este artículo Jaynes muestra en el teorema 1 que 
-\begin{equation}
-H_{B} \leq H_{G},
-\end{equation}
-y la igualdad se cumple solo cuando 
-\begin{equation}
-F_{N}(x_{1},x_{2},...,x_{N};p_{1},p_{2},...,p_{N})=f_{1}(x_{1},p_{1})...f_{1}(x_{N},p_{N}),
-\end{equation}
-es decir hay independencia entre las partículas esto es el caso para un gas que no tiene interacción entre partículas, gas ideal. Gracias a esto Jaynes prosigue mostrando que la entropía de Boltzmann, $S_{B}=k_{B}H_{B}$, solo es cierta cuando se habla de un fluido con la misma densidad y temperatura en todo el espacio pero sin fuerzas entre partículas. Mientras la entropía de Gibbs, $S_{G}=k_{B}H_{G}$, es válida para cualquier sistema porque da la entropía fenomenológica de la termodinámica.
-\\
-Concluye que esta diferencia no puede ser pequeña porque hay interacciones entre partículas muy importantes que afectan ampliamente el resultado. Esto muestra que aunque la idea de Gibbs sobre un ensamble es exótica da los resultados esperados por la termodinámica. Mientras que Boltzmann usando ideas más intuitivas no llega a hacer una conexión con la termodinámica.
-\\
-La mecánica estadística que introdujo Gibbs tenía como base la idea de la distribución microcanónica, esta es básicamente que: $\rho(q,p)$ es una distribución de densidad en el espacio de fase, la cual es cero en todo el espacio excepto entre $E$ y $E+ \Delta E$, donde $\Delta E$ es bastante pequeña. En esta superficie de energía $\rho$ tiene un valor constante. 
-\\
-La idea física detrás de esta distribución es bastante simple de exponer. Desde la perspectiva de la teoría de probabilidad cuando no se tiene conocimiento del problema que se quiere tratar se supone que no hay razón para darle un mayor peso a algún resultado que a otro, debido a la ignorancia subjetiva que se tiene. Entonces al no conocer nada del sistema se dice que todos los resultados tienen la misma probabilidad de salir, luego la distribución de probabilidad es constante. 
-\\
-Luego si tengo un sistema físico del que conozco solo su estado macroscópico, estos parámetros me pueden dar varios posibles estados microscópicos.Ya que no  se tiene más información suponemos que cada posible estado microscópico tiene la misma probabilidad de ser el estado en el que el sistema se encuentra en realidad. Este es uno de los problemas al fundamentar la mecánica estadística porque se basa en la ignorancia subjetiva que se tiene del sistema. Muchos argumentan que las teorías físicas deben ser edificadas en ideas objetivas, y que una rama tan importante de la física se asiente en algo como la ignorancia propia deja mucho que desear.
 \\
 También aunque esta idea se base en la teoría de la probabilidad también ha sido muy criticada en las matemáticas. Hay preguntas como: si se llegará a conocer un poco más del sistema, ¿ aún sería válida la distribución microcanónica?, ¿ si las probabilidades realmente tiene un peso que se les debería asignar?. En busca de evitar estas preguntas pero no volver a construir toda una teoría lo que se propone es intercambiar el principio de probabilidades iguales por una idea más estable que tenga las mismas implicaciones que ese principio y se vuelva a la mecánica estadística actual.
 \\
