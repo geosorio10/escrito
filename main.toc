@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {2.1.2}Teor\IeC {\'\i }a Cin\IeC {\'e}tica}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Boltzmann}{9}{section.2.2}
 \contentsline {section}{\numberline {2.3}Gibbs}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Ensamble Can\IeC {\'o}nico}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Ensamble Can\IeC {\'o}nico}{15}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}Teorma de Liouville }{16}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Consecuencias del Teorema de Liouville}{17}{subsection.2.4.1}
 \contentsline {section}{\numberline {2.5}Ergodicidad}{19}{section.2.5}

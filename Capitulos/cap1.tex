@@ -86,7 +86,7 @@ Una de las objeciones que recibió fue sobre la posibilidad de poner todas las v
 Otro problema dado por E. Zermelo es que Poincaré había demostrado que en ese modelo cinético de un gas aislado, el sistema secomportaba quasiperiódico. Esto quiere decir que la función H puede ir asumiendo valores más grandes después de un periodo. 
 \\
 \section{Gibbs}
-Ya más adelante W. Gibbs (1839-1903) con su libro \textit{Elementary Principles of Statistica Mechanics} en 1901 ya propuso la forma actual de hacer física estadística. Gibbs desarrolla las ideas de ensambles, el estado  microcanónico y canónico. Las ideas de Gibbs eran más perspicaces que las de Boltzmann, porque introdujo conceptos no muy intuitivos a la mecánica estadística. Aunque Gibbs se volvió a formular la física estadística con ideas nuevas, también se encontraron dificultades en ellas. \\
+Ya más adelante W. Gibbs (1839-1903) con su libro \textit{Elementary Principles of Statistica Mechanics} en 1901 propuso la forma actual de hacer física estadística. Gibbs desarrolla las ideas de ensambles, el estado  microcanónico y canónico. Las ideas de Gibbs eran más perspicaces que las de Boltzmann, porque introdujo conceptos no muy intuitivos a la mecánica estadística. Aunque Gibbs se volvió a formular la física estadística con ideas nuevas, también se encontraron dificultades en ellas. \\
 Para mostrar los nociones dadas por Gibbs se supone un sistema compuesto de $N$ partículas, la suposición atomista de la materia. Gracias a la mecánica clásica se conocen las ecuaciones de movimiento para un sistema de varias partículas, las ecuaciones de Hamilton:
 \begin{equation} \label{Hamilton}
 \frac{dq_{i}}{dt}= \frac{\partial H}{\partial p_{i}} \quad , \quad \frac{d p_{i}}{dt} =-\frac{\partial H}{\partial q_{i}}.
@@ -116,6 +116,8 @@ La mecánica estadística que introdujo Gibbs tenía como base la idea de la dis
 La idea física detrás de esta distribución es bastante simple de seguir. Desde la perspectiva de la teoría de probabilidad cuando no se tiene conocimiento del problema que se quiere tratar se supone que no hay razón para darle un mayor peso a algún resultado que a otro, debido a la ignorancia subjetiva que se tiene. Entonces al no conocer nada del sistema se dice que todos los resultados tienen la misma probabilidad de salir, luego la distribución de probabilidad es constante. 
 \\
 Entonces si tengo un sistema físico del que conozco solo su estado macroscópico, estos parámetros me pueden dar varios posibles estados microscópicos. Ya que, no  se tiene más información suponemos que, cada posible estado microscópico tiene la misma probabilidad de ser el estado en el que el sistema se encuentra en realidad. Este es uno de los problemas al fundamentar la mecánica estadística, porque se basa en la ignorancia subjetiva que se tiene del sistema. Muchos argumentan que las teorías físicas deben ser edificadas en ideas objetivas, y que una rama tan importante de la física se asiente en algo como la ignorancia propia deja mucho que desear \cite{Penrose}.
+\\
+Aunque esta idea se base en la teoría de la probabilidad también ha sido muy criticada en las matemáticas. Hay preguntas como: si se llegará a conocer un poco más del sistema, ¿ aún sería válida la distribución microcanónica? ¿ si las probabilidades realmente tiene un peso que se les debería asignar? En busca de evitar estas preguntas pero no volver a construir toda una teoría lo que se propone es intercambiar el principio de probabilidades iguales por una idea más estable que tenga las mismas implicaciones que ese principio.
 \\
 En este punto se puede incorporar la entropía de Gibbs. Usando la notación, $d\Gamma \equiv d^{3}x_{1}...d^{3}p_{N}$, $d\Gamma_{1} \equiv d^{3}x_{1}d^{3}p_{1}$, $d\Gamma_{-1} \equiv d^{3}x_{2}...d^{3}p_{N}$; la función de distribución de puntos representativos es
 \begin{equation}
@@ -148,7 +150,7 @@ es decir, cuando hay independencia entre las partículas. Este es el caso para u
 Concluye que esta diferencia no puede ser pequeña porque hay interacciones entre partículas muy importantes que afectan ampliamente el resultado. Esto muestra que aunque la idea de Gibbs sobre un ensamble es exótica da los resultados esperados por la termodinámica. Mientras que Boltzmann usando ideas más intuitivas no llega a hacer una conexión con la termodinámica.
 
 \subsection{Ensamble Canónico}
-Antes de entrar en el problema de ergodicidad se quiere ver cuál es el operador densidad de probabilidad para un sistema cerrado que puede intercambiar calor con su entorno. Para encontrar este operador se extremizará la entropía bajo dos restricciones \cite{ReichlStat}. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
+Para explorar un poco más la idea de Gibbs,se presentará el ensamble canónico desde un punto de vista cuántico. Este ensamble será útil como referencia para los próximos capítulos. Para encontrar este operador se extremizará la entropía de Gibbs bajo dos restricciones. La primera restricción es que el operador de densiada, $\rho$, esté normalizado.
 \begin{equation}
 \Tr(\rho)=1,
 \end{equation}
@@ -156,10 +158,11 @@ además se impone la restricción de tener un valor de energía fijo,
 \begin{equation}
 \Tr(H \rho)= \langle E \rangle,
 \end{equation}
-donde H  es el operador Hamiltoniano del sistema. El porqué el promedio de energía se escribe así se tendrá claro más adelante. La entropía que se va a maximizar  será la entropía de Gibbs, de esta se hablará un poco más profundo en el siguiente capítulo, esta se escribe para un sistema cuántico
+donde H  es el operador Hamiltoniano del sistema  \cite{ReichlStat}. El promedio de energía se escribe así, porque cuánticamente la traza permite escribir promedios de esta forma. La entropía de Gibbs para un sistema cuántico se escribe de la siguiente forma
 \begin{equation}
 S=-k_{B} \Tr[\rho \ln (\rho)].
 \end{equation}
+Se ve que mantiene la forma de la entropía clásica, teniendo como diferencia que se cambia la integral por una traza. \\
 Con ayuda de los multiplicadores de Lagrange, $\alpha$ y $\beta$, se encuentra la distribución de probabilidad que maximiza la entropía bajo las restricciones dadas. Entonces se tiene:
 \begin{align}
 \delta \{ \Tr [ \alpha \rho + \beta H \rho - k_{B} \rho \ln (\rho)] \} 
@@ -179,12 +182,9 @@ Aquí se ha definido la función de partición $Z(\beta)$ como la normalización
 \end{equation}
 Históricamente se escogió la entropía de Gibbs porque da este resultado para un sistema a temperatura $T$.
 \\
-También aunque esta idea se base en la teoría de la probabilidad también ha sido muy criticada en las matemáticas. Hay preguntas como: si se llegará a conocer un poco más del sistema, ¿ aún sería válida la distribución microcanónica?, ¿ si las probabilidades realmente tiene un peso que se les debería asignar?. En busca de evitar estas preguntas pero no volver a construir toda una teoría lo que se propone es intercambiar el principio de probabilidades iguales por una idea más estable que tenga las mismas implicaciones que ese principio y se vuelva a la mecánica estadística actual.
-\\
-
 \section{Teorma de Liouville }
-Este teorema es de alta importancia en la mecánica estadística, para ver sus consecuencias en esta área primero se verá qué declara este teorema. La siguiente demostración del teorema sigue los pasos dados por \cite{PathriaStat}. 
-
+Construyendo sobre las ideas de Gibbs, se puede encontrar el teorema de Liouville. Este teorema tiene mucha importancia en la mecánica estadística, para ver sus consecuencias en esta área primero se verá qué declara este teorema. La siguiente demostración del teorema sigue los pasos dados por \cite{PathriaStat}. 
+\\
 Se considera un volumen $\Gamma$ que encierra una región que se quiere estudiar en el espacio de fase,  este volumen tiene una superficie $\sigma$. El cambio del número de puntos, microestados posibles del sistema, dentro de este volumen está dado por 
 \begin{equation}
 \frac{\partial}{\partial t} \int_{\Gamma} \rho d\Gamma
@@ -313,7 +313,7 @@ Entonces la presencia de anarmonicidad no implica ergodicidad para este sistema.
 
 
 \section{Jaynes}
-Este problema ha llamado la atención de varias personas y han existido muchos intentos para poder resolver estos problemas. Se ha intentado basar la mecánica estadística en otras ideas. E.T Jaynes propone una relación entre la mecánica estadística y la teoría clásica de la información \cite{JaynesI},\cite{JaynesII}. 
+Los problemas mostrados hasta ahora han sido varios y de gran complejidad. Por esto varios intentos se han hecho para proponer una nueva perspectiva, que no tenga estas tensiones. Han existido muchas propuestas nuevas, tratando de basar la mecánica estadística en otras ideas. En esta sección se mostrará la visión de E.T Jaynes. Jaynes propone una relación entre la mecánica estadística y la teoría clásica de la información \cite{JaynesI},\cite{JaynesII}. Esto muestra una primera luz a usar herramientas de la información en áreas de la física.
 \\
 Jaynes impulsado por la falta de un argumento que conecte los fenómenos microscópicos y los macroscópicos. Procede a estipular que para tener una mecánica estadística libre de objeciones esta debería seguir los siguientes requerimientos: libre de incongruencias matemáticas, no debería tener suposiciones externas arbitrarias y debería ser capaz de describir procesos tanto fuera del equilibrio como en equilibrio. 
 \\
