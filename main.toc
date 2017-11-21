@@ -3,14 +3,14 @@
 \contentsline {chapter}{\numberline {2}Perspectivas}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Recuento Hist\IeC {\'o}rico}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Termodin\IeC {\'a}mica}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Teor\IeC {\'\i }a Cin\IeC {\'e}tica}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Teor\IeC {\'\i }a Cin\IeC {\'e}tica}{8}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Boltzmann}{9}{section.2.2}
 \contentsline {section}{\numberline {2.3}Gibbs}{11}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Ensamble Can\IeC {\'o}nico}{15}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}Teorma de Liouville }{16}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Consecuencias del Teorema de Liouville}{17}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Consecuencias del Teorema de Liouville}{18}{subsection.2.4.1}
 \contentsline {section}{\numberline {2.5}Ergodicidad}{19}{section.2.5}
-\contentsline {section}{\numberline {2.6}Jaynes}{23}{section.2.6}
+\contentsline {section}{\numberline {2.6}Jaynes}{24}{section.2.6}
 \contentsline {chapter}{\numberline {3}El Entrelazamiento y La Mec\IeC {\'a}nica Estad\IeC {\'\i }stica}{29}{chapter.3}
 \contentsline {section}{\numberline {3.1}Herramientas de la Teor\IeC {\'\i }a Cu\IeC {\'a}ntica}{29}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Operador de Densidad}{29}{subsection.3.1.1}
@@ -27,4 +27,4 @@
 \contentsline {section}{\numberline {4.2}Equilibraci\IeC {\'o}n}{58}{section.4.2}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{73}{appendix*.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{73}{appendix*.3}
