@@ -1,19 +1,19 @@
 \chapter{El Entrelazamiento y La Mecánica Estadística} \label{cap:2}
 
-La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista dadas las ecuaciones de movimiento. Pero lo que sorprende al tratar con  sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos \cite{CallenThermo}. La conexión que hay entre el determinismo y estas probabilidades es una discusión que no se ha podido solucionar dado a que han existido varias soluciones pero todas con sus fallas . Los métodos típicos requieren hablar de promedios de ensamble, promedios temporales, aleatoriedad. Todos estos conceptos siguen siendo muy debatidos y parecería que no solucionará ninguna pregunta seguir con ellos \cite{TodaStat}. Por eso se ha estado buscando nuevos fundamentos para la mecánica estadística.
+La mecánica clásica nos habla de un sistema físico definido que para todos los tiempos está especificado. Este sistema evolucionan de manera determinista dadas las ecuaciones de movimiento. Al tratar con  sistemas termodinámicos es que aunque se hable de un sistema clásico este puede mostrar propiedades que dependan de promedios estadísticos \cite{CallenThermo}. La conexión que hay entre el determinismo y estas probabilidades es una discusión que no se ha podido solucionar dado a que han existido varias soluciones pero todas con sus fallas, como por ejemplo las ideas dadas por Gibbs expuestas anteriormente. Los métodos típicos requieren hablar de promedios de ensamble, promedios temporales, aleatoriedad. Todos estos conceptos siguen siendo muy debatidos y parecería que no solucionará ninguna pregunta seguir con ellos \cite{TodaStat}. Por eso se ha estado buscando nuevos fundamentos para la mecánica estadística.
 \\
 La mecánica estadística tiene como base el postulado de probabilidades iguales; este viene dado por la ignorancia subjetiva que el observador del sistema tiene. Aunque la mecánica estadística no tiene problemas al comparar sus resultados teóricos con los experimentales, el cimiento filosófico en el que reposa da mucho de que hablar dando así posturas diferentes que desde los inicios de su teoría no han podido ser unificados. 
 \\
-En este capítulo se seguirá Popescu et al  \cite{Popescu2006} y mostrar una posible luz sobre el problema de unificar las perspectivas de la mecánica estadística. La idea principal que se quiere mostrar es cómo se puede reemplazar el postulado de probabilidades iguales por un principio canónico general basado en el entrelazamiento cuántico. Al poner el entrelazamiento cuántico como nuevo cimiento ya no se tiene probabilidades subjetivas sino objetivas dadas por la teoría  cuántica. Este nuevo enfoque permite evitar problemas con la ignorancia subjetiva pero también esquiva el problema de ergodicidad, gracias a esto se puede ver un fundamento más claro y sólido. 
+En este capítulo se seguirá el trabajo de Popescu \textit{et al}  \cite{Popescu2006} y mostrar una posible luz sobre el problema de unificar las perspectivas de la mecánica estadística. La idea principal que se quiere mostrar es cómo se puede reemplazar el postulado de probabilidades iguales por un principio canónico general basado en el entrelazamiento cuántico. Al poner el entrelazamiento cuántico como nuevo cimiento ya no se tiene probabilidades subjetivas sino objetivas dadas por la teoría  cuántica. Este nuevo enfoque permite evitar problemas con la ignorancia subjetiva pero también esquiva el problema de ergodicidad; gracias a esto se puede ver un fundamento más claro y sólido. 
 \\
 Este capítulo solo se enfocará en mostrar cómo la mayoría de los estados del universo están termalizados sin hablar en ningún momento de la evolución de estos estados. Si en general los estados del universo están termalizados se esperaría que cualquier evolución lleve los estados al equilibrio pero en el siguiente capítulo se darán especificaciones de esta conjetura junto con detalles que hacen ver las complicaciones de formalizar las ideas intuitivas que se tienen sobre el equilibrio.
 \\
 \section{Herramientas de la Teoría Cuántica}
-La mecánica cuántica en general se introduce desde la perspectiva del vector de estado. La aplicación de este formalismo implica una gran cantidad de problemas. Las herramientas entregadas por el vector de estado son dinámicas para algunos de estos problemas, pero no siempre es sencillo poder seguir con este formalismo en casos particulares; es por esto que se usa el formalismo de la matriz densidad u operador densidad, cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente no se puede especificar un estado individual para el subsistema, las herramientas proporcionadas por el operador densidad permite representar las estadísticas de las medidas de uno de los componentes del sistema \cite{Decoherence}.
+La mecánica cuántica dada por Schrödinger usa el formalismo del vector de estado. Las herramientas entregadas por el vector de estado son útiles para algunos problemas, pero no siempre es sencillo poder seguir con este formalismo en casos particulares; es por esto que se usa el formalismo de la matriz densidad u operador densidad, cuando se habla de un sistema compuesto por un subsistema y su ambiente. Debido al entrelazamiento que existe ente el subsistema y su ambiente, no se puede especificar un estado individual para el subsistema. Las herramientas proporcionadas por el operador densidad permiten representar las estadísticas de las medidas de uno de los componentes del sistema \cite{Decoherence}.
 \\
 
 \subsection{Operador de Densidad}
-Para comprender qué es el operador de densidad se debe empezar por responder cuándo se tiene el máximo conocimiento posible de un estado cuántico. Cuánticamente si el estado $\ket{\psi}$ da toda la información posible de un sistema se le llama un estado puro. Para especificar cuál es el operador densidad de un sistema se supone que el sistema cuántico puede estar en un estado puro, $\ket{\psi_{i}}$ para $i=1,2,...$. Cada estado posible del sistema tiene una probabilidad correspondiente, $p_{i}>0$ y $\sum_{i} p_{i}$. Luego el operador densidad para el sistema es :
+Para comprender qué es el operador de densidad se debe empezar por responder cuándo se tiene el máximo conocimiento posible de un estado cuántico. Cuánticamente, si el estado $\ket{\psi}$ da toda la información posible de un sistema, se le llama un estado puro. Para especificar cuál es el operador densidad de un sistema se supone que el sistema cuántico puede estar en un estado puro, $\ket{\psi_{i}}$ para $i=1,2,...$. Cada estado posible del sistema tiene una probabilidad correspondiente, $p_{i}>0$ y $\sum_{i} p_{i}$. Luego el operador densidad para el sistema es :
 \begin{equation}
 \rho \equiv \sum_{i} p_{i} \ket{\psi_{i}}\bra{\psi_{i}}.
 \end{equation}
@@ -24,7 +24,7 @@ El operador densidad también puede ser especificado por las siguientes propieda
 \begin{enumerate}
 \item $\rho$ tiene traza igual a uno, $\Tr(\rho)=1$.
 
-\item $\rho$ es un operador positivo, $\ket{\phi}$ es un vector arbitrario luego $\bra{\psi}\rho\ket{\psi} \geq 0$.
+\item $\rho$ es un operador positivo: si $\ket{\phi}$ es un vector arbitrario, luego $\bra{\psi}\rho\ket{\psi} \geq 0$.
 \end{enumerate}
 Ya con esta breve introducción se pueden reescribir los postulados de la mecánica cuántica en este formalismo, siguiendo a \cite{NielsenInformation}:
 \\
@@ -52,11 +52,11 @@ Los operados $\{  M_{m} \}$ satisfacen,
 \textbf{Postulado 4}: El espacio de un sistema físico compuesto es el producto tensorial de cada espacio de los componentes del sistema. Si  hay $N$ sistemas y cada sistema es preparado en el estado $\rho_{i}$, con el índice recorriendo cada sistema, el sistema total está representado por $\rho_{1} \otimes \rho_{2} \otimes ...\otimes \rho_{n}$.
 \\
 \\
-Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad, estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, estas medidas tienen muchas restricciones y no abarcan todas las posibilidades de medición.
+Estos son los postulados de la mecánica cuántica desde la perspectiva del operado densidad. Estos postulados son análogos a la perspectiva del vector de estado. Pero se debe ver un poco más en detalle el postulado 3, este habla sobre las mediciones cuánticas pero con mayor generalidad. Habitualmente al introducir la mecánica cuántica solo se habla de medidas proyectivas, estas medidas tienen muchas restricciones y no abarcan todas las posibilidades de medición.
 \\	
-Se puede demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales \cite{NielsenInformation}, entonces si existe una equivalencia entre estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general? Porque las mediciones generales no tienen tantas restricciones como las medidas proyectivas. Esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
+Se puede demostrar que las mediciones proyectivas junto con los demás axiomas de la cuántica son semejantes a las medidas generales \cite{NielsenInformation}, entonces si existe una equivalencia entre estos dos tipos de mediciones, ¿  por qué preocuparse por un esquema más general? Porque las mediciones generales tienen menos restricciones que las medidas proyectivas. Esto da una variedad de propiedades que las medidas proyectivas no tienen. Además en algunos problemas que conciernen a la teoría cuántica de la información es necesario usar mediciones generales, como por ejemplo la manera óptima de distinguir entre un conjunto de estados cuánticos.
 \\
-Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$. Al hacer la primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá en el mismo estado \cite{VedralInformation}. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin darle importancia a cuál sea el estado del sistema después de la medida \cite{NielsenInformation}.
+Pero hay una ventaja que tienen  la mediciones generales sobre las proyectivas, es lo que se nombra como \textit{repetibilidad}. Las medidas proyectivas tienen repetibilidad, puesto que si se tiene un estado inicial $\ket{\psi}$, al hacer la primera medida se encuentra que $\ket{\psi_{m}}=\frac{P_{m}\ket{\psi}}{\sqrt{\bra{\psi}P_{m}\ket{\psi}}}$. Operando otra vez a $\ket{\psi_{m}}$ con $P_{m}$, el estado no cambia entonces $\bra{\psi_{m}}P_{m}\ket{\psi_{m}}=1$, esto significa que si se repite la medición muchas veces se seguirá en el mismo estado \cite{VedralInformation}. Pero esto no es cierto para todos los experimentos. Si se está haciendo el experimento de la doble rendija y se quiere saber la posición de un fotón luego de pasar y eso se hace por medio de una placa, después de encontrar la posición del fotón no se puede volver a hacer una medición  sobre ese fotón. Entonces por esto se debe recurrir en ciertos casos a las mediciones generales. De esta mediciones generales hay un caso particular que es usado en la teoría cuántica de la información, este caso se llama medidas POVM (Positive Operator-Valued Measure). Estas medidas sirven cuando solo se quiere saber las probabilidades de que un resultado salga sin la necesidad de saber el estado del sistema luego de la medida \cite{NielsenInformation}.
 Por el postulado 3 se sabe que la probabilidad de que el resultado m salga viene dado por $p(m)= \Tr (M^{\dagger}_{m}M_{m} \rho)$. Si se define :
 \begin{equation}
 E_{m} \equiv M^{\dagger}_{m}M_{m}.
@@ -67,14 +67,14 @@ Esta manera más general de mediciones permite liberarse de restricciones impues
 
 \subsection{Operador de Densidad Reducido}
 
-Ahora se plantea la siguiente situación: se tiene un sistema $A$ que está correlacionado cuánticamente  con el sistema $B$. Esto quiere decir que el sistema completo $AB$ puede estar dado por un estado puro pero aún así no se puede describir individualmente el sistema $A$, entonces si solo se tiene acceso al sistema $A$ pero no al $B$, cómo se puede modelar matemáticamente toda la información que es posible de extraer solo de mediciones locales en $A$. Aquí se usa el operador densidad reducido, este se define así
+Ahora se plantea la siguiente situación: se tiene un sistema $A$ que está correlacionado cuánticamente  con el sistema $B$. Esto quiere decir que el sistema completo $AB$ puede estar dado por un estado puro pero aún así no se puede describir individualmente el sistema $A$; entonces si solo se tiene acceso al sistema $A$ pero no al $B$ ¿ cómo se puede modelar matemáticamente toda la información que es posible de extraer solo de mediciones locales en $A$? Aquí se usa el operador densidad reducido; este se define como
 \begin{equation}
 \rho_{A} \equiv \Tr_{B}(\rho_{AB}).
 \end{equation}
-La traza es tomada únicamente en una base del espacio de Hilbert $\mathcal{H}_{B}$ del sistema $B$. Esta operación puede ser interpretada como si se estuviese promediando sobre todos los grados de libertad del sistema que no se tiene acceso, esta operación se le llama la traza parcial sobre $B$. Para ver la utilidad que tiene este operador se verá un ejemplo sencillo, este ejemplo se puede generalizar fácilmente.
+La traza es tomada únicamente en una base del espacio de Hilbert $\mathcal{H}_{B}$ del sistema $B$. Esta operación puede ser interpretada como si se estuviese promediando sobre todos los grados de libertad del sistema al que no se tiene acceso. A esta operación se le llama la traza parcial sobre $B$. Para ver la utilidad que tiene este operador se verá un ejemplo sencillo. Este ejemplo se puede generalizar fácilmente.
 Se tiene el estado de algún sistema compuesto por $A$ y $B$ dado por la función de onda $\Phi$:
 \begin{equation}
-\Phi = \frac{1}{\sqrt{2}} (\ket{a_{1}}\ket{b_{1}}+\ket{a_{2}}\ket{b_{2}}),
+\Phi = \frac{1}{\sqrt{2}} (\ket{a_{1}}\ket{b_{1}}+\ket{a_{2}}\ket{b_{2}});
 \end{equation}
 este es un típico ejemplo de una función de onda donde los subsistemas $A$ y $B$ están entrelazados \cite{SusskindQuantum}. Los estados $\ket{a_{1}}$, $\ket{b_{1}}$,$\ket{a_{2}}$, $\ket{b_{2}}$ no son necesariamente ortogonales. La matriz de densidad es claramente:
 \begin{equation}
@@ -99,9 +99,10 @@ Con esto y siguiendo el ejemplo anterior se puede demostrar que  \cite{Decoheren
 \end{equation}
 Entonces si se conoce el estado del sistema total y solo se puede hacer mediciones en un subsistema aún así gracias al formalismo del operador densidad se puede encontrar las estadísticas de las mediciones. Es importante aclarar que aunque se tenga un operador de densidad reducido para el sistema $A$ no significa que se haya descrito el sistema de manera individual. Esto es solo una herramienta matemática para poder sacar las estadísticas de las mediciones. Se vio el poder que tiene el formalismo del operador densidad pero aún se puede construir más en base a este. La siguiente sección espera formular una pregunta que se responderá usando las herramientas cuánticas mostradas hasta ahora.
 \subsection{Distancia de Traza}
-Los métodos usados, generalmente en física, son impulsados por preguntas con única respuesta. Ahora se encuentra con la pregunta ¿ qué tan cercanos están dos estado cuánticos? La respuesta a esta pregunta puede ser dada por varias definiciones de distancias, pero la que se usará acá será la distancia de traza.
+
+Los métodos mostrados anteriormente por lo general tienen una herramienta única al momento de solucionar el problema. Ahora se encuentra con la pregunta ¿ qué tan cercanos están dos estado cuánticos? La respuesta a esta pregunta puede ser dada por varias definiciones de distancias, pero la que se usará acá será la distancia de traza.
 \\
-Una pregunta relacionada con la cercanía de los estados cuánticos es la de ¿ qué quiere decir que dos informaciones sean similares? En la teoría clásica de la información esto recae en poder diferenciar dos distribuciones de probabilidad. Pero como ya se había advertido esta respuesta no es única, existen diferentes medidas como la fidelidad o la distancia de Kullback–Leibler. Dependiendo del fin es deseable una a las otras.
+Una pregunta relacionada con la cercanía de los estados cuánticos es ¿ qué quiere decir que dos mensajes tenga la misma información? En la teoría clásica de la información esto recae en poder diferenciar dos distribuciones de probabilidad. Pero como ya se había advertido esta respuesta no es única, existen diferentes medidas como la fidelidad o la distancia de Kullback–Leibler. Dependiendo del fin es deseable una a las otras.
 \\
 Se tienen dos distribuciones de probabilidad $\{ p_{x} \}$ y $\{ q_{x} \}$. La distancia de  traza clásica viene dada por:
 \begin{equation}
@@ -111,17 +112,18 @@ También se conoce como la distancia $L_{1}$ o la distancia de Kolmogorov. Esta 
 \begin{equation}
 D(p_{x},q_{x})= \max_{S} \big| p(S)-q(S) \big| = \max_{S} \Bigg| \sum_{x \in S}p_{x}-\sum_{x \in S}q_{x} \Bigg|.
 \end{equation}
+\\
 Donde la maximización es sobre todos los subconjuntos $S$ de los indices $\{ x \}$ \cite{NielsenInformation}. Aunque estas igualdades puedan ser complicadas para hacer cálculos se conseguir una intuición de estas ecuaciones. Entonces la distancia de traza es la maximización  de las diferencias entre la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{p_{x} \}$ y la probabilidad que el evento $S$ ocurra de acuerdo a la distribución $\{q_{x} \}$. El evento $S$ se podría decir que es el evento óptimo para examinar las diferencias entre $\{p_{x} \}$ y $\{q_{x} \}$.
 \\
 Pasando a un contexto cuántico la distancia de traza entre dos estados cuánticos $\rho$ y $\sigma$ es,
 \begin{equation}
 D(\rho,\sigma) \equiv \frac{1}{2} \Tr |\rho-\sigma|.	
 \end{equation}
-
+\\
 donde $|M| \equiv \sqrt{M^{\dagger}M}$ con la raíz positiva. Esta definición generaliza la distancia de traza clásica, si $\rho$ y $\sigma$ conmutan son diagonales en una misma base luego
 \begin{align*}
 D(\rho,\sigma) &= \frac{1}{2} \Tr |\sum_{i} (r_{i}-s_{i})\ket{i}\bra{i}|\\
-\quad &= D(r_{i},s_{i}).
+\quad &= D(r_{i},s_{i}),
 \end{align*}
 donde $r_{i}$ y $s_{i}$ son los elementos diagonales de $\rho$ y $\sigma$ respectivamente. Al igual que con la distancia de traza clásica se le puede dar un sentido más físico a esta definición. El siguiente teorema construirá la conexión \cite{NielsenInformation}.
 \begin{theorem}
@@ -156,17 +158,17 @@ D(p_{m},q_{m}) &\leq \frac{1}{2} \sum_{m} \Tr(E_{m}|\rho-\sigma|)\\
 se usó la relación de completitud de los elementos de POVM. Por otro lado si se escogen medidas donde los elementos POVM incluyen proyectores sobre el soporte de $Q$ y $S$, se ve que existen mediciones que dan distribuciones de probabilidad tales que $D(p_{m},q_{m})= D(\rho,\sigma)$.
 
 \end{proof}
-
 Entonces se puede decir que si dos operadores de densidad son cercanos, según la distancia de traza, cualquier medición hecha en este estado cuántico dará una distribución de probabilidad la cual estará cercana, en el sentido clásico de la distancia de traza. También se puede ver como el límite superior a la distancia de traza entre las distribuciones de probabilidad que se encuentran al medir esos estados cuánticos.
 \\
-La distancia de traza es la forma en la que se dará un sentido de lejanía entre estados cuánticos. Es una herramienta que permitirá decir que tan lejos un estado está lejos de ser un estado canónico; punto fundamental 	en el artículo de Popescu et al para especificar, que casi todos los estados son cercanos al estado canónico. Ya con las herramientas en su lugar se pasa en la siguiente sección a plantear la situación de interés.
+La distancia de traza es la forma en la que se dará un sentido de lejanía entre estados cuánticos. Es una herramienta que permitirá decir qué tan lejos un estado está lejos de ser un estado canónico, punto fundamental 	en el artículo de Popescu \textit{et al} para especificar, que casi todos los estados son cercanos al estado canónico. Ya con las herramientas en su lugar se pasa en la siguiente sección a plantear la situación de interés.
 
 \section{Definiciones}
-Como lo que se estudiará es un sistema cuántico aislado compuesto por subsistema y ambiente. Es preciso dar la notación que se usará a lo largo de este capítulo y el siguiente, para no tener ambigüedades. Entonces, se tomará una pausa,en esta sección, para dejar la notación clara.
+
+Como lo que se estudiará es un sistema cuántico aislado compuesto por subsistema y ambiente es preciso la notación que se usará a lo largo de este capítulo y el siguiente, para no tener ambigüedades. Entonces, se tomará una pausa,en esta sección, para dejar la notación clara.
 \\
-Al tener un sistema cuántico grande descrito por un espacio de Hilbert $\mathcal{H}$ este se llamará el universo. El universo, puede ser dividido en dos subsistemas. El primero se llamará el sistema $S$  y el segundo se le dará el nombre de ambiente $E$, se supone que la dimensión del ambiente es mucho mayor que la del sistema. En ocasiones $S$ se le dirá subsistema y $E$ se le podrá llamar baño estos nombres son equivalentes a los anteriores. Esto lleva a descomponer $\mathcal{H}$ como $\mathcal{H}=\mathcal{H}_{S} \otimes \mathcal{H}_{E}$, con dimensiones $d_{S}$ y $d_{E}$ respectivamente. 
+Al tener un sistema cuántico grande descrito por un espacio de Hilbert $\mathcal{H}$, a este se llamará el universo. El universo, puede ser dividido en dos subsistemas. El primero se llamará el sistema $S$  y el segundo se le dará el nombre de ambiente $E$, y se supone que la dimensión del ambiente es mucho mayor que la del sistema. En ocasiones a $S$ se le dirá subsistema y $E$ se le podrá llamar baño estos nombres son equivalentes a los anteriores. Esto lleva a descomponer $\mathcal{H}$ como $\mathcal{H}=\mathcal{H}_{S} \otimes \mathcal{H}_{E}$, con dimensiones $d_{S}$ y $d_{E}$ respectivamente. Si al universo se le pone una restricción global, el espacio de Hilbert en el que se encuentra sería $\mathcal{H}_{R} \subseteq \mathcal{H}$.
 \\
-Para evitar espacios de dimensión infinita se introduce un tope para altas energías y así mantener la dimensión finita. Además, se eliminarían términos de interacción del Hamiltoniano que lo lleven a subespacios no permitidos.  No se ha especificado nada sobre el subsistema o el ambiente (Excepto las proporciones de sus dimensiones)  esto permite decir que cualquier descomposición del espacio de Hilbert especifica un subsistema y un baño. El subsistema $S$ puede ser cualquier cosa desde una partícula hasta el conjunto de partículas distribuidas por todo el baño.
+Para evitar espacios de dimensión infinita se introduce un tope para altas energías y así mantener la dimensión finita. Además, se eliminarían términos de interacción del Hamiltoniano que lo lleven a subespacios no permitidos.  No se ha especificado nada sobre el subsistema o el ambiente (Excepto las proporciones de sus dimensiones). Esto permite decir que cualquier descomposición del espacio de Hilbert especifica un subsistema y un baño. El subsistema $S$ puede ser cualquier cosa desde una partícula hasta el conjunto de partículas distribuidas por todo el baño.
 \\
 El estado global puro del universo se escribirá como $\ket{\phi(t)}$ en un tiempo $t$ y su matriz de densidad se escribirá $\rho(t)=\ket{\phi(t)}\bra{\phi(t)}$. El estado del subsistema se encontrará al hacer una traza parcial del ambiente sobre el estado del universo $\rho_{S}= \Tr _{B} \rho(t)$; similarmente el estado del ambiente está dado por $\rho_{B}=\Tr _{S} \rho(t)$ \cite{WildeInformation}. 
 \\
@@ -178,37 +180,37 @@ de manera análoga $\omega_{S}$ y $\omega_{B}$ son el promedio temporal para el 
 \\
 Este notación se usará de aquí en adelante. Es una notación usada generalmente por la literatura pero hay detalles que es mejor especificar.
 \section{Idea Conceptual}
-En esta parte se dará la idea central del artículo de Popescu et al. Para empezar este nuevo tratamiento de los fundamentos de la mecánica estadística, se supone que se tiene un sistema cuántico aislado, el universo. Separando el universo en dos subsistemas, el subsistema y el ambiente, y dando como condición que el ambiente sea más grande que el subsistema. Este universo está descrito por un estado cuántico puro que obedece una restricción global, arbitraria por el momento. Se plantea, que el sistema alcanza el equilibrio térmico por medio de la interacción mutua a consecuencia del entrelazamiento del sistema y el ambiente  \cite{Popescu2006}. Lo que se presentará más adelante es una definición más rigurosa que ayudará a dar cotas para la expresión "el ambiente es más grande".
+En esta parte se dará la idea central del artículo de Popescu \textit{et al}. Para empezar este nuevo tratamiento de los fundamentos de la mecánica estadística, se supone que se tiene un sistema cuántico aislado, el universo. Separando el universo en dos subsistemas, el subsistema y el ambiente, y dando como condición que el ambiente sea más grande que el subsistema. Este universo está descrito por un estado cuántico puro que obedece una restricción global, arbitraria por el momento. Se plantea, que el sistema alcanza el equilibrio térmico por medio de la interacción mutua a consecuencia del entrelazamiento del sistema y el ambiente  \cite{Popescu2006}. Lo que se presentará más adelante es una definición más rigurosa que ayudará a dar cotas para la expresión ``el ambiente es más grande".
 \\
 Esta idea permite formular un principio canónico general: el sistema estará termalizado para casi todos los estados puros del universo. Esto es soportado por límites cuantitativos. La restricción que se impone no es una específica, esto generaliza los resultados tradicionales dados en la literatura donde se toma por restricción la energía \cite{KardarStat}.
 \\
-Ya poniendo lo dicho en un contexto un poco más matemático y siguiendo a Popescu et al, el universo asilado y bastante grande tiene dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho más grande que la del sistema. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica esto puede ponerse como restricciones en el espacio de Hilbert, restricción de los estados posibles:
+Ya poniendo lo dicho en un contexto un poco más matemático y siguiendo a Popescu \textit{et al}, el universo asilado y bastante grande tiene dos partes el sistema $S$ y el ambiente $E$. La dimensión del ambiente es mucho más grande que la del sistema. Además se le impone una restricción global al universo llamada $R$. Desde la mecánica cuántica esto puede ponerse como restricciones en el espacio de Hilbert, restricción de los estados posibles:
 
 \begin{equation}
-\mathcal{H}_{R}\subseteq \mathcal{H}_{S}\otimes \mathcal{H}_{E}.
+\mathcal{H}_{R}\subseteq \mathcal{H}_{S}\otimes \mathcal{H}_{E},
 \end{equation}
-
-Donde $\mathcal{H}_{S}$ y $\mathcal{H}_{E}$ son los espacios de Hilbert del sistema y el ambiente con dimension $d_{S}$  y $d_{E}$ respectivamente. Es bueno recalcar que $R$ es una restricción arbitraria generalmente se toma como la energía del universo. Ahora se define el estado equiprobable del universo bajo $R$ como:
+\\
+donde $\mathcal{H}_{S}$ y $\mathcal{H}_{E}$ son los espacios de Hilbert del sistema y el ambiente con dimension $d_{S}$  y $d_{E}$ respectivamente. Es bueno recalcar que $R$ es una restricción arbitraria generalmente se toma como la energía del universo. Ahora se define el estado equiprobable del universo bajo $R$ como:
 
 \begin{equation}
 \mathcal{E}_{R} = \frac{1}{d_{R}} \mathbbm{1}_{R},
 \end{equation}
 
-Donde $\mathbbm{1}_{R}$ es el operador identidad (proyección) sobre el espacio de Hilbert  $\mathcal{H}_{R}$  que tiene dimensión $d_{R}$. Esto se relaciona con el principio de probabilidades iguales porque este es el estado máximamente mezclado en $\mathcal{H}_{R}$  \cite{SakuraiQuantum} por ser así todos los estados bajo la restricción de $R$ tienen la misma probabilidad de salir.
+Donde $\mathbbm{1}_{R}$ es el operador identidad (proyección) sobre el espacio de Hilbert  $\mathcal{H}_{R}$  que tiene dimensión $d_{R}$. Esto se relaciona con el principio de probabilidades iguales porque este es el estado máximamente mezclado en $\mathcal{H}_{R}$  \cite{SakuraiQuantum}. Por ser así todos los estados bajo la restricción de $R$ tienen la misma probabilidad de ser el estado en el que se encuentre el sistema.
 \\
-Definimos $\Omega_{S}$ como el estado canónico que está restringido por $R$ cuando el universo se encuentra en el estado $\mathcal{E}_{R}$. Esto significa que si se hace una traza parcial del ambiente al universo da como resultado el estado canónico:
+Definimos $\Omega_{S}$ como el estado canónico que está restringido por $R$ cuando el universo se encuentra en el estado $\mathcal{E}_{R}$. Esto significa que si se hace una traza parcial del ambiente al universo se obtiene un estado definido como el estado canónico:
 
 \begin{equation}
  \Omega_{S} =\Tr_{E} \mathcal{E}_{R}.
 \end{equation}
 \\
-Para lo que sigue se hace un supuesto importante  y es que el universo está en un estado puro $\ket{\phi}$ y no en un estado mixto $\mathcal{E}_{R}$, esto quiere decir que se conoce todo lo que es permitido por la mecánica cuántica del universo. Si estuviese en un estado mixto significaría que nosotros no tenemos toda la información que se pudiese tener \cite{SakuraiQuantum}. Ahora lo que se quiere ver es que  pese a que el estado del universo es puro el estado reducido del sistema
+Para lo que sigue se hace un supuesto importante  y es que el universo está en un estado puro $\ket{\phi}$ y no en un estado mixto $\mathcal{E}_{R}$, esto quiere decir que se conoce todo lo que es permitido por la mecánica cuántica del universo. Si estuviese en un estado mixto significaría que nosotros no tenemos toda la información que se pudiese tener \cite{SakuraiQuantum}. Ahora lo que se quiere ver es que  pese a que el estado del universo es puro, el estado reducido del sistema
 
 \begin{equation}
 \rho_{S}=\Tr_{E}\ket{\phi}\bra{\phi},
 \end{equation}
 
-se acerca al estado canónico para la gran mayoría de los casos es decir:
+se acerca al estado canónico para la gran mayoría de los casos; es decir:
 
 \begin{equation}
 \rho_{S} \approx \Omega_{S}.
@@ -218,7 +220,7 @@ Por consiguiente para casi todos los estados puros del universo $\ket{\phi} \in 
 
 \section{Formulación Matemática}
 
-Hasta ahora no se han entrado en los detalles ni en qué significa bastante pequeño o bastante grandes, ni tampoco se ha demostrado el principio general canónico. En esta sección se orientará en los detalles matemáticos, las herramientas usadas y la demostración de los teoremas que Popescu et al siguieron. En la siguiente sección se dará una perspectiva más física a lo hecho aquí.
+Hasta ahora no se han entrado en los detalles ni en qué significa bastante pequeño o bastante grandes, ni tampoco se ha demostrado el principio general canónico. En esta sección se replicarán los detalles matemáticos, se mostrarán las herramientas usadas y la demostración de los teoremas que Popescu \textit{et al} siguieron. En la siguiente sección se dará una perspectiva más física a lo hecho aquí.
 \\
 Para empezar se debe decir cuál será la distancia que usaremos para darle un sentido de cercanía a los estados $\rho_{S}$ y $\Omega_{S}$. La distancia a usar es una bastante conocida en la teoría cuántica de la información, la distancia de traza \cite{NielsenInformation}. Esta se define como:
 \begin{equation}
@@ -252,16 +254,18 @@ Donde
 
 y las constantes son: $ C=(18 \pi^{3})^{-1}, d_{R} = \dim \mathcal{H}_{R}, d_{S} = \dim \mathcal{H}_{S} $. $d_{E}^{eff}$ es la medida efectiva del tamaño del ambiente,
 \begin{equation}
-d_{E}^{eff}= \frac{1}{\Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}}.
+d_{E}^{eff}= \frac{1}{\Tr \Omega_{E}^{2}} \ge \frac{d_{R}}{d_{S}},
 \end{equation}
-
-Donde $\Omega_{E}= \Tr_{S} \mathcal{E}_{R}$. Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
+\\
+donde $\Omega_{E}= \Tr_{S} \mathcal{E}_{R}$.\\
 \end{theorem}
-Esta es la formulación matemática de la perspectiva de Popescu et al. El teorema anterior sintetiza, que la probabilidad de encontrar estados del subsistema que sean lejanos del estado canónico decae de manera exponencial con el tamaño del sistema. Por lo tanto el teorema formaliza qué significa que el ambiente deba ser muy grande. Además permite decir con seguridad que los estados que están lejanos del canónico son extremadamente raros de encontrar, no son genéricos.
+
+Ambas cantidades $\eta $ y $\eta'$ serán pequeñas esto implica que el estado estará cercano al estado canónico con alta probabilidad cuando la dimensión efectiva del ambiente sea mucho más grande que la del sistema ( es decir $d_{E}^{eff} >> d_{S}$) y  $d_{R}\epsilon^2>>1>>\epsilon$. Esta última condición se puede asegurar cuando el espacio accesible total es grande ( es decir $d_{R}>>1$), escogiendo $\epsilon=d_{R}^{-\frac{1}{3}}$.\\
+Esta es la formulación matemática de la perspectiva de Popescu \textit{et al}. El teorema anterior dice, que la probabilidad de encontrar estados del subsistema que sean lejanos del estado canónico decae de manera exponencial con el tamaño del sistema. Por lo tanto el teorema formaliza lo que significa que el ambiente deba ser muy grande. Además permite decir con seguridad que los estados que están lejanos del canónico son extremadamente raros de encontrar, no son genéricos.
 \\
 
 \subsection{Lema de Levy} \label{ levy}
-Para poder demostrar el teorema \ref{teorema principal} se puede hacer de dos formas \cite{Popescu2006}, pero se seguirá la que usa el lema de Levy. Este lema dice, que al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente  \cite{Lema}:
+Para poder demostrar el teorema \ref{teorema principal} se puede hacer de dos formas \cite{Popescu2006}, pero se seguirá la que usa el lema de Levy. Este lema dice, sea $f$ una función definida en la hiperesfera y al seleccionar un punto $\phi$ aleatoriamente de una hiperesfera de dimensión alta y que $f(\phi)$ no cambie muy rápido, entonces $f(\phi) \approx \langle f \rangle $ con alta probabilidad, Más exactamente  \cite{Lema}:
 \\
 \begin{lemma} \label{lemma de levy}
 
@@ -269,7 +273,7 @@ Dada una función $f: \mathbb{S}^d \to \mathbb{R} $ definida en la hiperesfera d
 \begin{equation}
 Pr_{\phi} \{ |f(\phi)- \langle f \rangle| \geq \epsilon \} \leq 2 \exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})
 \end{equation}
-donde $\eta$ es la constante de Lipschitz de $f$, dado por $\eta= \sup|\nabla f|$ y $C=(18 \pi^3)^{-1} $.\\
+donde $\eta$ es la constante de Lipschitz de $f$, dada por $\eta= \sup|\nabla f|$ y $C=(18 \pi^3)^{-1} $.\\
 
 \end{lemma}
 
@@ -279,7 +283,7 @@ La definición de continuidad dad en el cálculo básico es:
 
 \theoremstyle{definition}
 \begin{definition}{continuidad}
-Sea $f: I \to \mathbb{R}$ donde $I$ puede ser un intervalo abierto $(a,b)$ o uno cerrado $[a,b]$, además $C \in I$. Se dice que $f$ es continua en $C$ si y solo si para todo $ \epsilon >0 $  existe un $ \delta >0 $ tal que  $ |x-c|\longrightarrow |f(x)-f(c)|< \epsilon $.
+Sea $f: I \to \mathbb{R}$ donde $I$ puede ser un intervalo abierto $(a,b)$ o uno cerrado $[a,b]$, además $C \in I$. Se dice que $f$ es continua en $C$ si y solo si para todo $ \epsilon >0 $  existe un $ \delta >0 $ tal que si $ |x-c| < \delta \longrightarrow |f(x)-f(c)|< \epsilon $.
 \end{definition} 
 
 La  definición anterior es la usada por lo general pero hay sutilezas en este concepto que no siempre son mostradas; como por ejemplo que $\delta$ depende de donde se ponga el  punto $C$, esto se ve claramente en la siguiente función: $f: (0,1) \to \mathbb{R}$, $f(x)=\frac{1}{x} $ al $C$ estar más lejos del $0$ permite un $\delta$ más grande pero al acercarse al $0$ el $\delta$ debe ser más pequeño. La continuidad de Lipschitz permite que se defina un $\delta$ constante sin importar donde se encuentre el $C$. Para resolver este detalle se motiva la definicón de Lipschitz continuo. Se es Lipschitz continuo con constante $\eta$ si
@@ -288,7 +292,7 @@ La  definición anterior es la usada por lo general pero hay sutilezas en este c
 |f(x) -f(y)| \leq \eta |x-y|,
 \end{equation}
 
-esto permite decir que  $|f(x)-f(y)| < \epsilon $ entonces $\delta < \frac{\epsilon}{\eta} $. Ahora si f es derivable y $\nabla f$ es acotado, para $x$ y $y$ dados existe $\xi$ entre ellos tal que:
+esto permite decir que  $|f(x)-f(y)| < \epsilon $ entonces $\delta < \frac{\epsilon}{\eta} $. Ahora si f es derivable y $\nabla f$ es acotado, para $x$, $y$ $ \in R$ existe $\xi$ que se encuentre dentro del intervalo $(x,y)$; tal que:
 
 
 \begin{align}
@@ -299,7 +303,7 @@ esto permite decir que  $|f(x)-f(y)| < \epsilon $ entonces $\delta < \frac{\epsi
 
 como $\nabla f$ es acotado se tiene que $\sup |\nabla f(\xi)|=\eta$.\\
 
-Gracias a la normalización, los estados puros en $\mathcal{H}_{R}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$ \cite{SakuraiQuantum}. Luego se puede aplicar \ref{lemma de levy} a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H}_{R}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad. Para poder usar \ref{lemma de levy} primero  debe encontrarse la constante de Lipschitz ya teniendo una idea de qué es ser Lipschitz continuo se encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$ que es la función que nos interesa para el problema físico. Entonces para poder lograr esto se procederá de la siguiente forma se definen dos estados reducidos $\rho_{1}= \Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}= \Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, entonces
+Gracias a la normalización, los estados puros en $\mathcal{H}_{R}$ se pueden representar como puntos sobre la superficie de una hiperesfera de dimensión $2d_{R}-1$, o sea  $\mathbb{S}^{2d_{R}-1}$ \cite{SakuraiQuantum}. Luego se puede aplicar \ref{lemma de levy} a estado cuánticos $\phi$ aleatoriamente seleccionados. Para los estados seleccionados aleatoriamente $\phi \in \mathcal{H}_{R}$, se desea mostrar que $\norm{\rho_{S}- \Omega_{S}}_{1} \approx 0$ con alta probabilidad. Para poder usar \ref{lemma de levy} primero  debe encontrarse la constante de Lipschitz ya teniendo una idea de qué es ser Lipschitz continuo se encontrará una cota para la constante $\eta$ de la función $f(\phi)=\norm{\rho_{S}-\Omega_{S}}_{1}$ que es la función que nos interesa para el problema físico. Entonces para poder lograr esto se procederá de la siguiente forma: se definen dos estados reducidos $\rho_{1}= \Tr_{E} (\ket{\phi_{1}} \bra{\phi_{1}})$ y $\rho_{2}= \Tr_{E}(\ket{\phi_{2}} \bra{\phi_{2}})$, entonces
 
 \begin{equation}
 |f(\phi_{1})-f(\phi_{2})|^2= |\norm{\rho_{1}-\Omega}_{1} - \norm{\rho_{2}-\Omega}_{1}|^2.
@@ -333,13 +337,13 @@ Por lo tanto se tiene hasta ahora:
 \norm{\rho_{1}- \rho_{2} }_{1}^2 \le \norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2},
 \end{equation}
 
-Usando la hermiticidad de $\rho$ y el teorema espectral se puede descomponer $\rho= UDU^{\dag}$ donde $U$ es un operador unitario y $D$ es diagonal. Junto con las propiedades de la traza $\Tr(\sqrt{UD^2U^{\dag}})= Tr(U\sqrt{D^2}U^{\dag})= \Tr(\sqrt{D^{2}})$ se llega a
+Usando la hermiticidad de $\rho$ y el teorema espectral se puede descomponer $\rho= UDU^{\dag}$ donde $U$ es un operador unitario y $D$ es diagonal. Junto con las propiedades de la traza $\Tr(\sqrt{UD^2U^{\dag}})= Tr(U\sqrt{D^2}U^{\dag})= \Tr(\sqrt{D^{2}})$ se llega a que
 \begin{equation}
-\norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2} = 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2})
+\norm{\ket{\phi_{1}} \bra{\phi_{1}}-\ket{\phi_{2}} \bra{\phi_{2}}}_{1}^{2} = 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2});
 \end{equation}
-entonces
+entonces,
 \begin{equation}
- 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2}) \le 4|\ket{\phi}-\ket{\phi}|^2.
+ 4(1-|\bra{\phi_{1}} \ket{\phi_{2}}|^{2}) \le 4|\ket{\phi_{1}}-\ket{\phi_{2}}|^2.
 \end{equation}
 
 Uniendo todos los pasos anteriores
@@ -357,13 +361,13 @@ Con esto se muestra que $\eta \le 2$.
 Visto que el lema de Levy se puede usar para estados cuánticos, el trabajo más pesado ya sido hecho por este lema. Ahora se debe acoplar con la idea del principio general canónico, lo cual se seguirá haciendo en la próxima subsección.
 
 \subsection{Demonstración del Principio General Canónico}
-En esta parte se dará una demostración matemática explícita del principio general canónico usando el lema de Levy se entrará en los detalles matemáticos de usar este lema y las cotas adicionales que se necesitan para poder llegar al teorema \ref{teorema principal}. Habiendo dado una cota para $\eta$ ahora se puede usar por completo el lema \ref{lemma de levy} para la función $f(\phi)=\norm{\rho_{S} -\Omega_{S}}_{1}$ recordando que se reemplazará $d$ en el lema por $d=2d_{R}-1$.Tomando la parte derecha de la desigualdad de \ref{lemma de levy}  y sustituyendo la dimensión se tiene:
+En esta parte se dará una demostración matemática explícita del principio general canónico usando el lema de Levy. Se entrará en los detalles matemáticos de usar este lema y las cotas adicionales que se necesitan para poder llegar al teorema \ref{teorema principal}. Habiendo dado una cota para $\eta$ ahora se puede usar por completo el lema \ref{lemma de levy} para la función $f(\phi)=\norm{\rho_{S} -\Omega_{S}}_{1}$ recordando que se reemplazará $d$ en el lema por $d=2d_{R}-1$.Tomando la parte derecha de la desigualdad de \ref{lemma de levy}  y sustituyendo la dimensión se tiene:
 
 \begin{equation}
- 2 \exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})= 2 \exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2})
+ 2 \exp(-\frac{2C(d+1)\epsilon^2}{\eta^2})= 2 \exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2}).
 \end{equation}
 
-como $\eta \le 2$ entonces
+Como $\eta \le 2$, entonces
 
 \begin{equation} \label{desigualdad}
 2\exp(-Cd_{R}\epsilon^2) \ge 2 \exp(-\frac{4Cd_{R}\epsilon^2}{\eta^2}) \ge \Pr_{\phi}[|f(\phi)- \langle f \rangle| \ge \epsilon ].
@@ -376,13 +380,13 @@ Mirando más atentamente  $|f(\phi)- \langle f \rangle| \ge \epsilon $, como la 
 \norm{\rho_{S} -\Omega_{S}}_{1}- \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi} \ge \epsilon.
 \end{equation}
 
-Nombrando a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi} $ y $\mu'=2 \exp(-Cd_{R}\epsilon^2)$ esto permite organizar el lema de levy así:
+Definiendo a $\mu = \epsilon + \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi} $ y $\mu'=2 \exp(-Cd_{R}\epsilon^2)$, esto permite organizar el lema de Levy así:
 
 \begin{equation} \label{eq.3}
 \Pr_{\phi}[\norm{\rho_{S} -\Omega_{S}}_{1} \ge \mu] \le \mu'.
 \end{equation}
 
-Debido a que $d_{R}>>1$ Se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$. Para llegar a \ref{teorema principal} falta acotar $\mu$ con las dimensiones de los espacios conocidos, se impondrá una cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$; lo primero  para lograr esta empresa es acotar este promedio con trazas del estado del sistema  y luego se calcularán estas trazas para poder dejar la cota en términos de las dimensiones del sistema y la dimensión efectiva del ambiente. Se procede a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$ esto se hará para tener una facilidad de manejo ya que la norma de Hilbert-Schmidt ($\norm{.}_{2}$) es más sencilla para trabajar que la norma de traza y luego se procederá con los planeado.
+Debido a que $d_{R}>>1$, se asegura que $\epsilon$ y $\mu'$ son cantidades pequeñas al escoger $\epsilon=d_{R}^{-1/3}$. Para llegar a \ref{teorema principal} falta acotar $\mu$ con las dimensiones de los espacios conocidos. Se impondrá una cota a $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$; lo primero  para lograr esta empresa es acotar este promedio con trazas del estado del sistema  y luego se calcularán estas trazas para poder dejar la cota en términos de las dimensiones del sistema y la dimensión efectiva del ambiente. Se procede a encontrar la relación entre $\norm{\rho_{S} -\Omega_{S}}_{1}$ y $\norm{\rho_{S} -\Omega_{S}}_{2}$. Esto se hará para tener una facilidad de manejo ya que la norma de Hilbert-Schmidt ($\norm{.}_{2}$) es más sencilla para trabajar que la norma de traza y luego se procederá con los planeado.
 \\
 La relación entre estas dos normas se puede ver desde el manejo de matrices. Sea $M$ una matriz $n \times n$ se sabe que si $M$ tiene $\lambda_{i}$ valores propios entonces:
 \begin{equation}
@@ -416,13 +420,13 @@ Gracias a lo anterior la relación entre normas es:
 \end{equation}
 Esta relación se usará un poco más adelante.\\
 
-Volviendo al cálculo de $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$ se acotará la norma de Hilbert-Schmidt y con la relación entre normas se dará la desigualdad que limite el promedio de la norma de traza. Para empezar se recuerda que $ \langle f^{2} \rangle-\langle f \rangle^{2} \ge 0$ donde $\langle f \rangle = \int_{\mathcal{M}} f(x)p(x)dx$. Tomando a $f$ como $f= \norm{\rho_{S}-\Omega_{S}}_{2}$ entones
+Volviendo al cálculo de $\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle_{\phi}$ se acotará la norma de Hilbert-Schmidt y con la relación entre normas se dará la desigualdad que limite el promedio de la norma de traza. Para empezar se recuerda que $ \langle f^{2} \rangle-\langle f \rangle^{2} \ge 0$ donde $\langle f \rangle = \int_{\mathcal{M}} f(x)p(x)dx$. Tomando a $f$ como $f= \norm{\rho_{S}-\Omega_{S}}_{2}$ entonces 
 
 \begin{equation}
-\langle \norm{ \rho_{S}-\Omega_{S} }_{2} \rangle \le \sqrt{ \langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}
+\langle \norm{ \rho_{S}-\Omega_{S} }_{2} \rangle \le \sqrt{ \langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}.
 \end{equation}
 
-acordándose que este promedio es tomado a los estados $\ket{\phi}$, se omitirá por ahora el subíndice indicando este promedio, esto hace que $\Omega_{S}$ se tome constante. Por hermiticidad de $\rho_{S}-\Omega_{S}$ 
+Acordándose que este promedio es tomado con los estados $\ket{\phi}$, se omitirá por ahora el subíndice indicando este promedio; esto hace que $\Omega_{S}$ se tome constante. Por hermiticidad de $\rho_{S}-\Omega_{S}$ 
 
 \begin{equation}
 \sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle} = \sqrt{\langle \Tr(\rho_{S}-\Omega_{S})^{2} \rangle}
@@ -438,18 +442,17 @@ porque $\langle \rho_{S} \rangle=\Omega_{S}$. Luego se llega a
 \langle \norm{ \rho_{S}-\Omega_{S} }_{2}\rangle \le \sqrt{\langle \norm{ \rho_{S}-\Omega_{S} }_{2}^{2}\rangle}= \sqrt{\langle \Tr(\rho_{S})^{2}\rangle - \Tr(\Omega_{S}^{2}) }.
 \end{equation}
 
-Por la relación entre la norma de traza y la norma de Hilbert-Schmidt se concluye lo que se quería
+Por la relación entre la norma de traza y la norma de Hilbert-Schmidt, se concluye lo que se quería; es decir,
 
 \begin{equation}
 \langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle \le \sqrt{d_{S}( \langle \Tr(\rho_{S})^{2}\rangle -\Tr(\Omega_{S}^{2}) ) }.
 \end{equation}
 \\
-Aunque ya se ha acotado $\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle$ se quiere relacionar esta cota con las dimensiones del sistema para esto se procederá a demostrar la desigualdad
+Aunque ya se ha acotado $\langle \norm{ \rho_{S}-\Omega_{S} }_{1}\rangle$ se quiere relacionar esta cota con las dimensiones del sistema. Para esto se procederá a demostrar la desigualdad
 \begin{equation}
 \langle \Tr \rho_{S}^{2} \rangle \le \Tr \langle \rho_{S} \rangle^{2} +\Tr \langle \rho_E \rangle^{2},
 \end{equation}
-recordando que el promedio es tomado con respecto a los estados $\ket{\phi}$, los métodos usados para encontrar esta desigualdad son usados también en destilación de entrelazamiento aleatoria y codificación de canal cuántico aleatorio \cite{QuantumDistilation}. Para poder hacer este cálculo se introduce una segunda copia del espacio de Hilbert. Ahora el problema se trabaja en $\mathcal{H}_{R} \otimes \mathcal{H}_{R'}$, donde $\mathcal{H}_{R'} \subseteq \mathcal{H}_{S'} \otimes \mathcal{H}_{E'}$.
-Percatándose de lo siguiente
+recordando que el promedio es tomado con respecto a los estados $\ket{\phi}$, los métodos usados para encontrar esta desigualdad son usados también en destilación de entrelazamiento aleatorio y codificación de canal cuántico aleatorio \cite{QuantumDistilation}. Para poder hacer este cálculo se introduce una segunda copia del espacio de Hilbert. Ahora el problema se trabaja en $\mathcal{H}_{R} \otimes \mathcal{H}_{R'}$, donde $\mathcal{H}_{R'} \subseteq \mathcal{H}_{S'} \otimes \mathcal{H}_{E'}$, donde $\mathcal{H}_{S'}$ y $\mathcal{H}_{E'}$ son los espacios de la copia del subsistema y el ambiente respectivamente. Percatándose de lo siguiente
 
 \begin{equation}
 \Tr_{S} (\rho_{S})^2 = \sum_{k} (\rho_{kk})^{2} = \sum_{k,l,k',l'}(\rho_{kl})(\rho_{k'l'}) \bra{kk'}\ket{ll'}\bra{l'l'}\ket{kk'}.
@@ -483,29 +486,27 @@ la parte antisimétrica siempre debe ser 0 entonces $\beta=0$. Por la normalizac
 \begin{equation}
 V= \langle \ket{\phi} \bra{\phi} \otimes \ket{\phi} \bra{\phi} \rangle = \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim}.
 \end{equation}
-luego se tiene que 
+Luego se tiene que 
 \begin{equation}
-\langle \Tr (\rho)^{2} \rangle = \Tr_{RR'} \Big( \Big( \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim} \Big)(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big)
+\langle \Tr (\rho)^{2} \rangle = \Tr_{RR'} \Big( \Big( \frac{2}{d_{R}(d_{R} +1)} \Pi_{RR'}^{sim} \Big)(F_{SS'} \otimes \mathbbm{1}_{EE'}) \Big).
 \end{equation}
 Al ser $\Pi_{RR'}^{sim}$ un proyector simétrico se escribe
 \begin{equation}
-\Pi_{RR'}^{sim}=\frac{1}{2}(\mathbbm{1}_{RR'}+(F_{RR'} ))
+\Pi_{RR'}^{sim}=\frac{1}{2}(\mathbbm{1}_{RR'}+(F_{RR'} )),
 \end{equation}
-donde $F_{RR'}$ es el operador "flip"  $R \longleftrightarrow R'$. Como $F_{RR'}$ es un operador que actúa sobre $RR'$ puede escribirse como $F_{RR'}= \mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'})$.
-
-reuniendo todo lo anterior
+donde $F_{RR'}$ es el operador "flip"  $R \longleftrightarrow R'$. Como $F_{RR'}$ es un operador que actúa sobre $RR'$ puede escribirse como $F_{RR'}= \mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'})$. Reuniendo todo lo anterior
 
 \begin{equation}
 \langle \Tr_{S} \rho_{S}^2 \rangle = \Tr_{RR'} \Bigg( \frac{1}{d_{R}(d_{R}+1)} \Big( \mathbbm{1}_{RR'}+\mathbbm{1}_{RR'}(F_{SS'} \otimes F_{EE'}) \Big)  (F_{SS'}\otimes \mathbbm{1}_{EE'})   \Bigg)
 \end{equation}
 
-Distribuyendo y sabiendo que al hacer dos veces la operación "flip" no afecta nada se sigue lo siguiente
+Distribuyendo y sabiendo que al hacer dos veces la operación ``flip" no afecta nada se sigue que
 
 \begin{equation}
 \Tr_{RR'} \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} F_{SS'} \otimes \mathbbm{1}_{EE'} + \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} (\mathbbm{1}_{SS'} \otimes F_{EE'})  \Bigg).
 \end{equation}
 
-Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a:
+Por las propiedades aditivas de la traza junto con $\mathbbm{1}_{R} \otimes \mathbbm{1}_{R'}$  y $\frac{1}{d_{R}(d_{R}+1)} \le \frac{1}{d_{R}^{2}}$ se llega a que
 
 \begin{align*}
 \langle \Tr_{S} \rho_{S}^2 \rangle &= \Tr_{RR'} \Bigg( \Bigg( \frac{\mathbbm{1}_{RR'}}{d_{R}(d_{R}+1)} \Bigg) (F_{SS'} \otimes \mathbbm{1}_{EE'})  \Bigg) \\
@@ -526,19 +527,19 @@ Entonces se llega a lo que se quería:
 \end{equation}
 y esto es lo mismo que 
 \begin{equation}
-\langle \Tr_{S} \rho_{S}^{2} \rangle \le \Tr_{S} \langle \rho_{S} \rangle ^{2}  + \Tr_{E} \langle \rho_{E}.\rangle^{2}
+\langle \Tr_{S} \rho_{S}^{2} \rangle \le \Tr_{S} \langle \rho_{S} \rangle ^{2}  + \Tr_{E} \langle \rho_{E}\rangle^{2}.
 \end{equation}
 
-Gracias al resultado \ref{eq:0} se obtiene
+Gracias al resultado \ref{eq:0} se obtiene que
 \begin{equation}
 \langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{d_{S}(Tr_{E} \langle \rho_{E} \rangle^{2})}.
 \end{equation}
-Si se define $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ como la dimensión efectiva del ambiente en el estado canónico, esto mide la dimensión del espacio en el que el ambiente es más probable de estar, como $\langle \rho_{E} \rangle_{\phi} = \Omega_{E}$ se concluye que 
+Si se define $d_{E}^{eff} \equiv \frac{1}{Tr_{E} \Omega_{E}^{2}}$ como la dimensión efectiva del ambiente en el estado canónico, esto mide la dimensión del espacio en el que el ambiente es más probable de estar. Como $\langle \rho_{E} \rangle_{\phi} = \Omega_{E}$, se concluye que 
 \begin{equation}
-\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{\frac{d_{S}}{d_{E}^{eff}}}
+\langle \norm{\rho_{S} -\Omega_{S}}_{1} \rangle \le \sqrt{\frac{d_{S}}{d_{E}^{eff}}}.
 \end{equation}
 
-Ya con esto se tiene el teorema \ref{teorema principal}. Cuando  el ambiente es mucho más grande que el sistema $\mu$ y $\mu'$  de la ecuación \ref{eq.3} serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad. Aunque ya se llegó a la desigualdad que se quería se puede notar lo siguiente, sean los valores propios de $\Omega_{E}$ iguales a $\lambda_{E}^{k}$ con su máximo valor propio $\lambda_{E}^{max}$ se ve que 
+Ya con esto se tiene el teorema \ref{teorema principal}. Cuando  el ambiente es mucho más grande que el sistema, $\mu$ y $\mu'$  de la ecuación \ref{eq.3} serán pequeñas ($d_{E}^{eff}>>d_{S}$) implicando $\norm{\rho_{S} -\Omega_{S}}_{1} \approx 0$ con alta probabilidad. Aunque ya se llegó a la desigualdad que se quería, se puede notar lo siguiente: sean los valores propios de $\Omega_{E}$ iguales a $\lambda_{E}^{k}$ con su máximo valor propio $\lambda_{E}^{max}$; se ve entonces que 
 
 \begin{align*}
 \Tr_{E} \Omega_{E}^{2} &= \sum_{k} (\lambda_{E}^{k})\\
@@ -548,7 +549,7 @@ Ya con esto se tiene el teorema \ref{teorema principal}. Cuando  el ambiente es 
 &\leq \frac{d_{S}}{d_{E}}	
 \end{align*}
 
-en conclusión  $d^{eff}_{E} \geq d_{R}/ d_{S}$ entonces se obtiene
+En conclusión, $d^{eff}_{E} \geq d_{R}/ d_{S}$. Entonces se obtiene
 
 \begin{equation}
 \langle \norm{\rho_{S} - \Omega_{S}}_{1} \rangle \leq \sqrt{\frac{d_{S}}{d_{E}^{eff}}} \leq  \sqrt{\frac{d_{S}^{2}}{d_{R}}}.
@@ -557,16 +558,16 @@ Con esto se finaliza la demostración del teorema \ref{teorema principal} en la 
 
 \section{Significado Físico}
 
-El teorema anterior ya permite hablar del concepto importante que se sigue del aritculo de Popescu et al la idea general de la física es poder dar una relación uno a uno entre las propiedades de un objeto físico y su representación matemática con esta correspondencia se puede decir que la teoría esta completa cuando todas las propiedades que son posibles de medir tienen su semejante en la teoría \cite{Decoherence}. Por ejemplo en la física clásica a las cantidades como velocidad y distancia se le asigna los símbolos matemáticos $v$ y $x$, el cuerpo puede ser especificado dando estas dos cantidades en un tiempo determinado. La mecánica clásica nos da un ejemplo sencillo pero cuando se pasa a la mecánica estadística se encuentra perspectivas diferentes que entran en conflicto con esta sencilla idea. En los inicios de la mecánica estadística hubo muchas controversias dado a que ahora la idea determinista que Newton y otros habían mostrado como cierta (Se podía describir la naturaleza de manera predecible) ahora se introducía la probabilidad a sistemas que según Newton eran deterministas. En este punto se debe hacer claro que la necesidad de la probabilidad era por la falta de conocimiento pero no por un indeterminismo intrínseco como en la mecánica cuántica. Dos propuestas importantes surgieron en busca de una base conceptual sobre estas probabilidades, la visión de Gibbs y la de Boltzmann. Gibbs propuso la idea del ensamble, esta es una idea que hasta el día de hoy se sigue usando porque da los resultados correctos para las propiedades de sistemas termodinámicos.\\
-La idea de Gibbs es la siguiente: Se tiene un sistema macroscópico con ciertos parámetros que se pueden medir. Este sistema está compuesto por varias partículas que tienen posiciones y momentos, pero estas propiedades están restringidas por los parámetros macroscópicos. Entonces como no se puede conocer el microestado del sistemas, no se puede medir cada posición y momento de cada partícula, se tiene una libertad sobre cuál es el microestado dado el macroestado. El ensamble es el conjunto de microestados que cumplen con el macroestado, mientras el microestado cumpla con los parámetros macroscópicos hará parte del ensamble así el sistema no se encuentre en ese microestado. En teoría no hay limitación sobre el número de microestados que pertenezcan a un ensamble, este puede tener infinitos microestados. Esta idea de base para la función de densidad en el espacio de fase, cada punto en este espacio es un microestado estos micro estados no interactuan entre ellos , con esto se puede construir la mecánica estadística que se conoce \cite{PathriaStat}. 
+El teorema anterior ya permite hablar del concepto importante que se sigue del trabajo hecho por Popescu \textit{et al}. La idea general de la física es poder dar una relación uno a uno entre las propiedades de un objeto físico y su representación matemática. Con esta correspondencia se puede decir que la teoría esta completa cuando todas las propiedades que son posibles de medir tienen su semejante en la teoría \cite{Decoherence}. Por ejemplo, en la física clásica a las cantidades como velocidad y distancia se les asigna los símbolos matemáticos $v$ y $x$; el cuerpo puede ser especificado dando estas dos cantidades en un tiempo determinado. La mecánica clásica nos da un ejemplo sencillo pero cuando se pasa a la mecánica estadística se encuentra perspectivas diferentes que entran en conflicto con esta sencilla idea. En los inicios de la mecánica estadística hubo muchas controversias dado  que ahora la idea determinista que Newton y otros habían mostrado como cierta (Se podía describir la naturaleza de manera predecible) ahora se introducía la probabilidad a sistemas que según Newton eran deterministas. En este punto se debe hacer claro que la necesidad de la probabilidad era por la falta de conocimiento pero no por un indeterminismo intrínseco como en la mecánica cuántica. Dos propuestas importantes surgieron en busca de una base conceptual sobre estas probabilidades: la visión de Gibbs y la de Boltzmann. Gibbs propuso la idea del ensamble. Esta es una idea que hasta el día de hoy se sigue usando porque da los resultados correctos para las propiedades de sistemas termodinámicos.\\
+La idea de Gibbs es la siguiente: Se tiene un sistema macroscópico con ciertos parámetros que se pueden medir. Este sistema está compuesto por varias partículas que tienen posiciones y momentos, pero estas propiedades están restringidas por los parámetros macroscópicos. Entonces como no se puede conocer el microestado del sistemas, no se puede medir cada posición y momento de cada partícula, se tiene una restricción sobre cuál es el microestado dado el macroestado. El ensamble es el conjunto de microestados que cumplen con el macroestado, mientras el microestado cumpla con los parámetros macroscópicos hará parte del ensamble así el sistema no se encuentre en ese microestado. En teoría no hay limitación sobre el número de microestados que pertenezcan a un ensamble, este puede tener infinitos microestados. Esta idea de base para la función de densidad en el espacio de fase, cada punto en este espacio es un microestado estos micro estados no interactuan entre ellos , con esto se puede construir la mecánica estadística que se conoce \cite{PathriaStat}. 
 \\
-Por el contrario Boltzmann da un concepción de la mecánica estadística más intuitiva; él propone $N$ partículas que interactúan entre ellas y cumplen los parámetros macroscópicos. Las partículas no son imaginarias como en el caso de los ensambles de Gibbs, ellas son las partículas que están en el sistema que se está estudiando. Se esperaría que la solución de Boltzmann fuera la que diera los resultados correctos dada la sencillez de su propuesta pero es la formulación de Gibbs la que da la termodinámica correcta. E.T Jaynes en \cite{JaynesEntropies} muestra las diferencias matemáticas de cada perspectiva y llega a la conclusión que la formulación de Gibbs da la entropía correcta sin importar cual sea el tipo de interacción que tenga el sistema, además encuentra que la entropía que sale de la formulación Boltzmanniana no es la misma entropía dada por la termodinámica,la entropía de Boltzmann es correcta cuando no hay interacción entre las partículas.
+Por el contrario Boltzmann da un concepción de la mecánica estadística más intuitiva; él propone $N$ partículas que interactúan entre ellas y cumplen los parámetros macroscópicos. No se habla de copias imaginarias de un sistema como en el caso de los ensambles de Gibbs, ellas son las partículas que están en el sistema que se estudia estudiando. Se esperaría que la solución de Boltzmann fuera la que diera los resultados correctos dada la sencillez de su propuesta pero es la formulación de Gibbs la que da la termodinámica correcta. E.T Jaynes en \cite{JaynesEntropies} muestra las diferencias matemáticas de cada perspectiva y llega a la conclusión que la formulación de Gibbs da la entropía correcta sin importar cual sea el tipo de interacción que tenga el sistema; además encuentra que la entropía que sale de la formulación Boltzmanniana no es la misma entropía dada por la termodinámica. La entropía de Boltzmann es correcta cuando no hay interacción entre las partículas.
 \\
-Ya con la comprobación experimental se debería aceptar la perspectiva de Gibbs como la correcta y dejar a un lado la de boltzmann pero esto deja a la mecánica estadística en un contexto filosófico poco fuerte, aunque la física busque una correspondencia entre experimento y teoría no se puede aceptar cualquier teoría solo por tener congruencia con el experimento, la física debe buscar una estabilidad conceptual en sus teorías.¿ Por qué la perspectiva de Gibbs tiene un fundamento congruente ?  lo que propone Gibbs aunque matemáticamente aceptable se basa en todos los microestados en los que el macroestado no se encuentra es decir, que para poder determinar la propiedades de estado el cual se está estudiando se debe estudiar todos los estados en los que el sistema no se encuentra pero podría estar, pero por qué para analizar un sistema que se encuentra en un estado definido y exacto debería examinar los posibles infinitos estado en donde no se encuentra si se hace un promedio sobre estos microestados ¿ cuál es el significado de este promedio?. Este problema ontológico deja la perspectiva de Gibbs en duda, mientra la de Boltzmann habla del sistema que se examina sin ningún problema de este estilo. 
+Ya con la comprobación experimental se debería aceptar la perspectiva de Gibbs como la correcta y dejar a un lado la de Boltzmann pero esto deja a la mecánica estadística en un contexto filosófico poco fuerte, aunque la física busque una correspondencia entre experimento y teoría no se puede aceptar cualquier teoría solo por tener congruencia con el experimento. La física debe buscar una estabilidad conceptual en sus teorías. Es por esto que aunque Gibbs encuentre los resultados no se acepta como el marco teórico. Lo que propone Gibbs aunque matemáticamente aceptable se basa en todos los microestados en los que el macroestado no se encuentra es decir, que para poder determinar la propiedades de estado el cual se está estudiando se debe estudiar todos los estados en los que el sistema no se encuentra pero podría estar, pero por qué para analizar un sistema que se encuentra en un estado definido y exacto se debería examinar los posibles infinitos estado en donde no se encuentra. Si se hace un promedio sobre estos microestados ¿ cuál es el significado de este promedio?. Este problema ontológico deja la perspectiva de Gibbs en duda, mientra la de Boltzmann habla del sistema que se examina sin ningún problema de este estilo. 
 \\
-La lucha entre las perspectiva ha sido una de aún no se resuelve lo que se ha mostrado hasta ahora ha sido la matemática de la tentativa de unir ambas perspectivas por Popescu et al. pero ¿ por qué estos resultado matemáticos intentan dar una luz a la resolución de estas perspectivas? se puede ver fácilmente que cuando se habla de del estado $ \Omega_{S} = \Tr_{B} \mathcal{E}_{R} $  este condensa la perspectiva de Gibbs mientras que $\rho_{S} = \Tr_{E} \ket{\phi} \bra{\phi}$ habla de un subsistema específico bajo una restricción esta es la perspectiva de Boltzmann por lo tanto el resultado mostrado acá dice: a menos que se tenga un estado bastante especial se puede asegurar que el subsistema de un universo muy grande, dado por un estado puro, se comporta de la misma manera que si el universo se encontrara en un estado máximamente mezclado. Esto corresponde a decir que para la mayoría de los estados en un espacio de Hilbert se puede reconciliar ambas perspectivas.
+La lucha entre las perspectiva ha sido una que aún no se resuelve. Lo que se ha mostrado hasta ahora ha sido la matemática de la tentativa de unir ambas perspectivas por Popescu \textit{et al} pero ¿ por qué estos resultado matemáticos intentan dar una luz a la resolución de estas perspectivas? Se puede ver fácilmente que cuando se habla del estado $ \Omega_{S} = \Tr_{B} \mathcal{E}_{R} $  este condensa la perspectiva de Gibbs; mientras que $\rho_{S} = \Tr_{E} \ket{\phi} \bra{\phi}$ habla de un subsistema específico bajo una restricción, esta es la perspectiva de Boltzmann. Por lo tanto, el resultado mostrado acá dice: a menos que se tenga un estado bastante especial se puede asegurar que el subsistema de un universo muy grande, dado por un estado puro, se comporta de la misma manera que si el universo se encontrara en un estado máximamente mezclado. Esto corresponde a decir que para la mayoría de los estados en un espacio de Hilbert se puede reconciliar ambas perspectivas.
 \\
-Hay otro punto que da más mérito a la perspectiva mostrada acá y es que el estado $\Omega_{S}$ es la forma de mostrar la ignorancia subjetiva que se tiene del sistema. Se sabe que este es el punto de partida para la mecánica estadística pero esto también es un fundamento que generalmente es muy cuestionado gracias al teorema \ref{teorema principal} se cambia esa probabilidad subjetiva por una objetivad debido al entrelazamiento. Por este cambio a un fundamente más sólido no se debe entrar en el problema de ergodicidad ya que en general la solución del problema de esa probabilidad se dice que el sistema pasa por todos los estados,y eso solo complica la pregunta dado que hay sistemas que no pasan por todos los estados pero aún así son descritos por un estado canónico. Ya no debe entrarse en la pregunta sobre la ergodicidad del sistema dado que esta perspectiva muestra que los promedios no son necesarios en el momento de darle un fundamento a la mecánica estadística.
+Hay otro punto que da más mérito a la perspectiva de Popescu \textit{et al}, y es que el estado $\Omega_{S}$ habla del principio de probabilidades iguales. Se sabe que este es el punto de partida para la mecánica estadística pero este fundamento es muy cuestionado porque viene dado por la ignorancia subjetiva que se tiene. Gracias al teorema \ref{teorema principal} se cambia esa probabilidad subjetiva por una objetivad debido al entrelazamiento. Por este cambio de fundamento a uno más sólido no se debe entrar en el problema de ergodicidad. Así se muestra que en el nuevo enfoque los promedio no son necesarios para fundamentar la mecánica estadística.
 
 
 
